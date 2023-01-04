@@ -17,7 +17,7 @@ Hi. &nbsp;👋🏽 &nbsp;👋 &nbsp;**We are happy you are here.**&nbsp; 🎉&nb
 **`exercism/Crystal`** is one of many programming language tracks on [exercism(dot)org][exercism-website].
 This repo holds all the instructions, tests, code, & support files for Crystal _exercises_ currently under development or implemented & available for students.
 
-🌟 &nbsp;&nbsp;Track tooling (_test-runner and Continuous Integration_) runs on Crystal `1.2.2`.
+🌟 &nbsp;&nbsp;Track tooling (_test-runner and Continuous Integration_) runs on Crystal `1.2.2`. <br>
 🌟 &nbsp;&nbsp;Most exercises is solvable with Crystal `1.0.0` or higher.
 
 The track is made of **Practice Exercises**. Practice exercises are open-ended, and can be used to practice concepts learned, try out new techniques, and play.
@@ -44,7 +44,7 @@ We&nbsp;💛&nbsp;💙 &nbsp; our community.
 But currently there are some tooling being looked at changing/updating.
 This would make it easier for us to maintain the track, and also make it easier for you to contribute.
 **`Therefore are our maintainers not accepting community contributions at this time.`**  
-Please read this [community blog post](https://exercism.org/blog/freeing-our-maintainers) for details.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please read this [community blog post](https://exercism.org/blog/freeing-our-maintainers) for details.
 
 <br>
 <img align="left" width="95" height="85" src="https://github.com/exercism/website-icons/blob/main/exercises/boutique-suggestions.svg">
