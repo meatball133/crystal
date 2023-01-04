@@ -16,4 +16,8 @@ class Generator
   end
 end
 
+if ARGV.empty?
+  raise ArgumentError.new("Please provide an exercise")
+end
+
 Generator.new(ARGV[0])
