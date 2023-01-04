@@ -1,0 +1,20 @@
+{%- assign first = true -%}
+require "spec"
+require "../src/*"
+
+describe "{{- json.exercise | replace: "-", "_" | camelize  -}}" do
+{%- for cases in  json.cases -%}
+    {% if cases.cases %}
+        {%- for subcases in cases.cases %}
+        {% include "./bin/misc/generator_help", first: first %} "{{ subcases.description }}" do
+        {{ json.exercise | replace: "-", "_" | camelize }}.{{ subcases.property | underscore }}("{{ subcases.input.color }}").should eq({{ subcases.expected }})
+    end
+    {% assign first = false %}
+        {% endfor %}
+    {% else %}  
+    {% include "./bin/misc/generator_help", first: first %} "{{ cases.description }}" do
+        {{ json.exercise | replace: "-", "_" | camelize }}.{{ cases.property | underscore }}().should eq({{ cases.expected }})
+    end
+    {% endif %}
+{% endfor %}
+end
