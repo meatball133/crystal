@@ -9,7 +9,6 @@ describe "{{- json.exercise | replace: "-", "_" | camelize  -}}" do
         {% include "./bin/misc/generator_help", first: first %} "{{ subcases.description }}" do
         {{ json.exercise | replace: "-", "_" | camelize }}.{{ subcases.property | underscore }}("{{ subcases.input.color }}").should eq({{ subcases.expected }})
     end
-    {% assign first = false %}
         {% endfor %}
     {% else %}  
     {% include "./bin/misc/generator_help", first: first %} "{{ cases.description }}" do
