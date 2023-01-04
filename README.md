@@ -44,14 +44,14 @@ We&nbsp;💛&nbsp;💙 &nbsp; our community.
 But currently there are some tooling being looked at changing/updating.
 This would make it easier for us to maintain the track, and also make it easier for you to contribute.
 **`Therefore are our maintainers not accepting community contributions at this time.`**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please read this [community blog post](https://exercism.org/blog/freeing-our-maintainers) for details.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please read this [community blog post](https://exercism.org/blog/freeing-our-maintainers) for details.
 
 <br>
 <img align="left" width="95" height="85" src="https://github.com/exercism/website-icons/blob/main/exercises/boutique-suggestions.svg">
 
 Here to suggest a new feature or new exercise?? **Hooray!** &nbsp;🎉 &nbsp;  
 We'd love if you did that via our [Exercism Community Forum](https://forum.exercism.org/). Please keep in mind [Chesterton's Fence][chestertons-fence].  
-_Thoughtful suggestions will likely result faster & more enthusiastic responses from volunteers._
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Thoughtful suggestions will likely result faster & more enthusiastic responses from volunteers._
 
 <br>
 
