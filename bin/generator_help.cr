@@ -1,7 +1,6 @@
 require "liquid"
 require "json"
 require "http/client"
-require "toml"
 
 class GeneratorHelp
   @tpl : String | Nil
@@ -9,11 +8,13 @@ class GeneratorHelp
   def initialize(exercise : String)
     response = HTTP::Client.get("https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{exercise}/canonical-data.json")
     @json = JSON.parse(response.body)
-    file = File.read("./exercises/practice/#{exercise}/.meta/template.liquid")
+    template_path = "./exercises/practice/#{exercise}/.meta/template.liquid"
+    raise "Template not found: #{template_path}" unless File.exists?(template_path)
+    template_file = File.read("./exercises/practice/#{exercise}/.meta/template.liquid")
     remove_tests(toml(exercise))
     ctx = Liquid::Context.new
     ctx.set "json", @json
-    tpl = Liquid::Template.parse file
+    tpl = Liquid::Template.parse template_file
     @tpl = tpl.render ctx
   end
 
@@ -23,7 +24,9 @@ class GeneratorHelp
 
   def toml(exercise : String)
     uuid = [] of String
-    File.read("./exercises/practice/#{exercise}/.meta/tests.toml").split("\n").each do |line|
+    path = "./exercises/practice/#{exercise}/.meta/tests.toml"
+    raise "Toml not found: #{path}" unless File.exists?(path)
+    File.read(path).split("\n").each do |line|
       line = line.strip
       if line.starts_with? "#"
         next
