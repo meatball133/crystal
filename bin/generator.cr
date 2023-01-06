@@ -26,7 +26,6 @@ class Generator
           brackets = [] of Char
           y.each_char.with_index do |z, index|
             if ("[](){}".includes?(z.to_s)  && (brackets[-1]? != '"' || brackets[-1]?.nil? )) || '"' == z
-            p z
               if "[({".includes?(z.to_s) || (brackets[-1]? != '"' && '"' == z)
                 brackets << z
               else
@@ -40,7 +39,6 @@ class Generator
               count_2 += 1
             end
           end
-          p brackets
         end
       end
       x
