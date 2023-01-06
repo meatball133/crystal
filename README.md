@@ -99,4 +99,3 @@ Thanks to Bethany for the allowing us to use her [template][exercism-template] f
 [practice-exercises]: https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md
 [the-words-that-we-use]: https://github.com/exercism/docs/blob/main/community/good-member/words.md
 [website-contributing-section]: https://exercism.org/docs/building
-[zero-clause-bsd]: https://docs.python.org/3/license.html#zero-clause-bsd-license-for-code-in-the-python-release-documentation
