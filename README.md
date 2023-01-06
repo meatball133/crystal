@@ -81,7 +81,7 @@ Thanks to Bethany for the allowing us to use her [template][exercism-template] f
 [being-a-good-community-member]: https://github.com/exercism/docs/tree/main/community/good-member
 [chestertons-fence]: https://github.com/exercism/docs/blob/main/community/good-member/chestertons-fence.md
 [concept-exercises]: https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md
-[config-json]: https://github.com/exercism/python/blob/main/config.json
+[config-json]: https://github.com/exercism/crystal/blob/main/config.json
 [crystal-license]: https://github.com/crystal-lang/crystal/blob/master/LICENSE
 [exercise-presentation]: https://github.com/exercism/docs/blob/main/building/tracks/presentation.md
 [exercism-admins]: https://github.com/exercism/docs/blob/main/community/administrators.md
