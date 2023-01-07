@@ -1,6 +1,6 @@
 # Generator
 
-Last Updated: 2023/01/06
+Last Updated: 2023/01/07
 
 The generator is a powerful tool that can be used to generate the tests for an exercises based on the canonical data.
 The generator is written in Crystal and is located in the `bin` directory.
@@ -177,3 +177,6 @@ This is done since it is easier to read.
 It goes through each character on the line and after a specific length it will check if the next character is a `,` and that is not under a nested structure.
 If it is so will it add a new line by adding `\n`.
 After that is the new line returned and then will the file be formatted again with `crystal tool format`.
+
+There is also an extra option when running the generator which is being able to specify where the generated file should be written.
+This is by adding the path as a second argument when running the generator.
