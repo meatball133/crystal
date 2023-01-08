@@ -10,7 +10,6 @@ class GeneratorHelp
     check_config()
     @json = get_remote_files()
     @json.as_h["exercise_cammel"] = JSON::Any.new(to_cammel(@json["exercise"].to_s))
-    p @json
     remove_tests(toml())
     template_path = "./exercises/practice/#{@exercise}/.meta/test_template.liquid"
     raise "Template not found: #{template_path}" unless File.exists?(template_path)
@@ -25,7 +24,7 @@ class GeneratorHelp
     @tpl
   end
 
-  def toml()
+  def toml
     uuid = [] of String
     path = "./exercises/practice/#{@exercise}/.meta/tests.toml"
     raise "Toml not found: #{path}" unless File.exists?(path)
@@ -56,7 +55,7 @@ class GeneratorHelp
     end
   end
 
-  def get_remote_files()
+  def get_remote_files
     response = HTTP::Client.get("https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{@exercise}/canonical-data.json")
     case response.status_code
     when 200
@@ -69,7 +68,7 @@ class GeneratorHelp
     end
   end
 
-  def check_config()
+  def check_config
     config_file = File.read("./config.json")
     JSON.parse(config_file)["exercises"]["practice"].as_a.each do |x|
       return true if @exercise == x["slug"]
@@ -81,11 +80,11 @@ class GeneratorHelp
     result = ""
     input = input.capitalize
     capitalized = false
-    input.each_char do |x|
-      if x == '-'
+    input.each_char do |character|
+      if character == '-'
         capitalized = true
       else
-        result += capitalized ? x.upcase : x
+        result += capitalized ? character.upcase : character
         capitalized = false
       end
     end
