@@ -10,6 +10,7 @@ class GeneratorHelp
     check_config()
     @json = get_remote_files()
     @json.as_h["exercise_cammel"] = JSON::Any.new(to_cammel(@json["exercise"].to_s))
+    additional_json()
     remove_tests(toml())
     template_path = "./exercises/practice/#{@exercise}/.meta/test_template.liquid"
     raise "Template not found: #{template_path}" unless File.exists?(template_path)
@@ -89,5 +90,14 @@ class GeneratorHelp
       end
     end
     result
+  end
+
+  def additional_json
+    file_path = "./exercises/practice/#{@exercise}/.meta/additional_tests.json"
+    if File.exists?(file_path)
+      JSON.parse(File.read(file_path))["cases"].as_a.each do |test|
+        @json["cases"].as_a << test
+      end
+    end
   end
 end
