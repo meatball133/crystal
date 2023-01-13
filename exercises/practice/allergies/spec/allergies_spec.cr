@@ -3,198 +3,302 @@ require "../src/*"
 
 describe "Allergies" do
   it "not allergic to anything" do
-    Allergies.allergic_to("eggs", 0).should eq(false)
+    item = "eggs"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to eggs" do
-    Allergies.allergic_to("eggs", 1).should eq(true)
+    item = "eggs"
+    score = 1
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to eggs and something else" do
-    Allergies.allergic_to("eggs", 3).should eq(true)
+    item = "eggs"
+    score = 3
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not eggs" do
-    Allergies.allergic_to("eggs", 2).should eq(false)
+    item = "eggs"
+    score = 2
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("eggs", 255).should eq(true)
+    item = "eggs"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("peanuts", 0).should eq(false)
+    item = "peanuts"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to peanuts" do
-    Allergies.allergic_to("peanuts", 2).should eq(true)
+    item = "peanuts"
+    score = 2
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to peanuts and something else" do
-    Allergies.allergic_to("peanuts", 7).should eq(true)
+    item = "peanuts"
+    score = 7
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not peanuts" do
-    Allergies.allergic_to("peanuts", 5).should eq(false)
+    item = "peanuts"
+    score = 5
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("peanuts", 255).should eq(true)
+    item = "peanuts"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("shellfish", 0).should eq(false)
+    item = "shellfish"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to shellfish" do
-    Allergies.allergic_to("shellfish", 4).should eq(true)
+    item = "shellfish"
+    score = 4
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to shellfish and something else" do
-    Allergies.allergic_to("shellfish", 14).should eq(true)
+    item = "shellfish"
+    score = 14
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not shellfish" do
-    Allergies.allergic_to("shellfish", 10).should eq(false)
+    item = "shellfish"
+    score = 10
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("shellfish", 255).should eq(true)
+    item = "shellfish"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("strawberries", 0).should eq(false)
+    item = "strawberries"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to strawberries" do
-    Allergies.allergic_to("strawberries", 8).should eq(true)
+    item = "strawberries"
+    score = 8
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to strawberries and something else" do
-    Allergies.allergic_to("strawberries", 28).should eq(true)
+    item = "strawberries"
+    score = 28
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not strawberries" do
-    Allergies.allergic_to("strawberries", 20).should eq(false)
+    item = "strawberries"
+    score = 20
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("strawberries", 255).should eq(true)
+    item = "strawberries"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("tomatoes", 0).should eq(false)
+    item = "tomatoes"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to tomatoes" do
-    Allergies.allergic_to("tomatoes", 16).should eq(true)
+    item = "tomatoes"
+    score = 16
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to tomatoes and something else" do
-    Allergies.allergic_to("tomatoes", 56).should eq(true)
+    item = "tomatoes"
+    score = 56
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not tomatoes" do
-    Allergies.allergic_to("tomatoes", 40).should eq(false)
+    item = "tomatoes"
+    score = 40
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("tomatoes", 255).should eq(true)
+    item = "tomatoes"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("chocolate", 0).should eq(false)
+    item = "chocolate"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to chocolate" do
-    Allergies.allergic_to("chocolate", 32).should eq(true)
+    item = "chocolate"
+    score = 32
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to chocolate and something else" do
-    Allergies.allergic_to("chocolate", 112).should eq(true)
+    item = "chocolate"
+    score = 112
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not chocolate" do
-    Allergies.allergic_to("chocolate", 80).should eq(false)
+    item = "chocolate"
+    score = 80
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("chocolate", 255).should eq(true)
+    item = "chocolate"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("pollen", 0).should eq(false)
+    item = "pollen"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to pollen" do
-    Allergies.allergic_to("pollen", 64).should eq(true)
+    item = "pollen"
+    score = 64
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to pollen and something else" do
-    Allergies.allergic_to("pollen", 224).should eq(true)
+    item = "pollen"
+    score = 224
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not pollen" do
-    Allergies.allergic_to("pollen", 160).should eq(false)
+    item = "pollen"
+    score = 160
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("pollen", 255).should eq(true)
+    item = "pollen"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "not allergic to anything" do
-    Allergies.allergic_to("cats", 0).should eq(false)
+    item = "cats"
+    score = 0
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic only to cats" do
-    Allergies.allergic_to("cats", 128).should eq(true)
+    item = "cats"
+    score = 128
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to cats and something else" do
-    Allergies.allergic_to("cats", 192).should eq(true)
+    item = "cats"
+    score = 192
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "allergic to something, but not cats" do
-    Allergies.allergic_to("cats", 64).should eq(false)
+    item = "cats"
+    score = 64
+    Allergies.allergic_to(item, score).should eq(false)
   end
 
   pending "allergic to everything" do
-    Allergies.allergic_to("cats", 255).should eq(true)
+    item = "cats"
+    score = 255
+    Allergies.allergic_to(item, score).should eq(true)
   end
 
   pending "no allergies" do
-    Allergies.list(0).should eq([] of String)
+    score = 0
+    expected = [] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "just eggs" do
-    Allergies.list(1).should eq(["eggs"])
+    score = 1
+    expected = ["eggs"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "just peanuts" do
-    Allergies.list(2).should eq(["peanuts"])
+    score = 2
+    expected = ["peanuts"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "just strawberries" do
-    Allergies.list(8).should eq(["strawberries"])
+    score = 8
+    expected = ["strawberries"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "eggs and peanuts" do
-    Allergies.list(3).should eq(["eggs", "peanuts"])
+    score = 3
+    expected = ["eggs", "peanuts"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "more than eggs but not peanuts" do
-    Allergies.list(5).should eq(["eggs", "shellfish"])
+    score = 5
+    expected = ["eggs", "shellfish"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "lots of stuff" do
-    Allergies.list(248).should eq(["strawberries", "tomatoes", "chocolate", "pollen", "cats"])
+    score = 248
+    expected = ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "everything" do
-    Allergies.list(255).should eq(["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"])
+    score = 255
+    expected = ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] of String
+    Allergies.list(score).should eq(expected)
   end
 
   pending "no allergen score parts" do
-    Allergies.list(509).should eq(["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"])
+    score = 509
+    expected = ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] of String
+    Allergies.list(score).should eq(expected)
+  end
+
+  pending "no allergen score parts without highest valid score" do
+    score = 257
+    expected = ["eggs"] of String
+    Allergies.list(score).should eq(expected)
   end
 end
