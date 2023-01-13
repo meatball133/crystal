@@ -60,12 +60,32 @@ class GeneratorHelp
     response = HTTP::Client.get("https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{@exercise}/canonical-data.json")
     case response.status_code
     when 200
-      return JSON.parse(response.body)
+      return lowercase_keys(JSON.parse(response.body))
     when 404
       raise "Couldn't find canonical data for #{@exercise} on the github repo: problem-specifications."
     else
       raise "Error while requesting the #{@exercise} data file from GitHub... " +
             "Status was #{response.status_code}"
+    end
+  end
+
+  def lowercase_keys(obj)
+    if obj.as_h?
+      json_obj = {} of String => JSON::Any
+      obj.as_h.each do |key, value|
+        unless value == nil
+          json_obj[key.downcase] = lowercase_keys(value)
+        end
+      end
+      JSON::Any.new(json_obj)
+    elsif obj.as_a?
+      array = [] of JSON::Any
+      obj.as_a.each do |x|
+        array << lowercase_keys(x)
+      end
+      JSON::Any.new(array)
+    else
+      obj
     end
   end
 
