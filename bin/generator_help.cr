@@ -73,9 +73,7 @@ class GeneratorHelp
     if obj.as_h?
       json_obj = {} of String => JSON::Any
       obj.as_h.each do |key, value|
-        unless value == nil
-          json_obj[key.downcase] = lowercase_keys(value)
-        end
+        json_obj[key.downcase] = lowercase_keys(value)
       end
       JSON::Any.new(json_obj)
     elsif obj.as_a?
