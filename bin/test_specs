@@ -54,7 +54,7 @@ test_specs() {
         spec_name="${spec##*/}"
 
         # Generate a new spec.
-        crystal ./bin/generator.sh "${exercise}" "${tmpdir}/${spec_name}" >/dev/null || error "Failed to generate spec for ${exercise}."
+        ./bin/generator.sh "${exercise}" "${tmpdir}/${spec_name}" >/dev/null || error "Failed to generate spec for ${exercise}."
         if [[ ! -r "${tmpdir}/${spec_name}" ]]; then
             error "Failed to generate spec ${spec}!"
         fi
