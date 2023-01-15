@@ -1,4 +1,3 @@
-require "liquid"
 require "json"
 require "http/client"
 require "ecr"
