@@ -12,11 +12,13 @@ class GeneratorHelp
     @json.as_h["exercise_cammel"] = JSON::Any.new(to_cammel(@json["exercise"].to_s))
     additional_json()
     remove_tests(toml())
+    formated_json = lowercase_keys(@json)
     template_path = "./exercises/practice/#{@exercise}/.meta/test_template.liquid"
     raise "Template not found: #{template_path}" unless File.exists?(template_path)
     template_file = File.read(template_path)
     ctx = Liquid::Context.new
-    ctx.set "json", @json
+    ctx.set "json", formated_json
+    ctx.set "unformatted_json", @json
     tpl = Liquid::Template.parse template_file
     @tpl = tpl.render ctx
   end
@@ -60,7 +62,7 @@ class GeneratorHelp
     response = HTTP::Client.get("https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{@exercise}/canonical-data.json")
     case response.status_code
     when 200
-      return lowercase_keys(JSON.parse(response.body))
+      return JSON.parse(response.body)
     when 404
       raise "Couldn't find canonical data for #{@exercise} on the github repo: problem-specifications."
     else
