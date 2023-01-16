@@ -10,7 +10,6 @@ class GeneratorHelp
     @first = true
     check_config()
     @json = get_remote_files()
-    @json.as_h["exercise_cammel"] = JSON::Any.new(to_cammel(@json["exercise"].to_s))
     additional_json()
     remove_tests(toml())
   end
