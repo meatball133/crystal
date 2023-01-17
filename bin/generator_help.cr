@@ -98,7 +98,7 @@ class GeneratorHelp
     result
   end
 
-  def to_captlized(input)
+  def to_capitalized(input)
     result = ""
     input = input.capitalize
     capitalized = false
