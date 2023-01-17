@@ -1,7 +1,7 @@
 require "spec"
 require "../src/*"
 
-describe "<%-= to_captlized(@json["exercise"].to_s) %>" do
+describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
 <%- @json["cases"].as_a.each do |cases| %>
     <%- cases["cases"].as_a.each do |sub_case| %>
     <%= status()%> "<%-= sub_case["description"] %>" do
