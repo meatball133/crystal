@@ -8,7 +8,6 @@
 !LICENSE
 !Makefile
 !generator/
-!bin/templates/template.ecr
 
 # double ignore others
 *.swp
@@ -26,3 +25,4 @@ generator/bin
 generator/bin/generator
 lib
 shards.lock
+bin/templates/template.ecr
