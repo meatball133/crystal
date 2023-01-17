@@ -11,8 +11,8 @@ fi
 
 slug="$1"
 
-if test ! -d example_directory; then
-  mkdir example_directory
+if test ! -d "./bin/templates"; then
+  mkdir "./bin/templates"
 fi
 
 cat "./exercises/practice/${slug}/.meta/test_template.ecr" > "./bin/templates/template.ecr"
