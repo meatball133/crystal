@@ -11,6 +11,7 @@
 
 # double ignore others
 *.swp
+./bin/templates/template.ecr
 .crystal/
 .DS_Store
 bin/configlet
