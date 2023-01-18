@@ -15,7 +15,9 @@ describe "Triangle" do
   end
 
   pending "all zero sides is not a triangle" do
-    Triangle.new({0, 0, 0}).equilateral?.should be_false
+    expect_raises(ArgumentError) do
+      Triangle.new({0, 0, 0})
+    end
   end
 
   pending "sides may be floats" do
@@ -43,15 +45,21 @@ describe "Triangle" do
   end
 
   pending "first triangle inequality violation" do
-    Triangle.new({1, 1, 3}).isosceles?.should be_false
+    expect_raises(ArgumentError) do
+      Triangle.new({1, 1, 3})
+    end
   end
 
   pending "second triangle inequality violation" do
-    Triangle.new({1, 3, 1}).isosceles?.should be_false
+    expect_raises(ArgumentError) do
+      Triangle.new({1, 3, 1})
+    end
   end
 
   pending "third triangle inequality violation" do
-    Triangle.new({3, 1, 1}).isosceles?.should be_false
+    expect_raises(ArgumentError) do
+      Triangle.new({3, 1, 1})
+    end
   end
 
   pending "sides may be floats" do
@@ -79,7 +87,9 @@ describe "Triangle" do
   end
 
   pending "may not violate triangle inequality" do
-    Triangle.new({7, 3, 2}).scalene?.should be_false
+    expect_raises(ArgumentError) do
+      Triangle.new({7, 3, 2})
+    end
   end
 
   pending "sides may be floats" do
