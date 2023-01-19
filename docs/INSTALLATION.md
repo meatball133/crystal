@@ -1,6 +1,6 @@
 # Installation
 
-Crystal is available for Linux, macOS, and Windows.
+Crystal is available on Linux, macOS, and Windows.
 
 What to note is that Crystal's windows support is experimental.
 Thereby, it is not recommended to use it in production since issues may occur.
