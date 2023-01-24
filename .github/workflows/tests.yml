@@ -11,7 +11,7 @@ on:
 jobs:
   exercises:
     name: Check exercises
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     # idea from https://github.com/actions/starter-workflows/blob/master/ci/crystal.yml
     container:
       image: crystallang/crystal
@@ -21,7 +21,7 @@ jobs:
         run: make test-exercises
   generator:
     name: Check Generator Templates
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     container:
       image: crystallang/crystal
     steps:
