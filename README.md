@@ -95,7 +95,7 @@ Thanks to Bethany for the allowing us to use her [template][exercism-template] f
 [exercism-track-structure]: https://github.com/exercism/docs/tree/main/building/tracks
 [exercism-website]: https://exercism.org/
 [exercism-writing-style]: https://github.com/exercism/docs/blob/main/building/markdown/style-guide.md
-[first-timer]: https://github.com/exercism/crystal/labels/first-timers%20only
+[first-time]: https://github.com/exercism/crystal/labels/first-timers%20only
 [practice-exercises]: https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md
 [open-issues]: https://github.com/exercism/crystal/labels/help%20wanted
 [open-an-issue]: https://github.com/exercism/crystal/issues/new
