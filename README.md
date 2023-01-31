@@ -42,7 +42,7 @@ It might also be helpful to look at [Being a Good Community Member][being-a-good
 We&nbsp;💛&nbsp;💙 &nbsp;Pull Requests.
 **But our maintainers generally can't accept _unsolicited_ PRs.**
 Check our [help wanted][open-issues] list or [open an issue][open-an-issue] for discussion first.
-If it is your first time contributing to Exercism, check for [good first patch][good-first-issues] or [first-timers only][first-time]. 
+If it is your first time contributing to Exercism, check for [good first patch][good-first-issues] or [first-timers only][first-time] labels. 
 
 <br>
 <img align="left" width="95" height="85" src="https://github.com/exercism/website-icons/blob/main/exercises/boutique-suggestions.svg">
