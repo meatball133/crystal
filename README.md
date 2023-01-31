@@ -40,10 +40,9 @@ It might also be helpful to look at [Being a Good Community Member][being-a-good
 <img align="left" width="90" height="85" src="https://github.com/exercism/website-icons/blob/main/exercises/health-statistics.svg">
 
 We&nbsp;💛&nbsp;💙 &nbsp;our community.
-But currently, the track tooling needs review and changing/updating.  
-This overhaul will make it easier for us to maintain the track, and also make it easier for you to contribute.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`Therefore are our maintainers not accepting community contributions at this time.`**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please read this [community blog post](https://exercism.org/blog/freeing-our-maintainers) for details.
+**But our maintainers generally can't accept _unsolicited_ PRs.**
+Check our [help wanted][open-issues] list or [open an issue][open-an-issue] for discussion first.
+If it is your first time contributing to Exercism, check for [good first patch][good-first-issues] or [first-timers only][first-time]. 
 
 <br>
 <img align="left" width="95" height="85" src="https://github.com/exercism/website-icons/blob/main/exercises/boutique-suggestions.svg">
@@ -82,6 +81,7 @@ Thanks to Bethany for the allowing us to use her [template][exercism-template] f
 [concept-exercises]: https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md
 [config-json]: https://github.com/exercism/crystal/blob/main/config.json
 [crystal-license]: https://github.com/crystal-lang/crystal/blob/master/LICENSE
+[good-first-issues]: https://github.com/exercism/crystal/labels/good%20first%20patch
 [exercise-presentation]: https://github.com/exercism/docs/blob/main/building/tracks/presentation.md
 [exercism-admins]: https://github.com/exercism/docs/blob/main/community/administrators.md
 [exercism-code-of-conduct]: https://exercism.org/docs/using/legal/code-of-conduct
@@ -95,6 +95,9 @@ Thanks to Bethany for the allowing us to use her [template][exercism-template] f
 [exercism-track-structure]: https://github.com/exercism/docs/tree/main/building/tracks
 [exercism-website]: https://exercism.org/
 [exercism-writing-style]: https://github.com/exercism/docs/blob/main/building/markdown/style-guide.md
+[first-timer]: https://github.com/exercism/crystal/labels/first-timers%20only
 [practice-exercises]: https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md
+[open-issues]: https://github.com/exercism/crystal/labels/help%20wanted
+[open-an-issue]: https://github.com/exercism/crystal/issues/new
 [the-words-that-we-use]: https://github.com/exercism/docs/blob/main/community/good-member/words.md
 [website-contributing-section]: https://exercism.org/docs/building
