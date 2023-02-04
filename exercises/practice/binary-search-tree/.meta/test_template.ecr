@@ -1,0 +1,20 @@
+require "spec"
+require "../src/*"
+
+describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
+<%- @json["cases"].as_a.each do |cases| %>
+    <%- if cases["cases"]? -%>
+        <%- cases["cases"].as_a.each do |subcases| %>
+            <%= status()%> "<%-= subcases["description"] %>" do
+            root = Node.new(<%-= subcases["input"]["treeData"] %>)
+            <%-= binary_search_tree(subcases["expected"]) %>
+        end
+        <% end %>
+    <%- else -%>
+        <%= status()%> "<%-= cases["description"] %>" do
+        root = Node.new(<%-= cases["input"]["treeData"] %>)
+        <%-= binary_search_tree(cases["expected"]) %>
+        end
+    <% end %>
+<% end %>
+end

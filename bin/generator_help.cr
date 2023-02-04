@@ -1,8 +1,10 @@
 require "json"
 require "http/client"
 require "ecr"
+require "./generator_plugins.cr"
 
 class GeneratorHelp
+  include GeneratorPlugins
   @tpl : String | Nil
   @json : JSON::Any
 
