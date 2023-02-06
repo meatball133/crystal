@@ -388,6 +388,15 @@
         "topics": ["numbers", "arrays", "loops"]
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "42296e84-233a-4251-9910-bf1fb9a1563c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": ["numbers", "Hashmaps", "loops"]
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "uuid": "818c4ba2-9bb4-46fd-808c-9d9a9631881f",
