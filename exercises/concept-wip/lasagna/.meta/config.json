@@ -1,0 +1,10 @@
+{
+  "authors": ["meatball133"],
+  "files": {
+    "solution": ["src/lasagna.cr"],
+    "test": ["spec/lasagna_spec.cr"],
+    "example": [".meta/src/example.cr"]
+  },
+  "forked_from": ["ruby/lasagna"],
+  "blurb": "Learn about the basics of Ruby by following a lasagna recipe."
+}
