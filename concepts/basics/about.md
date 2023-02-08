@@ -25,7 +25,7 @@ That will be explained in later concepts.
 
 ### Variables
 
-To declare a variable, you must use the `=` assignment operator.
+To declare a [variable][variables], you must use the `=` assignment operator.
 In crystal should variables be written in snake_case.
 
 A variable can be declared and then redefine later.
@@ -66,7 +66,7 @@ Error: already initialized constant A
 
 ### Types
 
-Crystal has a type inference system, so you don't have to specify the type of a variable or method argument.
+Crystal has a [type inference system][type], so you don't have to specify the type of a variable or method argument.
 The compiler will try to guess the type of the variable or method argument.
 To see the type of a variable or method argument, you can use the `class` method.
 In this case the type of the variable `number` is `Int32`, Int is short for integer.
@@ -93,7 +93,7 @@ Error: no overload matches 'Int32#+' with type String
 
 ### Methods
 
-Methods are a way to group together a set of instructions that can be reused.
+[Methods][methods] are a way to group together a set of instructions that can be reused.
 In crystal so are these methods often defined in a class, module or struct.
 But methods can also be defined outside of a class, module or struct.
 Methods are declared using the `def` keyword, followed by the name of the method.
@@ -109,7 +109,7 @@ end
 
 ### Arguments
 
-Methods can have arguments.
+Methods can have [arguments][arguments].
 Arguments are data that is passed to a method.
 To give a method arguments, you must specify the name of the argument.
 In crystal should arguments be written in snake_case.
@@ -121,7 +121,7 @@ def hello(name)
 end
 ```
 
-In crystal it is possible to give a method argument a default value.
+In crystal it is possible to give a method argument a [default value][default_arguments].
 When a method argument has a default value, it is not required to pass an argument to the method.
 
 ```crystal
@@ -179,7 +179,7 @@ Hello.hello("Crystal")
 ### Return
 
 In crystal so will a method return the last line of code.
-This means that generally it is recommended to not use the `return` keyword.
+This means that generally it is recommended to not use the [`return`][return] keyword.
 But there are cases where you must use the `return` keyword.
 Like when you want to return early from a method.
 
@@ -207,10 +207,19 @@ hello
 
 ### Comments
 
-In crystal so are comments written with the `#` character, followed by a space and then the comment.
+In crystal so are [comments][comments] written with the `#` character, followed by a space and then the comment.
 Comments are used to document code.
 Comments are not executed by the compiler.
 
 ```crystal
 # This is a comment
 ```
+
+[arguments]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#arguments
+[assignement]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/assignment.html#assignment
+[comments]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/comments.html
+[default_arguments]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#default-arguments
+[methods]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#methods
+[return]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#returning-a-value
+[type]: https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html#type
+[variables]: https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html

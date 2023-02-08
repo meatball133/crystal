@@ -6,5 +6,5 @@
     "example": [".meta/src/example.cr"]
   },
   "forked_from": ["ruby/lasagna"],
-  "blurb": "Learn about the basics of Ruby by following a lasagna recipe."
+  "blurb": "Learn about the basics of Crystal by following a lasagna recipe."
 }
