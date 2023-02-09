@@ -18,5 +18,9 @@
   {
     "url": "https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html",
     "description": "Variables in crystal"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/1.7/syntax_and_semantics/constants.html",
+    "description": "Constants in crystal"
   }
 ]

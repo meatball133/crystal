@@ -40,7 +40,7 @@ p number # => 2
 
 ### Constants
 
-Constants are declared using the same `=` assignment operator, but uses all uppercase letters or also known as SCREAMING_SNAKE_CASE.
+[Constants][constants] are declared using the same `=` assignment operator, but uses all uppercase letters or also known as SCREAMING_SNAKE_CASE.
 The difference between constants and variables is that constants can't be redefined.
 
 ```crystal
@@ -218,6 +218,7 @@ Comments are not executed by the compiler.
 [arguments]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#arguments
 [assignement]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/assignment.html#assignment
 [comments]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/comments.html
+[constants]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/constants.html
 [default_arguments]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#default-arguments
 [methods]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#methods
 [return]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#returning-a-value
