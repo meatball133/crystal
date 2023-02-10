@@ -18,10 +18,10 @@ The language was developed and designed by Ary Borenszweig, Juan Wajnerman, Bria
 
 ## Getting Started
 
-Since Crystal is a compiled language, so will every variable or method argument be assigned a type in compile time.
+Crystal is a compiled language, thereby will every variable or method argument be assigned a type in compile time.
 The compiler is capable of inferring the type of a variable or method argument.
-Although some cases it is necessary to specify.
-That will be explained in later concepts.
+Although some cases it is necessary to specify the type.
+The cases will be explained in later concepts.
 
 ### Variables
 
@@ -44,24 +44,24 @@ p number # => 2
 The difference between constants and variables is that constants can't be redefined.
 
 ```crystal
-A = 1
-p A # => 1
+NUMBER = 1
+p NUMBER # => 1
 ```
 
 Assigning a value to a constant that is already defined will result in a compile-time error.
 
 ```crystal
-A = 1
+NUMBER = 1
 
-A = 2
+NUMBER = 2
 ```
 
 ```console
 In test.cr:3:1
 
- 3 | A = 2
+ 3 | NUMBER = 2
      ^
-Error: already initialized constant A
+Error: already initialized constant NUMBER
 ```
 
 ### Types
@@ -94,7 +94,7 @@ Error: no overload matches 'Int32#+' with type String
 ### Methods
 
 [Methods][methods] are a way to group together a set of instructions that can be reused.
-In crystal so are these methods often defined in a class, module or struct.
+In crystal are these methods often defined in a class, module or struct.
 But methods can also be defined outside of a class, module or struct.
 Methods are declared using the `def` keyword, followed by the name of the method.
 In crystal should methods be written in snake_case.
@@ -122,11 +122,20 @@ end
 ```
 
 In crystal it is possible to give a method argument a [default value][default_arguments].
-When a method argument has a default value, it is not required to pass an argument to the method.
+When a method argument has a default value, it is not required to pass that argument when calling the method.
 
 ```crystal
 def hello(name = "World")
   "Hello #{name}!"
+end
+```
+
+Methods can also have multiple arguments.
+In this case, the arguments must be separated by a comma.
+
+```crystal
+def hello(name, language)
+  puts "Hello #{name}! You are learning #{language}."
 end
 ```
 
@@ -136,6 +145,10 @@ To call a method, you must use the dot operator(`.`).
 The dot operator is used to call methods on a variable or method argument.
 
 ```crystal
+def hello(name = "World")
+  "Hello #{name}!"
+end
+
 hello
 # => Hello World!
 
@@ -157,9 +170,22 @@ In test.cr:1:1
 Error: wrong number of arguments for 'hello' (given 2, expected 1)
 ```
 
+To call a method with multiple arguments, you must use the parentheses.
+The arguments given to the method must be separated by a comma.
+The arguments must be given in the same order as the method arguments.
+
+```crystal
+def hello(name, language)
+  puts "Hello #{name}! You are learning #{language}."
+end
+
+hello("Crystal", "Programming Language")
+# => Hello Crystal! You are learning Programming Language.
+```
+
 To be able to call a method within a class or module, you most use self before the method name.
 What self does is that it refers to the class or module itself.
-In the example below the self refers to the Hello class.
+In the example below the self refers to the `Hello` class.
 Meaning that it could also be written as `Hello.hello`.
 But for the sake of readability, it is recommended to use self.
 
