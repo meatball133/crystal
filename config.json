@@ -487,6 +487,15 @@
         "topics": ["strings", "classes"]
       },
       {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "905fc8f6-625f-402e-8c2b-ba7eab43236cs",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["strings", "classes"]
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "6c07e00f-78f0-4878-9222-d9e3ed86fd0b",
