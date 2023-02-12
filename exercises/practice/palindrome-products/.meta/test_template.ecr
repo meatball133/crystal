@@ -4,13 +4,13 @@ require "../src/*"
 describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
 <%- @json["cases"].as_a.each do |cases| %>
     <%= status()%> "<%-= cases["description"] %>" do
-    Palindrome = <%= to_capitalized(@json["exercise"].to_s) %>.new(<%= cases["input"]["min"] %>, <%= cases["input"]["max"] %>)
+    palindrome = <%= to_capitalized(@json["exercise"].to_s) %>.new(<%= cases["input"]["min"] %>, <%= cases["input"]["max"] %>)
     <%- if cases["expected"]["error"]? -%>
     expect_raises(ArgumentError) do
-        Palindrome.<%= to_snake(cases["property"].to_s)%>()
+        palindrome.<%= to_snake(cases["property"].to_s)%>()
     end
     <%- else -%>
-    Palindrome.<%= to_snake(cases["property"].to_s)%>.should eq(<%= cases["expected"]["value"].as_i? ? cases["expected"]["value"] :  "nil" %> , <%= cases["expected"]["factors"].as_a.empty? ? "#{ cases["expected"]["factors"]} of Int32": cases["expected"]["factors"]%>)
+    palindrome.<%= to_snake(cases["property"].to_s)%>.should eq({<%= cases["expected"]["value"].as_i? ? cases["expected"]["value"] :  "nil" %> , <%= cases["expected"]["factors"].as_a.empty? ? "#{ cases["expected"]["factors"]} of Int32": cases["expected"]["factors"]%>})
     <%- end %>
     end
 <% end %>
