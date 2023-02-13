@@ -82,17 +82,20 @@ When using the not operator so should the bool be placed after the operator (`!`
 When working with booleans you can use brackets to decided which bools to evalutate first.
 Dependent on how the brackets are used so can the result end up to be different.
 
-In the first example below is first the and operation evaluated, since `true` and `false` is both not `true` will that return `false`
+If no brakcets are used so are the booleans evaluted from right to left.
+Therefore in the first example below so is the first and operation evaluted and gives `false`.
+Then the second one which also gives `false`, then it looks like this: `false || true`, which will return `true`.
+In the second example is the or operation evaluated first and thereby is the end result `false`
 
 ```crystal
-true && false || true
-# => false
-
-true && (false || true)
+true && false && false || true
 # => true
+
+true && false && (false || true)
+# => false
 ```
 
-
+Since what is in the bracket is evaluted first so will it affect when using the not operator.
 
 ```crystal
 >>>!true && false
@@ -101,4 +104,20 @@ false
 >>>!(true && false)
 true
 ```
+
+```exercism/caution
+You should only use brackets when they affect the result, otherwise should they be omitted.
+```
+
+## ;Method naming conventions with booleans
+
+In Crystal is it common to name method that returns a bool with a question mark (`?`).
+That is done to show that the method can be used with for example an if statement.
+
+It is although important that this naming convention has to do with if a method returns a truthy value or falsey.
+`true` and `false` are truthy and falsey respectively, but truthy is more or less anything an if statement will see as `true`.
+Crystal sees for example `0`, `nil`, `false` and more as `false`.
+
+Methods that doesnt return a bool that has a question mark often returns `nil` (_similiar to `None` or `null` from other languages_) instead.
+
 
