@@ -4,6 +4,7 @@
 
 - You need to define a [constant][constants] that should contain the [integer][integers] value specified in the recipe.
 - The constant needs to be defined in the `Lasagna` [class][classes].
+- It needs to be defined outside of a method.
 
 ## 2. Calculate the remaining oven time in minutes
 

@@ -1,6 +1,7 @@
 # Basics
 
-Crystal is a compiled, object-oriented programming language. These are some of the language's goals:
+Crystal is a compiled, object-oriented programming language.
+These are some of the language's goals:
 
 - Ruby-inspired syntax.
 
@@ -21,12 +22,12 @@ The language was developed and designed by Ary Borenszweig, Juan Wajnerman, Bria
 Crystal is a compiled language, thereby will every variable or method argument be assigned a type in compile time.
 The compiler is capable of inferring the type of a variable or method argument.
 Although some cases it is necessary to specify the type.
-The cases will be explained in later concepts.
+The cases that requires a type to be set will be explained in later concepts.
 
 ### Variables
 
 To declare a [variable][variables], you must use the `=` assignment operator.
-In crystal should variables be written in snake_case.
+In crystal should variables be written in [snake_case][snake-case].
 
 A variable can be declared and then redefine later.
 
@@ -67,7 +68,7 @@ Error: already initialized constant NUMBER
 ### Types
 
 Crystal has a [type inference system][type], so you don't have to specify the type of a variable or method argument.
-The compiler will try to guess the type of the variable or method argument.
+The compiler will try to "guess" or infer the type of the variable or method argument.
 To see the type of a variable or method argument, you can use the `class` method.
 In this case the type of the variable `number` is `Int32`, Int is short for integer.
 
@@ -94,7 +95,7 @@ Error: no overload matches 'Int32#+' with type String
 ### Methods
 
 [Methods][methods] are a way to group together a set of instructions that can be reused.
-In crystal are these methods often defined in a class, module or struct.
+In crystal are methods often defined in a class, module or struct.
 But methods can also be defined outside of a class, module or struct.
 Methods are declared using the `def` keyword, followed by the name of the method.
 In crystal should methods be written in snake_case.
@@ -111,9 +112,9 @@ end
 
 Methods can have [arguments][arguments].
 Arguments are data that is passed to a method.
-To give a method arguments, you must specify the name of the argument.
+To be able to give a method arguments, you must specify the name of the argument.
 In crystal should arguments be written in snake_case.
-A function can have multiple arguments, but the arguments must be separated by a comma.
+A method can have multiple arguments, but the arguments must be separated by a comma.
 
 ```crystal
 def hello(name)
@@ -141,8 +142,13 @@ end
 
 ### Calling Methods
 
-To call a method, you must use the dot operator(`.`).
-The dot operator is used to call methods on a variable or method argument.
+When calling a method that belongs to a class, module or struct, you must use the dot operator(`.`).
+Like following: `<ClassName>.<method_name>`.
+When the method doesnt belong to a class, module or struct, then you can simple call it by writing its name.
+
+To call a method that has arguments, you simply write those arguments after the method call
+When a method has arguments you may use brackets where the assignment of arguments, like following: `<method_name>(<argument_1>, <argument_2>)`.
+Although when not giving any arguments so should brackets be omitted.
 
 ```crystal
 def hello(name = "World")
@@ -156,38 +162,38 @@ hello("Crystal")
 # => Hello Crystal!
 ```
 
+
+When calling a method with multiple arguments, so should arguments separated by a comma.
+The arguments must be given in the same order as the method arguments.
+
+```crystal
+def hello_language(name, language)
+  puts "Hello #{name}! You are learning #{language}."
+end
+
+hello_language("Crystal", "Programming Language")
+# => Hello Crystal! You are learning Programming Language.
+```
+
 Calling a method with the wrong number of arguments will result in a compile-time error.
 
 ```crystal
-hello("Crystal", "Programming Language")
+hello_language("Crystal")
 ```
 
 ```console
 In test.cr:1:1
 
- 1 | hello("Crystal", "Programming Language")
+ 1 | hello_language("Crystal")
      ^----
-Error: wrong number of arguments for 'hello' (given 2, expected 1)
+Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
 ```
 
-To call a method with multiple arguments, you must use the parentheses.
-The arguments given to the method must be separated by a comma.
-The arguments must be given in the same order as the method arguments.
-
-```crystal
-def hello(name, language)
-  puts "Hello #{name}! You are learning #{language}."
-end
-
-hello("Crystal", "Programming Language")
-# => Hello Crystal! You are learning Programming Language.
-```
-
-To be able to call a method within a class or module, you most use self before the method name.
-What self does is that it refers to the class or module itself.
+To be able to call a method that is located in a class or module outside of that class, so must you use `self` before the method name.
+What `self` does is that it refers to the class or module that the code is placed within.
 In the example below the self refers to the `Hello` class.
-Meaning that it could also be written as `Hello.hello`.
-But for the sake of readability, it is recommended to use self.
+Meaning that instead of writing `self.hello` so would it be possible to write it as: `Hello.hello`.
+But for the sake of readability, it is recommended to use `self`.
 
 To call you do it with the following notation `<class_name>.<method_name>(<argument>)`, in this case that would be `Hello.hello(<argument>)`.
 
@@ -213,7 +219,7 @@ Like when you want to return early from a method.
 def hello
   return "Hello World!"
   # This line will never be executed
-    "Hello Crystal!"
+  "Hello Crystal!"
 end
 
 hello
@@ -248,5 +254,6 @@ Comments are not executed by the compiler.
 [default_arguments]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#default-arguments
 [methods]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#methods
 [return]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#returning-a-value
+[snake-case]: https://en.wikipedia.org/wiki/Snake_case
 [type]: https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html#type
 [variables]: https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html
