@@ -162,7 +162,6 @@ hello("Crystal")
 # => Hello Crystal!
 ```
 
-
 When calling a method with multiple arguments, so should arguments separated by a comma.
 The arguments must be given in the same order as the method arguments.
 
@@ -226,7 +225,7 @@ hello
 # => Hello World!
 ```
 
-When not giving a method a return value, it will return nil.
+When not giving `return` a value then it will return nil.
 
 ```crystal
 def hello
