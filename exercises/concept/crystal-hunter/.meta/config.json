@@ -2,10 +2,11 @@
   "authors": ["meatball133"],
   "contributors": [],
   "files": {
-    "solution": ["src/pacman_rules.cr"],
-    "test": ["spec/pacman_rules_spec.cr"],
-    "example": [".meta/src/example.cr"]
+    "solution": ["src/crystal_hunter.cr"],
+    "test": ["spec/crystal_hunter_spec.cr"],
+    "example": [".meta/src/exemplar.cr"]
   },
   "forked_from": ["elixir/pacman-rules"],
+  "icon": "low-power-embedded-game",
   "blurb": "Learn about booleans by implementing the rules of the Pac-Man game."
 }

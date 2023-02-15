@@ -1,7 +1,7 @@
 # Bools
 
 Crystal has a type know as `Bool`, it is used to represent the values `true` and `false`.
-With the bool classes does also logical operators(`!`, `||`, `&&`), which can be used to combine bools and change thier values.
+With the bool classes does also logical operators(`!`, `||`, `&&`), which can be used to combine bools and change their values.
 
 ```crystal
 true && true
@@ -27,7 +27,7 @@ false || false
 
 ## Logical operators
 
-Crystal has 3 logical operators which is used to combine bools and change thier values.
+Crystal has 3 logical operators which is used to combine bools and change their values.
 
 ### And(`&&`)
 
@@ -82,7 +82,7 @@ When using the not operator so should the bool be placed after the operator (`!`
 When working with booleans you can use brackets to decided which bools to evalutate first.
 Dependent on how the brackets are used so can the result end up to be different.
 
-If no brakcets are used so are the booleans evaluted from right to left.
+If no brackets are used so are the booleans evaluted from right to left.
 Therefore in the first example below so is the first and operation evaluted and gives `false`.
 Then the second one which also gives `false`, then it looks like this: `false || true`, which will return `true`.
 In the second example is the or operation evaluated first and thereby is the end result `false`
