@@ -1,5 +1,5 @@
 class Lasagna
-  # TODO: define the 'expected_minutes_in_oven' constant
+  # TODO: define the 'EXPECTED_MINUTES_IN_OVEN' constant
 
   def self.remaining_minutes_in_oven(actual_minutes_in_oven)
     raise "Please implement the Lasagna#remaining_minutes_in_oven method"

@@ -6,8 +6,7 @@ You have four tasks, all related to the time spent cooking the lasagna.
 
 ## 1. Define the expected oven time in minutes
 
-Define the `EXPECTED_MINUTES_IN_OVEN` constant in the Lasagna class, that stores how many minutes the lasagna should be in the oven.
-According to the cooking book, the expected oven time in minutes is 40:
+Define the `EXPECTED_MINUTES_IN_OVEN` constant in the `Lasagna` class, that stores how many minutes the lasagna should be in the oven.According to the cooking book, the expected oven time in minutes is 40:
 
 ```Crystal
 EXPECTED_MINUTES_IN_OVEN

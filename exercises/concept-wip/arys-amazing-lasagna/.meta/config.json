@@ -1,10 +1,11 @@
 {
-  "authors": ["meatball133"],
+  "authors": ["meatball133", "ErikSchierboom"],
   "files": {
     "solution": ["src/arys_amazing_lasagna.cr"],
     "test": ["spec/arys_amazing_lasagna_spec.cr"],
-    "example": [".meta/src/example.cr"]
+    "example": [".meta/src/exemplar.cr"]
   },
   "forked_from": ["ruby/lasagna"],
-  "blurb": "Learn about the basics of Crystal by following a lasagna recipe."
+  "blurb": "Learn about the basics of Crystal by following a lasagna recipe.",
+  "icon": "lasagna"
 }

@@ -1,28 +1,6 @@
 # Basics
 
-Crystal is a compiled, object-oriented programming language.
-These are some of the language's goals:
-
-- Ruby-inspired syntax.
-
-- Statically type-checked but without having to specify the type of variables or method arguments.
-
-- Be able to call C code by writing bindings to it in Crystal.
-
-- Have compile-time evaluation and generation of code, to avoid boilerplate code.
-
-- Compile to efficient native code.
-
-In 2011 did the work on crystal start with the goal of creating a language with the elegance and productivity of Ruby, but with the performance and type safety of a compiled language.
-Originally, the language compiler was written in Ruby, but in 2013, the compiler was rewritten in Crystal itself.
-The language was developed and designed by Ary Borenszweig, Juan Wajnerman, Brian Cardif.
-
-## Getting Started
-
-Crystal is a compiled language, thereby will every variable or method argument be assigned a type in compile time.
-The compiler is capable of inferring the type of a variable or method argument.
-Although some cases it is necessary to specify the type.
-The cases that requires a type to be set will be explained in later concepts.
+## Getting started
 
 ### Variables
 
@@ -33,10 +11,10 @@ A variable can be declared and then redefine later.
 
 ```crystal
 number = 1
-p number # => 1
+puts number # => 1
 
 number = 2
-p number # => 2
+puts number # => 2
 ```
 
 ### Constants
@@ -46,7 +24,7 @@ The difference between constants and variables is that constants can't be redefi
 
 ```crystal
 NUMBER = 1
-p NUMBER # => 1
+puts NUMBER # => 1
 ```
 
 Assigning a value to a constant that is already defined will result in a compile-time error.
@@ -67,30 +45,10 @@ Error: already initialized constant NUMBER
 
 ### Types
 
-Crystal has a [type inference system][type], so you don't have to specify the type of a variable or method argument.
-The compiler will try to "guess" or infer the type of the variable or method argument.
-To see the type of a variable or method argument, you can use the `class` method.
-In this case the type of the variable `number` is `Int32`, Int is short for integer.
-
-```crystal
-number = 1
-p number.class # => Int32
-```
-
-Using a method that doesn't exist on the type of the variable or method argument will result in a compile-time error.
-
-```crystal
-number = 1
-number + "1"
-```
-
-```console
-In test.cr:2:7
-
- 2 | number + "1"
-           ^
-Error: no overload matches 'Int32#+' with type String
-```
+Crystal is a compiled language, thereby will every variable or method argument be assigned a type at compile time.
+The compiler is capable of inferring the type of a variable or method argument.
+Although some cases it is necessary to specify the type.
+The cases that requires a type to be set will be explained in later concepts.
 
 ### Methods
 
@@ -108,6 +66,21 @@ def hello
 end
 ```
 
+Using a method that doesn't exist on the type of the variable or method argument will result in a compile-time error.
+
+```crystal
+number = 1
+number + "1"
+```
+
+```console
+In test.cr:2:7
+
+ 2 | number + "1"
+           ^
+Error: no overload matches 'Int32#+' with type String
+```
+
 ### Arguments
 
 Methods can have [arguments][arguments].
@@ -119,15 +92,6 @@ A method can have multiple arguments, but the arguments must be separated by a c
 ```crystal
 def hello(name)
   puts "Hello #{name}!"
-end
-```
-
-In crystal it is possible to give a method argument a [default value][default_arguments].
-When a method argument has a default value, it is not required to pass that argument when calling the method.
-
-```crystal
-def hello(name = "World")
-  "Hello #{name}!"
 end
 ```
 
@@ -151,12 +115,9 @@ When a method has arguments you may use brackets where the assignment of argumen
 Although when not giving any arguments so should brackets be omitted.
 
 ```crystal
-def hello(name = "World")
+def hello(name)
   "Hello #{name}!"
 end
-
-hello
-# => Hello World!
 
 hello("Crystal")
 # => Hello Crystal!
@@ -170,8 +131,8 @@ def hello_language(name, language)
   puts "Hello #{name}! You are learning #{language}."
 end
 
-hello_language("Crystal", "Programming Language")
-# => Hello Crystal! You are learning Programming Language.
+hello_language("World", "Crystal")
+# => Hello World! You are learning Crystal.
 ```
 
 Calling a method with the wrong number of arguments will result in a compile-time error.
@@ -186,54 +147,6 @@ In test.cr:1:1
  1 | hello_language("Crystal")
      ^----
 Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
-```
-
-To be able to call a method that is located in a class or module outside of that class, so must you use `self` before the method name.
-What `self` does is that it refers to the class or module that the code is placed within.
-In the example below the self refers to the `Hello` class.
-Meaning that instead of writing `self.hello` so would it be possible to write it as: `Hello.hello`.
-But for the sake of readability, it is recommended to use `self`.
-
-To call you do it with the following notation `<class_name>.<method_name>(<argument>)`, in this case that would be `Hello.hello(<argument>)`.
-
-```crystal
-class Hello
-  def self.hello(name)
-    "Hello #{name}!"
-  end
-end
-
-Hello.hello("Crystal")
-# => Hello Crystal!
-```
-
-### Return
-
-In crystal so will a method return the last line of code.
-This means that generally it is recommended to not use the [`return`][return] keyword.
-But there are cases where you must use the `return` keyword.
-Like when you want to return early from a method.
-
-```crystal
-def hello
-  return "Hello World!"
-  # This line will never be executed
-  "Hello Crystal!"
-end
-
-hello
-# => Hello World!
-```
-
-When not giving `return` a value then it will return nil.
-
-```crystal
-def hello
-  return
-end
-
-hello
-# => nil
 ```
 
 ### Comments
