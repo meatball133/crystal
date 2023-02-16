@@ -3,7 +3,7 @@
 You are in process of developing the new highly appreciated game **Crystal Hunter**.
 In the game you are a character which moves around and collects crystals, when the player has picked up all crystals they win.
 Although if the player come in contact with a bandit so will the player lose all crystals and lose.
-There is an expection to this rule and that is when the player has an active power up, which will make the player invisible for the bandits.
+There is an expectation to this rule and that is when the player has an active power up, which will make the player invisible for the bandits.
 
 Your goal is to write some rules that will be used in the game.
 
@@ -22,7 +22,7 @@ bonus_points?(false, true)
 
 In the game will the character gets points when taking up a crystal or picking up a power up.
 
-Define the `score?/2` method that takes two arguments (_if the character is touching a power up and _if the character is touching a crystal_) and returns a boolean value if the character scored. The method should return true if the character is touching a power up or a crystal.
+Define the `score?` method that takes two arguments (_if the character is touching a power up and _if the character is touching a crystal_) and returns a boolean value if the character scored. The method should return true if the character is touching a power up or a crystal.
 
 ```crystal
 Rules.score?(true, true)
@@ -31,7 +31,7 @@ Rules.score?(true, true)
 
 ## 3. Define if character loses
 
-Define the `lose?/2` method that takes two arguments (_if the character has a power up active_ and _if the character is touching a bandit_) and returns a boolean value if the character loses. The method should return true  the character is touching a bandit and does not have a power up active.
+Define the `lose?` method that takes two arguments (_if the character has a power up active_ and _if the character is touching a bandit_) and returns a boolean value if the character loses. The method should return true  the character is touching a bandit and does not have a power up active.
 
 ```crystal
 Rules.lose?(false, true)
@@ -40,7 +40,7 @@ Rules.lose?(false, true)
 
 ## 4. Define if character wins
 
-Define the `win?/3` method that takes three arguments (_if the character has eaten all of the dots_, _if the character has a power pellet active_, and _if the character is touching a ghost_) and returns a boolean value if the character wins. The method should return true if the character has eaten all of the dots and has not lost based on the arguments defined in part 3.
+Define the `win?` method that takes three arguments (_if the character has eaten all of the dots_, _if the character has a power pellet active_, and _if the character is touching a ghost_) and returns a boolean value if the character wins. The method should return true if the character has gathered all crystals and has not lost based on the arguments defined in part 3.
 
 ```crystal
 win?(false, true, false)

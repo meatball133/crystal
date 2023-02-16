@@ -115,6 +115,6 @@ In Crystal is it common to name method that returns a bool with a question mark 
 That is done to show that the method can be used with for example an if statement.
 
 It is although important that this naming convention has to do with if a method returns a truthy value or falsey.
-`true` and `false` are truthy and falsey respectively, Crystal sees `nil`, `false` and pointers which memory adress is zero (for example: 0, "", []) as falsey everything else will be seen as truthy.
+`true` and `false` are truthy and falsey respectively, Crystal sees `nil`, `false` and pointers which memory address is zero (for example: 0, "", []) as falsey everything else will be seen as truthy.
 
 Methods that doesnt return a bool that has a question mark often returns `nil` (_similiar to `None` or `null` from other languages_) instead but doesnt have to.
