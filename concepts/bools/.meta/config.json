@@ -1,5 +1,5 @@
 {
-  "blurb": "TO DO",
+  "blurb": "Crystal has a Bool type to represent true and false and a bool can only be true or false. The bool type support AND, OR, and NOT operators",
   "authors": ["meatball133"],
   "contributors": []
 }
