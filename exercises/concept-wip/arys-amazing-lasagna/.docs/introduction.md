@@ -57,7 +57,7 @@ In crystal are methods often defined in a class, module or struct.
 But methods can also be defined outside of a class, module or struct.
 Methods are declared using the `def` keyword, followed by the name of the method.
 In crystal should methods be written in snake_case.
-When a method doesnt have any arguments, you can omit the parentheses.
+When a method doesn't have any arguments, you can omit the parentheses.
 To declare the end of a method, you must use the `end` keyword.
 
 ```crystal
@@ -108,7 +108,7 @@ end
 
 When calling a method that belongs to a class, module or struct, you must use the dot operator(`.`).
 Like following: `<ClassName>.<method_name>`.
-When the method doesnt belong to a class, module or struct, then you can simple call it by writing its name.
+When the method doesn't belong to a class, module or struct, then you can simple call it by writing its name.
 
 To call a method that has arguments, you simply write those arguments after the method call
 When a method has arguments you may use brackets where the assignment of arguments, like following: `<method_name>(<argument_1>, <argument_2>)`.

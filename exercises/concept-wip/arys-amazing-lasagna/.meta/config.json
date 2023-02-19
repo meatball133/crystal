@@ -1,5 +1,6 @@
 {
-  "authors": ["meatball133", "ErikSchierboom"],
+  "authors": ["meatball133"],
+  "contributors": ["ErikSchierboom"],
   "files": {
     "solution": ["src/arys_amazing_lasagna.cr"],
     "test": ["spec/arys_amazing_lasagna_spec.cr"],

@@ -19,18 +19,15 @@ The goal of this exercise is to teach the student the basics of programming in C
 
 ## Out of scope
 
-- Memory and performance characteristics.
-- Method overloads.
-- Lambdas.
-- Optional parameters.
-- Organizing methods in namespaces.
-- Visibility.
+- Type Restrictions
+- Return type
+- Method Overloading
 
 ## Concepts
 
 `basics`:
 
-- Intigers
+- Integers
 - `*`, `+`, `-` operators
 - Method definition
 - Return
