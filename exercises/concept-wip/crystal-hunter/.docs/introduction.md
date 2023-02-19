@@ -69,13 +69,13 @@ When using the _not_ operator one Bool should be placed after the operator (`!`)
 ## Using parentheses(`()`)
 
 When working with booleans you can use parentheses to decided which Bools to evaluate first.
-The result can differ depending on how the brackets are used.
+The result can differ depending on how the parentheses are used.
 
 In crystal, what is in parentheses is evaluated first.
 After parentheses has been evaluated so are booleans evaluated from left to right.
 In the example below the _and_ operation be evaluated first, which will evaluate to: `false && false || true`.
 Then the second _and_ operation will be evaluated, which makes it look like: `false || true`, which in turn results in `true`.
-In the second example, it will first evaluate what is in the parentheses. After this evaluation, the expression look like: `true && false && true`.
+In the second example, it will first evaluate what is in the parenthesis. After this evaluation, the expression look like: `true && false && true`.
 In a situation where there is only one _and_ operation, all Bools have to be `true` to make the result be `true`.
 If one of the arguments to _and_ is `false` the result will also be `false`.
 
@@ -98,7 +98,7 @@ Since what is in parentheses is evaluated first, in the following example, the _
 ```
 
 ```exercism/caution
-You should only use brackets when they affect the result, otherwise should they be omitted.
+You should only use parentheses when they affect the result, otherwise should they be omitted.
 ```
 
 [bools]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/bool.html
