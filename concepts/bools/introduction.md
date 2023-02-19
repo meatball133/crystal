@@ -1,7 +1,7 @@
 # Bools
 
-Crystal has a type know as `Bool`, it is used to represent the values `true` and `false`.
-With the bool class can you use logical operators(`!`, `||`, `&&`) be used, which can be used to combine bools and change their values.
+Crystal has a type know as [`Bool`][bools], it is used to represent the values `true` and `false`.
+With the bool type can you use logical operators(`!`, `||`, `&&`) which can be used to combine bools and change their values.
 
 ```crystal
 true && true
@@ -24,3 +24,5 @@ false || false
 !true
 # => false
 ```
+
+[bools]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/bool.html
