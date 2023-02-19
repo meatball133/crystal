@@ -8,7 +8,7 @@ class Rules
   end
 
   def lose?(power_up_active, touching_bandit)
-    !power_pellet_active && touching_bandit
+    !power_up_active && touching_bandit
   end
 
   def win?(has_picked_up_all_crystals, power_up_active, touching_bandit)
