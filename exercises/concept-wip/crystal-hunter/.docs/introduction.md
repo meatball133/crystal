@@ -1,38 +1,27 @@
 # Bools
 
 Crystal has a type know as [`Bool`][bools], it is used to represent the values `true` and `false`.
-With the bool type can you use logical operators(`!`, `||`, `&&`) which can be used to combine bools and change their values.
+You can use logical operators (`!`, `||`, `&&`) which can be used to combine Bools and create more complex expressions:
 
 ```crystal
 true && true
-# => True
-
-true && false
-# => False
-
-false && false
-# => false
+# => true
 
 false || true
-# => True
-false || false
-# => false
+# => true
 
 !false
 # => true
-
-!true
-# => false
 ```
 
 ## Logical operators
 
-Crystal has 3 logical operators which is used to combine bools and change their values.
+Crystal has 3 logical operators which is used to combine Bools and make expressions that produce different values.
 
 ### And(`&&`)
 
-The [and operator][and] in crystal is represented by `&&` and returns `true` if both values given is `true` otherwise it returns `false`.
-When using the and operator so should one bool be placed one the right side of the `&&` and one on the left side.
+The [_and_ operator][and] in crystal is represented by `&&` and returns `true` if both values given are `true` otherwise it returns `false`.
+When using the _and_ operator, one Bool be placed on the right side of the `&&` and another one on the left side.
 
 ```crystal
 true && true
@@ -47,8 +36,8 @@ false && false
 
 ### Or(`||`)
 
-The [or operator][or] in crystal is represented by `||` and returns `true` if **at least one** of values given is `true` if both of the values are `false` then it returns `false`.
-When using the or operator so should one bool be placed one the right side of the `||` and one on the left side.
+The [_or_ operator][or] in crystal is represented by `||` and returns `true` if **at least one** of values given is `true` if both of the values are `false` then it returns `false`.
+When using the _or_ operator one bool should be placed on the right side of the `||` and another one on the left side.
 
 ```crystal
 true || true
@@ -66,8 +55,8 @@ false || false
 
 ### Not(`!`)
 
-The not operator in crystal is represented by `!` and returns `true` if the given bool is `false` and return `false` if `true` is given.
-When using the not operator so should the bool be placed after the operator (`!`).
+The _not_ operator in crystal is represented by `!` and returns `true` if the given Bool is `false` and return `false` if `true` is given.
+When using the _not_ operator one Bool should be placed after the operator (`!`).
 
 ```crystal
 !true
@@ -77,17 +66,18 @@ When using the not operator so should the bool be placed after the operator (`!`
 # => true
 ```
 
-## Using brackets(`()`)
+## Using parentheses(`()`)
 
-When working with booleans you can use brackets to decided which bools to evaluate first.
-Dependent on how the brackets are used so can the result end up to be different.
+When working with booleans you can use parentheses to decided which Bools to evaluate first.
+The result can differ depending on how the brackets are used.
 
-In crystal so is what is in brackets evaluated first.
-After brackets has been evaluated so are booleans evaluated from left to right.
-In the example below so will first AND operation be evaluated which will evaluate to: `false && false || true`.
-Then the second AND operation which makes it look like: `false || true`, which results in `true`.
-In the second example it will first evaluate what is in the brackets, after the evaluation it will look like: `true && false && true`.
-In a situation where there is only AND operation so does all bools has to be true to make the result be true, since one is false so will the result be false.
+In crystal, what is in parentheses is evaluated first.
+After parentheses has been evaluated so are booleans evaluated from left to right.
+In the example below the _and_ operation be evaluated first, which will evaluate to: `false && false || true`.
+Then the second _and_ operation will be evaluated, which makes it look like: `false || true`, which in turn results in `true`.
+In the second example, it will first evaluate what is in the parentheses. After this evaluation, the expression look like: `true && false && true`.
+In a situation where there is only one _and_ operation, all Bools have to be `true` to make the result be `true`.
+If one of the arguments to _and_ is `false` the result will also be `false`.
 
 ```crystal
 true && false && false || true
@@ -97,7 +87,7 @@ true && false && (false || true)
 # => false
 ```
 
-Since what is in the bracket is evaluated first so will it affect when using the not operator.
+Since what is in parentheses is evaluated first, in the following example, the _not_ operator will apply to the expression inside parentheses.
 
 ```crystal
 !true && false

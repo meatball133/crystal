@@ -1,17 +1,17 @@
 class Rules
-  def eat_ghost?(power_pellet_active, touching_ghost)
-    power_pellet_active && touching_ghost
+  def bonus_points?(power_pellet_active, touching_bandit)
+    power_pellet_active && touching_bandit
   end
 
-  def score?(touching_power_pellet, touching_dot)
-    touching_power_pellet || touching_dot
+  def score?(touching_power_up, touching_crystal)
+    touching_power_up || touching_crystal
   end
 
-  def lose?(power_pellet_active, touching_ghost)
-    !power_pellet_active && touching_ghost
+  def lose?(power_up_active, touching_bandit)
+    !power_pellet_active && touching_bandit
   end
 
-  def win?(has_eaten_all_dots, power_pellet_active, touching_ghost)
-    has_eaten_all_dots && !lose?(power_pellet_active, touching_ghost)
+  def win?(has_picked_up_all_crystals, power_up_active, touching_bandit)
+    has_picked_up_all_crystals && !lose?(power_up_active, touching_bandit)
   end
 end

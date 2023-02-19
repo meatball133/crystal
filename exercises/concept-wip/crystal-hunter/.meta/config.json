@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["andrerfcsantos", "angelikatyborska"],
   "files": {
     "solution": ["src/crystal_hunter.cr"],
     "test": ["spec/crystal_hunter_spec.cr"],
@@ -8,5 +8,5 @@
   },
   "forked_from": ["elixir/pacman-rules"],
   "icon": "low-power-embedded-game",
-  "blurb": "Learn about booleans by implementing the rules of the game, Crystal Hunter."
+  "blurb": "Learn about booleans by implementing the rules of the Crystal Hunter game."
 }

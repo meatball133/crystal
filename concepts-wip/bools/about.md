@@ -1,38 +1,27 @@
 # Bools
 
 Crystal has a type know as [`Bool`][bools], it is used to represent the values `true` and `false`.
-With the bool type can you use logical operators(`!`, `||`, `&&`) which can be used to combine bools and change their values.
+You can use logical operators (`!`, `||`, `&&`) which can be used to combine Bools and create more complex expressions:
 
 ```crystal
 true && true
-# => True
-
-true && false
-# => False
-
-false && false
-# => false
+# => true
 
 false || true
-# => True
-false || false
-# => false
+# => true
 
 !false
 # => true
-
-!true
-# => false
 ```
 
 ## Logical operators
 
-Crystal has 3 logical operators which is used to combine bools and change their values.
+Crystal has 3 logical operators which is used to combine Bools and make expressions that produce different values.
 
 ### And(`&&`)
 
-The [_and_ operator][and] in crystal is represented by `&&` and returns `true` if both values given is `true` otherwise it returns `false`.
-When using the _and_ operator so should one bool be placed one the right side of the `&&` and one on the left side.
+The [_and_ operator][and] in crystal is represented by `&&` and returns `true` if both values given are `true` otherwise it returns `false`.
+When using the _and_ operator, one Bool be placed on the right side of the `&&` and another one on the left side.
 
 ```crystal
 true && true
@@ -48,7 +37,7 @@ false && false
 ### Or(`||`)
 
 The [_or_ operator][or] in crystal is represented by `||` and returns `true` if **at least one** of values given is `true` if both of the values are `false` then it returns `false`.
-When using the _or_ operator so should one bool be placed one the right side of the `||` and one on the left side.
+When using the _or_ operator one bool should be placed on the right side of the `||` and another one on the left side.
 
 ```crystal
 true || true
@@ -66,8 +55,8 @@ false || false
 
 ### Not(`!`)
 
-The _not_ operator in crystal is represented by `!` and returns `true` if the given bool is `false` and return `false` if `true` is given.
-When using the _not_ operator so should the bool be placed after the operator (`!`).
+The _not_ operator in crystal is represented by `!` and returns `true` if the given Bool is `false` and return `false` if `true` is given.
+When using the _not_ operator one Bool should be placed after the operator (`!`).
 
 ```crystal
 !true
@@ -77,17 +66,18 @@ When using the _not_ operator so should the bool be placed after the operator (`
 # => true
 ```
 
-## Using brackets(`()`)
+## Using parentheses(`()`)
 
-When working with booleans you can use brackets to decided which bools to evaluate first.
-Dependent on how the brackets are used so can the result end up to be different.
+When working with booleans you can use parentheses to decided which Bools to evaluate first.
+The result can differ depending on how the parentheses are used.
 
-In crystal so is what is in brackets evaluated first.
-After brackets has been evaluated so are booleans evaluated from left to right.
-In the example below so will first _and_ operation be evaluated which will evaluate to: `false && false || true`.
-Then the second _and_ operation which makes it look like: `false || true`, which results in `true`.
-In the second example it will first evaluate what is in the brackets, after the evaluation it will look like: `true && false && true`.
-In a situation where there is only _and_ operation so does all bools has to be true to make the result be true, since one is false so will the result be false.
+In crystal, what is in parentheses is evaluated first.
+After parentheses has been evaluated so are booleans evaluated from left to right.
+In the example below the _and_ operation be evaluated first, which will evaluate to: `false && false || true`.
+Then the second _and_ operation will be evaluated, which makes it look like: `false || true`, which in turn results in `true`.
+In the second example, it will first evaluate what is in the parenthesis. After this evaluation, the expression look like: `true && false && true`.
+In a situation where there is only one _and_ operation, all Bools have to be `true` to make the result be `true`.
+If one of the arguments to _and_ is `false` the result will also be `false`.
 
 ```crystal
 true && false && false || true
@@ -97,7 +87,7 @@ true && false && (false || true)
 # => false
 ```
 
-Since what is in the bracket is evaluated first so will it affect when using the _not_ operator.
+Since what is in parentheses is evaluated first, in the following example, the _not_ operator will apply to the expression inside parentheses.
 
 ```crystal
 !true && false
@@ -108,13 +98,13 @@ Since what is in the bracket is evaluated first so will it affect when using the
 ```
 
 ```exercism/caution
-You should only use brackets when they affect the result, otherwise should they be omitted.
+You should only use parentheses when they affect the result, otherwise should they be omitted.
 ```
 
-## Truthy and falsy
+## Truthy and falsey
 
-In crystal so are there [truthy and falsy values][truthy_and_falsey_values].
-`true` and `false` are truthy and falsy respectively, Crystal sees `nil`, `false` and pointers which memory address is zero (_for example: `0`, `""`, `[]`_) as falsy everything else will be seen as truthy.
+In crystal there are [truthy and falsey values][truthy_and_falsey_values].
+`true` and `false` are truthy and falsey respectively, Crystal sees `nil`, `false` and pointers which memory address is zero (_for example: `0`, `""`, `[]`_) as falsey everything else will be seen as truthy.
 
 These values can be used with the logical operators, mentioned above.
 
@@ -132,11 +122,26 @@ true || nil
 
 ## Method naming conventions with booleans
 
-In Crystal is it common to name method that returns a bool with a question mark (`?`).
-It is to show that the method will either return a truthy or falsy value.
-That is done to show that the method can be used with for example an if statement.
+In Crystal it is common to name a method that returns a truthy or falsey value with a question mark (`?`).
+In most cases this method will return a Bool value, but it doesn't have to.
+This means that the method can be used in places where a truthy or falsy value is expected, for instance as a condition for an `if` statement:
 
-Methods that doesn't return a bool that has a question mark often returns `nil` (_similar to `None` or `null` from other languages_) instead but doesn't have to.
+```crystal
+def exchange(value)
+    if value.nil?
+        value = 5
+    end
+    value
+end
+
+exchange(10)
+# => 10
+
+exchange(nil)
+# => 5
+```
+
+Methods with a question mark at the end of their name that don't return a Bool value, often return `nil` instead. `nil` is _similar to `None` or `null` from other languages_.
 
 [bools]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/bool.html
 [and]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/and.html
