@@ -3,17 +3,6 @@
 Crystal has a type know as [`Bool`][bools], it is used to represent the values `true` and `false`.
 You can use logical operators (`!`, `||`, `&&`) which can be used to combine Bools and create more complex expressions:
 
-```crystal
-true && true
-# => true
-
-false || true
-# => true
-
-!false
-# => true
-```
-
 ## Logical operators
 
 Crystal has 3 logical operators which is used to combine Bools and make expressions that produce different values.
@@ -103,17 +92,15 @@ You should only use parentheses when they affect the result, otherwise should th
 
 ## Truthy and falsey
 
-In crystal there are [truthy and falsey values][truthy_and_falsey_values].
-`true` and `false` are truthy and falsey respectively, Crystal sees `nil`, `false` and pointers which memory address is zero (_for example: `0`, `""`, `[]`_) as falsey everything else will be seen as truthy.
-
+In crystal, the "falsey" values are: `false`, `nil` and null pointers; **everything else** is "truthy".
 These values can be used with the logical operators, mentioned above.
 
 ```crystal
 
-true && 0
+true && nil
 # => false
 
-true && 1
+true && 4
 # => true
 
 true || nil

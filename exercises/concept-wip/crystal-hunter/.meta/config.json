@@ -1,10 +1,10 @@
 {
   "authors": ["meatball133"],
-  "contributors": ["andrerfcsantos", "angelikatyborska"],
+  "contributors": ["andrerfcsantos", "angelikatyborska", "gleenj"],
   "files": {
     "solution": ["src/crystal_hunter.cr"],
     "test": ["spec/crystal_hunter_spec.cr"],
-    "example": [".meta/src/exemplar.cr"]
+    "exemplar": [".meta/src/exemplar.cr"]
   },
   "forked_from": ["elixir/pacman-rules"],
   "icon": "low-power-embedded-game",

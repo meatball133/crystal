@@ -3,7 +3,7 @@
 You are in process of developing the new highly appreciated game **Crystal Hunter**.
 In the game you are a character which moves around and collects crystals.
 The player wins by picking up all the crystals.
-If the player comes in contact with a bandit so will the player lose all crystals and lose.
+If the player comes in contact with a bandit, then the player will lose all their crystals and lose the game.
 There is an exception to this rule: the player can have an active power-up which makes them invisible to the bandits.
 
 Your goal is to write some rules that will be used in the game.

@@ -3,17 +3,6 @@
 Crystal has a type know as [`Bool`][bools], it is used to represent the values `true` and `false`.
 You can use logical operators (`!`, `||`, `&&`) which can be used to combine Bools and create more complex expressions:
 
-```crystal
-true && true
-# => true
-
-false || true
-# => true
-
-!false
-# => true
-```
-
 ## Logical operators
 
 Crystal has 3 logical operators which is used to combine Bools and make expressions that produce different values.
