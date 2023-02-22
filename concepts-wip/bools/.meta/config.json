@@ -1,5 +1,10 @@
 {
   "blurb": "Crystal has a Bool type to represent true and false and a Bool can only be true or false. The Bool type support AND, OR, and NOT operators",
   "authors": ["meatball133"],
-  "contributors": ["andrerfcsantos", "angelikatyborska", "gleenj"]
+  "contributors": [
+    "andrerfcsantos",
+    "angelikatyborska",
+    "gleenj",
+    "ryanplusplus"
+  ]
 }

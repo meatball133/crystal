@@ -48,6 +48,6 @@ Define the `win?` method that takes three arguments (_if the character has eaten
 The method should return `true` if the character has gathered all crystals and has not lost based on the arguments defined in part 3, and return `false` otherwise.
 
 ```crystal
-win?(false, true, false)
+Rules.win?(false, true, false)
 # => false
 ```

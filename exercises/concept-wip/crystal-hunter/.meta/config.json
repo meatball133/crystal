@@ -1,6 +1,11 @@
 {
   "authors": ["meatball133"],
-  "contributors": ["andrerfcsantos", "angelikatyborska", "gleenj"],
+  "contributors": [
+    "andrerfcsantos",
+    "angelikatyborska",
+    "gleenj",
+    "ryanplusplus"
+  ],
   "files": {
     "solution": ["src/crystal_hunter.cr"],
     "test": ["spec/crystal_hunter_spec.cr"],

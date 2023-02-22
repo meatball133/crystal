@@ -3,19 +3,19 @@ require "../src/*"
 
 describe Rules do
   describe "bonus_points?" do
-    it "Chracter gets bonus points" do
+    it "Character gets bonus points" do
       Rules.new.bonus_points?(true, true).should be_true
     end
 
-    it "Chracter gets no bonus points because no power-up is active" do
+    it "Character gets no bonus points because no power-up is active" do
       Rules.new.bonus_points?(false, true).should be_false
     end
 
-    it "Chracter gets no bonus points because not touching bandit" do
+    it "Character gets no bonus points because not touching bandit" do
       Rules.new.bonus_points?(true, false).should be_false
     end
 
-    it "Chracter gets no bonus points because no power-up is active and character is not touching bandit" do
+    it "Character gets no bonus points because no power-up is active and character is not touching bandit" do
       Rules.new.bonus_points?(false, false).should be_false
     end
   end

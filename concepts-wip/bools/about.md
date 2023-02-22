@@ -5,7 +5,7 @@ You can use logical operators (`!`, `||`, `&&`) which can be used to combine Boo
 
 ## Logical operators
 
-Crystal has 3 logical operators which is used to combine Bools and make expressions that produce different values.
+Crystal has 3 logical operators which are used to combine Bools and make expressions that produce different values.
 
 ### And(`&&`)
 
