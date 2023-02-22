@@ -7,7 +7,7 @@ class Temprature
     temprature.to_i
   end
 
-  def to_fahrenheit(temprature : Number) : Number
+  def to_fahrenheit(temprature : Number) : Int
     (temprature * 9 / 5) + 32
   end
 end
