@@ -41,4 +41,22 @@ describe "Temprature" do
       Temperature.new.to_whole_number(4.2434).should eq 4.2
     end
   end
+
+  describe "to_fahrenheit" do
+    it "should convert 0 celsius to 32 fahrenheit" do
+      Temperature.new.to_fahrenheit(0).should eq 32
+    end
+
+    it "should convert -273.15 to -456 fahrenheit" do
+      Temperature.new.to_fahrenheit(-273.15).should eq -456
+    end
+
+    it "should convert -100 celsius to -148 fahrenheit" do
+      Temperature.new.to_fahrenheit(-100).should eq -148
+    end
+
+    it "should convert 100 celsius to 212 fahrenheit" do
+      Temperature.new.to_fahrenheit(100).should eq 212
+    end
+  end
 end
