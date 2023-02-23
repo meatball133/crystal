@@ -1,13 +1,13 @@
 class Temprature
   def to_kelvin(temprature : Number) : Number
-    temprature + 273.15
+    raise "Please implement the Temprature#to_kelvin method"
   end
 
   def to_whole_number(temprature : Number) : Number
-    temprature.to_i
+    raise "Please implement the Temprature#to_whole_number method"
   end
 
   def to_fahrenheit(temprature : Number) : Int
-    (temprature * 9 / 5) + 32
+    raise "Please implement the Temprature#to_fahrenheit method"
   end
 end
