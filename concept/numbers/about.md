@@ -125,6 +125,22 @@ Which will always be an integer, by rounding down the result.
 # => 2
 ```
 
+````exercism/caution
+When dividing by zero when using integer division results in a DivisionByZeroError.
+Which is different from when using normal division.
+
+```crystal
+1 // 0
+```
+
+```console
+Unhandled exception: Division by 0 (DivisionByZeroError)
+  from /usr/share/crystal/src/int.cr:145:7 in 'check_div_argument'
+  from /usr/share/crystal/src/int.cr:109:5 in '//'
+  from test.cr:1:3 in '__crystal_main'
+```
+````
+
 ### Modulus
 
 Modulus is used to get the remainder of a division.
@@ -153,6 +169,21 @@ decimal_part = 5/3 - whole_part
 remainder = decimal_part * 3
 # => 2.0
 ```
+
+````exercism/caution
+When dividing by zero when using modulo results in a DivisionByZeroError.
+Which is different from when using normal division.
+
+```crystal
+1 % 0
+```
+
+```console
+Unhandled exception: Division by 0 (DivisionByZeroError)
+  from /usr/share/crystal/src/int.cr:165:5 in `%`
+  from test.cr:1:3 in '__crystal_main'
+```
+````
 
 ## Rounding
 
