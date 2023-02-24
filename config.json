@@ -22,7 +22,7 @@
     "solution": ["src/%{snake_slug}.cr"],
     "test": ["spec/%{snake_slug}_spec.cr"],
     "example": [".meta/src/example.cr"],
-    "exemplar": [".meta/src/exemplar/.cr"]
+    "exemplar": [".meta/src/exemplar.cr"]
   },
   "exercises": {
     "concept": [],
