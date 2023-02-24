@@ -5,22 +5,22 @@
   },
   {
     "url": "https://crystal-lang.org/reference/1.7/conventions/coding_style.html",
-    "description": "Crystals coding style"
+    "description": "Crystal docs: Crystals coding style"
   },
   {
     "url": "https://crystal-lang.org/reference/1.7/syntax_and_semantics/comments.html",
-    "description": "Comments in crystal"
+    "description": "Crystal docs: Comments in crystal"
   },
   {
     "url": "https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html#methods",
-    "description": "Methods in crystal"
+    "description": "Crystal introduction: Methods in crystal"
   },
   {
     "url": "https://crystal-lang.org/reference/1.7/tutorials/basics/20_variables.html",
-    "description": "Variables in crystal"
+    "description": "Crystal introduction: Variables in crystal"
   },
   {
     "url": "https://crystal-lang.org/reference/1.7/syntax_and_semantics/constants.html",
-    "description": "Constants in crystal"
+    "description": "Crystal introduction: Constants in crystal"
   }
 ]
