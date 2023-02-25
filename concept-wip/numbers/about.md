@@ -1,7 +1,7 @@
 # Numbers
 
 Crystal has a type `Number` which is the base type for all numeric types.
-Inside of the Number type there are two main types: `Int` and `Float`.
+Inside the Number type, there are two main types: [`Int`][int] and [`Float`][float].
 Int is short for integer and represents whole numbers.
 Int can be both negative and positive, and doesn't have a decimal point.
 
@@ -13,7 +13,7 @@ Int can be both negative and positive, and doesn't have a decimal point.
 # => Int32
 ```
 
-Float represents numbers with a decimal point, floats can be both negative and positive.
+Float represents numbers with a decimal point, Floats can be both negative and positive.
 
 ```crystal
 10.5.class
@@ -23,7 +23,7 @@ Float represents numbers with a decimal point, floats can be both negative and p
 # => Float64
 ```
 
-On numbers you can use the basic arithmetic operators: `+`, `-`, `*`, `/`, and `%`.
+On numbers, you can use the [basic arithmetic operators: `+`, `-`, `*`, `/`, and `%`][math].
 
 ## Converting between Int and Float
 
@@ -51,8 +51,8 @@ You can mix and match Int and Float when using these operators.
 
 Addition and subtraction are used to add or subtract numbers.
 The `+` operator is used for addition and the `-` operator is used for subtraction.
-When having an operation with a float and an int the result will be a float.
-The result will be an int if both numbers are ints.
+When having an operation with a Float and an Int the result will be a Float.
+The result will be an Int if both numbers are Ints.
 
 ```crystal
 1 + 1
@@ -69,7 +69,7 @@ The result will be an int if both numbers are ints.
 
 Multiplication is used to multiply numbers.
 The `*` operator is used for multiplication.
-When having an operation with a float and an int the result will be a float.
+When having an operation with a Float and an Int the result will be a Float.
 
 ```crystal
 2 * 2
@@ -81,7 +81,7 @@ When having an operation with a float and an int the result will be a float.
 
 Division is used to divide numbers.
 The `/` operator is used for division.
-The result will always be a float.
+The result will always be a Float.
 
 ```crystal
 4 / 2
@@ -95,7 +95,8 @@ The result will always be a float.
 In some programming languages when dividing by zero the result will be an error.
 
 In Crystal when dividing by zero the result will be `Infinity` or `-Infinity`.
-Only exception is when dividing zero by zero, which will result in `NaN` (Not a Number).
+The Only exception is when dividing zero by zero, which will result in `NaN` (Not a Number).
+Infinity and NaN are special values in the Float type.
 
 ```crystal
 1 / 0
@@ -112,7 +113,7 @@ Only exception is when dividing zero by zero, which will result in `NaN` (Not a 
 ## Integer division
 
 Integer division is used to divide numbers and get the whole part of the result.
-Which will always be an integer, by rounding down the result.
+The result will always be rounded down to an Int.
 
 ```crystal
 4 // 2
@@ -126,18 +127,12 @@ Which will always be an integer, by rounding down the result.
 ```
 
 ````exercism/caution
-When dividing by zero when using integer division results in a DivisionByZeroError.
-Which is different from when using normal division.
+When dividing by zero when using integer division results in a `DivisionByZeroError`.
+This is different from normal division.
 
 ```crystal
 1 // 0
-```
-
-```console
-Unhandled exception: Division by 0 (DivisionByZeroError)
-  from /usr/share/crystal/src/int.cr:145:7 in 'check_div_argument'
-  from /usr/share/crystal/src/int.cr:109:5 in '//'
-  from test.cr:1:3 in '__crystal_main'
+# Error: Unhandled exception: Division by 0 (DivisionByZeroError)
 ```
 ````
 
@@ -157,37 +152,33 @@ The `%` operator is used for modulus.
 # => 2
 ```
 
-Another way to think about modulus:
-
-```crystal
-whole_part = (5/3).to_i
-# => 1
-
-decimal_part = 5/3 - whole_part
-# => 0.6666666666666666
-
-remainder = decimal_part * 3
-# => 2.0
-```
-
 ````exercism/caution
-When dividing by zero when using modulo results in a DivisionByZeroError.
-Which is different from when using normal division.
+Dividing by zero when using modulo results in a DivisionByZeroError.
+This is different from normal division.
 
 ```crystal
 1 % 0
-```
-
-```console
-Unhandled exception: Division by 0 (DivisionByZeroError)
-  from /usr/share/crystal/src/int.cr:165:5 in `%`
-  from test.cr:1:3 in '__crystal_main'
+# Error: Unhandled exception: Division by 0 (DivisionByZeroError)
 ```
 ````
 
+## Exponentiation
+
+Exponentiation is used to raise a number to a power.
+The `**` operator is used for exponentiation.
+When having an operation with a Float and an Int the result will be a Float.
+
+```crystal
+2 ** 2
+# => 4
+
+2.0 ** 2
+# => 4.0
+```
+
 ## Rounding
 
-You can round a float to a certain number of decimal places using the `round` method.
+The `round` method takes an optional argument that specifies the number of decimal places to round to.
 The `round` method takes an optional argument which is the number of decimal places to round to.
 The default number of decimal places is 0.
 
@@ -207,7 +198,7 @@ The default number of decimal places is 0.
 
 ### Rounding up and down
 
-You can also round up or down using the `ceil` and `floor` methods.
+You can also round up or down to an Int by using the `ceil` and `floor` methods.
 The `ceil` method rounds up and the `floor` method rounds down.
 
 ```crystal
@@ -237,8 +228,8 @@ This is useful when you want to change the order of operations.
 # => 20
 ```
 
-When using multiple arithmetic operators the order of operations is the same as in mathematics, also known as PEMDAS.
-Which follows tha order of parentheses(`()`), exponents(`**`), multiplication(`*`) and division(`/`), and addition(`+`) and subtraction(`-`).
+When using multiple arithmetic operators the order of operations is the same as in mathematics, also known as [PEMDAS][pemdas].
+It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) and division(`/`), and addition(`+`) and subtraction(`-`).
 
 ```crystal
 2 + 3 - 4 * 4
@@ -247,3 +238,8 @@ Which follows tha order of parentheses(`()`), exponents(`**`), multiplication(`*
 (2 + 3 - 4) * 4
 # => 20
 ```
+
+[pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
+[math]: https://crystal-lang.org/reference/1.7/tutorials/basics/30_math.html
+[int]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/integers.html
+[float]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/floats.html

@@ -2,7 +2,8 @@
 
 ## General
 
-- Don't worry about specific number types, just use `Int` and `Float` for now.
+- Don't worry about specific number types, just use `Int32` and `Float64` for now.
+- Int32 and Float64 are the default number types in crystal, so you don't need to specify them.
 
 ## 1. Convert the temperature from Celsius to Kelvin
 
@@ -18,7 +19,7 @@
 - You can use the arithmetic operator(`*`) to multiply numbers.
 - You can use parentheses(`()`) to group operations.
 
-## 4. Get number of missing sensors
+## 4. Get the number of missing sensors
 
 - You can use the arithmetic operator(`-`) to subtract numbers.
 - You can use the arithmetic operator(`%`) to get the remainder of a division.
