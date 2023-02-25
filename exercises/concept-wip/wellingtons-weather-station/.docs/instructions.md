@@ -72,7 +72,7 @@ Here is a table showing the conversion between Celsius and Fahrenheit:
 
 The weather station wants you to implement a method that converts a temperature from Celsius to Fahrenheit.
 
-Implement the `to_fahrenheit` method that takes an argument `celsius` and returns the temperature in Fahrenheit as an integer by multiplying the given `celsius` value by 1.8 and adding 32 and then rounding the result.
+Implement the `to_fahrenheit` method that takes an argument `celsius` and returns the temperature in Fahrenheit as an integer by multiplying the given `celsius` value by 1.8 and adding 32 and then rounding the result to a whole number.
 
 ```crystal
 Temperature.to_fahrenheit(10)
@@ -81,9 +81,9 @@ Temperature.to_fahrenheit(10)
 
 ## 4. Get number of missing sensors
 
-Under the installation of the temperature sensors, the maintenance works realized some sensors were missing.
-To build a complete temperature measurement unit, so is 4 temperature sensors required.
-The maintenance team counted how many sensors they had.
+Under the installation of the temperature sensors, the maintenance workers realized some sensors were missing.
+To build a complete temperature measurement unit, is 4 temperature sensors required.
+The maintenance team counted how many sensors they had, but they do not know how many sensors are missing.
 They would like to get some help counting how many sensors they need to buy to have so all sensors are used in a temperature measurement unit.
 
 Implement the `number_missing_sensors` method that takes an argument `number_of_sensors` and returns the amount of missing sensors.

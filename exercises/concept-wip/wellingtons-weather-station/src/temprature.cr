@@ -1,13 +1,13 @@
 class Temperature
-  def to_kelvin(temperature)
+  def to_kelvin(celsius)
     raise "Please implement the Temperature#to_kelvin method"
   end
 
-  def to_whole_number(temperature)
+  def to_whole_number(celsius)
     raise "Please implement the Temperature#to_whole_number method"
   end
 
-  def to_fahrenheit(temperature)
+  def to_fahrenheit(celsius)
     raise "Please implement the Temperature#to_fahrenheit method"
   end
 
