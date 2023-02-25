@@ -3,7 +3,7 @@
 Crystal has a type `Number` which is the base type for all numeric types.
 Inside of the Number type there are two main types: `Int` and `Float`.
 Int is short for integer and represents whole numbers.
-Int can be both negative and positive, and doesnt have a decimal point.
+Int can be both negative and positive, and doesn't have a decimal point.
 
 ```crystal
 1.class

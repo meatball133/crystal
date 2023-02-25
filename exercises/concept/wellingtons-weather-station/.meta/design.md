@@ -16,7 +16,7 @@ The goal of this exercise is to teach the student about numbers in crystal.
 
 ## Concepts
 
-`Bools`:
+`Number`:
 
 - Int and Float
 - Arithmetic operators(+, -, \*, /, %)

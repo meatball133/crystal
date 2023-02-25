@@ -12,7 +12,7 @@ describe "Temprature" do
     end
 
     it "should convert -100 celsius to 173.15 Kelvin" do
-      Temperature.new.to_kelvin(-100).should eq 173.15
+      Temperature.new.to_kelvin(-100).should be_close 173.15, 0.001
     end
 
     it "should convert 100 celsius to 373.15 Kelvin" do
@@ -48,7 +48,7 @@ describe "Temprature" do
     end
 
     it "should convert -273.15 to -456 fahrenheit" do
-      Temperature.new.to_fahrenheit(-273.15).should eq -456
+      Temperature.new.to_fahrenheit(-273.15).should eq -459
     end
 
     it "should convert -100 celsius to -148 fahrenheit" do
@@ -57,6 +57,24 @@ describe "Temprature" do
 
     it "should convert 100 celsius to 212 fahrenheit" do
       Temperature.new.to_fahrenheit(100).should eq 212
+    end
+  end
+
+  describe "number_missing_sensors" do
+    it "should return 1 if there is one missing sensor" do
+      Temperature.new.number_missing_sensors(3).should eq 1
+    end
+
+    it "should return 2 if there are two missing sensors" do
+      Temperature.new.number_missing_sensors(2).should eq 2
+    end
+
+    it "should return 3 if there are three missing sensors" do
+      Temperature.new.number_missing_sensors(1).should eq 3
+    end
+
+    it "should return 1 if there are 1 missing sensors when having a big number of sensors" do
+      Temperature.new.number_missing_sensors(15).should eq 1
     end
   end
 end

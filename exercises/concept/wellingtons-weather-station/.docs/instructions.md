@@ -20,12 +20,12 @@ Its starting point is absolute zero, which is 0K (Kelvin) or -273.15°C (Celsius
 
 Here is a table showing the conversion between Celsius and Kelvin:
 
-| Celsius | Kelvin |
-| ------- | ------ |
-| -273.15 | 0      |
-| -100    | 173.15 |
-| 0       | 273.15 |
-| 100     | 373.15 |
+| Celsius(°C) | Kelvin(K) |
+| ----------- | --------- |
+| -273.15     | 0         |
+| -100        | 173.15    |
+| 0           | 273.15    |
+| 100         | 373.15    |
 
 The weather station wants you to implement a method that converts a temperature from Celsius to Kelvin.
 
@@ -43,9 +43,9 @@ It can measure the temperature to the nearest 0.0001°C.
 Although, the weather station only wants to display the temperature rounded to 1 decimal place.
 Since most users are not interested in the temperature to that level of precision.
 
-The weather station would thereby like you to implement a method that rounds the temperature to a whole number
+The weather station would thereby like you to implement a method that rounds the temperature to 1 decimal place.
 
-Implement the `round` method that takes an argument `celsius` and returns the temperature rounded to a whole number.
+Implement the `round` method that takes an argument `celsius` and returns the temperature rounded to 1 decimal place.
 
 ```crystal
 Temperature.round(10.1234)
@@ -63,12 +63,12 @@ To convert a temperature from Celsius to Fahrenheit, you multiply the celsius va
 
 Here is a table showing the conversion between Celsius and Fahrenheit:
 
-| Celsius | Fahrenheit |
-| ------- | ---------- |
-| -273.15 | -459.8     |
-| -100    | 148        |
-| 0       | 32         |
-| 100     | 212        |
+| Celsius(°C) | Fahrenheit(°F) |
+| ----------- | -------------- |
+| -273.15     | -459.8         |
+| -100        | 148            |
+| 0           | 32             |
+| 100         | 212            |
 
 The weather station wants you to implement a method that converts a temperature from Celsius to Fahrenheit.
 
@@ -82,7 +82,7 @@ Temperature.to_fahrenheit(10)
 ## 4. Get number of missing sensors
 
 Under the installation of the temperature sensors, the maintenance works realized some sensors were missing.
-To build a complete temperature measurement unit, so is 4 temperature sensors required. 
+To build a complete temperature measurement unit, so is 4 temperature sensors required.
 The maintenance team counted how many sensors they had.
 They would like to get some help counting how many sensors they need to buy to have so all sensors are used in a temperature measurement unit.
 

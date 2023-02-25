@@ -1,14 +1,14 @@
-class Temprature
-  def to_kelvin(temprature)
-    temprature + 273.15
+class Temperature
+  def to_kelvin(temperature)
+    temperature + 273.15
   end
 
-  def to_whole_number(temprature)
-    temprature.to_i
+  def to_whole_number(temperature)
+    temperature.round(1)
   end
 
-  def to_fahrenheit(temprature)
-    (temprature * 1.8) + 32
+  def to_fahrenheit(temperature)
+    ((temperature * 1.8) + 32).to_i
   end
 
   def number_missing_sensors(number_of_sensors)
