@@ -7,8 +7,6 @@
 To declare a [variable][variables], you must use the `=` assignment operator.
 In Crystal variables should be written in [snake_case][snake-case].
 
-A variable can be declared and then redefined later.
-
 ```crystal
 number = 1
 puts number # => 1
@@ -32,14 +30,7 @@ Assigning a value to a constant that is already defined will result in a compile
 NUMBER = 1
 
 NUMBER = 2
-```
-
-```console
-In test.cr:3:1
-
- 3 | NUMBER = 2
-     ^
-Error: already initialized constant NUMBER
+# Error: already initialized constant NUMBER
 ```
 
 ### Types
@@ -108,6 +99,7 @@ end
 When calling a method that belongs to a class, module or struct, you must use the dot operator(`.`).
 Like following: `<ClassName>.<method_name>`.
 When the method doesn't belong to a class, module or struct, then you can simple call it by writing its name.
+Methods always implicitly return the value of the last expression in the method.
 
 When a method has arguments, you may use parentheses when specifying the arguments in the method call and definition, like following: `<method_name>(<argument_1>, <argument_2>)`.
 When a method has no arguments, parentheses should be omitted.
@@ -145,23 +137,6 @@ In test.cr:1:1
  1 | hello_language("Crystal")
      ^----
 Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
-```
-
-### Return
-
-In crystal so will a method return the last line of code.
-This means that generally it is recommended to not use the [`return`][return] keyword.
-But there are cases where you must use the `return` keyword.
-Like when you want to return early from a method.
-
-```crystal
-def hello
-  return "Hello World!"
-  # This line will never be executed
-  "Hello Crystal!"
-end
-hello
-# => Hello World!
 ```
 
 ### Addition & Subtraction & Multiplication
