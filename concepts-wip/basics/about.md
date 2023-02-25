@@ -158,7 +158,7 @@ Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
 
 ### Addition & Subtraction & Multiplication
 
-In Crystal you can use the `+` operator to add two numbers together.
+In Crystal, you can use the `+` operator to add two numbers together.
 You can also use the `-` operator to subtract two numbers.
 And you can use the `*` operator to multiply two numbers.
 
