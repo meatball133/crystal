@@ -13,7 +13,7 @@ These are some of the language's goals:
 
 - Compile to efficient native code.
 
-In 2011 did the work on crystal start with the goal of creating a language with the elegance and productivity of Ruby, but with the performance and type safety of a compiled language.
+The work on Crystal started in 2011 with the goal of creating a language with the elegance and productivity of Ruby, but with the performance and type safety of a compiled language.
 Originally, the language compiler was written in Ruby, but in 2013, the compiler was rewritten in Crystal itself.
 The language was developed and designed by Ary Borenszweig, Juan Wajnerman, Brian Cardif.
 
@@ -22,9 +22,9 @@ The language was developed and designed by Ary Borenszweig, Juan Wajnerman, Bria
 ### Variables
 
 To declare a [variable][variables], you must use the `=` assignment operator.
-In crystal should variables be written in [snake_case][snake-case].
+In Crystal variables should be written in [snake_case][snake-case].
 
-A variable can be declared and then redefine later.
+A variable can be declared and then redefined later.
 
 ```crystal
 number = 1
@@ -36,8 +36,7 @@ puts number # => 2
 
 ### Constants
 
-[Constants][constants] are declared using the same `=` assignment operator, but uses all uppercase letters or also known as SCREAMING_SNAKE_CASE.
-The difference between constants and variables is that constants can't be redefined.
+[Constants][constants] are declared using the same `=` assignment operator, but use all uppercase letters, also known as SCREAMING_SNAKE_CASE.
 
 ```crystal
 NUMBER = 1
@@ -62,19 +61,19 @@ Error: already initialized constant NUMBER
 
 ### Types
 
-Crystal is a compiled language, thereby will every variable or method argument be assigned a type at compile time.
+Crystal is a compiled language, which means that every variable or method argument is assigned a type at compile time.
 The compiler is capable of inferring the type of a variable or method argument.
-Although some cases it is necessary to specify the type.
+Although in some cases it is necessary to specify the type.
 The cases that requires a type to be set will be explained in later concepts.
 
 ### Methods
 
 [Methods][methods] are a way to group together a set of instructions that can be reused.
-In crystal are methods often defined in a class, module or struct.
+In Crystal methods are often defined in a class, module or struct.
 But methods can also be defined outside of a class, module or struct.
 Methods are declared using the `def` keyword, followed by the name of the method.
-In crystal should methods be written in snake_case.
-When a method doesnt have any arguments, you can omit the parentheses.
+In Crystal methods should be written in snake_case.
+When a method doesn't have any arguments, you can omit the parentheses.
 To declare the end of a method, you must use the `end` keyword.
 
 ```crystal
@@ -103,7 +102,7 @@ Error: no overload matches 'Int32#+' with type String
 Methods can have [arguments][arguments].
 Arguments are data that is passed to a method.
 To be able to give a method arguments, you must specify the name of the argument.
-In crystal should arguments be written in snake_case.
+In Crystal arguments should be written in snake_case.
 A method can have multiple arguments, but the arguments must be separated by a comma.
 
 ```crystal
@@ -125,11 +124,10 @@ end
 
 When calling a method that belongs to a class, module or struct, you must use the dot operator(`.`).
 Like following: `<ClassName>.<method_name>`.
-When the method doesnt belong to a class, module or struct, then you can simple call it by writing its name.
+When the method doesn't belong to a class, module or struct, then you can simple call it by writing its name.
 
-To call a method that has arguments, you simply write those arguments after the method call
-When a method has arguments you may use brackets where the assignment of arguments, like following: `<method_name>(<argument_1>, <argument_2>)`.
-Although when not giving any arguments so should brackets be omitted.
+When a method has arguments, you may use parentheses when specifying the arguments in the method call and definition, like following: `<method_name>(<argument_1>, <argument_2>)`.
+When a method has no arguments, parentheses should be omitted.
 
 ```crystal
 def hello(name)
@@ -140,7 +138,7 @@ hello("Crystal")
 # => Hello Crystal!
 ```
 
-When calling a method with multiple arguments, so should arguments separated by a comma.
+When calling a method with multiple arguments, the arguments should be separated by a comma.
 The arguments must be given in the same order as the method arguments.
 
 ```crystal
@@ -166,9 +164,26 @@ In test.cr:1:1
 Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
 ```
 
+### Return
+
+In crystal so will a method return the last line of code.
+This means that generally it is recommended to not use the [`return`][return] keyword.
+But there are cases where you must use the `return` keyword.
+Like when you want to return early from a method.
+
+```crystal
+def hello
+  return "Hello World!"
+  # This line will never be executed
+  "Hello Crystal!"
+end
+hello
+# => Hello World!
+```
+
 ### Comments
 
-In crystal so are [comments][comments] written with the `#` character, followed by a space and then the comment.
+In Crystal [comments][comments] are written with the `#` character, followed by a space and then the comment.
 Comments are used to document code.
 Comments are not executed by the compiler.
 
