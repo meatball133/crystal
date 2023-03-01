@@ -120,6 +120,23 @@ b = 2.0_f64.to_f.class
 # => Float64
 ```
 
+## Type after operation
+
+When you do an operation between two numbers, the result will be of the type of the number with the highest precision.
+Float is more precise than integer and integer is more precise than unsigned integer.
+Then Float64 is more precise than Float32 and so on.
+
+```crystal
+(1_u8 + 2_u64).class
+# => UInt64
+
+(1_u8 + 2_i64).class
+# => Int64
+
+(1_u8 + 2.0_f64).class
+# => Float64
+```
+
 ## Dig Deeper: unsigned integers vs signed integers
 
 ```exercism/advanced
