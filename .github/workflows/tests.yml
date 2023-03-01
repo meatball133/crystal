@@ -30,10 +30,11 @@ jobs:
         run: ./bin/test_specs
   template:
     name: Check file formatting
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
+    include:
+      - GLIBC_2.34
     container:
-      image: jenkins/jenkins:lts-jdk17
-      options: --privileged
+      image: crystallang/crystal
     steps:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: Run file formatting
