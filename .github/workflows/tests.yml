@@ -32,7 +32,7 @@ jobs:
     name: Check file formatting
     runs-on: ubuntu-22.04
     include:
-      - GLIBC_2.34
+      - toolset: gcc-4.4
     container:
       image: crystallang/crystal
     steps:
