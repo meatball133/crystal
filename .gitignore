@@ -10,6 +10,7 @@
 !generator/
 
 # double ignore others
+*.o
 *.swp
 .crystal/
 .DS_Store
