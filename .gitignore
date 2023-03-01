@@ -4,13 +4,13 @@
 # unignore files with extensions, dirs and specific ones
 !*.*
 !*/
+!/**/
 !bin/*
 !LICENSE
 !Makefile
 !generator/
 
 # double ignore others
-*.o
 *.swp
 .crystal/
 .DS_Store
