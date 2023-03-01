@@ -30,7 +30,7 @@ jobs:
         run: ./bin/test_specs
   template:
     name: Check file formatting
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     container:
       image: crystallang/crystal
       options: --privileged
