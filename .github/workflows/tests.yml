@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-22.04
     include:
       - toolset: gcc-4.4
+        os: ubuntu-22.04
     container:
       image: crystallang/crystal
     steps:
