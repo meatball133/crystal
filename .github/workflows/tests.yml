@@ -31,12 +31,9 @@ jobs:
   template:
     name: Check file formatting
     runs-on: ubuntu-22.04
-    include:
-      - toolset: gcc-4.4
-        os: ubuntu-22.04
     container:
       image: crystallang/crystal
     steps:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: Run file formatting
-        run: ./bin/check-format.bin
+        run: ./bin/check-format.cr
