@@ -23,7 +23,7 @@ Define the following constants:
 
 The navigation computer needs to know the area of some objects in space to do the right calculations.
 An area can **NOT** be negative.
-The engineers had the plan that the program would generate an owerflow error when the area is negative.
+The engineers had the plan that the program would generate an overflow error when the area is negative.
 But the engineers forgot to change the signed integer to an unsigned integer.
 
 Thereby the engineers would like a program that converts the signed integer to an unsigned integer.

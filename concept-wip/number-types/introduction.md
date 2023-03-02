@@ -96,7 +96,7 @@ b = 2_u16.to_u.class
 
 There are two different floating point types, one is more precise than the other.
 
-Float32 is ligther compared to Float64, but has less precision.
+Float32 is lighter compared to Float64, but has less precision.
 Float64 is heavier compared to Float32, but has more precision.
 
 The default floating point type is `Float64`.
