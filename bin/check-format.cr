@@ -16,6 +16,8 @@ module Check_template
           raise "The source file \"./exercises/practice/#{dir}/src/#{dir.gsub("-", "_")}.cr\" is not formatted"
         when !File.same_content?("/tmp/spec.cr", "./exercises/practice/#{dir}/spec/#{dir.gsub("-", "_")}_spec.cr")
           raise "The spec file \"./exercises/practice/#{dir}/spec/#{dir.gsub("-", "_")}_spec.cr\" is not formatted"
+        else
+          puts "All files in \"./exercises/practice/#{dir}\" are formatted"
         end
       end
     end
