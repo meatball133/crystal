@@ -2,14 +2,16 @@
 
 Crystal has a number of different number types.
 There are different number types for different purposes.
-For example some types are smaller and faster, but have a smaller range of possible values than other types.
-And then there are some that are bigger and slower, but have a bigger range of possible values.
+For example, some types are smaller and faster but have a smaller range of possible values than other types.
+And then there are some that are bigger and slower but have a bigger range of possible values.
 
-In crystal there are signed and unsigned integer types.
+In Crystal there are signed and unsigned integer types.
 The signed integer types can be positive or negative.
 The unsigned integer types can only be positive.
 
 ## Signed integers types
+
+Here is a table of the [signed integer types][int] in Crystal, the smallest types come first and the biggest types come last:
 
 | Type     | Size (bits) | Range                                                                                                       |
 | -------- | ----------- | ----------------------------------------------------------------------------------------------------------- |
@@ -19,22 +21,22 @@ The unsigned integer types can only be positive.
 | `Int64`  | 64          | -9_223_372_036_854_775_808 to 9_223_372_036_854_775_807                                                     |
 | `Int128` | 128         | -170_141_183_460_469_231_731_687_303_715_884_105_728 to 170_141_183_460_469_231_731_687_303_715_884_105_727 |
 
-The smaller types uses less memory and are faster than the bigger types but have a smaller range of possible values.
-The bigger types uses more memory and are slower than the smaller types but have a bigger range of possible values.
+The smaller types use less memory and are faster than the bigger types but have a smaller range of possible values.
+The bigger types use more memory and are slower than the smaller types but have a bigger range of possible values.
 
-There are situation where you know that values will be within a certain range, then you can use a smaller type to save memory and improve performance.
+There are situations where you know that values will be within a certain range, then you can use a smaller type to save memory and improve performance.
 
 The default integer type is `Int32`.
 To declare an integer with a specific type you can use the type name as a suffix, by adding `<number>_i<bit>`.
 
 ```crystal
-a = 1_i8.class
+1_i8.class
 # => Int8
 
-d = 3
+3
 # => Int32
 
-e = 5_i128.class
+5_i128.class
 # => Int128
 ```
 
@@ -42,14 +44,16 @@ To convert between different integer types you can use the `to_i<bit>` method.
 The `to_i` method converts to the default integer type, which is `Int32`.
 
 ```crystal
-a = 1_i8.to_i16.class
+1_i8.to_i16.class
 # => Int16
 
-b = 2_i16.to_i.class
+2_i16.to_i.class
 # => Int32
 ```
 
 ## Unsigned integers types
+
+Table of all the [unsigned integer][uint] types in Crystal:
 
 | Type      | Size (bits) | Range                                                    |
 | --------- | ----------- | -------------------------------------------------------- |
@@ -63,16 +67,16 @@ The unsigned integer types can only be positive.
 Otherwise are the unsigned integer types the same as the signed integer types.
 
 The reason for having unsigned integer types is that they can be used to store values that are always positive.
-Which can be useful when you want to for example only work with indexes in an array.
+This can be useful when you want to for example only work with indexes in an array.
 
 The default unsigned integer type is `UInt32`.
 To declare an unsigned integer with a specific type you can use the type name as a suffix, by adding `<number>_u<bit>`
 
 ```crystal
-a = 1_u8.class
+1_u8.class
 # => UInt8
 
-e = 5_u128.class
+5_u128.class
 # => UInt128
 ```
 
@@ -80,21 +84,23 @@ To convert between different unsigned integer types you can use the `to_u<bit>` 
 The `to_u` method converts to the default unsigned integer type, which is `UInt32`.
 
 ```crystal
-a = 1_u8.to_u16.class
+1_u8.to_u16.class
 # => UInt16
 
-b = 2_u16.to_u.class
+2_u16.to_u.class
 # => UInt32
 ```
 
 ## Floating point types
+
+Table of all the floating point types in Crystal:
 
 | Type      | Size (bits) | Range                |
 | --------- | ----------- | -------------------- |
 | `Float32` | 32          | 1.2E-38 to 3.4E+38   |
 | `Float64` | 64          | 2.3E-308 to 1.7E+308 |
 
-There are two different floating point types, one is more precise than the other.
+There are two different [floating point types][float], one is more precise than the other.
 
 Float32 is lighter compared to Float64, but has less precision.
 Float64 is heavier compared to Float32, but has more precision.
@@ -102,10 +108,10 @@ Float64 is heavier compared to Float32, but has more precision.
 The default floating point type is `Float64`.
 
 ```crystal
-a = 1.0_f32.class
+1.0_f32.class
 # => Float32
 
-b = 2.0_f64.class
+2.0_f64.class
 # => Float64
 ```
 
@@ -113,18 +119,18 @@ To convert between different floating point types you can use the `to_f<bit>` me
 The `to_f` method converts to the default floating point type, which is `Float64`.
 
 ```crystal
-a = 1.0_f64.to_f32.class
+1.0_f64.to_f32.class
 # => Float32
 
-b = 2.0_f64.to_f.class
+2.0_f64.to_f.class
 # => Float64
 ```
 
-## Type after operation
+## Type after an operation
 
 When you do an operation between two numbers, the result will be of the type of the number with the highest precision.
-Float is more precise than integer and integer is more precise than unsigned integer.
-Then Float64 is more precise than Float32 and so on.
+Float is more precise than an integer and an integer is more precise than an unsigned integer.
+Then `Float64` is more precise than Float32 and so on.
 
 ```crystal
 (1_u8 + 2_u64).class
@@ -140,14 +146,15 @@ Then Float64 is more precise than Float32 and so on.
 ## Dig Deeper: unsigned integers vs signed integers
 
 ```exercism/advanced
-Under the hood what makes unsigned integers different from signed integers, is that for signed integers is the first bit used to store the sign.
+Under the hood what makes unsigned integers different from signed integers, is that signed integers are the first bit used to store the sign.
 The sign is either positive or negative.
-For unsigned integers the first bit is used to store the value.
-So for a signed 32 bit integer is the max value 2^31 - 1.
-For an unsigned 32 bit integer is the max value 2^32 - 1.
+For unsigned integers, the first bit is used to store the value.
+So for a signed 32-bit integer is the max value 2^31 - 1.
+For an unsigned 32-bit integer is the max value 2^32 - 1.
 
-If you are interested in learning more about signedness you can read more about it on [Wikipedia][signedness].
+If you are interested in learning more about signedness you can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Signedness).
 ```
 
-[signedness]: https://en.wikipedia.org/wiki/Signedness
-
+[float]: https://crystal-lang.org/api/1.7.2/Float.html
+[int]: https://crystal-lang.org/api/1.7.2/Int.html
+[uint]: https://crystal-lang.org/api/1.7.2/UInt32.html

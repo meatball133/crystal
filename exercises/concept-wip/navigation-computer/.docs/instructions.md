@@ -1,7 +1,7 @@
 # Instructions
 
-The ESA (Exercism Space Agency) is at full speed at planning a new mission to Phobos, a moon of Mars.
-The missions goal is to land a probe on the surface of Phobos and to send back data about the surface.
+The ESA (Exercism Space Agency) is at full speed in planning a new mission to Phobos, a moon of Mars.
+The mission's goal is to land a probe on the surface of Phobos and to send back data about the surface.
 ESA has requested your help to build the navigation computer for the probe.
 The navigation computer has limited memory so we need to keep the memory usage as low as possible.
 Thereby we need to use the right data types.
@@ -11,7 +11,7 @@ Thereby we need to use the right data types.
 The navigation computer needs to know the distance between some objects in space to do the right calculations, the distance is measured in km.
 Km stands for kilometer, which is a unit of length, there kilo means 1000 and meter is a unit of length.
 The distance should be from earth.
-The distance that needs to be stored are neptune, mars and the atmosphere.
+The distances that need to be stored are: Neptune, Mars and the atmosphere.
 
 Define the following constants:
 
