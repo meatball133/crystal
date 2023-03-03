@@ -1,11 +1,10 @@
 # Bools
 
 Crystal has a type known as [`Bool`][bools], it is used to represent the values `true` and `false`.
-You can use logical operators (`!`, `||`, `&&`) which can be used to combine Bools and create more complex expressions:
 
 ## Logical operators
 
-Crystal has 3 logical operators which are used to combine Bools and make expressions that produce different values.
+Crystal has 3 logical operators (`!`, `||`, `&&`) which are used to combine Bools and make expressions that produce different values.
 
 ### And(`&&`)
 
@@ -63,9 +62,6 @@ true && false && (false || true)
 # => false
 ```
 
-In a situation where there is only one _and_ operation, all Bools have to be `true` to make the result be `true`.
-If one of the arguments to _and_ is `false` the result will also be `false`.
-
 Since what is in parentheses is evaluated first, in the following example, the _not_ operator will apply to the expression inside parentheses.
 
 ```crystal
@@ -76,7 +72,7 @@ Since what is in parentheses is evaluated first, in the following example, the _
 # => true
 ```
 
-```exercism/caution
+```exercism/note
 You should only use parentheses when they affect the result, otherwise, should they be omitted.
 ```
 

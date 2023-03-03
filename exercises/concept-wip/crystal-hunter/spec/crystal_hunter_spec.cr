@@ -46,6 +46,10 @@ describe Rules do
     it "Don't lose if not touching a bandit" do
       Rules.new.lose?(false, false).should be_false
     end
+
+    it "Don't lose if powered-up and not touching a bandit" do
+      Rules.new.lose?(true, false).should be_false
+    end
   end
 
   describe "win?" do
