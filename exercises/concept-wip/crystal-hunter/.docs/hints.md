@@ -14,7 +14,7 @@
 
 ## 3. Define if character loses
 
-- You can use [the logical _not_ operator][not]) to negate an argument for a result.
+- You can use [the logical _not_ operator][not] to negate an argument for a result.
 
 ## 4. Define if character wins
 
