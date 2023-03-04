@@ -1,6 +1,6 @@
 ## Goal
 
-The goal of this exercise is to teach the student about numbers types in crystal.
+The goal of this exercise is to teach the student about numbers types in Crystal.
 
 ## Learning objectives
 

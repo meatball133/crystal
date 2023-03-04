@@ -2,8 +2,8 @@
 
 Crystal has a number of different number types.
 There are different number types for different purposes.
-For example, some types are smaller and faster but have a smaller range of possible values than other types.
-And then there are some that are bigger and slower but have a bigger range of possible values.
+For example, some types are faster but have a smaller range of possible values than other types.
+And then there are some that have a bigger range of possible values but are slower.
 
 In Crystal there are signed and unsigned integer types.
 The signed integer types can be positive or negative.

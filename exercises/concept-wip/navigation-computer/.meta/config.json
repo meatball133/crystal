@@ -7,5 +7,5 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "icon": "land-grab-in-space",
-  "blurb": "Learn about number types while building a navigation system for ESA (Exericsm Space Agency)."
+  "blurb": "Learn about number types while building a navigation system for ESA (Exercism Space Agency)."
 }
