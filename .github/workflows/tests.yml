@@ -37,3 +37,13 @@ jobs:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: Run file formatting
         run: crystal ./bin/check-format.cr
+  exercises_old:
+    name: Check exercises_old
+    runs-on: ubuntu-22.04
+    # idea from https://github.com/actions/starter-workflows/blob/master/ci/crystal.yml
+    container:
+      image: crystallang/crystal
+    steps:
+      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - name: Run tests_old
+        run: make test-exercises
