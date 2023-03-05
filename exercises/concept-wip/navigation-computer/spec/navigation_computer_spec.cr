@@ -24,7 +24,7 @@ describe "Navigation" do
   describe "correct_area_analysis" do
     it "Giving 9999 should return 9999 as Uint" do
       result = Navigation.new.correct_area_analysis(9_999)
-      result.should eq 9_999_u32
+      result.should eq 9_999
       result.should be_a(UInt32)
     end
 
@@ -38,19 +38,19 @@ describe "Navigation" do
   describe "calculate_velocity" do
     it "1000 m and 5 seconds should equal 200 meter per second" do
       calculation = Navigation.new.calculate_velocity(1000, 5)
-      calculation.should eq 200_f32
+      calculation.should eq 200
       calculation.should be_a(Float32)
     end
 
     it "502.5 m and 2.5 seconds should equal 201" do
       calculation = Navigation.new.calculate_velocity(502.5, 2.5)
-      calculation.should eq 201_f32
+      calculation.should eq 201
       calculation.should be_a(Float32)
     end
 
     it "4531 m and 14.6 seconds should equal" do
       calculation = Navigation.new.calculate_velocity(4531, 14.6)
-      calculation.should eq 310.34247_f32
+      calculation.should eq 310.34247
       calculation.should be_a(Float32)
     end
   end
