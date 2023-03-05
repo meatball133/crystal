@@ -50,7 +50,7 @@ describe "Navigation" do
 
     it "4531 m and 14.6 seconds should equal" do
       calculation = Navigation.new.calculate_velocity(4531, 14.6)
-      calculation.should eq 310.34247
+      calculation.should eq 310.34247_f32
       calculation.should be_a(Float32)
     end
   end
