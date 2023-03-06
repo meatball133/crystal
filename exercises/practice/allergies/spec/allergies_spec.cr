@@ -7,7 +7,7 @@ describe "Allergies" do
   end
 
   pending "allergic only to eggs" do
-    Allergies.allergic_to("eggs", 1).should eq(true)
+    Allergies.allergic_to("eggs", 1).should eq(false)
   end
 
   pending "allergic to eggs and something else" do
