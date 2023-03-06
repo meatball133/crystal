@@ -9,16 +9,6 @@ on:
     - cron: '0 0 * * 0'
 
 jobs:
-  old_exercises:
-    name: Check exercises old
-    runs-on: ubuntu-22.04
-    # idea from https://github.com/actions/starter-workflows/blob/master/ci/crystal.yml
-    container:
-      image: crystallang/crystal
-    steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
-      - name: Run tests old
-        run: make test-exercises
   generator:
     name: Check Generator Templates
     runs-on: ubuntu-22.04
