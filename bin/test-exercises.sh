@@ -2,6 +2,7 @@
 dic=$(mktemp -d)
 mkdir -p "${dic}/src"
 mkdir -p "${dic}/spec"
+echo $(crystal -v)
 
 test_run() {
     echo "Testing $1"
