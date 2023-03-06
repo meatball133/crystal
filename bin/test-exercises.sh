@@ -5,7 +5,7 @@ mkdir -p "${dic}/spec"
 
 test_run() {
     echo "Testing $1"
-    cat "$1/.meta/src/$2.cr"> "${dic}/src/$2.cr"
+    cat "$1/.meta/src/$2.cr" > "${dic}/src/$2.cr"
     spec_file="$1/$(jq -r '.files.test[0]' $1/.meta/config.json)"
     cat "${spec_file}" > "${dic}/spec/spec.cr"
     sed -i -e 's/pending/it/g' ${dic}/spec/spec.cr
@@ -16,6 +16,8 @@ for exercise in ./exercises/practice/*; do
     test_run ${exercise} "example"
 done
 
-for exercise in ./exercises/concepts/*; do
-    test_run ${exercise} "exemplar"
-done
+if [ -d "./exercises/concepts" ]; then
+    for exercise in ./exercises/concepts/*; do
+        test_run ${exercise} "example"
+    done
+fi
