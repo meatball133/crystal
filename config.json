@@ -21,8 +21,8 @@
   "files": {
     "solution": ["src/%{snake_slug}.cr"],
     "test": ["spec/%{snake_slug}_spec.cr"],
-    "example": ["src/example.cr"],
-    "exemplar": [".meta/exemplar/.cr"]
+    "example": [".meta/src/example.cr"],
+    "exemplar": [".meta/src/exemplar.cr"]
   },
   "exercises": {
     "concept": [],
@@ -88,6 +88,15 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
+        "topics": []
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "a50ad959-0a5e-4110-8e49-fa50b1242a89",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
         "topics": []
       },
       {
@@ -388,6 +397,15 @@
         "topics": ["numbers", "arrays", "loops"]
       },
       {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "e78171f5-ab0e-4997-a5b8-030c05301ed3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": ["string", "number", "loops"]
+      },
+      {
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "42296e84-233a-4251-9910-bf1fb9a1563c",
@@ -413,6 +431,15 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": ["integers", "math", "transforming"]
+      },
+      {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "52b3f087-2b9e-4566-8de5-a4b59ef80b16",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": ["strings"]
       },
       {
         "slug": "forth",
@@ -478,6 +505,24 @@
         "topics": ["Hashmaps", "strings", "loops"]
       },
       {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["strings", "classes"]
+      },
+      {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["strings", "classes"]
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "6c07e00f-78f0-4878-9222-d9e3ed86fd0b",
@@ -530,6 +575,15 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": ["integers", "loops", "math"]
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "5b5bf7c3-6aad-4648-a6e1-964bbbad838c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": []
       },
       {
         "slug": "react",

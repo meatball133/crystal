@@ -1,7 +1,7 @@
 class Clock
-  HOURS_PER_DAY = 24
+  HOURS_PER_DAY    = 24
   MINUTES_PER_HOUR = 60
-  MINUTES_PER_DAY = HOURS_PER_DAY * MINUTES_PER_HOUR
+  MINUTES_PER_DAY  = HOURS_PER_DAY * MINUTES_PER_HOUR
 
   getter minutes : Int32
   private setter minutes : Int32
