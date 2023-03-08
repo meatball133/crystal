@@ -5,7 +5,7 @@ class Combinations
   end
 
   def solve : Array(Array(Int32))
-    candidates = (1..min(sum, 9)).to_a
+    candidates = (1..[sum, 9].min).to_a
       .reject { |c| exclude.includes?(c) }
 
     candidates.combination(size)
