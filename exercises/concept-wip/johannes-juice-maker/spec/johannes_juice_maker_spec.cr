@@ -45,9 +45,10 @@ describe "JuiceMaker" do
   end
 
   describe "stop" do
-    it "should stop the machine" do 
+    it "should stop the machine" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
+      juice_maker.@running.should eq true
       juice_maker.stop(5)
       juice_maker.@running.should eq false
       juice_maker.@fluid.should eq 25

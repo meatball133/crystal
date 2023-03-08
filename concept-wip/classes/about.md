@@ -11,7 +11,7 @@ This goes in line with that everything in Crystal is an object, and that every o
 A class is defined using the `class` keyword, followed by the name of the class written in `UpperCamelCase`.
 
 ```crystal
-class Person
+class Account
 end
 ```
 
@@ -20,53 +20,53 @@ end
 To create an instance of a class, you call the class name with the `new` method.
 
 ```crystal
-class Person
+class Account
 end
 
-person = Person.new
+account = Account.new
 ```
 
-In the example above so is the variable `person` an instance of the class `Person`.
+In the example above so is the variable `account` an instance of the class `Account`.
 
 When creating an instance, there is a special method called `initialize` that is a constructor, it is called when an instance is created.
-The contructor allows you to set the initial state of the instance.
+The constructor allows you to set the initial state of the instance.
 
 ```crystal
-class Person
+class Account
   def initialize
-    puts "Hello"
+    puts 5
   end
 end
 
-Person.new
-# => Hello
+Account.new
+# => 5
 ```
 
 The `initialize` method can take arguments, which are passed when creating an instance.
 
 ```crystal
-class Person
-  def initialize(name)
-    puts "Hello #{name}"
+class Account
+  def initialize(number)
+    p 5 + number
   end
 end
 
-Person.new("John Doe")
-# => Hello John Doe
+Account.new(4)
+# => 9
 ```
 
 ````exercism/note
 The `initialize` method cant return a value, instead when calling new the instance is returned.
 
 ```crystal
-class Person
-  def initialize(name)
-    "Hello #{name}"
+class Account
+  def initialize(number)
+    5 + number
   end
 end
 
-Person.new("John Doe")
-# => #<Person:0x7f5dc33dcea0>
+Account.new(4)
+# => #<Account:0x7f5dc33dcea0>
 ````
 
 ## Instance variables
@@ -76,64 +76,64 @@ They can be initialized in the `initialize` method.
 They are defined using the `@` prefix.
 
 ```crystal
-class Person
+class Account
   def initialize
-    @name = "John Doe"
+    @balance = 100
   end
 
-    def name
-        @name
-    end
+  def balance
+    @balance
+  end
 end
 
-person = Person.new
-person.name
-# => "John Doe"
+account = Account.new
+account.balance
+# => 100
 ```
 
 It is possible to create instance variables without declaring them in the `initialize` method.
 
 ```crystal
-class Person
+class Account
   @age = 0
 end
 ```
 
-### Instance variables with intlization
+### Instance variables with initialization
 
-Instance variables can be initialized with a value passed to the `initialize` method.
-Although since crystal can't infer the type of the instance variable in an intlization of a variables, so does it needs to be specified.
+Instance variables can be initialized with a argument passed to the `initialize` method.
+Although since crystal can't infer the type of an argument under initialization, so does it needs to be specified.
 To specify the type of the variable you can use the `:` symbol, followed by the type.
-For example if you want to create an instance variable called `number` that is an `Int32`, you can do the following: `@number : Int32`.
+For example if you want to create an instance variable called `balance` that is an `Int32`, you can do the following: `@balance : Int32`.
 Or if you want to create an instance variable called `raining` that is a `Bool`, you can do the following: `@raining : Bool`.
 
-There are a few ways to impliment this, either by in the `initialize` method declaring the argument with the type, and then assigning the instance variable to the argument, like following example:
+There are a few ways to implement this, either by in the `initialize` method declaring the argument with the type, and then assigning the instance variable to the argument, like following example:
 
 ```crystal
-class Person
-  def initialize(number : Int32)
-    @number = number
+class Account
+  def initialize(balance : Int32)
+    @balance = balance
   end
 
-  def number
-    @number
+  def balance
+    @balance
   end
 end
 
-person = Person.new(1)
-person_2 = Person.new(5)
+account = Account.new(1)
+account_2 = Account.new(5)
 
-person.number
+account.number
 # => 1
 
-person_2.number
+account_2.number
 # => 5
 ```
 
 Another way is to declaring the instance variable type in the class definition, when you have to do: `@<variable> : <Type>`, like following example:
 
 ```crystal
-class Person
+class Weather
 
   @raining : Bool
 
@@ -146,18 +146,19 @@ class Person
   end
 end
 
-person = Person.new(true)
-person.raining
+weather = Weather.new(true)
+weather.raining
 # => true
 ```
 
-### Shorthand for intlize instance variables
+### Shorthand for initialize instance variables
 
-There is a shorthand for intlizing instance variables, which is to in the argument of the `initialize` method, declare the instance variable with the type, like following example: `@<variable> : <Type>`.
+There is a shorthand for initializing instance variables, which is to in the argument of the `initialize` method, declare the instance variable with the type, like following example: `@<variable> : <Type>`.
+This combines the assignment of the instance variable to the argument, and the declaration of the instance variable type.
 
 ```crystal
-class Person
-  def initialize(@name : String)
+class Account
+  def initialize(@balance : String)
   end
 end
 ```
@@ -169,30 +170,30 @@ These methods can be called on the instance of the class.
 When a method modify an instance variable, the change is only available in the instance of the class, meaning that the change will be there when calling the method again.
 
 ```crystal
-class Person
-  def initialize(number)
-    @number = number
+class Account
+  def initialize(balance)
+    @balance = balance
   end
 
-  def decrease(amount)
-    @number -= amount
+  def withdraw(amount)
+    @balance -= amount
   end
 
-  def number
-    @number
+  def balance
+    @balance
   end
 end
 
-person = Person.new(10)
-person.number
+account = Account.new(10)
+account.balance
 # => 10
 
-person.decrease(5)
-person.number
+account.withdraw(5)
+account.balance
 # => 5
 
-person.decrease(5)
-person.decrease(5)
-person.number
+account.withdraw(5)
+account.withdraw(5)
+account.balance
 # => -5
 ```
