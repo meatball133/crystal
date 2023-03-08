@@ -8,7 +8,7 @@ class Combinations
     candidates = (1..[sum, 9].min).to_a
       .reject { |c| exclude.includes?(c) }
 
-    candidates.combination(size)
+    candidates.combinations(size)
       .select { |c| c.sum == sum }
       .to_a
   end
