@@ -1,5 +1,5 @@
 class Combinations
-  getter sum, size, exclude
+  private getter sum, size, exclude
 
   def initialize(@sum : Int32, @size : Int32, @exclude : Array(Int32))
   end
