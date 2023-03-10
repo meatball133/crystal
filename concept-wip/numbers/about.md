@@ -2,6 +2,7 @@
 
 Crystal has a type `Number` which is the base type for all numeric types.
 Inside the Number type, there are two main types: [`Int`][int] and [`Float`][float].
+
 Int is short for integer and represents whole numbers.
 Int can be both negative and positive, and doesn't have a decimal point.
 
@@ -13,17 +14,13 @@ Int can be both negative and positive, and doesn't have a decimal point.
 # => Int32
 ```
 
-Float represents numbers with a decimal point, Floats can be both negative and positive.
+Float represents numbers with a decimal point.
+Floats can be both negative and positive.
 
 ```crystal
 10.5.class
 # => Float64
-
-1.0.class
-# => Float64
 ```
-
-On numbers, you can use the [basic arithmetic operators: `+`, `-`, `*`, `/`, and `%`][math].
 
 ## Converting between Int and Float
 
@@ -43,41 +40,21 @@ When converting from Float to Int the number is rounded down.
 
 ## Arithmetic operators
 
-You can use the basic arithmetic operators on Int and Float.
+You can use the [basic arithmetic operators][math] on Int and Float.
 The operators are `+`, `-`, `*`, `/`, and `%`.
 You can mix and match Int and Float when using these operators.
 
-### Addition & Subtraction
+### Addition & Subtraction & Multiplication
 
-Addition and subtraction are used to add or subtract numbers.
-The `+` operator is used for addition and the `-` operator is used for subtraction.
-When having an operation with a Float and an Int the result will be a Float.
-The result will be an Int if both numbers are Ints.
+The `+` operator is used for addition, the `-` operator is used for subtraction, and the `*` operator is used for multiplication.
 
-```crystal
-1 + 1
-# => 2
+| Operator | Example        |
+| -------- | -------------- |
+| `+`      | `4 + 6 => 10`  |
+| `-`      | `15 - 10 => 5` |
+| `*`      | `2 * 3 => 6`   |
 
-1.0 + 1
-# => 2.0
-
-4.5 - 1.2
-# => 3.3
-```
-
-### Multiplication & Division
-
-Multiplication is used to multiply numbers.
-The `*` operator is used for multiplication.
-When having an operation with a Float and an Int the result will be a Float.
-
-```crystal
-2 * 2
-# => 4
-
-2.0 * 2
-# => 4.0
-```
+### Division
 
 Division is used to divide numbers.
 The `/` operator is used for division.
@@ -116,9 +93,6 @@ Integer division is used to divide numbers and get the whole part of the result.
 The result will always be rounded down to an Int.
 
 ```crystal
-4 // 2
-# => 2
-
 4.0 // 2
 # => 2
 
@@ -126,15 +100,10 @@ The result will always be rounded down to an Int.
 # => 2
 ```
 
-````exercism/caution
+```exercism/caution
 When dividing by zero when using integer division results in a `DivisionByZeroError`.
 This is different from normal division.
-
-```crystal
-1 // 0
-# Error: Unhandled exception: Division by 0 (DivisionByZeroError)
 ```
-````
 
 ### Modulus
 
@@ -178,7 +147,6 @@ When having an operation with a Float and an Int the result will be a Float.
 
 ## Rounding
 
-The `round` method takes an optional argument that specifies the number of decimal places to round to.
 The `round` method takes an optional argument which is the number of decimal places to round to.
 The default number of decimal places is 0.
 
@@ -188,9 +156,6 @@ The default number of decimal places is 0.
 
 1.5.round
 # => 2
-
-1.5.round(1)
-# => 1.5
 
 1.234.round(2)
 # => 1.23
@@ -208,9 +173,6 @@ The `ceil` method rounds up and the `floor` method rounds down.
 1.2.ceil
 # => 2
 
-1.0.floor
-# => 1
-
 1.7.floor
 # => 1
 ```
@@ -219,14 +181,6 @@ The `ceil` method rounds up and the `floor` method rounds down.
 
 Crystal allows parentheses(`()`) which can be used to group expressions.
 This is useful when you want to change the order of operations.
-
-```crystal
-2 + 3 * 4
-# => 14
-
-(2 + 3) * 4
-# => 20
-```
 
 When using multiple arithmetic operators the order of operations is the same as in mathematics, also known as [PEMDAS][pemdas].
 It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) and division(`/`), and addition(`+`) and subtraction(`-`).

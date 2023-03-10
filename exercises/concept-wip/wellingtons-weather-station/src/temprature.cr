@@ -3,8 +3,8 @@ class Temperature
     raise "Please implement the Temperature#to_kelvin method"
   end
 
-  def to_whole_number(celsius)
-    raise "Please implement the Temperature#to_whole_number method"
+  def round(celsius)
+    raise "Please implement the Temperature#round method"
   end
 
   def to_fahrenheit(celsius)

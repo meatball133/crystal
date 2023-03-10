@@ -3,7 +3,7 @@ class Temperature
     celsius + 273.15
   end
 
-  def to_whole_number(celsius)
+  def round(celsius)
     celsius.round(1)
   end
 

@@ -20,25 +20,21 @@ describe "Temprature" do
     end
   end
 
-  describe "to_whole_number" do
+  describe "round" do
     it "should convert 1.12 celsius to 1.1" do
-      Temperature.new.to_whole_number(1.12).should eq 1.1
+      Temperature.new.round(1.12).should eq 1.1
     end
 
     it "should convert 1 celsius to 1" do
-      Temperature.new.to_whole_number(1).should eq 1
+      Temperature.new.round(1).should eq 1
     end
 
     it "should convert -273.15 to -273" do
-      Temperature.new.to_whole_number(-273.15).should eq -273.2
+      Temperature.new.round(-273.15).should eq -273.2
     end
 
     it "should convert 1.1 celsius to 1.1" do
-      Temperature.new.to_whole_number(1.1).should eq 1.1
-    end
-
-    it "should convert 4.2434 celsius to 4.2" do
-      Temperature.new.to_whole_number(4.2434).should eq 4.2
+      Temperature.new.round(1.1).should eq 1.1
     end
   end
 
@@ -61,6 +57,10 @@ describe "Temprature" do
   end
 
   describe "number_missing_sensors" do
+    it "should return 0 if there are no missing sensors" do
+      Temperature.new.number_missing_sensors(4).should eq 0
+    end
+
     it "should return 1 if there is one missing sensor" do
       Temperature.new.number_missing_sensors(3).should eq 1
     end
