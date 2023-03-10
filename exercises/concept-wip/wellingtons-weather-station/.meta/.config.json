@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": ["ryanplusplus", "gleenj"],
+  "contributors": ["ryanplusplus", "glennj"],
   "files": {
     "solution": ["src/wellingtons_weather_station.cr"],
     "test": ["spec/wellingtons_weather_station_spec.cr"],
