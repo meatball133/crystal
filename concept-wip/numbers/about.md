@@ -190,7 +190,7 @@ It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) 
 # => -11
 
 (2 + 3 - 4) * 4
-# => 20
+# => 4
 ```
 
 [pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
