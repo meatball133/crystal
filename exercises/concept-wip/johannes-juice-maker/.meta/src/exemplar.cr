@@ -1,4 +1,8 @@
 class JuiceMaker
+  def self.debug_light_on?
+    true
+  end
+
   def initialize(fluid : Int32)
     @fluid = fluid
     @running = false
@@ -6,6 +10,10 @@ class JuiceMaker
 
   def start
     @running = true
+  end
+
+  def status
+    @running
   end
 
   def add_fluid(fluid)

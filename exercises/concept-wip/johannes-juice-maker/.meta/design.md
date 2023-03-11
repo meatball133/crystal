@@ -10,6 +10,7 @@ The goal of this exercise is to teach the student about classes in crystal.
 - Understand that classes can hold methods
 - Understand instance variables
 - Understand how to assign types and why you have to assign types.
+- Know what a class method is
 
 ## Out of scope
 
@@ -25,7 +26,8 @@ The goal of this exercise is to teach the student about classes in crystal.
 - .new
 - `@<variables>` (instance variables)
 - Assigning types, `<variable> : <Type>`
-- Using methods which belongs to a class classes
+- Using methods which belongs to a class
+- Using method which belongs to an instance
 
 ## Prerequisites
 

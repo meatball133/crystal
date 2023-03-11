@@ -156,18 +156,6 @@ weather.raining
 # => true
 ```
 
-### Shorthand for initialize instance variables
-
-There is a shorthand for initializing instance variables, which is to in the argument of the `initialize` method, declare the instance variable with the type, like the following example: `@<variable> : <Type>`.
-This combines the assignment of the instance variable to the argument and the declaration of the instance variable type.
-
-```crystal
-class Account
-  def initialize(@balance : Int32)
-  end
-end
-```
-
 ## Modify instance variables
 
 Instance variables can be modified by methods.
