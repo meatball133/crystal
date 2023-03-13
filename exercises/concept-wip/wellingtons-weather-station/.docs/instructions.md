@@ -31,7 +31,7 @@ The weather station wants you to implement a method that converts a temperature 
 Implement the `to_kelvin` method that takes an argument `celsius` and returns the temperature in Kelvin by adding 273.15 to the given `celsius` value.
 
 ```crystal
-Temperature.to_kelvin(0)
+Temperature.new.to_kelvin(0)
 # => 273.15
 ```
 
@@ -46,10 +46,10 @@ The weather station would thereby like you to implement a method that rounds the
 Implement the `round` method that takes an argument `celsius` and returns the temperature rounded to 1 decimal place.
 
 ```crystal
-Temperature.round(10.1234)
+Temperature.new.round(10.1234)
 # => 10.1
 
-Temperature.round(10.1567)
+Temperature.new.round(10.1567)
 # => 10.2
 ```
 
@@ -76,7 +76,7 @@ The weather station wants you to implement a method that converts a temperature 
 Implement the `to_fahrenheit` method that takes a number in Celsius and returns the temperature in Fahrenheit as an integer.
 
 ```crystal
-Temperature.to_fahrenheit(10)
+Temperature.new.to_fahrenheit(10)
 # => 50
 ```
 
@@ -90,6 +90,6 @@ They would like to get some help counting how many sensors they need to buy to h
 Implement the `number_missing_sensors` method that takes an argument `number_of_sensors` and returns the number of missing sensors.
 
 ```crystal
-Temperature.number_missing_sensors(10)
+Temperature.new.number_missing_sensors(10)
 # => 2
 ```

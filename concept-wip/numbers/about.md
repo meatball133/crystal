@@ -194,6 +194,6 @@ It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) 
 ```
 
 [pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
-[math]: https://crystal-lang.org/reference/1.7/tutorials/basics/30_math.html
-[int]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/integers.html
-[float]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/floats.html
+[math]: https://crystal-lang.org/reference/latest/tutorials/basics/30_math.html
+[int]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html
+[float]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/floats.html
