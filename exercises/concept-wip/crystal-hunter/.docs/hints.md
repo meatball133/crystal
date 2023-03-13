@@ -20,6 +20,6 @@
 
 - You can use the previous methods to combine arguments for a result.
 
-[and]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/and.html
-[or]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/or.html
-[not]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/not.html
+[and]: https://crystal-lang.org/reference/latest/syntax_and_semantics/and.html
+[or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html
+[not]: https://crystal-lang.org/reference/latest/syntax_and_semantics/not.html

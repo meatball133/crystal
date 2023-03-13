@@ -16,7 +16,7 @@ Define the `bonus_points?` method that takes two arguments (_if the character ha
 The method should return `true` only if the character has a power-up active and is touching a bandit, and `false` otherwise.
 
 ```Crystal
-bonus_points?(false, true)
+Rules.new.bonus_points?(false, true)
 # => false
 ```
 
@@ -28,7 +28,7 @@ Define the `score?` method that takes two arguments (_if the character is touchi
 The method should return `true` if the character is touching a power-up or a crystal, and return `false` otherwise.
 
 ```crystal
-Rules.score?(true, true)
+Rules.new.score?(true, true)
 # => true
 ```
 
@@ -38,7 +38,7 @@ Define the `lose?` method that takes two arguments (_if the character has a powe
 The method should return `true` if the character is touching a bandit and does not have a power-up active, and return `false` otherwise.
 
 ```crystal
-Rules.lose?(false, true)
+Rules.new.lose?(false, true)
 # => true
 ```
 
@@ -48,6 +48,6 @@ Define the `win?` method that takes three arguments (_if the character has eaten
 The method should return `true` if the character has gathered all crystals and has not lost based on the arguments defined in part 3, and return `false` otherwise.
 
 ```crystal
-Rules.win?(false, true, false)
+Rules.new.win?(false, true, false)
 # => false
 ```

@@ -76,6 +76,6 @@ Since what is in parentheses is evaluated first, in the following example, the _
 You should only use parentheses when they affect the result, otherwise, should they be omitted.
 ```
 
-[bools]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/bool.html
-[and]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/and.html
-[or]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/or.html
+[bools]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/bool.html
+[and]: https://crystal-lang.org/reference/latest/syntax_and_semantics/and.html
+[or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html

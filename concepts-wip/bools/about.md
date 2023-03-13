@@ -116,7 +116,7 @@ exchange(nil)
 
 Methods with a question mark at the end of their name that don't return a Bool value, often return `nil` instead. `nil` is _similar to `None` or `null` from other languages_.
 
-[bools]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/bool.html
-[and]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/and.html
-[or]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/or.html
-[truthy_and_falsey_values]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/truthy_and_falsey_values.html
+[bools]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/bool.html
+[and]: https://crystal-lang.org/reference/latest/syntax_and_semantics/and.html
+[or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html
+[truthy_and_falsey_values]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
