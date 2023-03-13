@@ -4,11 +4,11 @@
     "description": "Wikipedia: Signedness"
   },
   {
-    "url": "https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/floats.html",
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/floats.html",
     "description": "Crystal docs: Float"
   },
   {
-    "url": "https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/integers.html",
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html",
     "description": "Crystal docs: Int"
   }
 ]

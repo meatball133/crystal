@@ -155,6 +155,6 @@ For an unsigned 32-bit integer is the max value 2^32 - 1.
 If you are interested in learning more about signedness you can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Signedness).
 ```
 
-[float]: https://crystal-lang.org/api/1.7.2/Float.html
-[int]: https://crystal-lang.org/api/1.7.2/Int.html
-[uint]: https://crystal-lang.org/api/1.7.2/UInt32.html
+[float]: https://crystal-lang.org/api/latest/Float.html
+[int]: https://crystal-lang.org/api/latest/Int.html
+[uint]: https://crystal-lang.org/api/latest/UInt32.html

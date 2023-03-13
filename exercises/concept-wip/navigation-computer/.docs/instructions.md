@@ -19,6 +19,17 @@ Define the following constants:
 - `MARS_DISTANCE` with the value `227_940_000` which should be stored as a `int32`
 - `ATMOSPHERE_DISTANCE` with the value `10_000` which should be stored as a `int16`
 
+```crystal
+Navigation::NEPTUNE_DISTANCE
+# => 4400000000
+
+Navigation::MARS_DISTANCE
+# => 227940000
+
+Navigation::ATMOSPHERE_DISTANCE
+# => 10000
+```
+
 ## 2. Correct area analysis
 
 The navigation computer needs to know the area of some objects in space to do the right calculations.
@@ -35,7 +46,10 @@ measurement = 52554
 measurement.class
 # => Int32
 
-correct_area_analysis(measurement).class
+Navigation.new.correct_area_analysis(measurement)
+# => 52554
+
+Navigation.new.correct_area_analysis(measurement).class
 # => UInt32
 ```
 
@@ -56,9 +70,9 @@ Implement the `calculate_velocity` method that takes a `distance` and a `time` a
 distance = 52554
 time = 2.5
 
-calculate_velocity(distance, time)
+Navigation.new.calculate_velocity(distance, time)
 # => 21021.6
 
-calculate_velocity(distance, time).class
+Navigation.new.calculate_velocity(distance, time).class
 # => Float32
 ```

@@ -21,4 +21,4 @@
 - The result of a numeric operation will be of the highest precision type, so you need to convert the result to the correct type.
 
 [constants]: https://crystal-lang.org/reference/syntax_and_semantics/constants.html
-[integers]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/integers.html
+[integers]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html

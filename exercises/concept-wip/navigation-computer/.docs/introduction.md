@@ -126,7 +126,6 @@ The `to_f` method converts to the default floating point type, which is `Float64
 # => Float64
 ```
 
-[float]: https://crystal-lang.org/api/1.7.2/Float.html
-[int]: https://crystal-lang.org/api/1.7.2/Int.html
-[signedness]: https://en.wikipedia.org/wiki/Signedness
-[uint]: https://crystal-lang.org/api/1.7.2/UInt32.html
+[float]: https://crystal-lang.org/api/latest/Float.html
+[int]: https://crystal-lang.org/api/latest/Int.html
+[uint]: https://crystal-lang.org/api/latest/UInt32.html
