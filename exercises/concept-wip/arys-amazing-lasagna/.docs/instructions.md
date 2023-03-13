@@ -9,7 +9,7 @@ You have four tasks, all related to the time spent cooking the lasagna.
 Define the `EXPECTED_MINUTES_IN_OVEN` constant in the `Lasagna` class, that stores how many minutes the lasagna should be in the oven.According to the cooking book, the expected oven time in minutes is 40:
 
 ```Crystal
-EXPECTED_MINUTES_IN_OVEN
+Lasagna::EXPECTED_MINUTES_IN_OVEN
 # => 40
 ```
 
@@ -18,7 +18,7 @@ EXPECTED_MINUTES_IN_OVEN
 Define the `Lasagna#remaining_minutes_in_oven` method that takes the actual minutes the lasagna has been in the oven as a parameter and returns how many minutes the lasagna still has to remain in the oven, based on the expected oven time in minutes from the previous task.
 
 ```Crystal
-Lasagna.remaining_minutes_in_oven(30)
+Lasagna.new.remaining_minutes_in_oven(30)
 # => 10
 ```
 
@@ -27,7 +27,7 @@ Lasagna.remaining_minutes_in_oven(30)
 Define the `Lasagna#preparation_time_in_minutes` method that takes the number of layers you added to the lasagna as a parameter and returns how many minutes you spent preparing the lasagna, assuming each layer takes you 2 minutes to prepare.
 
 ```Crystal
-Lasagna.preparation_time_in_minutes(2)
+Lasagna.new.preparation_time_in_minutes(2)
 # => 4
 ```
 
@@ -38,6 +38,6 @@ Define the `Lasagna#total_time_in_minutes` method that takes two named parameter
 ```Crystal
 number_of_layers = 3
 actual_minutes_in_oven = 20
-Lasagna.total_time_in_minutes(number_of_layers, actual_minutes_in_oven)
+Lasagna.new.total_time_in_minutes(number_of_layers, actual_minutes_in_oven)
 # => 26
 ```

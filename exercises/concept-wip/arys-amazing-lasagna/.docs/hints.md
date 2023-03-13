@@ -24,6 +24,6 @@
 - You can use the mathematical operator(`+`) to add values.
 
 [constants]: https://crystal-lang.org/reference/syntax_and_semantics/constants.html
-[integers]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/literals/integers.html
-[classes]: https://crystal-lang.org/reference/1.7/syntax_and_semantics/classes_and_methods.html#classes-and-methods
-[methods]: https://crystal-lang.org/reference/1.7/tutorials/basics/60_methods.html
+[integers]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html
+[classes]: https://crystal-lang.org/reference/latest/syntax_and_semantics/classes_and_methods.html#classes-and-methods
+[methods]: https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html
