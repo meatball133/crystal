@@ -91,6 +91,15 @@
         "topics": []
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "a50ad959-0a5e-4110-8e49-fa50b1242a89",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
         "slug": "clock",
         "name": "Clock",
         "uuid": "3ba4f982-c46e-4fc3-8ab4-9580656eb2b4",
@@ -505,6 +514,15 @@
         "topics": ["strings", "classes"]
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "17957877-0e43-4069-b806-f35d9212ff23",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["numbers", "classes"]
+      },
+      {
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
@@ -548,6 +566,14 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": ["arrays", "loops", "strings"]
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "00e8ffd8-b4f7-44e0-b007-8b265eed14fb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "secret-handshake",
