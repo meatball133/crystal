@@ -29,6 +29,33 @@ When wanting to concat a string with a non-string type so can you use the method
 # => "Hello 1"
 ```
 
+## Conversation between Strings and numbers
+
+A string can be converted to a number using the `to_i` method, that will return an integer.
+Alternatively the `to_f` method can be used to return a floating point number.
+If the string can't be converted to a number then an ArgumentError will be raised.
+
+```crystal
+"1".to_i
+# => 1
+
+"1.0".to_f
+# => 1.0
+
+"Hello".to_i
+# => ArgumentError: Invalid integer: Hello
+```
+
+An integer or floating point number can be converted to a string using the `to_s` method.
+
+```crystal
+1.to_s
+# => "1"
+
+1.0.to_s
+# => "1.0"
+```
+
 ## Interpolation
 
 Interpolation is a convenient way to combine strings and embed expressions in strings.
@@ -45,6 +72,42 @@ Crystal will automatically convert the result of the expression to a string.
 ```crystal
 "Hello #{1 + 1}!"
 # => "Hello 2!"
+```
+
+## Size
+
+When you need to know the amount of characters in a string you can use the `size` method, this will return the length of the string as an integer.
+The size of a string is a stored property of the string, so it doesn't have to calculate the size every time you call the method, making it very fast.
+
+```crystal
+"Hello World".size
+# => 11
+```
+
+## Indexing
+
+Indexing is when you want to get a specific character from a string.
+To get a character from a string you can use the `[]` method with the index of the character you want to get.
+In crystal is the first character in a string at index 0.
+
+```crystal
+"Hello World"[0]
+# => 'H'
+
+"Hello World"[6]
+# => 'W'
+```
+
+To get a character from the end of a string you can take the length of the string minus one to get the index of the last character, and to get the second last character you can take the length of the string minus two and so on.
+There is although a shortcut for this and that is to simply use a negative index, where the last character is at index -1, the second last character is at index -2 and so on.
+
+```crystal
+name = "Hello World"
+name[name.size - 1]
+# => 'd'
+
+name[-1]
+# => 'd'
 ```
 
 ## Escaping
@@ -71,3 +134,24 @@ These are the special characters in Crystal:
 | `\377`   | Octal ASCII character         |
 | `\xFF`   | Hexadecimal ASCII character   |
 | `\uFFFF` | Hexadecimal unicode character |
+
+```crystal
+puts "Hello \"World\""
+# => Hello "World"
+
+puts "Hello \nWorld"
+# => Hello
+# => World
+```
+
+## Multi-line strings
+
+To write a multi-line string you simply use the same syntax as a single line string, but make a new line for every line you want in the string.
+
+```crystal
+"Hello
+World"
+# => "Hello\nWorld"
+```
+
+## Unicode (Special edition)
