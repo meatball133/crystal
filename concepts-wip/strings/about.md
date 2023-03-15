@@ -154,4 +154,22 @@ World"
 # => "Hello\nWorld"
 ```
 
-## Unicode (Special edition)
+## Unicode 
+
+Unicode is a standard for encoding, representing and processing text in different writing systems.
+Unicode supports over 100,000 characters, including letters, punctuation, symbols, and emoji.
+
+That means that you can use emoji in your strings.
+
+```crystal
+"Hello 🌍"
+# => "Hello 🌍"
+```
+
+Some times you want to use a character that is not available in for example your editor or system.
+In that case you can use the unicode escape sequence to write the character.
+
+```crystal
+"\u{1F310}"
+# => "🌐"
+```
