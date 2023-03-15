@@ -1,6 +1,6 @@
 # Strings
 
-Crystal has a type know as `String` which is used to represent text.
+Crystal has a type know as [`String`][strings] which is used to represent text.
 In Crystal is a String a sequence of unicode characters.
 Strings are immutable, meaning they cannot be changed once created.
 Which means that every time you do a modification on a string a new string is created, thereby the original string is not modified.
@@ -154,9 +154,9 @@ World"
 # => "Hello\nWorld"
 ```
 
-## Unicode 
+## Unicode
 
-Unicode is a standard for encoding, representing and processing text in different writing systems.
+[Unicode][unicode] is a standard for encoding, representing and processing text in different writing systems.
 Unicode supports over 100,000 characters, including letters, punctuation, symbols, and emoji.
 
 That means that you can use emoji in your strings.
@@ -173,3 +173,6 @@ In that case you can use the unicode escape sequence to write the character.
 "\u{1F310}"
 # => "🌐"
 ```
+
+[strings]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/string.html
+[unicode]: https://en.wikipedia.org/wiki/Unicode
