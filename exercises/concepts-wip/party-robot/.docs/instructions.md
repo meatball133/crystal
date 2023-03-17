@@ -38,14 +38,17 @@ It should accept 5 parameters.
 
 The exact result format can be seen in the example below.
 
+The seatmate's should be shorted to the first and last letter of the name.
+Frank becomes Fk, Christian becomes Cn, and so on.
+
 The robot provides the table number.
 The robot also mentions the distance of the table.
 Fortunately only with a precision that's limited to 1 digit.
 
 ```crystal
-PartyRobot("Christiane", "on the left", 27, 23.7834298, "Frank")
+PartyRobot.assign_table("Christiane", "on the left", 27, 23.7834298, "Frank")
 # =>
 # Welcome to my party, Christiane!
 # You have been assigned to table 027. Your table is on the left, exactly 23.8 meters from here.
-# You will be sitting next to Frank.
+# You will be sitting next to Fk.
 ```

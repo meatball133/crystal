@@ -1,0 +1,11 @@
+{
+  "authors": ["meatball133"],
+  "contributors": [],
+  "files": {
+    "solution": ["src/party_robot.cr"],
+    "test": ["spec/party_robot_spec.cr"],
+    "exemplar": [".meta/src/exemplar.cr"]
+  },
+  "icon": "party-robot",
+  "blurb": "Learn about strings by programming a party robot."
+}
