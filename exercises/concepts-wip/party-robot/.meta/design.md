@@ -28,7 +28,7 @@ The goal of this exercise is to teach the student about strings in crystal.
 - interpolation (`#{}`)
 - Escaping(`\n`)
 - indexing([i])
-- concatination of strings
+- concatenation of strings
 - Conversion between types
 
 ## Prerequisites
