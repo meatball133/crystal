@@ -7,7 +7,7 @@ class PartyRobot
     raise "Please implement the PartyRobot.happy_birthday method"
   end
 
-  def self.assign_table(name : String, table : Int, neighbor, direction : String, distance : Float64) : String
+  def self.assign_table(name : String, direction : String, table : Int, distance : Float64, neighbor : String) : String
     raise "Please implement the PartyRobot.assign_table method"
   end
 end
