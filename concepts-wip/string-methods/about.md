@@ -58,3 +58,42 @@ The `gsub` method works the same as sub but will replace all occurrences of the 
 
 ## String#chomp & String#strip
 
+Chomp and strip are methods that can be used to remove unwanted characters from a string.
+
+The `chomp` method will be default remove the last `\r`, `\n` or `\r\n` characters from a string.
+If the method is called with an argument, it will remove that argument from the end of the string.
+
+```crystal
+"hello\n".chomp
+# => "hello"
+
+"hello ".chomp
+# => "hello "
+
+"hello".chomp("llo")
+# => "he"
+```
+
+The `strip` method will by default remove all whitespace from the beginning and end of a string.
+If the method is called with an argument, it will remove that argument from the beginning and end of the string.
+
+```crystal
+" hello ".strip
+# => "hello"
+```
+
+## String#delete_at
+
+To remove a character from a string, you can use the `delete_at` method.
+The `delete_at` method takes an index as an argument and will remove the character at that index.
+
+```crystal
+"hello".delete_at(0)
+# => "ello"
+
+"hello".delete_at(3)
+# => "helo"
+```
+
+## String#reverse
+
