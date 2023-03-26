@@ -21,20 +21,6 @@ The [`downcase`][downcase] method returns a new string with all the characters c
 # => "hello"
 ```
 
-## String#capitalize & String#camelcase & String#underscore & String#titleize
-
-There are a number of methods that can do more specific case conversions.
-That can be useful when you want to convert a string to a specific format.
-Here is a list of some of the most common methods:
-
-| Method                            | Description                                                                                                        | Example                                              |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lower case                                                  | `"hEllO" # => "Hello"`                               |
-| [`String#camelcase`][cammel-case] | Converts underscore to cammelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
-| `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lower cased                                                | `"empire_state_building" # => "empireStateBuilding"` |
-| [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
-| [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
-
 ## String#sub & String#gsub
 
 Crystal has methods for replacing parts of a string.
@@ -84,16 +70,6 @@ If the method is called with an argument, it will remove that argument from the 
 # => "hello"
 ```
 
-## String#reverse
-
-To reverse a string, you can use the [`reverse`][reverse] method.
-This method will return a new string with the characters in reverse order.
-
-```crystal
-"hello".reverse
-# => "olleh"
-```
-
 ## String#index
 
 The [`index`][index] method can be used to find the index of a character in a string.
@@ -139,15 +115,10 @@ The `insert` method will return a new string with the second argument inserted a
 [string-api]: https://crystal-lang.org/api/latest/String.html
 [upcase]: https://crystal-lang.org/api/latest/String.html#upcase%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
 [downcase]: https://crystal-lang.org/api/latest/String.html#downcase%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
-[cammel-case]: https://crystal-lang.org/api/latest/String.html#capitalize(options=Unicode::CaseOptions::None)-instance-method
-[underscore]: https://crystal-lang.org/api/latest/String.html#underscore%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
-[titleize]: https://crystal-lang.org/api/latest/String.html#titleize%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
-[capitalize]: https://crystal-lang.org/api/latest/String.html#capitalize%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
 [sub]: https://crystal-lang.org/api/latest/String.html#sub%28string%3AString%2Creplacement%29%3AString-instance-method
 [gsub]: https://crystal-lang.org/api/latest/String.html#gsub%28string%3AString%2Creplacement%29%3AString-instance-method
 [chomp]: https://crystal-lang.org/api/latest/String.html#chomp%28suffix%3AString%29%3AString-instance-method
 [strip]: https://crystal-lang.org/api/latest/String.html#strip%28chars%3AString%29%3AString-instance-method
-[reverse]: https://crystal-lang.org/api/latest/String.html#reverse%3AString-instance-method
 [index]: https://crystal-lang.org/api/latest/String.html#index%28search%3AString%2Coffset%3D0%29-instance-method
 [delete_at]: https://crystal-lang.org/api/latest/String.html#delete_at%28index%3AInt%29%3AString-instance-method
 [insert]: https://crystal-lang.org/api/latest/String.html#insert%28index%3AInt%2Cother%3AString%29%3AString-instance-method

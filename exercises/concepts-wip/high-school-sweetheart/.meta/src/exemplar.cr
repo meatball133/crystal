@@ -4,7 +4,7 @@ class HighSchoolSweetheart
   end
 
   def self.first_letter(name)
-    name.strip.first
+    name.strip[0]
   end
 
   def self.initial(name)
