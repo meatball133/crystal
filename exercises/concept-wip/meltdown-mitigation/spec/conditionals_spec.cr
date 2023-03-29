@@ -29,8 +29,12 @@ describe Reactor do
       Reactor.reactor_efficiency(150, 45, 10000).should eq "orange"
     end
 
-    it "Should return \"red\" if the reactor is running at less than 60% efficiency" do
+    it "Should return \"red\" if the reactor is running at less than 60% but at least 30% efficiency" do
       Reactor.reactor_efficiency(100, 30, 5000).should eq "red"
+    end
+
+    it "Should return \"black\" if the reactor is running at less than 30% efficiency" do
+      Reactor.reactor_efficiency(50, 15, 2500).should eq "black"
     end
   end
 end
