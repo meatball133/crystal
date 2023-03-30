@@ -37,4 +37,7 @@ describe Reactor do
       Reactor.reactor_efficiency(50, 15, 2500).should eq "black"
     end
   end
+
+  describe "fail_safe" do
+  end
 end
