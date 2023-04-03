@@ -30,7 +30,5 @@ class Reactor
     else
       return "DANGER"
     end
-
-    return status_code
   end
 end

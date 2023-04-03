@@ -39,5 +39,24 @@ describe Reactor do
   end
 
   describe "fail_safe" do
+    it "should return low if the the output is too low" do
+      Reactor.fail_safe(10, 10000, 400).should eq "LOW"
+    end
+
+    it "should return low if the the output is too low on the upper end" do
+      Reactor.fail_safe(10, 10000, 899).should eq "LOw"
+    end
+
+    it "should return noromal if the ouput is within throughput" do
+      Reactor.fail_safe(10, 10000, 901).should eq "NORMAL"
+    end
+
+    it "should return noromal if the ouput is within throughput on the upper end" do
+      Reactor.fail_safe(10, 10000, 1099).should eq "NORMAL"
+    end
+
+    it "should return Danger if the ouput is too high" do
+      Reactor.fail_safe(10, 10000, 1101).should eq "DANGER"
+    end
   end
 end
