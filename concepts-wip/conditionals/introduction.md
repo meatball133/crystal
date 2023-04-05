@@ -31,19 +31,6 @@ If the values are the same then it will return `true` otherwise it will return `
 The `==` operator can compare any type of value with any other type of value.
 The `!=` works the same way but it will return `true` if the values are not equal and `false` if they are equal.
 
-## Spaceship operator
-
-The spaceship operator is a special comparison operator and has got its name because of the way it looks.
-It is special in the sense that it doesn't return a truthy or falsey value but it returns a number.
-It is written as `<=>` and it is used to compare 2 values.
-It will return `1` if the left value is greater than the right value, `-1` if the left value is less than the right value, and `0` if the values are equal.
-
-```crystal
-1 <=> 2 # => -1
-2 <=> 1 # => 1
-1 <=> 1 # => 0
-```
-
 ## If statement
 
 The [`if`][if] statement is used to check if a given condition is truthy or falsey.
