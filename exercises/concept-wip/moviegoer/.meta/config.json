@@ -1,0 +1,12 @@
+{
+  "authors": ["meatball133"],
+  "contributors": [],
+  "files": {
+    "solution": ["src/moviegoer.cr"],
+    "test": ["spec/moviegoer_spec.cr"],
+    "exemplar": [".meta/src/exemplar.cr"]
+  },
+  "forked_from": ["ruby/moviegoer"],
+  "blurb": "Learn about ternary operator while writing the rules for a movie theater's website.",
+  "icon": "moviegoer"
+}
