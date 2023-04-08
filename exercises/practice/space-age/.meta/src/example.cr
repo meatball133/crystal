@@ -2,7 +2,7 @@ module Space
   struct Age
     SECONDS_PER_EARTH_YEAR = 31557600
     EARTH_YEARS_ON_PLANET  = {
-      earth: 1,
+      earth:   1,
       mercury: 0.2408467,
       venus:   0.61519726,
       mars:    1.8808158,
