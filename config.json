@@ -91,6 +91,15 @@
         "topics": []
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "a50ad959-0a5e-4110-8e49-fa50b1242a89",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
         "slug": "clock",
         "name": "Clock",
         "uuid": "3ba4f982-c46e-4fc3-8ab4-9580656eb2b4",
@@ -487,6 +496,15 @@
         "topics": ["arrays", "enumerable", "loops"]
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "243d683a-a2ba-4759-8a7c-61b4173a9a7e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": ["arrays", "loops"]
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "27783181-8b3e-4a18-af09-05882941f8d7",
@@ -505,6 +523,15 @@
         "topics": ["strings", "classes"]
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "17957877-0e43-4069-b806-f35d9212ff23",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["numbers", "classes"]
+      },
+      {
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
@@ -512,6 +539,14 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": ["strings", "classes"]
+      },
+      {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "3941b2c4-19d1-478e-96d7-1cc596197ccd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "allergies",
@@ -550,6 +585,14 @@
         "topics": ["arrays", "loops", "strings"]
       },
       {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "00e8ffd8-b4f7-44e0-b007-8b265eed14fb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
@@ -584,6 +627,14 @@
         "prerequisites": [],
         "difficulty": 6,
         "topics": []
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "cef9b59f-d44e-4477-8dd2-8ab88953caea",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },

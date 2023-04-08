@@ -9,16 +9,6 @@ on:
     - cron: '0 0 * * 0'
 
 jobs:
-  exercises:
-    name: Check exercises
-    runs-on: ubuntu-22.04
-    # idea from https://github.com/actions/starter-workflows/blob/master/ci/crystal.yml
-    container:
-      image: crystallang/crystal
-    steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
-      - name: Run tests
-        run: make test-exercises
   generator:
     name: Check Generator Templates
     runs-on: ubuntu-22.04
@@ -37,3 +27,18 @@ jobs:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: Run file formatting
         run: crystal ./bin/check-format.cr
+  exercises:
+    name: Check exercises crystal ${{ matrix.crystal }}
+    runs-on: ubuntu-22.04
+    strategy:
+      # Allows running the job multiple times with different configurations
+      matrix:
+        crystal: [1.2.2, 1.6, 1.7]
+    container:
+      image: crystallang/crystal:${{ matrix.crystal }}
+    steps:
+      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - name: Install jq
+        run: apt-get update && apt-get install -y jq
+      - name: Run tests
+        run: ./bin/test-exercises.sh
