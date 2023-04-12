@@ -41,6 +41,14 @@
         "concepts": ["bools"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -665,6 +673,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
+      "slug": "numbers",
+      "name": "Numbers"
     }
   ],
   "key_features": [
