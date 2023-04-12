@@ -85,7 +85,7 @@ Temperature.new.to_fahrenheit(10)
 During the installation of the temperature sensors, the maintenance workers realized some sensors were missing.
 To build a complete temperature measurement unit is 4 temperature sensors required.
 The maintenance team counted how many sensors they had, but they do not know how many sensors are missing.
-They would like to get some help counting how many sensors they need to buy to have so that all sensors are used in a temperature measurement unit.
+They would like to get some help counting how many sensors they need to buy to build another complete temperature measurement unit.
 
 Implement the `number_missing_sensors` method that takes an argument `number_of_sensors` and returns the number of missing sensors.
 
