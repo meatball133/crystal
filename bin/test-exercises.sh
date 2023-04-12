@@ -19,6 +19,6 @@ done
 
 if [ -d "./exercises/concepts" ]; then
     for exercise in ./exercises/concepts/*; do
-        test_run ${exercise} "example"
+        test_run ${exercise} "exemplar"
     done
 fi
