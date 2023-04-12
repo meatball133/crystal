@@ -25,7 +25,16 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "arys-amazing-lasagna",
+        "name": "Ary's Amazing Lasagna",
+        "uuid": "e2d8380e-d815-4458-a760-963e150bb439",
+        "concepts": ["basics"],
+        "prerequisites": [],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "acronym",
@@ -638,7 +647,13 @@
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "2145e868-df45-4262-8026-1cd0eb3433d8",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
   "key_features": [
     {
       "title": "Simple Syntax",
