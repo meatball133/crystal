@@ -3,6 +3,7 @@
 ## 1. Calculate the interest rate
 
 - Use a conditional expression as an [`if`][if] statement and compare the `balance` to the different ranges.
+- The `return` keyword can be used to do an early return from a method.
 
 ## 2. Calculate the interest
 

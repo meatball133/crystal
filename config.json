@@ -46,7 +46,7 @@
         "slug": "interest-is-interesting",
         "name": "Interest is Interesting",
         "uuid": "142d81e4-6572-4567-841d-e59439945dd9",
-        "concepts": ["while-loops"],
+        "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "wip"
       }
@@ -673,6 +673,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "9f4009c3-fe9e-4e4d-b0ff-6605b35a8a2d",
+      "slug": "return",
+      "name": "Return"
     },
     {
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",

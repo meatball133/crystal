@@ -1,9 +1,11 @@
-# While && Until Loops
+# While && Until Loops && Return
 
 A loop is a control structure that allows code to be executed repeatedly based on a given condition.
 
 In looping there is a term known as an infinite loop, which has a condition that will stay true forever.
 This is not a good practice and should be avoided.
+
+Return is a keyword that can be used to exit a method early.
 
 ## While Loops
 
@@ -117,6 +119,35 @@ while i < 3
   # => String
   i += 1
 end
+```
+
+## Return
+
+In Crystal so does always the last expression in a method return its value.
+Although sometimes you need to return a value before the last expression.
+For this, you can use the `return` keyword, which will return the value of the expression that follows it.
+Code written after a `return` keyword will not be executed.
+
+```crystal
+def speed_limit(road_number)
+    if road_number == 1
+        return 50
+        puts "This will not be executed"
+    end
+    if road_number == 2
+        return 80
+        puts "This will not be executed"
+    end
+    100
+end
+
+p speed_limit(1) # => 50
+p speed_limit(2) # => 80
+p speed_limit(3) # => 100
+```
+
+```exercism/note
+The `return` keyword should be omitted when the last expression in a method is the value that should be returned.
 ```
 
 [while]: https://crystal-lang.org/reference/latest/syntax_and_semantics/while.html
