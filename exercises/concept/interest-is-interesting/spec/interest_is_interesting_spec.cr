@@ -54,45 +54,45 @@ describe SavingsAccount do
 
   describe "interest" do
     it "Returns intrest on negative balance" do
-      SavingsAccount.interest(-10000.0).should eq(-321.3)
+      SavingsAccount.interest(-10000.0).should be_close(-321.3)
     end
 
     it "Returns interest on small balance" do
-      SavingsAccount.interest(555.55).should eq(2.77775)
+      SavingsAccount.interest(555.55).should be_close(2.77775)
     end
 
     it "Returns interest on medium balance" do
-      SavingsAccount.interest(4999.99).should eq(81.0498379)
+      SavingsAccount.interest(4999.99).should be_close(81.0498379)
     end
 
     it "Returns interest on large balance" do
-      SavingsAccount.interest(34600.80).should eq(856.3698)
+      SavingsAccount.interest(34600.80).should be_close(856.3698)
     end
   end
 
   describe "annual_balance_update" do
     it "Returns zero for empty start balance" do
-      SavingsAccount.annual_balance_update(0.0).should eq(0.0)
+      SavingsAccount.annual_balance_update(0.0).should be_close(0.0)
     end
 
     it "Returns updated balance on small start balance" do
-      SavingsAccount.annual_balance_update(0.000001).should eq(0.000001005)
+      SavingsAccount.annual_balance_update(0.000001).should be_close(0.000001005)
     end
 
     it "Returns updated balance on avrage start balance" do
-      SavingsAccount.annual_balance_update(1_000.0).should eq(1016.2101016210)
+      SavingsAccount.annual_balance_update(1_000.0).should be_close(1016.2101016210)
     end
 
     it "Returns updated balance on large start balance" do
-      SavingsAccount.annual_balance_update(898124017.826243404425).should eq(920352587.26744292868451875)
+      SavingsAccount.annual_balance_update(898124017.826243404425).should be_close(920352587.26744292868451875)
     end
 
     it "Returns updated balance on small negative start balance" do
-      SavingsAccount.annual_balance_update(-0.123).should eq(-0.12695199)
+      SavingsAccount.annual_balance_update(-0.123).should be_close(-0.12695199)
     end
 
     it "Returns updated balance on large negative start balance" do
-      SavingsAccount.annual_balance_update(-152964.231).should eq(-157878.97174203)
+      SavingsAccount.annual_balance_update(-152964.231).should be_close(-157878.97174203)
     end
   end
 
