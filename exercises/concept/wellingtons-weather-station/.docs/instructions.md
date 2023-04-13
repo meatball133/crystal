@@ -4,7 +4,7 @@ The weather station of Wellington is going to replace its manual temperature rec
 In the old system, the calculations were performed manually.
 In the new system, they will be automated.
 The calculations include converting the temperature from Celsius to Fahrenheit, and finding the average temperature.
-The new system has sensors to record temperature data in degrees Celsius.
+The new system has sensors to record temperature data in Celsius.
 
 The Wellington weather station wants you to help them with the new system.
 
@@ -28,7 +28,7 @@ Here is a table showing the conversion between Celsius and Kelvin:
 
 The weather station wants you to implement a method that converts a temperature from Celsius to Kelvin.
 
-Implement the `to_kelvin` method that takes an argument `celsius` and returns the temperature in Kelvin by adding 273.15 to the given `celsius` value.
+Implement the `Temperature#to_kelvin` method that takes an argument `celsius` and returns the temperature in Kelvin by adding 273.15 to the given `celsius` value.
 
 ```crystal
 Temperature.new.to_kelvin(0)
@@ -43,7 +43,7 @@ The weather station only wants to display the temperature rounded to 1 decimal p
 
 The weather station would thereby like you to implement a method that rounds the temperature to 1 decimal place.
 
-Implement the `round` method that takes an argument `celsius` and returns the temperature rounded to 1 decimal place.
+Implement the `Temperature#round` method that takes an argument `celsius` and returns the temperature rounded to 1 decimal place.
 
 ```crystal
 Temperature.new.round(10.1234)
@@ -60,7 +60,7 @@ The tourists are interested in the temperature in Fahrenheit.
 
 Fahrenheit is a unit of measurement for temperature.
 It has a different scale than Celsius.
-0°C is 32°F, and 1 Celsius degree is equal to 1.8 Fahrenheit degrees.
+0°C is 32°F, and 1 degree Celsius is equal to 1.8 degrees Fahrenheit.
 
 Here is a table showing the conversion between Celsius and Fahrenheit:
 
@@ -73,7 +73,7 @@ Here is a table showing the conversion between Celsius and Fahrenheit:
 
 The weather station wants you to implement a method that converts a temperature from Celsius to Fahrenheit.
 
-Implement the `to_fahrenheit` method that takes a number in Celsius and returns the temperature in Fahrenheit as an integer.
+Implement the `Temperature#to_fahrenheit` method that takes an argument `celsius` and returns the temperature in Fahrenheit as an integer.
 
 ```crystal
 Temperature.new.to_fahrenheit(10)
@@ -83,11 +83,11 @@ Temperature.new.to_fahrenheit(10)
 ## 4. Get the number of missing sensors
 
 During the installation of the temperature sensors, the maintenance workers realized some sensors were missing.
-To build a complete temperature measurement unit is 4 temperature sensors required.
+To build a complete temperature measurement unit so are 4 temperature sensors required.
 The maintenance team counted how many sensors they had, but they do not know how many sensors are missing.
 They would like to get some help counting how many sensors they need to buy to build another complete temperature measurement unit.
 
-Implement the `number_missing_sensors` method that takes an argument `number_of_sensors` and returns the number of missing sensors.
+Implement the `Temperature#number_missing_sensors` method that takes an argument `number_of_sensors` and returns the number of missing sensors.
 
 ```crystal
 Temperature.new.number_missing_sensors(10)
