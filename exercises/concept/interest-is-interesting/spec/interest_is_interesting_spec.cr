@@ -1,3 +1,6 @@
+require "spec"
+require "../src/*"
+
 describe SavingsAccount do
   describe "interest_rate" do
     it "Returns minimum interest rate" do
