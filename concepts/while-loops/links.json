@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/while.html",
+    "description": "Crystal docs: While"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/until.html",
+    "description": "Crystal docs: Until"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/break.html",
+    "description": "Crystal docs: Break"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/next.html",
+    "description": "Crystal docs: Next"
+  }
+]
