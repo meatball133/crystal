@@ -42,13 +42,13 @@ describe "Navigation" do
       calculation.should be_a(Float32)
     end
 
-    it "502.5 m and 2.5 seconds should equal 201" do
+    it "502.5 m and 2.5 seconds should equal 201 meter per second" do
       calculation = Navigation.new.calculate_velocity(502.5, 2.5)
       calculation.should eq 201
       calculation.should be_a(Float32)
     end
 
-    it "4531 m and 14.6 seconds should equal" do
+    it "4531 m and 14.6 seconds should equal 310.34247 meter per second" do
       calculation = Navigation.new.calculate_velocity(4531, 14.6)
       calculation.should eq 310.34247_f32
       calculation.should be_a(Float32)

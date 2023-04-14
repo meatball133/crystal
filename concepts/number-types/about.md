@@ -33,7 +33,7 @@ To declare an integer with a specific type you can use the type name as a suffix
 1_i8.class
 # => Int8
 
-3
+3.class
 # => Int32
 
 5_i128.class
@@ -124,6 +124,35 @@ The `to_f` method converts to the default floating point type, which is `Float64
 
 2.0_f64.to_f.class
 # => Float64
+```
+
+## Type after an operation
+
+When you do an operation between two numbers, the result will be of the type of the number with the highest precision.
+Float is more precise than an integer and an integer is more precise than an unsigned integer.
+Then `Float64` is more precise than Float32 and so on.
+
+```crystal
+(1_u8 + 2_u64).class
+# => UInt64
+
+(1_u8 + 2_i64).class
+# => Int64
+
+(1_u8 + 2.0_f64).class
+# => Float64
+```
+
+## Dig Deeper: unsigned integers vs signed integers
+
+```exercism/advanced
+Under the hood what makes unsigned integers different from signed integers, is that signed integers are the first bit used to store the sign.
+The sign is either positive or negative.
+For unsigned integers, the first bit is used to store the value.
+So for a signed 32-bit integer is the max value 2^31 - 1.
+For an unsigned 32-bit integer is the max value 2^32 - 1.
+
+If you are interested in learning more about signedness you can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Signedness).
 ```
 
 [float]: https://crystal-lang.org/api/latest/Float.html

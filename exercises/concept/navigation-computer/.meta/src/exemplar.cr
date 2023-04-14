@@ -8,6 +8,6 @@ class Navigation
   end
 
   def calculate_velocity(distance, time)
-    distance.to_f32 / time.to_f32
+    (distance / time).to_f32
   end
 end

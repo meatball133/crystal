@@ -7,8 +7,8 @@
 
 ## 1. Navigation constants
 
-- You need to define a [constant][constants] that should contain the [integer][integers].
-- The constant should be declared inside the `navigation` class.
+- You need to define [constants][constants] that should contain a [integer][integers].
+- The constant should be declared inside the `Navigation` class.
 - The constant needs to be declared outside of any method.
 
 ## 2. Correct area analysis

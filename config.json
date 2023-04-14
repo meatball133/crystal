@@ -41,6 +41,14 @@
         "concepts": ["bools"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "navigation-computer",
+        "name": "Navigation Computer",
+        "uuid": "d980412c-1480-453a-be6c-2cd7779284bc",
+        "concepts": ["number-types"],
+        "prerequisites": ["numbers"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -665,6 +673,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "43dd66b4-5d26-44b6-8f2e-2a0392c642b2",
+      "slug": "number-types",
+      "name": "Number Types"
     }
   ],
   "key_features": [

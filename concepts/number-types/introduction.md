@@ -33,7 +33,7 @@ To declare an integer with a specific type you can use the type name as a suffix
 1_i8.class
 # => Int8
 
-3
+3.class
 # => Int32
 
 5_i128.class
