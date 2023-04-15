@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["ihid"],
   "files": {
     "solution": ["src/navigation_computer.cr"],
     "test": ["spec/navigation_computer_spec.cr"],
