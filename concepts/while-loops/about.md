@@ -133,7 +133,9 @@ end
 p a
 # => 1
 
-a = while true
+i = 0
+a = while i == 0
+  i += 1
   1
 end
 
