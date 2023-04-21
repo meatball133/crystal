@@ -9,26 +9,12 @@ Thereby we need to use the right data types.
 ## 1. Navigation constants
 
 The navigation computer needs to know the distance between some objects in space to do the right calculations, the distance is measured in km.
-Km stands for kilometer, which is a unit of length, there kilo means 1000 and meter is a unit of length.
-The distance should be from earth.
-The distances that need to be stored are: Neptune, Mars and the atmosphere.
 
 Define the following constants:
 
 - `NEPTUNE_DISTANCE` with the value `4_400_000_000` which should be stored as a `Int64`
 - `MARS_DISTANCE` with the value `227_940_000` which should be stored as a `Int32`
 - `ATMOSPHERE_DISTANCE` with the value `10_000` which should be stored as a `Int16`
-
-```crystal
-Navigation::NEPTUNE_DISTANCE
-# => 4400000000
-
-Navigation::MARS_DISTANCE
-# => 227940000
-
-Navigation::ATMOSPHERE_DISTANCE
-# => 10000
-```
 
 ## 2. Correct area analysis
 
@@ -57,7 +43,6 @@ Navigation.new.correct_area_analysis(measurement).class
 
 The navigation computer needs to know the velocity of the probe.
 The velocity is measured in m/s.
-M/s stands for meter per second, which is a unit of velocity.
 
 To get the velocity we need to know the distance and the time it took to travel that distance.
 Then take the distance and divide it by the time.
