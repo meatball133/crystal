@@ -42,6 +42,8 @@ module Check_template
           raise "The source file \"./exercises/concept/#{dir}/#{json["files"]["solution"]}\" is not formatted"
         when !File.same_content?("/tmp/spec.cr", "./exercises/concept/#{dir}/#{json["files"]["test"][0]}")
           raise "The spec file \"./exercises/concept/#{dir}/#{json["files"]["test"]}\" is not formatted"
+        else
+          puts "All files in \"./exercises/concept/#{dir}\" are formatted"
         end
       end
     end
