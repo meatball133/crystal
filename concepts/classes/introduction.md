@@ -3,9 +3,7 @@
 Classes are a centric concept in [object-oriented programming][object-oriented-programming].
 [In Crystal so is everything an object][everything-is-an-object], and every object has a type, and it can respond to some methods.
 Classes are blueprints to create objects, providing initial values for state, like variables, and implementations of behavior, like methods.
-When creating an object from a class, the object is called an instance of the class, the instance holds all the instance variables.
-
-This goes in line with that everything in Crystal is an object, and that every object has a type, and it can respond to some methods.
+When creating an object from a class, the object is an instance of that class, the instance holds all the instance variables and states.
 
 ## Class definition
 
@@ -27,7 +25,7 @@ end
 account = Account.new
 ```
 
-In the example above so is the variable `account` an instance of the class `Account`.
+In the example above so is the variable `account` is an instance of the class `Account`.
 
 When creating an instance, there is a special method called `initialize` that is a constructor, it is called when an instance is created.
 The constructor allows you to set the initial state of the instance.
@@ -62,7 +60,7 @@ Account.new(4)
 
 An instance method is a method that is available to an instance of a class.
 And can be called on an instance of a class.
-Instance methods are defined using the `def` keyword, followed by the name of the method.
+Instance methods are defined using the `def` keyword, followed by the name of the method and they need to be defined inside the class definition.
 
 ```crystal
 class Account
@@ -75,7 +73,6 @@ end
 ## Instance variables
 
 [Instance variables][instance-variable] are variables that are available in all methods of the instance.
-When they are modified in one method, the change is visible in all other methods.
 They can be initialized in the `initialize` method.
 They are defined using the `@` prefix.
 
@@ -106,7 +103,7 @@ end
 ### Instance variables with initialization
 
 Instance variables can be initialized with an argument passed to the `initialize` method.
-Although since crystal can't infer the type of an argument under initialization, so does it needs to be specified.
+Although since Crystal can't infer the type of an argument under initialization, so does it needs to be specified.
 If you want to read more about this, you can read: [type-inference][type-inference].
 To specify the type of the variable you can use the `:` symbol, followed by the type.
 For example, if you want to create an instance variable called `balance` that is an `Int32`, you can do the following: `@balance : Int32`.
@@ -186,9 +183,8 @@ account_2.balance
 # => 10
 
 account.withdraw(5)
-account.withdraw(5)
 account.balance
-# => 0
+# => 5
 
 account_2.balance
 # => 10
@@ -196,11 +192,11 @@ account_2.balance
 
 ## Class methods
 
-[Class methods][class-methods], are methods that are defined on the class, and not on the instances of the class.
+[Class methods][class-methods], are methods that are defined on a class, and not on the instances of a class.
 They offer a way to create methods that are not dependent on the state of the instance.
 They are defined using the `def` keyword, followed by `self.` and the name of the method.
 `self` is a reference to the namespace which self is being called from.
-In this case, it is a reference to the class, Account.
+In this case, it is a reference to the class, `Account`.
 It would be the same as if you would have written `Account.`, but `self.` is the preferred way to do it.
 
 ```crystal

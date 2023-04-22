@@ -41,6 +41,14 @@
         "concepts": ["bools"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "johannes-juice-maker",
+        "name": "Johannes' Juice Maker",
+        "uuid": "f3a1928f-7cce-4dca-9a2e-a1b714deb8db",
+        "concepts": ["classes"],
+        "prerequisites": ["number-types", "bools"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -673,6 +681,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "35772a3e-13ff-4e67-9e2c-04c53c986ef4",
+      "slug": "classes",
+      "name": "Classes"
     }
   ],
   "key_features": [

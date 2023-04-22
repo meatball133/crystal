@@ -2,7 +2,7 @@
 
 ## General
 
-- Don't worry about which running state the machine is in.
+- Don't worry about which running state the machine is in, e.g the machine wont be running when you plug it in.
 
 ## 1. Debug light
 
@@ -17,21 +17,21 @@
 
 ## 3. Turn on the machine
 
-- Define an instance method `turn_on`.
+- Define an instance method called `turn_on`.
 - Set the [instance variable][instance-variable] `@running` to `true`.
 
 ## 4. Status of the machine
 
-- Define an instance method `status`.
+- Define an instance method called `status`.
 - Return the [instance variable][instance-variable] `@running`.
 
 ## 5. Add juice
 
-- Define an instance method `add_juice`, that takes an integer as an argument.
+- Define an instance method called `add_juice`, that takes an integer as an argument.
 - Set the [instance variable][instance-variable] `@amount_of_juice_in_cup` to the sum of the current value of `@amount_of_juice_in_cup` and the argument passed to the method.
 
 ## 6. Turn off the machine
 
-- Define an instance method `turn_off`, that takes an integer as an argument.
+- Define an instance method called `turn_off`, that takes an integer as an argument.
 - Set the [instance variable][instance-variable] `@running` to `false`.
 - Set the [instance variable][instance-variable] `@amount_of_juice_in_cup` to the current value of `@amount_of_juice_in_cup` minus the argument passed to the method times 5.

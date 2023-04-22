@@ -23,12 +23,13 @@ describe "JuiceMaker" do
   end
 
   describe "start" do
-    it "should start the machine" do
+    it "Can start the machine" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
       juice_maker.@running.should eq true
     end
-    it "should start the machine if there is no fluid" do
+
+    it "Can start the machine evn if there is no fluid" do
       juice_maker = JuiceMaker.new(0)
       juice_maker.start
       juice_maker.@running.should eq true
@@ -36,25 +37,25 @@ describe "JuiceMaker" do
   end
 
   describe "status" do
-    it "should return true if the machine is started" do
+    it "Status should return true if the machine is started" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
       juice_maker.status.should eq true
     end
 
-    it "should return false if the machine is not started" do
+    it "Status return false if the machine is not started" do
       juice_maker = JuiceMaker.new(0)
       juice_maker.status.should eq false
     end
   end
 
   describe "add_fluid" do
-    it "should add fluid to the machine" do
+    it "Can add fluid to the machine" do
       juice_maker = JuiceMaker.new(0)
       juice_maker.add_fluid(5)
       juice_maker.@fluid.should eq 5
     end
-    it "can add fluid multiple times" do
+    it "Caa´´n add fluid multiple times" do
       juice_maker = JuiceMaker.new(5)
       juice_maker.add_fluid(5)
       juice_maker.add_fluid(20)
@@ -64,7 +65,7 @@ describe "JuiceMaker" do
   end
 
   describe "stop" do
-    it "should stop the machine" do
+    it "Can stop the machine" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
       juice_maker.status.should eq true
