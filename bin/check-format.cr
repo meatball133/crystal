@@ -5,8 +5,8 @@ module Check_template
     Dir.open("./exercises/practice").each_child do |dir|
       json = JSON.parse(File.read("./exercises/practice/#{dir}/.meta/config.json"))
       File.write("/tmp/example.cr", File.read("./exercises/practice/#{dir}/.meta/src/example.cr"))
-      File.write("/tmp/src.cr", File.read("./exercises/practice/#{dir}/src/#{json["files"]["solution"]}.cr"))
-      File.write("/tmp/spec.cr", File.read("./exercises/practice/#{dir}/spec/#{json["files"]["test"]}_spec.cr"))
+      File.write("/tmp/src.cr", File.read("./exercises/practice/#{dir}/src/#{json["files"]["solution"][0]}.cr"))
+      File.write("/tmp/spec.cr", File.read("./exercises/practice/#{dir}/spec/#{json["files"]["test"][0]}_spec.cr"))
 
       system("crystal tool format /tmp/example.cr")
       system("crystal tool format /tmp/src.cr")
@@ -14,9 +14,9 @@ module Check_template
       case
       when !File.same_content?("/tmp/example.cr", "./exercises/practice/#{dir}/.meta/src/example.cr")
         raise "The example file \"./exercises/practice/#{dir}/.meta/src/example.cr\" is not formatted"
-      when !File.same_content?("/tmp/src.cr", "./exercises/practice/#{dir}/src/#{json["files"]["solution"]}.cr")
+      when !File.same_content?("/tmp/src.cr", "./exercises/practice/#{dir}/src/#{json["files"]["solution"][0]}.cr")
         raise "The source file \"./exercises/practice/#{dir}/src/#{json["files"]["solution"]}.cr\" is not formatted"
-      when !File.same_content?("/tmp/spec.cr", "./exercises/practice/#{dir}/spec/#{json["files"]["test"]}_spec.cr")
+      when !File.same_content?("/tmp/spec.cr", "./exercises/practice/#{dir}/spec/#{json["files"]["test"][0]}_spec.cr")
         raise "The spec file \"./exercises/practice/#{dir}/spec/#{json["files"]["test"]}_spec.cr\" is not formatted"
       else
         puts "All files in \"./exercises/practice/#{dir}\" are formatted"
