@@ -1,7 +1,7 @@
 # Strings
 
 Crystal has a type known as [`String`][strings] which is used to represent text.
-In Crystal is a String a sequence of unicode characters.
+Crystal strings are sequences of unicode characters.
 Strings are immutable, meaning they cannot be changed once created.
 This means that every time you do a modification on a string a new string is created, thereby the original string is not modified.
 
@@ -20,13 +20,6 @@ The `+` operator will return a new string that is the combination of the two str
 hello = "Hello"
 hello + " World"
 # => "Hello World"
-```
-
-When wanting to concat a string with a non-string type so can you use the method `to_s` to convert the type to a string.
-
-```crystal
-"Hello " + 1.to_s
-# => "Hello 1"
 ```
 
 ## Conversation between Strings and numbers
@@ -87,7 +80,12 @@ The size of a string is a stored property of the string, so it doesn't have to c
 ## Indexing
 
 Indexing is when you want to get a specific character from a string.
-To get a character from a string you can use the `[]` method with the index of the character you want to get.
+To get a character from a string you can use familiar bracket notation.
+
+```exercism/note
+`[]` is actually implemented as a String instance method, where the index is the method argument.
+```
+
 In crystal is the first character in a string at index 0.
 
 ```crystal

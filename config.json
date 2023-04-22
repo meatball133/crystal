@@ -41,6 +41,14 @@
         "concepts": ["bools"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "party-robot",
+        "name": "Party Robot",
+        "uuid": "205a9a18-d32d-437e-9e43-9116cb9a2f46",
+        "concepts": ["strings"],
+        "prerequisites": ["classes"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -673,6 +681,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "7bea8916-b41e-4b28-872d-a7abeca74125",
+      "slug": "strings",
+      "name": "Strings"
     }
   ],
   "key_features": [
