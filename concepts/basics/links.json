@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://crystal-lang.org/reference/latest/index.html",
+    "description": "Crystals documentation"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/conventions/coding_style.html",
+    "description": "Crystal docs: Crystals coding style"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/comments.html",
+    "description": "Crystal docs: Comments in crystal"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html#methods",
+    "description": "Crystal introduction: Methods in crystal"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/20_variables.html",
+    "description": "Crystal introduction: Variables in crystal"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/constants.html",
+    "description": "Crystal introduction: Constants in crystal"
+  }
+]
