@@ -17,8 +17,8 @@ for exercise in ./exercises/practice/*; do
     test_run ${exercise} "example"
 done
 
-if [ -d "./exercises/concepts" ]; then
-    for exercise in ./exercises/concepts/*; do
-        test_run ${exercise} "example"
+if [ -d "./exercises/concept" ]; then
+    for exercise in ./exercises/concept/*; do
+        test_run ${exercise} "exemplar"
     done
 fi
