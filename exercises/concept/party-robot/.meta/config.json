@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["glennj"],
   "files": {
     "solution": ["src/party_robot.cr"],
     "test": ["spec/party_robot_spec.cr"],
