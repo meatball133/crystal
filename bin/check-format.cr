@@ -1,3 +1,5 @@
+require "json"
+
 module Check_template
   def self.check_practice_exercises
     Dir.open("./exercises/practice").each_child do |dir|
