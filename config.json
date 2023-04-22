@@ -41,6 +41,14 @@
         "concepts": ["bools"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "meltdown-mitigation",
+        "name": "Meltdown Mitigation",
+        "uuid": "190e759e-e343-4c52-942f-2642e2d41780",
+        "concepts": ["conditionals"],
+        "prerequisites": ["string-methods"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -673,6 +681,11 @@
       "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
       "slug": "bools",
       "name": "Bools"
+    },
+    {
+      "uuid": "8bb2f156-ff7d-4d5f-8878-5fc9aa11c408",
+      "slug": "conditionals",
+      "name": "Conditionals"
     }
   ],
   "key_features": [

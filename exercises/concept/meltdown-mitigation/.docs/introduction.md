@@ -15,12 +15,12 @@ These operators require 2 values to be compared of the same type.
 If the values are not of the same type then the compiler will throw an error.
 Here is a list of the comparison operators and an example of when they give a `true` value:
 
-| Method | Description   | Example |
-| ------ | ------------- | ------- |
-| <      | less          | 5 < 4   |
-| <=     | less or equal | 4 <= 4  |
-| >      | more          | 3 > 1   |
-| >=     | more or equal | 2 >= 2  |
+| Method | Description           | Example |
+| ------ | --------------------- | ------- |
+| <      | less than             | 5 < 4   |
+| <=     | less than or equal    | 4 <= 4  |
+| >      | greater than          | 3 > 1   |
+| >=     | greater than or equal | 2 >= 2  |
 
 ## Equality operators
 
@@ -35,6 +35,7 @@ The `!=` works the same way but it will return `true` if the values are not equa
 
 The [`if`][if] statement is used to check if a given condition is truthy or falsey.
 If the condition is truthy then the code inside the if statement will run.
+An `if` statement ends with the `end` keyword.
 
 ```crystal
 if 1 == 1
@@ -45,6 +46,7 @@ end
 if 1 > 2
   puts "1 is greater than 2"
 end
+# => no output
 ```
 
 ## Unless statement
@@ -55,6 +57,7 @@ The [`unless`][unless] statement works very similarly to the If statement but it
 unless 1 == 1
   puts "1 is not equal to 1"
 end
+# => no output
 
 unless 1 > 2
   puts "1 is not greater than 2"
@@ -83,7 +86,7 @@ end
 # => 1 is greater than 2
 ```
 
-## Elsif statement
+## "Cascading-if" statements
 
 The `elsif` statement can be used in conjunction with the if statement.
 The `elsif` statement will be executed if the if branch is not executed and the condition of the elsif statement is truthy.
