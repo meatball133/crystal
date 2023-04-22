@@ -25,7 +25,24 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "arys-amazing-lasagna",
+        "name": "Ary's Amazing Lasagna",
+        "uuid": "e2d8380e-d815-4458-a760-963e150bb439",
+        "concepts": ["basics"],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "crystal-hunter",
+        "name": "Crystal Hunter",
+        "uuid": "2e4f0820-655d-461f-a48e-9465eed99c75",
+        "concepts": ["bools"],
+        "prerequisites": ["basics"],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "acronym",
@@ -593,6 +610,14 @@
         "difficulty": 4
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "f95325e2-242b-4ecd-b518-78259a6c7f86",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
@@ -627,10 +652,29 @@
         "prerequisites": [],
         "difficulty": 6,
         "topics": []
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "cef9b59f-d44e-4477-8dd2-8ab88953caea",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "2145e868-df45-4262-8026-1cd0eb3433d8",
+      "slug": "basics",
+      "name": "Basics"
+    },
+    {
+      "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
+      "slug": "bools",
+      "name": "Bools"
+    }
+  ],
   "key_features": [
     {
       "title": "Simple Syntax",
