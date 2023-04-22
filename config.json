@@ -57,6 +57,14 @@
         "status": "wip"
       },
       {
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics"],
+        "status": "wip"
+      },
+      {
         "slug": "navigation-computer",
         "name": "Navigation Computer",
         "uuid": "d980412c-1480-453a-be6c-2cd7779284bc",
@@ -65,11 +73,11 @@
         "status": "wip"
       },
       {
-        "slug": "wellingtons-weather-station",
-        "name": "Wellington's Weather Station",
-        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
-        "concepts": ["numbers"],
-        "prerequisites": ["basics"],
+        "slug": "johannes-juice-maker",
+        "name": "Johannes' Juice Maker",
+        "uuid": "f3a1928f-7cce-4dca-9a2e-a1b714deb8db",
+        "concepts": ["classes"],
+        "prerequisites": ["number-types", "bools"],
         "status": "wip"
       },
       {
