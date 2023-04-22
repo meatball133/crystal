@@ -3,7 +3,7 @@ require "json"
 module Check_template
   def self.check_practice_exercises
     Dir.open("./exercises/practice").each_child do |dir|
-      json = JSON.parse(File.read("./exercises/practice/{dir}/.meta/config.json"))
+      json = JSON.parse(File.read("./exercises/practice/#{dir}/.meta/config.json"))
       File.write("/tmp/example.cr", File.read("./exercises/practice/#{dir}/.meta/src/example.cr"))
       File.write("/tmp/src.cr", File.read("./exercises/practice/#{dir}/src/#{json["files"]["solution"]}.cr"))
       File.write("/tmp/spec.cr", File.read("./exercises/practice/#{dir}/spec/#{json["files"]["test"]}_spec.cr"))
@@ -27,7 +27,7 @@ module Check_template
   def self.check_concept_exercises
     if Dir.exists?("exercises/concept")
       Dir.open("./exercises/concept").each_child do |dir|
-        json = JSON.parse(File.read("./exercises/practice/{dir}/.meta/config.json"))
+        json = JSON.parse(File.read("./exercises/concept/#{dir}/.meta/config.json"))
         File.write("/tmp/exemplar.cr", File.read("./exercises/concept/#{dir}/.meta/src/exemplar.cr"))
         File.write("/tmp/src.cr", File.read("./exercises/concept/#{dir}/src/#{json["files"]["solution"]}.cr"))
         File.write("/tmp/spec.cr", File.read("./exercises/concept/#{dir}/spec/#{json["files"]["test"]}_spec.cr"))
