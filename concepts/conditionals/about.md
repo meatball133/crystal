@@ -117,6 +117,19 @@ end
 # => 1 is greater than 2
 ```
 
+## if and unless as suffix
+
+The if and unless statement can also be used as a [suffix][if-as-suffix], this is useful when you want to run a single line of code if a condition is true.
+It is done by putting the if or unless statement after the code that you want to run.
+
+```crystal
+puts "1 is equal to 1" if 1 == 1
+# => 1 is equal to 1
+
+puts "1 is not equal to 1" unless 1 == 1
+# => no output
+```
+
 ## Types with conditionals
 
 When assigning to different types then will the variable carry both of the types.
@@ -137,3 +150,4 @@ typeof(a) # => Int32 | String
 [if]: https://crystal-lang.org/reference/latest/syntax_and_semantics/if.html
 [unless]: https://crystal-lang.org/reference/latest/syntax_and_semantics/unless.html
 [equality-and-comparison]: https://crystal-lang.org/reference/latest/syntax_and_semantics/operators.html#equality-and-comparison
+[if-as-suffix]: https://crystal-lang.org/reference/latest/syntax_and_semantics/as_a_suffix.html
