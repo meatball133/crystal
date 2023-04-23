@@ -147,9 +147,7 @@ describe "BankAccount" do
   pending "Can handle concurrent transactions" do
     bank_account = BankAccount.new
     bank_account.open
-
     channel = Channel(Int32).new
-    bank_account.open
     1000.times do
       spawn do
         begin

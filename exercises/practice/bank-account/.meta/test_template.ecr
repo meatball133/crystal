@@ -9,9 +9,8 @@ describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
         <% if cases["input"]["operations"].as_a.size == i + 1 && operations["operation"].to_s != "balance" %>
             expect_raises(ArgumentError) do
         <%- end -%>
-        <% if operations["operation"].to_s == "concurrent" %>
+        <%- if operations["operation"].to_s == "concurrent" -%>
             channel = Channel(Int32).new
-            bank_account.open
             1000.times do
             spawn do
                 begin
