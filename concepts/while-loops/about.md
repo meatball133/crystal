@@ -1,14 +1,11 @@
-# While && Until Loops
+# While and Until Loops
 
 A loop is a control structure that allows code to be executed repeatedly based on a given condition.
-
-In looping there is a term known as an infinite loop, which has a condition that will stay true forever.
-This is not a good practice and should be avoided.
 
 ## While Loops
 
 A while loop is a control structure that allows code to be executed repeatedly based on a given condition.
-The code within a while loop will continue to execute until the condition evaluates to falsey.
+The code within a while loop will continue to execute while the condition evaluates to truthy.
 While loops are often used when the number of iterations is not known beforehand but can be used in any situation where a loop is needed.
 
 The condition is evaluated before the code within the loop is executed, which means that if the condition is true the code within the loop will never be executed.
@@ -57,6 +54,14 @@ until i == 3
 end
 ```
 
+### Infinite loops
+
+A common error with while loops is getting into an "infinite" loop: a loop that never exits.
+The condition of an infinite loop _never_ evaluates to a falsey value.
+This is often due to programmer error; for example, forgetting to increment the loop variable.
+But sometimes an infinite loop is the clearest way to implement the logic of the program.
+Or it is truly necessary to loop forever; for example, an HTTP server waits for an incoming connection, handles it, then waits for the next connection.
+
 ## Break
 
 The `break` keyword can be used to exit a loop early.
@@ -69,7 +74,7 @@ while i < 3
   i += 1
   if i == 2
     break
-  emd
+  end
 end
 
 # Output:
