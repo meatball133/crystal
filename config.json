@@ -549,6 +549,15 @@
         "topics": ["numbers", "classes"]
       },
       {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "f20d55a6-7045-4035-a51b-55324ff2101e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["numbers", "concurrency"]
+      },
+      {
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
