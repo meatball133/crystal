@@ -117,6 +117,15 @@ end
 # => 1 is greater than 2
 ```
 
+## Ternary Operator
+
+Crystal has a ternary operator which is a single line if-else statement: `condition ? expression_if_truthy : expression_if_falsey`
+
+```crystal
+1 == 1 ? puts("1 is equal to 1") : puts("1 is not equal to 1")
+# => 1 is equal to 1
+```
+
 ## if and unless as suffix
 
 The if and unless statement can also be used as a [suffix][if-as-suffix], this is useful when you want to run a single line of code if a condition is true.

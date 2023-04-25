@@ -121,6 +121,15 @@ end
 typeof(a) # => Int32 | String
 ```
 
+## Ternary Operator
+
+Crystal has a ternary operator which is a single line if-else statement: `condition ? expression_if_truthy : expression_if_falsey`
+
+```crystal
+1 == 1 ? puts("1 is equal to 1") : puts("1 is not equal to 1")
+# => 1 is equal to 1
+```
+
 [if]: https://crystal-lang.org/reference/latest/syntax_and_semantics/if.html
 [unless]: https://crystal-lang.org/reference/latest/syntax_and_semantics/unless.html
 [equality-and-comparison]: https://crystal-lang.org/reference/latest/syntax_and_semantics/operators.html#equality-and-comparison
