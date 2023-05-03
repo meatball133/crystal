@@ -49,6 +49,14 @@
         "concepts": ["number-types"],
         "prerequisites": ["numbers"],
         "status": "wip"
+      },
+      {
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -539,6 +547,14 @@
         "topics": ["Hashmaps", "strings", "loops"]
       },
       {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "8d675618-a8f3-49b5-b32e-fee46991b5a7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -555,6 +571,15 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": ["numbers", "classes"]
+      },
+      {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "f20d55a6-7045-4035-a51b-55324ff2101e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["numbers", "concurrency"]
       },
       {
         "slug": "palindrome-products",
@@ -653,6 +678,14 @@
         "topics": []
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "121b6ec7-ae79-4665-8c6b-7c5b41fa8abf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "react",
         "name": "React",
         "uuid": "2da645e4-7e72-4377-a7ac-184b67ff8a63",
@@ -686,6 +719,11 @@
       "uuid": "43dd66b4-5d26-44b6-8f2e-2a0392c642b2",
       "slug": "number-types",
       "name": "Number Types"
+    },
+    {
+      "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
+      "slug": "numbers",
+      "name": "Numbers"
     }
   ],
   "key_features": [
