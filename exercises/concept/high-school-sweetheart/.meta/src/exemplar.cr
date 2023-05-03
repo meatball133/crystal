@@ -4,29 +4,29 @@ class HighSchoolSweetheart
   end
 
   def self.first_letter(name)
-    name.strip[0]
+    clean_up_name(name)[0]
   end
 
   def self.initial(name)
-    first_letter(name).upcase + '.'
+    first_letter(name).upcase + "."
   end
 
   def self.pair(name1, name2)
     "
-           ******       ******
-         **      **   **      **
-       **         ** **         **
-      **            *            **
-      **                         **
-      **     #{initial(name1)}  +  #{initial(name2)}     **
-       **                       **
-         **                   **
-           **               **
-             **           **
-               **       **
-                 **   **
-                   ***
-                    *
-      "
+          ******       ******
+        **      **   **      **
+      **         ** **         **
+     **            *            **
+     **                         **
+     **        B.  +  R.        **
+      **                       **
+        **                   **
+          **               **
+            **           **
+              **       **
+                **   **
+                  ***
+                   *
+    "
   end
 end
