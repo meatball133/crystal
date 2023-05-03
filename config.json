@@ -25,7 +25,32 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "arys-amazing-lasagna",
+        "name": "Ary's Amazing Lasagna",
+        "uuid": "e2d8380e-d815-4458-a760-963e150bb439",
+        "concepts": ["basics"],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "crystal-hunter",
+        "name": "Crystal Hunter",
+        "uuid": "2e4f0820-655d-461f-a48e-9465eed99c75",
+        "concepts": ["bools"],
+        "prerequisites": ["basics"],
+        "status": "wip"
+      },
+      {
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics"],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "acronym",
@@ -496,6 +521,15 @@
         "topics": ["arrays", "enumerable", "loops"]
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "243d683a-a2ba-4759-8a7c-61b4173a9a7e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": ["arrays", "loops"]
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "27783181-8b3e-4a18-af09-05882941f8d7",
@@ -503,6 +537,14 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": ["Hashmaps", "strings", "loops"]
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "8d675618-a8f3-49b5-b32e-fee46991b5a7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       },
       {
         "slug": "robot-simulator",
@@ -523,6 +565,15 @@
         "topics": ["numbers", "classes"]
       },
       {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "f20d55a6-7045-4035-a51b-55324ff2101e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["numbers", "concurrency"]
+      },
+      {
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
@@ -530,6 +581,14 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": ["strings", "classes"]
+      },
+      {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "3941b2c4-19d1-478e-96d7-1cc596197ccd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "allergies",
@@ -576,6 +635,14 @@
         "difficulty": 4
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "f95325e2-242b-4ecd-b518-78259a6c7f86",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
@@ -603,6 +670,14 @@
         "topics": []
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "121b6ec7-ae79-4665-8c6b-7c5b41fa8abf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "react",
         "name": "React",
         "uuid": "2da645e4-7e72-4377-a7ac-184b67ff8a63",
@@ -610,10 +685,34 @@
         "prerequisites": [],
         "difficulty": 6,
         "topics": []
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "cef9b59f-d44e-4477-8dd2-8ab88953caea",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "2145e868-df45-4262-8026-1cd0eb3433d8",
+      "slug": "basics",
+      "name": "Basics"
+    },
+    {
+      "uuid": "403dd39d-22ba-45b9-a80a-be0b94291ea1",
+      "slug": "bools",
+      "name": "Bools"
+    },
+    {
+      "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
+      "slug": "numbers",
+      "name": "Numbers"
+    }
+  ],
   "key_features": [
     {
       "title": "Simple Syntax",
