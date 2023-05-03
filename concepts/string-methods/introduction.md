@@ -1,6 +1,6 @@
 # String methods
 
-String has a number of methods that can be used to manipulate the string.  
+String has a number of methods that can be used to manipulate strings.  
 These methods are called on the string itself, and are often chained together to perform multiple operations on a string.
 
 Following is a list of some of the most common methods, for a full list of methods, see the [String API documentation][string-api].
@@ -28,7 +28,7 @@ These are known as [`sub`][sub] (_substitution_) and [`gsub`][gsub] (_global sub
 
 These methods can take a string, char or regex as the first argument, and a string or char as the second argument.
 The first argument is the part of the string that will be replaced, and the second argument is the replacement.
-Chars and regex will be explained at a later stage.
+Chars and regex will be explained at later concepts.
 
 The `sub` method will replace the first occurrence of the first argument with the second argument.
 
@@ -49,14 +49,11 @@ The `gsub` method works the same as sub but will replace all occurrences of the 
 Chomp and strip are methods that can be used to remove unwanted characters from a string.
 
 The [`chomp`][chomp] method will be default remove the last `\r`, `\n` or `\r\n` characters from a string.
-If the method is called with an argument, it will remove that argument from the end of the string.
+If the method is called with an argument, it will remove the given value from the end of the string.
 
 ```crystal
 "hello\n".chomp
 # => "hello"
-
-"hello ".chomp
-# => "hello "
 
 "hello".chomp("llo")
 # => "he"

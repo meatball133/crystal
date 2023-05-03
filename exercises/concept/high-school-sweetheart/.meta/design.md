@@ -8,7 +8,7 @@ The goal of this exercise is to teach the student about strings in crystal.
 
 ## Out of scope
 
-- Methods that involves data types not coverd in prerequisites concepts
+- Methods that involves data types not covered in prerequisites concepts
 
 ## Concepts
 

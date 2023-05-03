@@ -49,6 +49,14 @@
         "concepts": ["numbers"],
         "prerequisites": ["basics"],
         "status": "wip"
+      },
+      {
+        "slug": "high-school-sweetheart",
+        "name": "High School Sweetheart",
+        "uuid": "375d5c38-3b3b-4f62-8a16-e0e3e381adc9",
+        "concepts": ["string-methods"],
+        "prerequisites": ["strings"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -711,6 +719,11 @@
       "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
       "slug": "numbers",
       "name": "Numbers"
+    },
+    {
+      "uuid": "644484e8-7eb9-4db0-ba6c-bf83439bf4f7",
+      "slug": "string-methods",
+      "name": "String Methods"
     }
   ],
   "key_features": [
