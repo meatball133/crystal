@@ -1,6 +1,6 @@
 # Instructions
 
-Your friend Johannes loves doing diy (do it yourself) hardware.
+Your friend Johannes loves doing DIY (do it yourself) hardware.
 They just built a juice-maker, Johannes is very excited about it.
 Johannes's goal is to be able to make fresh juice every morning.
 

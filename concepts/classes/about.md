@@ -1,7 +1,7 @@
 # classes
 
-Classes are a centric concept in [object-oriented programming][object-oriented-programming].
-[In Crystal so is everything an object][everything-is-an-object], and every object has a type, and it can respond to some methods.
+Classes are a central concept in [object-oriented programming][object-oriented-programming].
+[In Crystal, everything is an object][everything-is-an-object], every object has a type, and it can respond to some methods.
 Classes are blueprints to create objects, providing initial values for state, like variables, and implementations of behavior, like methods.
 When creating an object from a class, the object is an instance of that class, the instance holds all the instance variables and states.
 
@@ -25,9 +25,10 @@ end
 account = Account.new
 ```
 
-In the example above so is the variable `account` is an instance of the class `Account`.
+In the example above the variable `account` is an instance of the class `Account`.
 
-When creating an instance, there is a special method called `initialize` that is a constructor, it is called when an instance is created.
+When creating an instance, there is a special method called `initialize` that is a constructor.
+It is called when an instance is created.
 The constructor allows you to set the initial state of the instance.
 The `initialize` method can take arguments, which are passed when creating an instance.
 
@@ -103,7 +104,7 @@ end
 ### Instance variables with initialization
 
 Instance variables can be initialized with an argument passed to the `initialize` method.
-Although since Crystal can't infer the type of an argument under initialization, so does it needs to be specified.
+Since Crystal can't infer the type of an argument during initialization, it needs to be specified.
 If you want to read more about this, you can read: [type-inference][type-inference].
 To specify the type of the variable you can use the `:` symbol, followed by the type.
 For example, if you want to create an instance variable called `balance` that is an `Int32`, you can do the following: `@balance : Int32`.
@@ -153,7 +154,7 @@ weather.raining
 # => true
 ```
 
-### Shorthand for initialize instance variables
+### Shorthand to initialize instance variables
 
 There is a shorthand for initializing instance variables, which is to in the argument of the `initialize` method, declare the instance variable with the type, like the following example: `@<variable> : <Type>`.
 This combines the assignment of the instance variable to the argument and the declaration of the instance variable type.

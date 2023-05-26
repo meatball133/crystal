@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["vaeng"],
   "files": {
     "solution": ["src/johannes_juice_maker.cr"],
     "test": ["spec/johannes_juice_maker_spec.cr"],
