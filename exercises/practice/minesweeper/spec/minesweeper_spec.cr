@@ -7,57 +7,57 @@ describe "Minesweeper" do
     minesweeper.annotate.should eq([] of String)
   end
 
-  it "no columns" do
+  pending "no columns" do
     minesweeper = Minesweeper.new([""] of String)
     minesweeper.annotate.should eq([""] of String)
   end
 
-  it "no mines" do
+  pending "no mines" do
     minesweeper = Minesweeper.new(["   ", "   ", "   "] of String)
     minesweeper.annotate.should eq(["   ", "   ", "   "] of String)
   end
 
-  it "minefield with only mines" do
+  pending "minefield with only mines" do
     minesweeper = Minesweeper.new(["***", "***", "***"] of String)
     minesweeper.annotate.should eq(["***", "***", "***"] of String)
   end
 
-  it "mine surrounded by spaces" do
+  pending "mine surrounded by spaces" do
     minesweeper = Minesweeper.new(["   ", " * ", "   "] of String)
     minesweeper.annotate.should eq(["111", "1*1", "111"] of String)
   end
 
-  it "space surrounded by mines" do
+  pending "space surrounded by mines" do
     minesweeper = Minesweeper.new(["***", "* *", "***"] of String)
     minesweeper.annotate.should eq(["***", "*8*", "***"] of String)
   end
 
-  it "horizontal line" do
+  pending "horizontal line" do
     minesweeper = Minesweeper.new([" * * "] of String)
     minesweeper.annotate.should eq(["1*2*1"] of String)
   end
 
-  it "horizontal line, mines at edges" do
+  pending "horizontal line, mines at edges" do
     minesweeper = Minesweeper.new(["*   *"] of String)
     minesweeper.annotate.should eq(["*1 1*"] of String)
   end
 
-  it "vertical line" do
+  pending "vertical line" do
     minesweeper = Minesweeper.new([" ", "*", " ", "*", " "] of String)
     minesweeper.annotate.should eq(["1", "*", "2", "*", "1"] of String)
   end
 
-  it "vertical line, mines at edges" do
+  pending "vertical line, mines at edges" do
     minesweeper = Minesweeper.new(["*", " ", " ", " ", "*"] of String)
     minesweeper.annotate.should eq(["*", "1", " ", "1", "*"] of String)
   end
 
-  it "cross" do
+  pending "cross" do
     minesweeper = Minesweeper.new(["  *  ", "  *  ", "*****", "  *  ", "  *  "] of String)
     minesweeper.annotate.should eq([" 2*2 ", "25*52", "*****", "25*52", " 2*2 "] of String)
   end
 
-  it "large minefield" do
+  pending "large minefield" do
     minesweeper = Minesweeper.new([" *  * ", "  *   ", "    * ", "   * *", " *  * ", "      "] of String)
     minesweeper.annotate.should eq(["1*22*1", "12*322", " 123*2", "112*4*", "1*22*2", "111111"] of String)
   end
