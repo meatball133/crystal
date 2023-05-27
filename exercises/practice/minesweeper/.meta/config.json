@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "meatball133"
+  ],
+  "files": {
+    "solution": [
+      "src/minesweeper.cr"
+    ],
+    "test": [
+      "spec/minesweeper_spec.cr"
+    ],
+    "example": [
+      ".meta/src/example.cr"
+    ]
+  },
+  "blurb": "Add the numbers to a minesweeper board."
+}
