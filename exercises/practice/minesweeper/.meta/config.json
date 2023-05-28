@@ -2,6 +2,9 @@
   "authors": [
     "meatball133"
   ],
+  "contributors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "src/minesweeper.cr"
