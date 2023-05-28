@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has a Number type, there are 2 main number types, Int and Float. Crystal has arithmetic operators to be able to do mathematical operations.",
+  "authors": ["meatball133"],
+  "contributors": ["ryanplusplus", "glennj"]
+}
