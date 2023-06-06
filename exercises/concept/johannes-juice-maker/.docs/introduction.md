@@ -35,12 +35,11 @@ The `initialize` method can take arguments, which are passed when creating an in
 ```crystal
 class Account
   def initialize(number)
-    p 5 + number
+    5 + number # => 9
   end
 end
 
 Account.new(4)
-# => 9
 ```
 
 ````exercism/note
@@ -55,6 +54,7 @@ end
 
 Account.new(4)
 # => #<Account:0x7f5dc33dcea0>
+```
 ````
 
 ## Instance methods
@@ -69,11 +69,15 @@ class Account
     100
   end
 end
+
+account = Account.new
+account.balance # => 100
 ```
 
 ## Instance variables
 
 [Instance variables][instance-variable] are variables that are available in all methods of the instance.
+To access an instance variable you need to define an instance method.
 They can be initialized in the `initialize` method.
 They are defined using the `@` prefix.
 
@@ -93,7 +97,7 @@ account.balance
 # => 100
 ```
 
-It is possible to create instance variables without declaring them in the `initialize` method.
+It is possible to create instance variables without declaring them in the `initialize` method by specifying a default value for it.
 
 ```crystal
 class Account
