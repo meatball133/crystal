@@ -12,7 +12,7 @@ class JuiceMaker
     @running = true
   end
 
-  def status
+  def running?
     @running
   end
 

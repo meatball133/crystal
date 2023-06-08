@@ -31,8 +31,8 @@ When the machine is powered on it should create an instance of a class called `J
 The machine is supposed to have an initialized state.
 The initialized state should hold the following information:
 
-- If the machine is running or not, this should always be `false` when the machine is turned on.
-- The amount of juice in the cup, this will be a sensor that will measure the amount of juice in the cup.
+1. If the machine is running or not. This should always be `false` when the machine is turned on.
+2. The amount of juice in the cup, this will be a sensor that will measure the amount of juice in the cup.
 
 Define the initialized state, which takes the amount of juice in the cup as a parameter, and construct the initialized state.
 The initialized state should host an instance variable `@running` that is set to `false`, and an instance variable `@amount_of_juice_in_cup` that is based on an argument given when the class is initialized.
@@ -63,13 +63,13 @@ juice_maker
 The machine needs to be able to tell you the status of the machine.
 It should return `true` if the machine is running, and `false` if the machine is not running.
 
-Define the method `JuiceMaker#status` that returns the status of the machine.
+Define the method `JuiceMaker#running?` that returns the status of the machine.
 
 ```crystal
 juice_maker = JuiceMaker.new(5)
 juice_maker.turn_on
 
-juice_maker.status
+juice_maker.running?
 #=> true
 ```
 
@@ -92,7 +92,8 @@ juice_maker
 ## 6. Turn off the machine
 
 The machine can be turned on and off.
-You need to define a method to turn off the machine.
+You need to define a method to turn off the machine
+This method will only be called when the machine is running.
 When the machine is turned off, the running state should be set to `false`.
 The machine also needs help to know how much juice is in the cup after the machine is turned off.
 The machine uses 5 units of juice per minute.

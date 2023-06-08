@@ -3,7 +3,7 @@
 Classes are a central concept in [object-oriented programming][object-oriented-programming].
 [In Crystal, everything is an object][everything-is-an-object], every object has a type, and it can respond to some methods.
 Classes are blueprints to create objects, providing initial values for state, like variables, and implementations of behavior, like methods.
-When creating an object from a class, the object is an instance of that class, the instance holds all the instance variables and states.
+Objects are an instance of a class, that hold all the instance variables and states.
 
 ## Class definition
 
@@ -27,7 +27,7 @@ account = Account.new
 
 In the example above the variable `account` is an instance of the class `Account`.
 
-When creating an instance, there is a special method called `initialize` that is a constructor.
+When creating an instance, there is a special method called `initialize` that acts as a constructor.
 It is called when an instance is created.
 The constructor allows you to set the initial state of the instance.
 The `initialize` method can take arguments, which are passed when creating an instance.
@@ -43,7 +43,7 @@ Account.new(4)
 ```
 
 ````exercism/note
-The `initialize` method cant return a value, instead, when calling new the instance is returned.
+The `initialize` method cannot manually return a value, instead, it returns the newly created instance.
 
 ```crystal
 class Account
@@ -60,8 +60,8 @@ Account.new(4)
 ## Instance methods
 
 An instance method is a method that is available to an instance of a class.
-And can be called on an instance of a class.
-Instance methods are defined using the `def` keyword, followed by the name of the method and they need to be defined inside the class definition.
+And can be called on that instance.
+Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
 
 ```crystal
 class Account
@@ -97,7 +97,7 @@ account.balance
 # => 100
 ```
 
-It is possible to create instance variables without declaring them in the `initialize` method by specifying a default value for it.
+Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
 
 ```crystal
 class Account
@@ -111,8 +111,8 @@ Instance variables can be initialized with an argument passed to the `initialize
 Since Crystal can't infer the type of an argument during initialization, it needs to be specified.
 If you want to read more about this, you can read: [type-inference][type-inference].
 To specify the type of the variable you can use the `:` symbol, followed by the type.
-For example, if you want to create an instance variable called `balance` that is an `Int32`, you can do the following: `@balance : Int32`.
-Or if you want to create an instance variable called `raining` that is a `Bool`, you can do the following: `@raining : Bool`.
+For example, if you want to create an instance variable called `balance` of type `Int32`, you can do the following: `@balance : Int32`.
+Or if you want to create an instance variable called `raining` of type `Bool`, you can do the following: `@raining : Bool`.
 
 There are a few ways to implement this, either by in the `initialize` method declaring the argument with the type, and then assigning the instance variable to the argument, like the following example:
 
@@ -137,7 +137,7 @@ account_2.number
 # => 5
 ```
 
-Another way is to declare the instance variable type in the class definition when you have to do: `@<variable> : <Type>`, like the following example:
+Another way is to declare the instance variable type in the class definition in the form: `@<variable> : <Type>`, like the following example:
 
 ```crystal
 class Weather
@@ -160,7 +160,7 @@ weather.raining
 
 ### Shorthand to initialize instance variables
 
-There is a shorthand for initializing instance variables, which is to in the argument of the `initialize` method, declare the instance variable with the type, like the following example: `@<variable> : <Type>`.
+There is a shorthand for initializing instance variables in the arguments of the `initialize` method, using the same syntax `@<variable> : <Type>`.
 This combines the assignment of the instance variable to the argument and the declaration of the instance variable type.
 
 ```crystal
@@ -174,7 +174,7 @@ end
 
 Instance variables can be modified by methods.
 These methods can be called on the instance of the class.
-When a method modifies an instance variable, the change is only available in the instance of the class.
+When a method modifies an instance variable, that change is only available in the instance of the class you called it on.
 
 ```crystal
 class Account
@@ -209,9 +209,9 @@ account_2.balance
 
 ## Class methods
 
-[Class methods][class-methods], are methods that are defined on a class, and not on the instances of a class.
+[Class methods][class-methods], are methods that are defined on a class, but not on the instances of that class.
 They offer a way to create methods that are not dependent on the state of the instance.
-They are defined using the `def` keyword, followed by `self.` and the name of the method.
+They are defined using the `def` keyword, followed by `self.<method name>`.
 `self` is a reference to the namespace which self is being called from.
 In this case, it is a reference to the class, `Account`.
 It would be the same as if you would have written `Account.`, but `self.` is the preferred way to do it.

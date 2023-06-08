@@ -4,7 +4,7 @@ require "../src/*"
 describe "JuiceMaker" do
   describe "debug_light_on?" do
     it "should be on if the machine is running" do
-      JuiceMaker.debug_light_on?.should eq true
+      JuiceMaker.debug_light_on?.should be_true
     end
   end
 
@@ -12,13 +12,13 @@ describe "JuiceMaker" do
     it "should create a new JuiceMaker" do
       juice_maker = JuiceMaker.new(0)
       juice_maker.@fluid.should eq 0
-      juice_maker.@running.should eq false
+      juice_maker.@running.should be_false
     end
 
     it "Can take a fluid as input" do
       juice_maker = JuiceMaker.new(5)
       juice_maker.@fluid.should eq 5
-      juice_maker.@running.should eq false
+      juice_maker.@running.should be_false
     end
   end
 
@@ -26,26 +26,26 @@ describe "JuiceMaker" do
     it "Can start the machine" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
-      juice_maker.@running.should eq true
+      juice_maker.@running.should be_true
     end
 
-    it "Can start the machine evn if there is no fluid" do
+    it "Can start the machine even if there is no fluid" do
       juice_maker = JuiceMaker.new(0)
       juice_maker.start
-      juice_maker.@running.should eq true
+      juice_maker.@running.should be_true
     end
   end
 
-  describe "status" do
+  describe "running?" do
     it "Status should return true if the machine is started" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
-      juice_maker.status.should eq true
+      juice_maker.running?.should be_true
     end
 
     it "Status return false if the machine is not started" do
       juice_maker = JuiceMaker.new(0)
-      juice_maker.status.should eq false
+      juice_maker.running?.should be_false
     end
   end
 
@@ -55,7 +55,7 @@ describe "JuiceMaker" do
       juice_maker.add_fluid(5)
       juice_maker.@fluid.should eq 5
     end
-    it "Caa´´n add fluid multiple times" do
+    it "Can add fluid multiple times" do
       juice_maker = JuiceMaker.new(5)
       juice_maker.add_fluid(5)
       juice_maker.add_fluid(20)
@@ -68,18 +68,18 @@ describe "JuiceMaker" do
     it "Can stop the machine" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
-      juice_maker.status.should eq true
+      juice_maker.running?.should be_true
       juice_maker.stop(5)
-      juice_maker.@running.should eq false
+      juice_maker.@running.should be_false
       juice_maker.@fluid.should eq 25
     end
 
-    it "Doesnt remove any fluid if the machine stops right after start" do
+    it "Doesn't remove any fluid if the machine stops right after start" do
       juice_maker = JuiceMaker.new(50)
       juice_maker.start
-      juice_maker.status.should eq true
+      juice_maker.running?.should be_true
       juice_maker.stop(0)
-      juice_maker.status.should eq false
+      juice_maker.running?.should be_false
       juice_maker.@fluid.should eq 50
     end
   end
