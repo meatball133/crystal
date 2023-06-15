@@ -5,7 +5,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Discourse topics](https://img.shields.io/discourse/topics?color=8A08E6&label=Connect%20&labelColor=FFDF58&logo=Discourse&logoColor=8A08E6&server=https%3A%2F%2Fforum.exercism.org&style=social)](https://forum.exercism.org)
 &nbsp;[![Exercism_II](https://img.shields.io/badge/Exercism--Built-9101FF?logo=crystal&logoColor=000000&labelColor=E5E5E5&label=Crystal%201.8.1%20Powered)](https://exercism.org)
-&nbsp;[![Exercism_III](https://img.shields.io/badge/Open-11b30e?labelColor=3D454D&label=Contributions)](https://exercism.org/blog/freeing-our-maintainers) &nbsp;[![Build Status](https://github.com/exercism/python/workflows/Exercises%20check/badge.svg)](https://github.com/exercism/crystal/actions/workflows/tests.yml)
+&nbsp;[![Exercism_III](https://img.shields.io/badge/Open-11b30e?labelColor=3D454D&label=Contributions)](https://exercism.org/blog/freeing-our-maintainers) &nbsp;[![Build Status](https://github.com/exercism/crystal/workflows/Tests/badge.svg)](https://github.com/exercism/crystal/actions/workflows/tests.yml)
 
 <br>
 
@@ -64,7 +64,7 @@ Please keep in mind [Chesterton's Fence][chestertons-fence].
 
 ## Crystal Software and Documentation
 
-**Copyright © 2012-2022 Manas Technology Solutions. All rights reserved.**
+**Copyright © 2012-2023 Manas Technology Solutions. All rights reserved.**
 
 Crystal software and documentation are licensed under the [Apache License v2.0][crystal-license].
 
