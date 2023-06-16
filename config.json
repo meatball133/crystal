@@ -84,6 +84,15 @@
         "topics": []
       },
       {
+        "slug": "resistor-color-expert",
+        "name": "Resistor Color Expert",
+        "uuid": "5373e713-f2ab-4b1e-b934-92969174bc48",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": []
+      },
+      {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "2df0796e-951d-4f10-8a2e-5c54f2443f10",
