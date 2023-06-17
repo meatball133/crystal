@@ -51,7 +51,7 @@ class GeneratorHelp
     when 200
       return JSON.parse(response.body)
     when 404
-      raise "Couldn't find canonical data for #{@exercise} on the github repo: problem-specifications."
+      return check_for_local_canonical_data()
     else
       raise "Error while requesting the #{@exercise} data file from GitHub... " +
             "Status was #{response.status_code}"
@@ -87,6 +87,15 @@ class GeneratorHelp
       JSON.parse(File.read(file_path))["cases"].as_a.each do |test|
         @json["cases"].as_a << test
       end
+    end
+  end
+
+  def check_for_local_canonical_data
+    file_path = "./exercises/practice/#{@exercise}/.meta/canonical_data.json"
+    if File.exists?(file_path)
+      return JSON.parse(File.read(file_path))
+    else
+      raise "No canonical-data.json found"
     end
   end
 
