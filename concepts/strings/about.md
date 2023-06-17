@@ -26,7 +26,7 @@ hello + " World"
 
 A string can be converted to a number using the `to_i` method, which will return an integer.
 Alternatively, the `to_f` method can be used to return a floating point number.
-If the string can't be converted to a number then an ArgumentError will be raised.
+If the string can't be converted to a number then an `ArgumentError` will be raised.
 
 ```crystal
 "1".to_i
@@ -181,7 +181,7 @@ World"
 [Unicode][unicode] is a standard for encoding, representing, and processing text in different writing systems.
 Unicode supports over 100,000 characters, including letters, punctuation, symbols, and emoji.
 
-That means that you can use emojis in your strings.
+Since Crystal uses unicode for strings, you can for example put emojis in strings.
 
 ```crystal
 "Hello 🌍"

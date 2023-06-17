@@ -18,7 +18,7 @@ The goal of this exercise is to teach the student about strings in crystal.
 
 - Most strings method
 - Heradoc
-- Precent strings literals
+- Percent strings literals
 
 ## Concepts
 
