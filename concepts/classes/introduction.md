@@ -43,7 +43,7 @@ Account.new(4)
 ```
 
 ````exercism/note
-The `initialize` method cannot manually return a value, instead, it returns the newly created instance.
+The `initialize` method cannot manually return a value, instead, `new` returns the newly created instance.
 
 ```crystal
 class Account
@@ -59,8 +59,7 @@ Account.new(4)
 
 ## Instance methods
 
-An instance method is a method that is available to an instance of a class.
-And can be called on that instance.
+An instance method is a method that is available to an instance of a class, and can be called on that instance.
 Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
 
 ```crystal
