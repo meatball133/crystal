@@ -1,5 +1,6 @@
 {
   "authors": ["meatball133"],
+  "contributors": ["ryanplusplus"],
   "files": {
     "solution": [
       "src/saddle_points.cr"
