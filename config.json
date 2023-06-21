@@ -587,6 +587,17 @@
         ]
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "45708d37-36f7-4368-a2ef-0ab3e66df0c9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays"
+        ]
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
