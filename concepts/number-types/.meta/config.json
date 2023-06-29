@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has specific number types for integers and floats. These allows you to have more control over the numbers and memory usage. Crystal has syntax for converting between these types and declaring them.",
+  "authors": ["meatball133"],
+  "contributors": ["glennj", "ihid"]
+}
