@@ -2,49 +2,31 @@
 #
 
 module GeneratorPlugins
-  def binary_search_tree(tree, last = nil, depth = 0)
-    p tree.class
+  def binary_search_tree(tree, last = [] of String) : String
     case tree
     when tree.as_h?
-      p "hi"
       result = ""
-      if tree == nil
-        return ""
-      end
+      return "" if tree == nil
       if tree["data"]?
-        if last == nil
+        if last.size == 0
           result += "tree.value.should eq(#{tree["data"]})\n"
-        elsif depth >= 2
-          result += "#{last}_#{depth} = #{last}_#{depth - 1}.#{last}.not_nil!\n"
-          result += "#{last}_#{depth}.value.should eq(#{tree["data"]})\n"
+        elsif last.size == 1
+          result += "#{last[-1]} = tree.#{last[-1]}.not_nil!
+          #{last[-1]}.value.should eq(#{tree["data"]})\n"
         else
-          result += "#{last}_#{depth} = tree.#{last}.not_nil!\n"
-          result += "#{last}_#{depth}.value.should eq(#{tree["data"]})\n"
+          result += "#{last.join("_")} = #{last[...-1].join("_")}.#{last[-1]}.not_nil!
+          #{last.join("_")}.value.should eq(#{tree["data"]})\n"
         end
       end
       if tree["left"]?
-        result += binary_search_tree(tree["left"], "left", depth + 1)
-      else
-        if last == nil
-          result += "tree.left.should be_nil\n"
-        else
-          "#{last}_#{depth}.left.should be_nil\n"
-        end
+        result += binary_search_tree(tree["left"], [*last, "left"])
       end
       if tree["right"]?
-        result += binary_search_tree(tree["right"], "right", depth + 1)
-      else
-        if last == nil
-          result += "tree.right.should be_nil\n"
-        else
-          "#{last}_#{depth}.left.should be_nil\n"
-        end
+        result += binary_search_tree(tree["right"], [*last, "right"])
       end
-      return result
-    when Array
-      return ""
+      result
     else
-      return ""
+      ""
     end
   end
 end

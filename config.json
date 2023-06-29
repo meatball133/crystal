@@ -134,20 +134,6 @@
         ]
       },
       {
-        "slug": "binary-search-tree",
-        "name": "Binary Search Tree",
-        "uuid": "415605d8-cc98-4eb1-9467-5c970e69f137",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "algorithms",
-          "data_structures",
-          "recursion",
-          "trees"
-        ]
-      },
-      {
         "slug": "bob",
         "name": "Bob",
         "uuid": "7ad02ecf-036c-4510-b6ad-93bf1d5f0d28",
@@ -959,6 +945,20 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "415605d8-cc98-4eb1-9467-5c970e69f137",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "algorithms",
+          "data_structures",
+          "recursion",
+          "trees"
+        ]
       },
       {
         "slug": "alphametics",

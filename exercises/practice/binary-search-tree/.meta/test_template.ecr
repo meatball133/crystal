@@ -6,14 +6,24 @@ describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
     <%- if cases["cases"]? -%>
         <%- cases["cases"].as_a.each do |subcases| %>
             <%= status()%> "<%-= subcases["description"] %>" do
-            root = Node.new(<%-= subcases["input"]["treeData"] %>)
+            tree = Node.new(<%= subcases["input"]["treeData"][0] %>)
+            <%- subcases["input"]["treeData"].as_a[1..].each do |data| -%>
+                tree.insert(<%-= data.to_s.to_i %>)
+            <%- end -%>
+            <% if subcases["property"].to_s != "sortedData" -%>
             <%-= binary_search_tree(subcases["expected"]) %>
+            <%- else -%>
+            tree.sort.should eq <%-= subcases["expected"].as_a.map { |n| n.to_s.to_i } %>
+            <% end %>
         end
         <% end %>
     <%- else -%>
-        <%= status()%> "<%-= cases["description"] %>" do
-        root = Node.new(<%-= cases["input"]["treeData"] %>)
-        <%-= binary_search_tree(cases["expected"]) %>
+            <%= status()%> "<%-= cases["description"] %>" do
+            tree = Node.new(<%= cases["input"]["treeData"][0] %>)
+            <%- cases["input"]["treeData"].as_a[1..].each do |data| -%>
+                tree.insert(<%-= data.to_s.to_i %>)
+            <%- end -%>
+            <%-= binary_search_tree(cases["expected"]) %>
         end
     <% end %>
 <% end %>
