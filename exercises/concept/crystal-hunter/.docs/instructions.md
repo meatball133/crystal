@@ -44,7 +44,7 @@ Rules.new.lose?(false, true)
 
 ## 4. Define if character wins
 
-Define the `Rules#win?` method that takes three arguments (_if the character has eaten all of the crystals_, _if the character has a power-up active_, and _if the character is touching a bandit_) and returns a boolean value indicating if the character wins or not.
+Define the `Rules#win?` method that takes three arguments (_if the character has picked up all of the crystals_, _if the character has a power-up active_, and _if the character is touching a bandit_) and returns a boolean value indicating if the character wins or not.
 The method should return `true` if the character has gathered all crystals and has not lost based on the arguments defined in part 3, and return `false` otherwise.
 
 ```crystal
