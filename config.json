@@ -76,6 +76,7 @@
         ],
         "status": "wip"
       },
+      {
         "slug": "wellingtons-weather-station",
         "name": "Wellington's Weather Station",
         "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
@@ -86,7 +87,7 @@
           "basics"
         ],
         "status": "wip"
-      }
+      },
       {
         "slug": "johannes-juice-maker",
         "name": "Johannes' Juice Maker",
@@ -99,6 +100,7 @@
           "bools"
         ],
         "status": "wip"
+      }
     ],
     "practice": [
       {
