@@ -68,18 +68,37 @@
         "slug": "navigation-computer",
         "name": "Navigation Computer",
         "uuid": "d980412c-1480-453a-be6c-2cd7779284bc",
-        "concepts": ["number-types"],
-        "prerequisites": ["numbers"],
+        "concepts": [
+          "number-types"
+        ],
+        "prerequisites": [
+          "numbers"
+        ],
         "status": "wip"
       },
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      }
       {
         "slug": "johannes-juice-maker",
         "name": "Johannes' Juice Maker",
         "uuid": "f3a1928f-7cce-4dca-9a2e-a1b714deb8db",
-        "concepts": ["classes"],
-        "prerequisites": ["number-types", "bools"],
+        "concepts": [
+          "classes"
+        ],
+        "prerequisites": [
+          "number-types",
+          "bools"
+        ],
         "status": "wip"
-      }
     ],
     "practice": [
       {
@@ -595,6 +614,17 @@
         ]
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "45708d37-36f7-4368-a2ef-0ab3e66df0c9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays"
+        ]
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
@@ -703,6 +733,14 @@
         "difficulty": 3
       },
       {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "06741d82-0bf9-4aeb-af1f-be6e03bc7e46",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -741,7 +779,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": ["numbers", "concurrency"]
+        "topics": [
+          "numbers",
+          "concurrency"
+        ]
       },
       {
         "slug": "palindrome-products",
@@ -839,6 +880,14 @@
         "difficulty": 4
       },
       {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "d8901821-bcdd-4e2c-981f-7f2445971064",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
@@ -898,6 +947,22 @@
         "difficulty": 5
       },
       {
+        "slug": "ocr-numbers",
+        "name": "OCR Numbers",
+        "uuid": "26bebd08-8867-4a90-94ba-5b620ab3af84",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "9a889142-2223-407a-af9a-df9c14eb6a9e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "react",
         "name": "React",
         "uuid": "2da645e4-7e72-4377-a7ac-184b67ff8a63",
@@ -918,6 +983,14 @@
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "20c471f8-e45e-4313-a23a-85d4a36c7185",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "d8a1b1c8-41ba-43a9-a4d6-b8325e438dc6",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
