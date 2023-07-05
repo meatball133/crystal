@@ -79,7 +79,7 @@
       {
         "slug": "wellingtons-weather-station",
         "name": "Wellington's Weather Station",
-        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "uuid": "7bc39dfb-acee-489a-b3ed-745cdb7225d5",
         "concepts": [
           "numbers"
         ],
@@ -91,7 +91,7 @@
       {
         "slug": "johannes-juice-maker",
         "name": "Johannes' Juice Maker",
-        "uuid": "f3a1928f-7cce-4dca-9a2e-a1b714deb8db",
+        "uuid": "4abe6ed3-6118-475b-b2ad-915ba7dcb756",
         "concepts": [
           "classes"
         ],
