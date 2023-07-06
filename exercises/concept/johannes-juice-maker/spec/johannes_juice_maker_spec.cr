@@ -43,9 +43,9 @@ describe "JuiceMaker" do
 
     it "Can start the machine even if there is no fluid" do
       {% if JuiceMaker.has_method?("start") && JuiceMaker.has_method?("initialize") %}
-      juice_maker = JuiceMaker.new(0)
-      juice_maker.start
-      juice_maker.@running.should be_true
+        juice_maker = JuiceMaker.new(0)
+        juice_maker.start
+        juice_maker.@running.should be_true
       {% else %}
         raise "Error: undefined method 'start' for JuiceMaker"
       {% end %}
@@ -75,7 +75,7 @@ describe "JuiceMaker" do
 
   describe "add_fluid" do
     it "Can add fluid to the machine" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize")%}
+      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") %}
         juice_maker = JuiceMaker.new(0)
         juice_maker.add_fluid(5)
         juice_maker.@fluid.should eq 5
@@ -84,7 +84,7 @@ describe "JuiceMaker" do
       {% end %}
     end
     it "Can add fluid multiple times" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize")%}
+      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") %}
         juice_maker = JuiceMaker.new(5)
         juice_maker.add_fluid(5)
         juice_maker.add_fluid(20)
