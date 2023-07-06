@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["neenjaw"],
   "files": {
     "solution": ["src/high_school_sweetheart.cr"],
     "test": ["spec/high_school_sweetheart_spec.cr"],

@@ -30,7 +30,7 @@ Here is a list of some of the most common methods:
 | Method                            | Description                                                                                                        | Example                                              |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
 | [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lower case                                                  | `"hEllO" # => "Hello"`                               |
-| [`String#camelcase`][cammel-case] | Converts underscore to cammelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
+| [`String#camelcase`][camel-case] | Converts underscore to camelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
 | `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lower cased                                                | `"empire_state_building" # => "empireStateBuilding"` |
 | [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
 | [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
@@ -136,7 +136,7 @@ The `insert` method will return a new string with the second argument inserted a
 [string-api]: https://crystal-lang.org/api/latest/String.html
 [upcase]: https://crystal-lang.org/api/latest/String.html#upcase%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
 [downcase]: https://crystal-lang.org/api/latest/String.html#downcase%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
-[cammel-case]: https://crystal-lang.org/api/latest/String.html#capitalize(options=Unicode::CaseOptions::None)-instance-method
+[camel-case]: https://crystal-lang.org/api/latest/String.html#capitalize(options=Unicode::CaseOptions::None)-instance-method
 [underscore]: https://crystal-lang.org/api/latest/String.html#underscore%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
 [titleize]: https://crystal-lang.org/api/latest/String.html#titleize%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method
 [capitalize]: https://crystal-lang.org/api/latest/String.html#capitalize%28options%3AUnicode%3A%3ACaseOptions%3D%3Anone%29%3AString-instance-method

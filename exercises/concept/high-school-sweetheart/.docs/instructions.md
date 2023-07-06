@@ -60,20 +60,18 @@ Make sure to reuse `HighSchoolSweetheart.initial` that you defined in the previo
 
 ```crystal
 HighSchoolSweetheart.pair("Blake Miller", "Riley Lewis")
-# => "
-#      ******       ******
-#    **      **   **      **
-#  **         ** **         **
-# **            *            **
-# **                         **
-# **        B.  +  R.        **
-#  **                       **
-#    **                   **
-#      **               **
-#        **           **
-#          **       **
-#            **   **
-#              ***
-#               *
-# "
+# => "      ******       ******
+#   **      **   **      **
+# **         ** **         **
+#**            *            **
+#**                         **
+#**        B.  +  R.        **
+# **                       **
+#   **                   **
+#     **               **
+#       **           **
+#         **       **
+#           **   **
+#             ***
+#              *"
 ```

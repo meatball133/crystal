@@ -1,11 +1,13 @@
-# String methods
+# Introduction
+
+## String Methods
 
 String has a number of methods that can be used to manipulate strings.  
 These methods are called on the string itself, and are often chained together to perform multiple operations on a string.
 
 Following is a list of some of the most common methods, for a full list of methods, see the [String API documentation][string-api].
 
-## String#upcase & String#downcase
+### String#upcase & String#downcase
 
 The [`upcase`][upcase] method returns a new string with all the characters converted to uppercase.
 
@@ -21,7 +23,7 @@ The [`downcase`][downcase] method returns a new string with all the characters c
 # => "hello"
 ```
 
-## String#sub & String#gsub
+### String#sub & String#gsub
 
 Crystal has methods for replacing parts of a string.
 These are known as [`sub`][sub] (_substitution_) and [`gsub`][gsub] (_global substitution_).
@@ -44,7 +46,7 @@ The `gsub` method works the same as sub but will replace all occurrences of the 
 # => "herro"
 ```
 
-## String#chomp & String#strip
+### String#chomp & String#strip
 
 Chomp and strip are methods that can be used to remove unwanted characters from a string.
 
@@ -67,7 +69,7 @@ If the method is called with an argument, it will remove that argument from the 
 # => "hello"
 ```
 
-## String#index
+### String#index
 
 The [`index`][index] method can be used to find the index of a character in a string.
 The `index` method takes a string, char or regex as an argument.
@@ -82,7 +84,7 @@ The `index` method will return the index of the first occurrence of the argument
 # => 3
 ```
 
-## String#delete_at
+### String#delete_at
 
 To remove a character from a string, you can use the [`delete_at`][delete_at] method.
 The `delete_at` method takes an index as an argument and will remove the character at that index.
@@ -95,7 +97,7 @@ The `delete_at` method takes an index as an argument and will remove the charact
 # => "helo"
 ```
 
-## String#insert
+### String#insert
 
 The [`insert`][insert] method can be used to insert a string at a specific index.
 The `insert` method takes an index as the first argument and a string as the second argument.
