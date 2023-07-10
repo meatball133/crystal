@@ -3,21 +3,21 @@ require "../src/*"
 
 describe "Proverb" do
   it "zero pieces" do
-    input = [] of String
+    input = Tuple.new()
     output = [] of String
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
   end
 
   pending "one piece" do
     input = ["nail"]
     output = ["And all for the want of a nail."]
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
   end
 
   pending "two pieces" do
     input = ["nail", "shoe"]
     output = ["For want of a nail the shoe was lost.", "And all for the want of a nail."]
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
   end
 
   pending "three pieces" do
@@ -25,7 +25,7 @@ describe "Proverb" do
     output = [
       "For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "And all for the want of a nail.",
     ]
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
   end
 
   pending "full proverb" do
@@ -35,7 +35,7 @@ describe "Proverb" do
       "For want of a rider the message was lost.", "For want of a message the battle was lost.",
       "For want of a battle the kingdom was lost.", "And all for the want of a nail.",
     ]
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
   end
 
   pending "four pieces modernized" do
@@ -44,6 +44,22 @@ describe "Proverb" do
       "For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.",
       "And all for the want of a pin.",
     ]
-    Proverb.recite(input).should eq(output)
+    Proverb.recite(*input).should eq(output)
+  end
+
+  pending "an optional qualifier can be added" do
+    input = ["nail"]
+    output = ["And all for the want of a horseshoe nail."]
+    Proverb.proverb(*input, qualifier: "horseshoe").should eq(output)
+  end
+
+  pending "an optional qualifier in the final consequences" do
+    input = ["nail", "shoe", "horse", "rider", "message", "battle", "kingdom"]
+    output = [
+      "For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "For want of a horse the rider was lost.",
+      "For want of a rider the message was lost.", "For want of a message the battle was lost.",
+      "For want of a battle the kingdom was lost.", "And all for the want of a horseshoe nail.",
+    ]
+    Proverb.proverb(*input, qualifier: "horseshoe").should eq(output)
   end
 end
