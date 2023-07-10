@@ -38,7 +38,7 @@ describe "HighSchoolSweetheart" do
 
   describe "pair" do
     it "prints the pair's initials inside a heart" do
-      expected = <<-String                     
+      expected = <<-String
             ******       ******
           **      **   **      **
         **         ** **         **
