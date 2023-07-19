@@ -27,7 +27,7 @@ describe "Grains" do
   end
 
   pending "64" do
-    Grains.square(64).should eq(9223372036854775808)
+    Grains.square(64).should eq(9223372036854775808_u64)
   end
 
   pending "square 0 raises an exception" do
@@ -49,6 +49,6 @@ describe "Grains" do
   end
 
   pending "returns the total number of grains on the board" do
-    Grains.total.should eq(18446744073709551615)
+    Grains.total.should eq(18446744073709551615_u64)
   end
 end
