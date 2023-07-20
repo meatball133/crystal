@@ -11,7 +11,7 @@ def speed_limit(road_number)
         return 50
         puts "This will not be executed"
     end
-    if road_number == 2
+    elsif road_number == 2
         return 80
         puts "This will not be executed"
     end

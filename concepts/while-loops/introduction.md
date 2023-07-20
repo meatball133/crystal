@@ -69,7 +69,7 @@ This can be convenient when you want to exit a loop early under certain conditio
 
 ```crystal
 i = 0
-while i < 3
+while i <= 3
   puts i
   i += 1
   if i == 2
@@ -89,7 +89,7 @@ This can be convenient when you want to skip certain iterations of a loop.
 
 ```crystal
 i = 0
-while i < 3
+while i <= 3
   i += 1
   if i == 2
     next

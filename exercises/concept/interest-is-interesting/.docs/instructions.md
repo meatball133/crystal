@@ -13,7 +13,8 @@ You have four tasks, each of which will deal your balance and its interest rate.
 
 ## 1. Calculate the interest rate
 
-Implement the method, `SavingsAccount.interest_rate()` to calculate the interest rate based on the specified balance.
+Implement the method, `SavingsAccount.interest_rate()` that takes a balance as an argument.
+The method should return the interest rate for the given balance.
 
 ```Crystal
 SavingsAccount.interest_rate(200.75)
@@ -22,7 +23,8 @@ SavingsAccount.interest_rate(200.75)
 
 ## 2. Calculate the interest
 
-Implement the method, `SavingsAccount.interest()` to calculate the interest based on the specified balance.
+Implement the method, `SavingsAccount.interest()` that takes a balance as an argument.
+The method should return the interest for the given balance.
 
 ```Crystal
 SavingsAccount.interest(200.75)
@@ -31,7 +33,8 @@ SavingsAccount.interest(200.75)
 
 ## 3. Calculate the annual balance update
 
-Implement the method, `SavingsAccount.annual_balance_update()` to calculate the annual balance update, taking into account the interest rate
+Implement the method, `SavingsAccount.annual_balance_update()` that takes a balance as an argument.
+The method should return the balance after one year.
 
 ```Crystal
 SavingsAccount.annual_balance_update(200.75)
@@ -40,7 +43,8 @@ SavingsAccount.annual_balance_update(200.75)
 
 ## 4. Calculate the years before reaching the desired balance
 
-Implement the method, `SavingsAccount.years_before_desired_balance()` to calculate the minimum number of years required to reach the desired balance given annually compounding interest:
+Implement the method, `SavingsAccount.years_before_desired_balance()` that takes a balance and a target balance as arguments.
+The method should return the number of years it would take to reach the target balance.
 
 ```Crystal
 balance = 200.75
