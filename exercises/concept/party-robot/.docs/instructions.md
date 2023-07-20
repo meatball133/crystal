@@ -49,6 +49,6 @@ Fortunately only with a precision that's limited to 1 digit.
 PartyRobot.assign_table("Christiane", "on the left", 27, 23.7834298, "Frank")
 # =>
 # Welcome to my party, Christiane!
-# You have been assigned to table 027. Your table is on the left, exactly 23.8 meters from here.
+# You have been assigned to table 27. Your table is on the left, exactly 23.8 meters from here.
 # You will be sitting next to Fk.
 ```

@@ -86,7 +86,7 @@ To get a character from a string you can use familiar bracket notation.
 `[]` is actually implemented as a String instance method, where the index is the method argument.
 ```
 
-In crystal is the first character in a string at index 0.
+In Crystal is the first character in a string at index 0.
 
 ```crystal
 "Hello World"[0]
