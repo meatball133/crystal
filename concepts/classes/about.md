@@ -129,10 +129,10 @@ end
 account = Account.new(1)
 account_2 = Account.new(5)
 
-account.number
+account.balance
 # => 1
 
-account_2.number
+account_2.balance
 # => 5
 ```
 

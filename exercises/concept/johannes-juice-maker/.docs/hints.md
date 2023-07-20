@@ -13,25 +13,25 @@
 
 - Create a [constructor][new-initialize] for the class `JuiceMaker`.
 - Create an [instance variable][instance-variable] `@running` that is set to `false`.
-- Create an [instance variable][instance-variable] `@amount_of_juice_in_cup` that is set to the amount of the argument passed to the constructor.
+- Create an [instance variable][instance-variable] `@fluid` that is set to the amount of the argument passed to the constructor.
 
 ## 3. Turn on the machine
 
-- Define an instance method called `turn_on`.
+- Define an instance method called `start`.
 - Set the [instance variable][instance-variable] `@running` to `true`.
 
 ## 4. Status of the machine
 
-- Define an instance method called `status`.
+- Define an instance method called `running?`.
 - Return the [instance variable][instance-variable] `@running`.
 
 ## 5. Add juice
 
 - Define an instance method called `add_juice`, that takes an integer as an argument.
-- Set the [instance variable][instance-variable] `@amount_of_juice_in_cup` to the sum of the current value of `@amount_of_juice_in_cup` and the argument passed to the method.
+- Set the [instance variable][instance-variable] `@fluid` to the sum of the current value of `@fluid` and the argument passed to the method.
 
 ## 6. Turn off the machine
 
-- Define an instance method called `turn_off`, that takes an integer as an argument.
+- Define an instance method called `stop`, that takes an integer as an argument.
 - Set the [instance variable][instance-variable] `@running` to `false`.
-- Set the [instance variable][instance-variable] `@amount_of_juice_in_cup` to the current value of `@amount_of_juice_in_cup` minus the argument passed to the method times 5.
+- Set the [instance variable][instance-variable] `@fluid` to the current value of `@fluid` minus the argument passed to the method times 5.
