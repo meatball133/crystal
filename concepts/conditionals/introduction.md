@@ -6,7 +6,7 @@ There are operators that can be used to create truthy or falsey values, these ar
 There are 2 main control expressions that are used to control which code will run and which will not.
 Also known as which given branch will run.
 
-That is the `if` and the `unless` expression.
+Those 2 are: `if` and the `unless` expression.
 
 ## Comparison operators
 

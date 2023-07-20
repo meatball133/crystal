@@ -40,8 +40,7 @@ where `generated_power` = `voltage` \* `current`.
 Note that the percentage value is usually not an integer number, so make sure to consider the
 proper use of the `<` and `<=` comparisons.
 
-Implement the method `Reactor.reactor_efficiency(<voltage>, <current>, <theoretical_max_power>)`, with three parameters: `voltage`,
-`current`, and `theoretical_max_power`.
+Implement the method `Reactor.reactor_efficiency`, with three parameters: `voltage`, `current`, and `theoretical_max_power`.
 This function should return the efficiency band of the reactor : "green", "orange", "red", or "black".
 
 ```crystal
@@ -55,8 +54,7 @@ Your final task involves creating a fail-safe mechanism to avoid overload and me
 This mechanism will determine if the reactor is below, at, or above the ideal criticality threshold.
 Criticality can then be increased, decreased, or stopped by inserting (or removing) control rods into the reactor.
 
-Implement the method called `Reactor.fail_safe()`, which takes 3 parameters: `temperature` measured in kelvin,
-`neutrons_produced_per_second`, and `threshold`, and outputs a status code for the reactor.
+Implement the method called `Reactor.fail_safe()`, which takes 3 parameters: `temperature` measured in kelvin, `neutrons_produced_per_second`, and `threshold`, and outputs a status code for the reactor.
 
 - If `temperature * neutrons_produced_per_second` < 90% of `threshold`, output a status code of "LOW"
   indicating that control rods must be removed to produce power.
