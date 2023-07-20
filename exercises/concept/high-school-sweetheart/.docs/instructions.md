@@ -3,26 +3,13 @@
 In this exercise, you are going to help high school sweethearts profess their love on social media by generating an ASCII heart with their initial:
 
 ```
-     ******       ******
-   **      **   **      **
- **         ** **         **
-**            *            **
-**                         **
-**        J.  +  M.        **
- **                       **
-   **                   **
-     **               **
-       **           **
-         **       **
-           **   **
-             ***
-              *
+❤ J.  +  M. ❤
 ```
 
 ## 1. Clean up the name
 
 Implement the `HighSchoolSweetheart.clean_up_name` method.
-It should take a name and remove all `-` characters from it.
+It should take a name and remove all `-` characters from it and replace them with a space.
 It should also remove any whitespace from the beginning and end of the name.
 
 ```crystal
@@ -55,23 +42,10 @@ HighSchoolSweetheart.initial("Robert")
 ## 4. Put the initials inside of the heart
 
 Implement the `HighSchoolSweetheart.pair` method.
-It should take two names and return the initials inside an ASCII heart.
+It should take two names and return the initials with emoji hearts around.
 Make sure to reuse `HighSchoolSweetheart.initial` that you defined in the previous step.
 
 ```crystal
 HighSchoolSweetheart.pair("Blake Miller", "Riley Lewis")
-# => "      ******       ******
-#   **      **   **      **
-# **         ** **         **
-#**            *            **
-#**                         **
-#**        B.  +  R.        **
-# **                       **
-#   **                   **
-#     **               **
-#       **           **
-#         **       **
-#           **   **
-#             ***
-#              *"
+# => "❤ B.  +  R. ❤"
 ```

@@ -50,6 +50,7 @@ Chomp and strip are methods that can be used to remove unwanted characters from 
 
 The [`chomp`][chomp] method will be default remove the last `\r`, `\n` or `\r\n` characters from a string.
 If the method is called with an argument, it will remove the given value from the end of the string.
+If it does exist at the end of the string.
 
 ```crystal
 "hello\n".chomp
@@ -61,6 +62,7 @@ If the method is called with an argument, it will remove the given value from th
 
 The [`strip`][strip] method will by default remove all whitespace from the beginning and end of a string.
 If the method is called with an argument, it will remove that argument from the beginning and end of the string.
+If it does exist at the beginning or end of the string.
 
 ```crystal
 " hello ".strip

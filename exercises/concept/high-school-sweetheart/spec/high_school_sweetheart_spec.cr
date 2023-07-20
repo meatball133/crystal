@@ -38,22 +38,7 @@ describe "HighSchoolSweetheart" do
 
   describe "pair" do
     it "prints the pair's initials inside a heart" do
-      expected = <<-String
-            ******       ******
-          **      **   **      **
-        **         ** **         **
-      **             *            **
-      **                          **
-      **        A.  +  C.         **
-        **                       **
-          **                   **
-            **               **
-              **           **
-                **       **
-                  **   **
-                    ***
-                     *
-      String
+      expected = "❤ A.  +  C. ❤"
       HighSchoolSweetheart.pair("Avery", "Charlie").should eq expected
     end
   end

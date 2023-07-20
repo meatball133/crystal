@@ -12,19 +12,6 @@ class HighSchoolSweetheart
   end
 
   def self.pair(name1, name2)
-    "      ******       ******
-    **      **   **      **
-  **         ** **         **
-**             *            **
-**                          **
-**        #{initial(name1)}  +  #{initial(name2)}         **
-  **                       **
-    **                   **
-      **               **
-        **           **
-          **       **
-            **   **
-              ***
-               *"
+    "\u2764 #{initial(name1)}  +  #{initial(name2)} \u2764"
   end
 end
