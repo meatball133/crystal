@@ -422,15 +422,6 @@
         "topics": []
       },
       {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": []
-      },
-      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "bed338cd-2308-4a15-9225-699d1d09ed49",
@@ -600,6 +591,15 @@
           "Hashmaps",
           "loops"
         ]
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": []
       },
       {
         "slug": "high-scores",
