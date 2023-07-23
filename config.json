@@ -309,17 +309,6 @@
         ]
       },
       {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "uuid": "ec55356b-61ab-4164-94d0-791133718fa8",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
-      },
-      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "607eb4f7-2650-47e1-81b9-a6fc2f0367cd",
@@ -345,17 +334,6 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
-      },
-      {
-        "slug": "pascals-triangle",
-        "name": "Pascal's Triangle",
-        "uuid": "1f04c451-a96a-4299-9386-6774b08f55ed",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
       },
       {
         "slug": "raindrops",
@@ -454,30 +432,6 @@
         ]
       },
       {
-        "slug": "sieve",
-        "name": "Sieve",
-        "uuid": "a2e06a49-1311-47eb-8d57-6fbc5abbe7e2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
-      },
-      {
-        "slug": "space-age",
-        "name": "Space Age",
-        "uuid": "0077bdf1-a1be-4a42-992e-8cdde99837eb",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "conditionals",
-          "floating_point_numbers",
-          "integers"
-        ]
-      },
-      {
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "64f8e403-9a3d-4094-9114-f1bee88c072b",
@@ -485,6 +439,18 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "math"
+        ]
       },
       {
         "slug": "two-fer",
@@ -500,18 +466,6 @@
         ]
       },
       {
-        "slug": "darts",
-        "name": "Darts",
-        "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2,
-        "topics": [
-          "conditionals",
-          "math"
-        ]
-      },
-      {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
         "uuid": "c6b6a4eb-a85e-44fb-8d3d-c706a301e768",
@@ -522,6 +476,19 @@
           "arrays",
           "numbers",
           "strings"
+        ]
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "0077bdf1-a1be-4a42-992e-8cdde99837eb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "conditionals",
+          "floating_point_numbers",
+          "integers"
         ]
       },
       {
@@ -614,6 +581,45 @@
         ]
       },
       {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "1b656b12-9046-4b47-ac51-6ffdb0afc0d0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "algorithms",
+          "filtering",
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "28cc9eaa-ebff-46b6-a7a9-3be60fe86ee6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "arrays",
+          "bitwise_operations",
+          "integers"
+        ]
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "c8dd3c53-e4fc-434e-9e4e-3def1361cf58",
@@ -624,6 +630,39 @@
           "integers",
           "math",
           "transforming"
+        ]
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "ec55356b-61ab-4164-94d0-791133718fa8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "pascals-triangle",
+        "name": "Pascal's Triangle",
+        "uuid": "1f04c451-a96a-4299-9386-6774b08f55ed",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "a2e06a49-1311-47eb-8d57-6fbc5abbe7e2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
         ]
       },
       {
@@ -646,29 +685,6 @@
         "difficulty": 3,
         "topics": [
           "arrays"
-        ]
-      },
-      {
-        "slug": "forth",
-        "name": "Forth",
-        "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": []
-      },
-      {
-        "slug": "meetup",
-        "name": "Meetup",
-        "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "dates",
-          "time",
-          "transforming",
-          "type_conversion"
         ]
       },
       {
@@ -781,6 +797,19 @@
         "difficulty": 3
       },
       {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays",
+          "loops",
+          "strings"
+        ]
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -790,6 +819,29 @@
         "topics": [
           "strings",
           "classes"
+        ]
+      },
+      {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": []
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "dates",
+          "time",
+          "transforming",
+          "type_conversion"
         ]
       },
       {
@@ -857,45 +909,6 @@
         ]
       },
       {
-        "slug": "grains",
-        "name": "Grains",
-        "uuid": "28cc9eaa-ebff-46b6-a7a9-3be60fe86ee6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "integers",
-          "math"
-        ]
-      },
-      {
-        "slug": "perfect-numbers",
-        "name": "Perfect Numbers",
-        "uuid": "1b656b12-9046-4b47-ac51-6ffdb0afc0d0",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "algorithms",
-          "filtering",
-          "integers",
-          "math"
-        ]
-      },
-      {
-        "slug": "proverb",
-        "name": "Proverb",
-        "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "arrays",
-          "loops",
-          "strings"
-        ]
-      },
-      {
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "00e8ffd8-b4f7-44e0-b007-8b265eed14fb",
@@ -926,19 +939,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
-      },
-      {
-        "slug": "secret-handshake",
-        "name": "Secret Handshake",
-        "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5,
-        "topics": [
-          "arrays",
-          "bitwise_operations",
-          "integers"
-        ]
       },
       {
         "slug": "sum-of-multiples",
