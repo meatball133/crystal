@@ -1,8 +1,8 @@
-## Adding method to the Array class
+## Adding methods to the Array class
 
 This exercise focuses on adding methods to the `Array` class in Crystal.
 To do this you will have to define a class with the name `Array(T)`.
-And put the method inside this class.
+And put the methods inside this class.
 
 ```crystal
 class Array(T)
