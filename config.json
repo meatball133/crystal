@@ -166,17 +166,6 @@
         "topics": []
       },
       {
-        "slug": "binary",
-        "name": "Binary",
-        "uuid": "d0c862a3-7d1f-4081-b378-f631ccf54fac",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
-      },
-      {
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "415605d8-cc98-4eb1-9467-5c970e69f137",
@@ -1042,6 +1031,18 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7
+      },
+      {
+        "slug": "binary",
+        "name": "Binary",
+        "uuid": "d0c862a3-7d1f-4081-b378-f631ccf54fac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "math"
+        ],
+        "status": "deprecated"
       }
     ]
   },
