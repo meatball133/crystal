@@ -3,7 +3,7 @@
   "slug": "crystal",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": true,
     "analyzer": false
@@ -42,7 +42,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "crystal-hunter",
@@ -54,7 +54,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "wellingtons-weather-station",
@@ -62,7 +62,7 @@
         "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
         "concepts": ["numbers"],
         "prerequisites": ["basics"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "navigation-computer",
@@ -74,7 +74,7 @@
         "prerequisites": [
           "numbers"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "johannes-juice-maker",
@@ -87,7 +87,7 @@
           "number-types",
           "bools"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "party-robot",
@@ -97,7 +97,7 @@
         "prerequisites": [
           "classes"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "high-school-sweetheart",
@@ -105,7 +105,7 @@
         "uuid": "375d5c38-3b3b-4f62-8a16-e0e3e381adc9",
         "concepts": ["string-methods"],
         "prerequisites": ["strings"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "meltdown-mitigation",
@@ -113,7 +113,7 @@
         "uuid": "190e759e-e343-4c52-942f-2642e2d41780",
         "concepts": ["conditionals"],
         "prerequisites": ["string-methods"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "interest-is-interesting",
@@ -121,7 +121,7 @@
         "uuid": "142d81e4-6572-4567-841d-e59439945dd9",
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
