@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+    "description": "Wikipedia: Object-oriented programming"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/everything_is_an_object.html",
+    "description": "Crystal docs: Everything is an object"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/classes_and_methods.html",
+    "description": "Crystal docs: Classes and methods"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/new%2C_initialize_and_allocate.html",
+    "description": "Crystal docs: new, initialize and allocate"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/methods_and_instance_variables.html",
+    "description": "Crystal docs: Methods and instance variables"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/type_inference.html",
+    "description": "Crystal docs: Type inference"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/class_methods.html",
+    "description": "Crystal docs: Class methods"
+  }
+]
