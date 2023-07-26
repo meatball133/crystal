@@ -29,4 +29,13 @@ module GeneratorPlugins
       ""
     end
   end
+
+  def strain(function : String) : String
+    if function[9..].includes?("contains")
+        return "x.includes?(5)"
+    elsif function[9..].includes?("starts_with")
+        return "x.starts_with?('z')"
+    end
+    function[9..]
+  end
 end
