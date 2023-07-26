@@ -3,7 +3,7 @@
   "slug": "crystal",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": true,
     "analyzer": false
@@ -16,7 +16,7 @@
     "highlightjs_language": "crystal"
   },
   "test_runner": {
-    "average_run_time": 6.0
+    "average_run_time": 6
   },
   "files": {
     "solution": [
@@ -42,7 +42,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "crystal-hunter",
@@ -54,7 +54,15 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
+      },
+      {
+        "slug": "wellingtons-weather-station",
+        "name": "Wellington's Weather Station",
+        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics"],
+        "status": "beta"
       },
       {
         "slug": "navigation-computer",
@@ -66,19 +74,54 @@
         "prerequisites": [
           "numbers"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
-        "slug": "wellingtons-weather-station",
-        "name": "Wellington's Weather Station",
-        "uuid": "e6175dc0-61b5-4bf4-8df4-ad8815ccd3a9",
+        "slug": "johannes-juice-maker",
+        "name": "Johannes' Juice Maker",
+        "uuid": "4abe6ed3-6118-475b-b2ad-915ba7dcb756",
         "concepts": [
-          "numbers"
+          "classes"
         ],
         "prerequisites": [
-          "basics"
+          "number-types",
+          "bools"
         ],
-        "status": "wip"
+        "status": "beta"
+      },
+      {
+        "slug": "party-robot",
+        "name": "Party Robot",
+        "uuid": "205a9a18-d32d-437e-9e43-9116cb9a2f46",
+        "concepts": ["strings"],
+        "prerequisites": [
+          "classes"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "high-school-sweetheart",
+        "name": "High School Sweetheart",
+        "uuid": "375d5c38-3b3b-4f62-8a16-e0e3e381adc9",
+        "concepts": ["string-methods"],
+        "prerequisites": ["strings"],
+        "status": "beta"
+      },
+      {
+        "slug": "meltdown-mitigation",
+        "name": "Meltdown Mitigation",
+        "uuid": "190e759e-e343-4c52-942f-2642e2d41780",
+        "concepts": ["conditionals"],
+        "prerequisites": ["string-methods"],
+        "status": "beta"
+      },
+      {
+        "slug": "interest-is-interesting",
+        "name": "Interest is Interesting",
+        "uuid": "142d81e4-6572-4567-841d-e59439945dd9",
+        "concepts": ["while-loops", "return"],
+        "prerequisites": ["conditionals"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -121,17 +164,6 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
-      },
-      {
-        "slug": "binary",
-        "name": "Binary",
-        "uuid": "d0c862a3-7d1f-4081-b378-f631ccf54fac",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
       },
       {
         "slug": "bob",
@@ -252,17 +284,6 @@
         ]
       },
       {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "uuid": "ec55356b-61ab-4164-94d0-791133718fa8",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
-      },
-      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "607eb4f7-2650-47e1-81b9-a6fc2f0367cd",
@@ -288,17 +309,6 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
-      },
-      {
-        "slug": "pascals-triangle",
-        "name": "Pascal's Triangle",
-        "uuid": "1f04c451-a96a-4299-9386-6774b08f55ed",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
       },
       {
         "slug": "raindrops",
@@ -365,15 +375,6 @@
         "topics": []
       },
       {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": []
-      },
-      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "bed338cd-2308-4a15-9225-699d1d09ed49",
@@ -397,30 +398,6 @@
         ]
       },
       {
-        "slug": "sieve",
-        "name": "Sieve",
-        "uuid": "a2e06a49-1311-47eb-8d57-6fbc5abbe7e2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "math"
-        ]
-      },
-      {
-        "slug": "space-age",
-        "name": "Space Age",
-        "uuid": "0077bdf1-a1be-4a42-992e-8cdde99837eb",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "conditionals",
-          "floating_point_numbers",
-          "integers"
-        ]
-      },
-      {
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "64f8e403-9a3d-4094-9114-f1bee88c072b",
@@ -428,6 +405,18 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "math"
+        ]
       },
       {
         "slug": "two-fer",
@@ -443,18 +432,6 @@
         ]
       },
       {
-        "slug": "darts",
-        "name": "Darts",
-        "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2,
-        "topics": [
-          "conditionals",
-          "math"
-        ]
-      },
-      {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
         "uuid": "c6b6a4eb-a85e-44fb-8d3d-c706a301e768",
@@ -465,6 +442,19 @@
           "arrays",
           "numbers",
           "strings"
+        ]
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "0077bdf1-a1be-4a42-992e-8cdde99837eb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "conditionals",
+          "floating_point_numbers",
+          "integers"
         ]
       },
       {
@@ -545,6 +535,15 @@
         ]
       },
       {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": []
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "uuid": "818c4ba2-9bb4-46fd-808c-9d9a9631881f",
@@ -554,6 +553,45 @@
         "topics": [
           "arrays",
           "classes"
+        ]
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "1b656b12-9046-4b47-ac51-6ffdb0afc0d0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "algorithms",
+          "filtering",
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "28cc9eaa-ebff-46b6-a7a9-3be60fe86ee6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "arrays",
+          "bitwise_operations",
+          "integers"
         ]
       },
       {
@@ -567,6 +605,39 @@
           "integers",
           "math",
           "transforming"
+        ]
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "ec55356b-61ab-4164-94d0-791133718fa8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "pascals-triangle",
+        "name": "Pascal's Triangle",
+        "uuid": "1f04c451-a96a-4299-9386-6774b08f55ed",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "a2e06a49-1311-47eb-8d57-6fbc5abbe7e2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "math"
         ]
       },
       {
@@ -589,29 +660,6 @@
         "difficulty": 3,
         "topics": [
           "arrays"
-        ]
-      },
-      {
-        "slug": "forth",
-        "name": "Forth",
-        "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": []
-      },
-      {
-        "slug": "meetup",
-        "name": "Meetup",
-        "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "dates",
-          "time",
-          "transforming",
-          "type_conversion"
         ]
       },
       {
@@ -708,6 +756,35 @@
         "difficulty": 3
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "b8178ba4-7bcd-48c9-842c-ff76256697c7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "d1d73f91-51e0-45a2-95a1-d37b493512ae",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays",
+          "loops",
+          "strings"
+        ]
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -717,6 +794,29 @@
         "topics": [
           "strings",
           "classes"
+        ]
+      },
+      {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": []
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "dates",
+          "time",
+          "transforming",
+          "type_conversion"
         ]
       },
       {
@@ -784,45 +884,6 @@
         ]
       },
       {
-        "slug": "grains",
-        "name": "Grains",
-        "uuid": "28cc9eaa-ebff-46b6-a7a9-3be60fe86ee6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "integers",
-          "math"
-        ]
-      },
-      {
-        "slug": "perfect-numbers",
-        "name": "Perfect Numbers",
-        "uuid": "1b656b12-9046-4b47-ac51-6ffdb0afc0d0",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "algorithms",
-          "filtering",
-          "integers",
-          "math"
-        ]
-      },
-      {
-        "slug": "proverb",
-        "name": "Proverb",
-        "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "arrays",
-          "loops",
-          "strings"
-        ]
-      },
-      {
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "00e8ffd8-b4f7-44e0-b007-8b265eed14fb",
@@ -853,19 +914,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
-      },
-      {
-        "slug": "secret-handshake",
-        "name": "Secret Handshake",
-        "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5,
-        "topics": [
-          "arrays",
-          "bitwise_operations",
-          "integers"
-        ]
       },
       {
         "slug": "sum-of-multiples",
@@ -909,6 +957,14 @@
         "slug": "dominoes",
         "name": "Dominoes",
         "uuid": "c237b348-89e6-4ba7-8450-0cf248b9cba0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "ocr-numbers",
+        "name": "OCR Numbers",
+        "uuid": "26bebd08-8867-4a90-94ba-5b620ab3af84",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -967,6 +1023,26 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "9881c617-2388-4c30-884b-f79cbebcdb55",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
+        "slug": "binary",
+        "name": "Binary",
+        "uuid": "d0c862a3-7d1f-4081-b378-f631ccf54fac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "math"
+        ],
+        "status": "deprecated"
       }
     ]
   },
@@ -982,14 +1058,44 @@
       "name": "Bools"
     },
     {
+      "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
+      "slug": "numbers",
+      "name": "Numbers"
+    },
+    {
       "uuid": "43dd66b4-5d26-44b6-8f2e-2a0392c642b2",
       "slug": "number-types",
       "name": "Number Types"
     },
     {
-      "uuid": "4aa0a83d-393a-412e-8175-65bbf7fcd8d6",
-      "slug": "numbers",
-      "name": "Numbers"
+      "uuid": "35772a3e-13ff-4e67-9e2c-04c53c986ef4",
+      "slug": "classes",
+      "name": "Classes"
+    },
+    {
+      "uuid": "7bea8916-b41e-4b28-872d-a7abeca74125",
+      "slug": "strings",
+      "name": "Strings"
+    },
+    {
+      "uuid": "644484e8-7eb9-4db0-ba6c-bf83439bf4f7",
+      "slug": "string-methods",
+      "name": "String Methods"
+    },
+    {
+      "uuid": "8bb2f156-ff7d-4d5f-8878-5fc9aa11c408",
+      "slug": "conditionals",
+      "name": "Conditionals"
+    },
+    {
+      "uuid": "9f4009c3-fe9e-4e4d-b0ff-6605b35a8a2d",
+      "slug": "return",
+      "name": "Return"
+    },
+    {
+      "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
+      "slug": "while-loops",
+      "name": "While Loops"
     }
   ],
   "key_features": [
