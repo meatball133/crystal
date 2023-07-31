@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has a string type, string holds a sequence of characters. To create a string, use double quotes (\").",
+  "authors": ["meatball133"],
+  "contributors": ["glennj"]
+}
