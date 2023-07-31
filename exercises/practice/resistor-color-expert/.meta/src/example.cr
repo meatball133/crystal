@@ -40,12 +40,12 @@ module ResistorColorExpert
     value *= multiplier
 
     case value
-    when 0..999
-      "#{value} ohms ±#{tolerance}%"
     when 1000..999999
       "#{(value / 1000) % 1 == 0 ? (value / 1000).to_i : value / 1000} kiloohms ±#{tolerance}%"
     when 1000000..999999999
       "#{(value / 1000000) % 1 == 0 ? (value / 1000000).to_i : value / 1000000} megaohms ±#{tolerance}%"
+    else
+      "#{value} ohms ±#{tolerance}%"
     end
   end
 end
