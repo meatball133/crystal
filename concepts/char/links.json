@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/bool.html",
+    "description": "Crystal docs: Bools"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/and.html",
+    "description": "Crystal docs: And operator"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html",
+    "description": "Crystal docs: Or operator"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html",
+    "description": "Crystal docs: Truthy and falsey values"
+  }
+]
