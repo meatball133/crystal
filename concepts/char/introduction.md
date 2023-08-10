@@ -1,81 +1,131 @@
-# Bools
+# Char
 
-Crystal has a type known as [`Bool`][bools], it is used to represent the values `true` and `false`.
-
-## Logical operators
-
-Crystal has 3 logical operators (`!`, `||`, `&&`) which are used to combine Bools and make expressions that produce different values.
-
-### And(`&&`)
-
-The [_and_ operator][and] in Crystal is represented by `&&` and returns `true` if both values given are `true` otherwise it returns `false`.
-When using the _and_ operator, one Bool be placed on the right side of the `&&` and another one on the left side.
+Char is a data type in Crystal which represents a 32 bit Unicode code point.
+Due to thier size makes so they are memory efficent, and also gives it certain properties that Strings don't have.
+They are created using single quotes (`'`) and do only allow for one Unicode code point to be placed inside.
 
 ```crystal
-true && true
-# => true
-
-true && false
-# => false
+'a' # => 'a'
+typeof('a') # => Char
 ```
 
-### Or(`||`)
+When working with Strings in Crystal is it quite common to work with Chars, since quite a few methods in the String class returns Chars or takes Chars as arguments.
+For example the [`String#[]`][index] method returns a Char, or the [`String#chars`][chars] method returns a `Chars` object which is a collection of Chars.
 
-The [_or_ operator][or] in Crystal is represented by `||` and returns `true` if **at least one** of values given is `true` if both of the values are `false` then it returns `false`.
-When using the _or_ operator one bool should be placed on the right side of the `||` and another one on the left side.
+## Incrimenting / Decrimenting
+
+Due to char being a 32 Unicode point do they support incrimenting and decrimenting, this makes so if you have `'a'` so can you get `'b'` by adding one.
 
 ```crystal
-true || true
-# => true
+'a' + 5
+# => 'f'
 
-true || false
-# => true
-
-false || false
-# => false
+'z' - 25
+# => 'a'
 ```
 
-### Not(`!`)
-
-The _not_ operator in Crystal is represented by `!` and returns `true` if the given Bool is `false` and returns `false` if `true` is given.
-When using the _not_ operator one Bool should be placed after the operator (`!`).
+There is also a method called [`Char#succ`][succ] which will return the next char in the unicode table and [`Char#pred`][pred] which will return the previous char in the unicode table.
 
 ```crystal
-!true
-# => false
+'a'.succ
+# => 'b'
 
-!false
-# => true
+'z'.pred
+# => 'y'
 ```
 
-## Using parentheses(`()`)
+## Concationation
 
-When working with booleans you can use parentheses to decide which Bools to evaluate first.
-The result can differ depending on how the parentheses are used.
-In Crystal, what is in parentheses is evaluated first.
+Since Chars is only meant to represent a 32 bit unicode, can't 2 chars be concatanated.
+Thereby Chars can only be concatinated with Strings.
+
+```Crystal
+'a' + "bc"
+# => "abc"
+
+'a' + 'b'
+# => error: expected argument #1 to 'Char#+' to be Int or String, not Char
+```
+
+## Properies methods
+
+Crystal has a few methods that can be used to get information about a Char, like if it is a number or a letter, or if it is uppercase or lowercase.
+Here is a list of some of the methods, for a full list see the [Char API][char-api].:
+
+| Method                           | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| [`Char#number?`][number]         | Returns `true` if the Char is a number               |
+| [`Char#letter?`][letter]         | Returns `true` if the Char is a letter               |
+| [`Char#lowercase?`][lowercase]   | Returns `true` if the Char is lowercase              |
+| [`Char#uppercase?`][uppercase]   | Returns `true` if the Char is uppercase              |
+| [`Char#ascii?`][ascii]           | Returns `true` if the Char is a ASCII character      |
+| [`Char#whitespace?`][whitespace] | Returns `true` if the Char is a whitespace character |
+
+## Converting
+
+### Converting between Codepoints and Chars
+
+Since Chars is a 32 bit unicode point, so can you convert between Chars and Codepoints (Int).
+This can be done using the [`Char#ord`][ord] method which will return the codepoint of the Char, or the [`Int#chr`][chr] method which will return the Char of the codepoint.
 
 ```crystal
-true && false && false || true
-# => true
+'a'.ord
+# => 97
 
-true && false && (false || true)
-# => false
+97.chr
+# => 'a'
 ```
 
-Since what is in parentheses is evaluated first, in the following example, the _not_ operator will apply to the expression inside parentheses.
+### Converting between types
+
+As with other data types so does Chars have a few methods that can be used to convert between types.
+The most common one is the `Char#to_s` method which will convert the Char to a String, but there is also the `Char#to_i` method which will convert the Char to a Int, And the `Char#to_f` method which will convert the Char to a Float.
 
 ```crystal
-!true && false
-# => false
+'a'.to_s
+# => "a"
 
-!(true && false)
-# => true
+'4'.to_i
+# => 4
+
+'a'.to_i
+# => Error: Invalid integer: a (ArgumentError)
 ```
 
-```exercism/note
-You should only use parentheses when they affect the result, otherwise, should they be omitted.
-```
+## Escaping
 
-[bools]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/bool.html
-[and]: https://crystal-lang.org/reference/latest/syntax_and_semantics/and.html
-[or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html
+As with Strings are thier certain characters that can't be written directly, and to write them do you need to escape them.
+To write an escape sequence you can use the `\` character followed by the character you want to escape.
+
+These are the special characters in Crystal:
+
+| Value    | Description                   |
+| -------- | ----------------------------- |
+| `\a`     | Alert                         |
+| `\b`     | Backspace                     |
+| `\e`     | Escape                        |
+| `\f`     | Form feed                     |
+| `\n`     | Line feed or newline          |
+| `\r`     | Carriage return               |
+| `\t`     | Horizontal tab                |
+| `\v`     | Vertical tab                  |
+| `\\`     | Backslash                     |
+| `\'`     | Single quote                  |
+| `\"`     | Double quote                  |
+| `\377`   | Octal ASCII character         |
+| `\xFF`   | Hexadecimal ASCII character   |
+| `\uFFFF` | Hexadecimal unicode character |
+
+[char-api]: https://crystal-lang.org/api/latest/Char.html
+[succ]: https://crystal-lang.org/api/latest/Char.html#succ%3AChar-instance-method
+[pred]: https://crystal-lang.org/api/latest/Char.html#pred%3AChar-instance-method
+[index]: https://crystal-lang.org/api/latest/String.html#%5B%5D%28index%3AInt%29%3AChar-instance-method
+[chars]: https://crystal-lang.org/api/latest/String.html#chars%3AArray%28Char%29-instance-method
+[ord]: https://crystal-lang.org/api/latest/Char.html#ord%3AInt32-instance-method
+[chr]: https://crystal-lang.org/api/latest/Int.html#chr%3AChar-instance-method
+[number]: https://crystal-lang.org/api/latest/Char.html#number%3F%3ABool-instance-method
+[letter]: https://crystal-lang.org/api/latest/Char.html#letter%3F%3ABool-instance-method
+[lowercase]: https://crystal-lang.org/api/latest/Char.html#lowercase%3F%3ABool-instance-method
+[uppercase]: https://crystal-lang.org/api/latest/Char.html#uppercase%3F%3ABool-instance-method
+[ascii]: https://crystal-lang.org/api/latest/Char.html#ascii%3F%3ABool-instance-method
+[whitespace]: https://crystal-lang.org/api/latest/Char.html#whitespace%3F%3ABool-instance-method
