@@ -1,6 +1,6 @@
 # Goal
 
-The goal of this exercise is to teach the student about while loops in crystal.
+The goal of this exercise is to teach the student about while loops in Crystal.
 
 ## Learning objectives
 
