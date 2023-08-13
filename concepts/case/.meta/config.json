@@ -1,0 +1,5 @@
+{
+  "blurb": "Case is a control expression which works a bit like pattern matching, and allows for writing more readable if-else-if statements.",
+  "authors": ["meatball133"],
+  "contributors": []
+}
