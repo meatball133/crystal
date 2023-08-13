@@ -17,7 +17,7 @@ In turn this means that the compiler will automatically check for null reference
 
 To be able to handle `nil` values, are there certain approaches that can be taken.
 `nil` is a [falsey][truhy-falsey] value as well are `false`.
-Which means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
+This means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
 
 ```crystal
 if nil
@@ -29,7 +29,7 @@ end
 # => nil is falsey
 ```
 
-This means for a variable that has the possibility of being `nil`, will ensure that the variable doesnt hold a `nil` value in the truthy branch.
+This means for a variable that has the possibility of being `nil`, will ensure that the variable doesn't hold a `nil` value in the truthy branch.
 
 ```crystal
 foo = "foo"[2]? # It is possible that foo is nil
@@ -40,8 +40,8 @@ end
 
 ## Check for nil
 
-Crystal does have a specific method which can be used to check if a value is `nil`.
-It is called [`nil?`][nil?] and is a method which is available on all objects.
+Crystal does have a specific method that can be used to check if a value is `nil`.
+It is called [`nil?`][nil?] and is a method that is available on all objects.
 
 ```crystal
 foo = "foo"[2]?
@@ -53,7 +53,7 @@ end
 ```
 
 This is a bit different when just using the value in an if statement, since in the last examples would both false and nil be treated as false.
-Here only `nil` is treated as falsy, since if it was false it wouldnt have been nil thereby it would have been truthy.
+Here only `nil` is treated as falsy, since if it was false it wouldn't have been nil thereby it would have been truthy.
 
 ## Or operator
 
@@ -73,7 +73,7 @@ This approach should be seen as a last resort, and should only be used if you ar
 If possible use the other approaches instead.
 ```
 
-[`not_nil!`][not_nil] is a method which allows you to tell the compiler that a value is not nil and will thereby make so the type it holds can't be nil.
+[`not_nil!`][not_nil] is a method that allows you to tell the compiler that a value is not nil and will thereby make so the type it holds can't be nil.
 It does that by raising an exception if the value is nil.
 
 ```crystal

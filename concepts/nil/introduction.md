@@ -17,7 +17,7 @@ In turn this means that the compiler will automatically check for null reference
 
 To be able to handle `nil` values, are there certain approaches that can be taken.
 `nil` is a [falsey][truhy-falsey] value as well are `false`.
-Which means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
+This means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
 
 ```crystal
 if nil
@@ -29,7 +29,7 @@ end
 # => nil is falsey
 ```
 
-This means for a variable that has the possibility of being `nil`, will ensure that the variable doesnt hold a `nil` value in the truthy branch.
+This means for a variable that has the possibility of being `nil`, will ensure that the variable doesn't hold a `nil` value in the truthy branch.
 
 ```crystal
 foo = "foo"[2]? # It is possible that foo is nil
@@ -40,9 +40,8 @@ end
 
 ## Check for nil
 
-Crystal does have a specific method which can be used to check if a value is `nil`.
-It is called [`nil?`][nil?] and is a method which is available on all objects.
-It will return `true` if the value is `nil` and `false` if it is not.
+Crystal does have a specific method that can be used to check if a value is `nil`.
+It is called [`nil?`][nil?] and is a method that is available on all objects.
 
 ```crystal
 foo = "foo"[2]?
@@ -54,7 +53,7 @@ end
 ```
 
 This is a bit different when just using the value in an if statement, since in the last examples would both false and nil be treated as false.
-Here only `nil` is treated as falsy, since if it was false it wouldnt have been nil thereby it would have been truthy.
+Here only `nil` is treated as falsy, since if it was false it wouldn't have been nil thereby it would have been truthy.
 
 ## Or operator
 
@@ -67,25 +66,8 @@ This can be used to make if the value is `nil` it will be falsey and thereby the
 "foo"[10]? || "bar" # => "bar"
 ```
 
-## not_nil!
-
-```exercism/cuation 
-This approach should be seen as a last resort, and should only be used if you are **sure** that the value is not nil.
-If possible use the other approaches instead.
-```
-
-[`not_nil!`][not_nil] is a method which allows you to tell the compiler that a value is not nil and will thereby make so the type it holds can't be nil.
-It does that by raising an exception if the value is nil.
-
-```crystal
-foo = "foo"[4]?
-foo.not_nil!
-# => Error: Nil assertion failed (NilAssertionError)
-```
-
 [nil]: https://crystal-lang.org/reference/syntax_and_semantics/literals/nil.html
 [null-pointer]: https://en.wikipedia.org/wiki/Null_pointer
-[not_nil]: https://crystal-lang.org/api/latest/Object.html#not_nil%21-instance-method
 [truhy-falsey]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
 [nil?]: https://crystal-lang.org/api/latest/Object.html#nil?:Bool-instance-method
 [string-index]: https://crystal-lang.org/api/latest/String.html#%5B%5D%3F%28index%3AInt%29%3AChar%7CNil-instance-method

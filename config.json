@@ -122,6 +122,14 @@
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "castle-dinner",
+        "name": "Castle Dinner",
+        "uuid": "2d60caf1-074a-455d-b59d-1ed6f3992c36",
+        "concepts": ["nil"],
+        "prerequisites": ["conditionals"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1113,6 +1121,11 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "af170079-e697-4ce9-b9fe-30dd210dc60c",
+      "slug": "nil",
+      "name": "Nil"
     }
   ],
   "key_features": [

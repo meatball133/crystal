@@ -1,6 +1,6 @@
 # Hints
 
-## 1. Check if food is correct
+## 1. Check if the food is correct
 
 - You can use an [`if`][if] statement to check if the food is correct.
 
