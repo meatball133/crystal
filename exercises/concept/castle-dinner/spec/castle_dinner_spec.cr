@@ -17,7 +17,7 @@ describe CastleDinner do
   end
 
   describe "check_drink?" do
-    it "should return drink if it is Apple jucie" do 
+    it "should return drink if it is Apple jucie" do
       CastleDinner.check_drink?("Apple juice").should eq "Apple juice"
     end
 
