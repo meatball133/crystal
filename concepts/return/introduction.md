@@ -1,6 +1,6 @@
 # Return
 
-Methods always return the value of last expression.
+In Crystal, the last expression in a method returns its value.
 Although sometimes you need to return a value before the last expression.
 For this, you can use the `return` keyword, which will return the value of the expression that follows it.
 Code written after a `return` keyword will not be executed.
