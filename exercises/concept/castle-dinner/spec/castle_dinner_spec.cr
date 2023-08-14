@@ -38,17 +38,17 @@ describe CastleDinner do
     end
   end
 
-  describe "replace_drinks" do
+  describe "replace_drink" do
     it "shouldnt replace Elderberry juice" do
-      CastleDinner.replace_drinks("Elderberry juice").should eq "Elderberry juice"
+      CastleDinner.replace_drink("Elderberry juice").should eq "Elderberry juice"
     end
 
     it "should replace Water with Apple juice" do
-      CastleDinner.replace_drinks("Water").should eq "Apple juice"
+      CastleDinner.replace_drink("Water").should eq "Apple juice"
     end
 
     it "should replace Ale with Iced tea" do
-      CastleDinner.replace_drinks("Ale").should eq "Apple juice"
+      CastleDinner.replace_drink("Ale").should eq "Apple juice"
     end
   end
 end
