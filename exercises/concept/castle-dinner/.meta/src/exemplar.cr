@@ -5,7 +5,7 @@ class CastleDinner
 
   def self.check_drink?(drink)
     has_i = drink.downcase.includes?("i")
-    unless has_i.nil?
+    unless has_i
       return drink
     end
     nil
