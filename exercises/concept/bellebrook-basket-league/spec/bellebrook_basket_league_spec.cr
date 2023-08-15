@@ -173,7 +173,7 @@ describe TicketSystem do
       {% end %}
     end
 
-    it "Can give different name for unsuccessful" do 
+    it "Can give different name for unsuccessful" do
       {% if @top_level.has_constant? "TicketingReservation" %}
         {% if TicketingReservation.has_method?("tickets_available") && TicketingReservation.has_method?("order_message") %}
           expected = "Jane, your purchase was unsuccessful, there is not enough tickets available."
