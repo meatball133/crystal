@@ -122,6 +122,14 @@
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "bellebrook-basket-league",
+        "name": "Bellebrook Basket League",
+        "uuid": "e3f34342-65f8-4f3e-9277-c6df08c8a8e4",
+        "concepts": ["modules"],
+        "prerequisites": ["return"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1121,6 +1129,11 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "686e2660-f614-4603-b6c6-e2110415bcc5",
+      "slug": "modules",
+      "name": "Modules"
     }
   ],
   "key_features": [
