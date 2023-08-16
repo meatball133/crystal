@@ -1,34 +1,28 @@
 ## Goal
 
-The goal of this exercise is to teach the student about classes in crystal.
+The goal of this exercise is to teach the about Chars in Crystal.
 
 ## Learning objectives
 
-- Know that classes are templates to create objects.
-- Understand constructors of classes.
-- Know that you can set up custom constructors.
-- Understand that classes can hold methods.
-- Understand instance variables.
-- Understand how to assign types and why you have to assign types.
-- Know what a class method is.
+- How to work with chars, like getting the ascii value
+- How to check what type of char it is
+- That indexing a string returns a char
+- Iterating over a string using while loops
 
 ## Out of scope
 
-- Class variables
-- Macro shortcuts(getter etc)
-- extend, include
+- `each_char`
 
 ## Concepts
 
-`classes`:
+`chars`:
 
-- initialize
-- `.new`
-- `@<variables>` (instance variables)
-- Assigning types, `<variable> : <Type>`
-- Using methods which belong to a class
-- Using methods which belong to an instance
+- `Char#ord`
+- `String#[]` returns a `Char`
+- `Char#letter?`
+- `Char#uppercase?`
+- `Char#-`
 
 ## Prerequisites
 
-- Number Types, Bools
+- While loops

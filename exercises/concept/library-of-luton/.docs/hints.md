@@ -1,7 +1,5 @@
 # Hints
 
-## General
-
 ## 1. Get first letter of title
 
 - There is [a method][index] that returns a Char from a String at a given index.
