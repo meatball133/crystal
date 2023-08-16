@@ -63,7 +63,7 @@ describe "Library" do
     end
 
     it "Should return the decrypted text of another text" do
-      expected =  "A town by the area 1000 with the capital."
+      expected = "A town by the area 1000 with the capital."
       Library.decrypt_text("B upxo cz uif bsfb 1000 xjui uif dbqjubm.").should eq expected
     end
 
