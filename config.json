@@ -127,7 +127,7 @@
         "slug": "library-of-luton",
         "name": "Library of Luton",
         "uuid": "d98302fa-fd76-469d-83dd-235c71363b43",
-        "concepts": ["chars"],
+        "concepts": ["char"],
         "prerequisites": ["while-loops"],
         "status": "wip"
       }
@@ -1124,8 +1124,8 @@
     },
     {
       "uuid": "2c28dd98-4628-4d88-b410-8f742ad978ab",
-      "slug": "chars",
-      "name": "Chars"
+      "slug": "char",
+      "name": "Char"
     }
   ],
   "key_features": [
