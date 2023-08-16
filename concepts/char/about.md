@@ -1,20 +1,20 @@
 # Char
 
 Char is a data type in Crystal which represents a 32 bit Unicode code point.
-Due to thier size makes so they are memory efficent, and also gives it certain properties that Strings don't have.
+Due to their size makes so they are memory efficient, and also gives it certain properties that Strings don't have.
 They are created using single quotes (`'`) and do only allow for one Unicode code point to be placed inside.
 
 ```crystal
 'a' # => 'a'
-typeof('a') # => Char
+'a'.class # => Char
 ```
 
 When working with Strings in Crystal is it quite common to work with Chars, since quite a few methods in the String class returns Chars or takes Chars as arguments.
-For example the [`String#[]`][index] method returns a Char, or the [`String#chars`][chars] method returns a `Chars` object which is a collection of Chars.
+For example the [`String#[]`][index] method returns a Char, or the [`String#chars`][chars] method returns a collection of Chars.
 
-## Incrimenting / Decrimenting
+## Incrementing / Decrementing
 
-Due to char being a 32 Unicode point do they support incrimenting and decrimenting, this makes so if you have `'a'` so can you get `'b'` by adding one.
+Due to char being a 32 Unicode point do they support incrementing and decrementing, this makes so if you have `'a'` so can you get `'b'` by adding one.
 
 ```crystal
 'a' + 5
@@ -34,10 +34,10 @@ There is also a method called [`Char#succ`][succ] which will return the next cha
 # => 'y'
 ```
 
-## Concationation
+## concatenation
 
-Since Chars is only meant to represent a 32 bit unicode, can't 2 chars be concatanated.
-Thereby Chars can only be concatinated with Strings.
+Since Chars is only meant to represent a 32 bit unicode, can't 2 chars be concatenation.
+Thereby Chars can only be concatenated with Strings.
 
 ```Crystal
 'a' + "bc"
@@ -47,10 +47,10 @@ Thereby Chars can only be concatinated with Strings.
 # => error: expected argument #1 to 'Char#+' to be Int or String, not Char
 ```
 
-## Properies methods
+## Properties methods
 
 Crystal has a few methods that can be used to get information about a Char, like if it is a number or a letter, or if it is uppercase or lowercase.
-Here is a list of some of the methods, for a full list see the [Char API][char-api].:
+Here is a list of some of the methods, for a full list see the [Char API][char-api]:
 
 | Method                           | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
@@ -94,7 +94,7 @@ The most common one is the `Char#to_s` method which will convert the Char to a S
 
 ## Escaping
 
-As with Strings are thier certain characters that can't be written directly, and to write them do you need to escape them.
+As with Strings are their certain characters that can't be written directly, and to write them do you need to escape them.
 To write an escape sequence you can use the `\` character followed by the character you want to escape.
 
 These are the special characters in Crystal:
