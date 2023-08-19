@@ -33,7 +33,7 @@ describe PasswordLock do
 
   describe "encrypt" do
     it "can encrypt digits password" do
-      {% if PasswordLock.has_method? "encrypt" && PasswordLock.has_method? "initialize" %}
+      {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new(1234)
         pasword_lock.encrypt
         pasword_lock.@password.should eq 617
