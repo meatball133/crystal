@@ -3,7 +3,7 @@ class PasswordLock
     @password = "password"
   end
 
-  def encrypt_password()
+  def encrypt_password
     password = @passwords
     if password.is_a?(Int32)
       password = (password / 2).round

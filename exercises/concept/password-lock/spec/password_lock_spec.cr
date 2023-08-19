@@ -35,7 +35,7 @@ describe PasswordLock do
     it "can encrypt digits password" do
       {% if PasswordLock.has_method? "encrypt" && PasswordLock.has_method? "initialize" %}
         pasword_lock = PasswordLock.new(1234)
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq 617
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
@@ -45,7 +45,7 @@ describe PasswordLock do
     it "can enccrypt string password" do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new("abc123")
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq "321cba"
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
@@ -55,7 +55,7 @@ describe PasswordLock do
     it "can encrypt fingerprint password" do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new(23231.422)
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq 92925.688
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
@@ -65,7 +65,7 @@ describe PasswordLock do
     it "can encrypt string password with spaces" do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new("abc 123")
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq "321 cba"
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
@@ -75,7 +75,7 @@ describe PasswordLock do
     it "can encrypt string password whith single character" do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new("a")
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq "a"
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
@@ -85,7 +85,7 @@ describe PasswordLock do
     it "can encrypt digit that is odd" do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new(12345)
-        pasword_lock.encrypt()
+        pasword_lock.encrypt
         pasword_lock.@password.should eq 6173
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
