@@ -3,7 +3,7 @@ module Chess
   FILES = 'A'..'H'
 
   def self.valid_square?(rank, file)
-    RANKS.include?(rank) && FILES.include?(file)
+    RANKS.includes?(rank) && FILES.includes?(file)
   end
 
   def self.nick_name(first_name, last_name)
