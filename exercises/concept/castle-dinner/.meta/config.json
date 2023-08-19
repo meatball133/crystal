@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["ryanplusplus"],
   "files": {
     "solution": ["src/castle_dinner.cr"],
     "test": ["spec/castle_dinner_spec.cr"],

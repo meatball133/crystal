@@ -16,8 +16,8 @@ In turn this means that the compiler will automatically check for null reference
 ## Falsey value
 
 To be able to handle `nil` values, are there certain approaches that can be taken.
-`nil` is a [falsey][truhy-falsey] value as well are `false`.
-This means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
+`nil` is a [falsey][truthy-falsey] value as well are `false`.
+This means that in if statements and other places where a falsey or truthy value is expected it will be treated as false.
 
 ```crystal
 if nil
@@ -29,7 +29,7 @@ end
 # => nil is falsey
 ```
 
-This means for a variable that has the possibility of being `nil`, will ensure that the variable doesn't hold a `nil` value in the truthy branch.
+This means that the truthy branch won't be taken if a nilable variable has a value of `nil`.
 
 ```crystal
 foo = "foo"[2]? # It is possible that foo is nil
@@ -40,8 +40,8 @@ end
 
 ## Check for nil
 
-Crystal does have a specific method that can be used to check if a value is `nil`.
-It is called [`nil?`][nil?] and is a method that is available on all objects.
+Crystal has a method that can be used to check if a value is `nil`.
+It is called [`nil?`][nil?] and it is available on all objects.
 
 ```crystal
 foo = "foo"[2]?
@@ -68,7 +68,7 @@ This can be used to make if the value is `nil` it will be falsey and thereby the
 
 ## not_nil!
 
-```exercism/cuation 
+```exercism/caution 
 This approach should be seen as a last resort, and should only be used if you are **sure** that the value is not nil.
 If possible use the other approaches instead.
 ```
@@ -85,7 +85,7 @@ foo.not_nil!
 [nil]: https://crystal-lang.org/reference/syntax_and_semantics/literals/nil.html
 [null-pointer]: https://en.wikipedia.org/wiki/Null_pointer
 [not_nil]: https://crystal-lang.org/api/latest/Object.html#not_nil%21-instance-method
-[truhy-falsey]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
+[truthy-falsey]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
 [nil?]: https://crystal-lang.org/api/latest/Object.html#nil?:Bool-instance-method
 [string-index]: https://crystal-lang.org/api/latest/String.html#%5B%5D%3F%28index%3AInt%29%3AChar%7CNil-instance-method
 [or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html
