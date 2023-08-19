@@ -122,6 +122,14 @@
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "password-lock",
+        "name": "Password Lock",
+        "uuid": "da64a912-5041-4b86-9a3c-3b2d90d7cd64",
+        "concepts": ["union-type"],
+        "prerequisites": ["nil", "char"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1121,6 +1129,11 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "1c734ab0-2bec-4521-ae8b-dcb07f7e7357",
+      "slug": "union-type",
+      "name": "Union Type"
     }
   ],
   "key_features": [
