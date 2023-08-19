@@ -1,8 +1,8 @@
 # Ranges
 
-[Ranges][ranges] represents a an interval between two values.
-The most common types that support ranges are ints, chars, and strings.
-They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range, and iteration.
+[Ranges][ranges] represents an interval between two values.
+The most common types that support ranges are Ints, Chars, and Strings.
+They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range and iteration.
 They are created using the range operator `..` or `...` (inclusive and exclusive respectively).
 
 ```crystal
@@ -10,9 +10,9 @@ They are created using the range operator `..` or `...` (inclusive and exclusive
 1...5 # => 1, 2, 3, 4
 ```
 
-The reason of having two range operators is to allow to create ranges that are inclusive or exclusive of the end value, which can be useful when for example working with indexes, that are zero based.
+The reason for having two range operators is to allow to create ranges that are inclusive or exclusive of the end value, which can be useful when for example working with indexes, that are zero based.
 
-Ranges can also be created using the `Range` struct initializer.
+Ranges can also be created using the `Range` initializer.
 
 ```crystal
 Range.new(1, 5) # => 1, 2, 3, 4, 5
@@ -47,12 +47,12 @@ You can also use negative indexes to get the substring from the end of the strin
 ## Range methods
 
 Ranges do have a set of methods that can be used to work with them.
-These methods when for example wanting to get the sum of all the values in the range, or check if the range includes a value.
+These methods when for example want to get the sum of all the values in the range, or check if the range includes a value.
 
-| Method      | Description                                                             | Example                         |
-| ----------- | ----------------------------------------------------------------------- | ------------------------------- |
-| [`sum`][sum]       | Returns the sum of all the values in the range                          | `(1..5).sum # => 15`            |
-| [`size`][size]      | Returns the size of the range                                           | `(1..5).size # => 5`            |
+| Method                  | Description                                                             | Example                         |
+| ----------------------- | ----------------------------------------------------------------------- | ------------------------------- |
+| [`sum`][sum]            | Returns the sum of all the values in the range                          | `(1..5).sum # => 15`            |
+| [`size`][size]          | Returns the size of the range                                           | `(1..5).size # => 5`            |
 | [`includes?`][indludes] | Returns `true` if the range includes the given value, otherwise `false` | `(1..5).includes?(3) # => true` |
 
 ## Endless & Beginningless ranges
@@ -73,7 +73,7 @@ If not used on a collection, the endless range can cause an infinite loop, if no
 
 ## Char ranges
 
-Chars can be used in ranges and allows to get an interval of chars between two chars.
+Chars can be used in ranges and allow to get an interval of chars between two chars.
 This can be handy when you want to for example get the alphabet.
 
 ```crystal
@@ -82,9 +82,9 @@ This can be handy when you want to for example get the alphabet.
 
 ## String ranges
 
-Strings can also be used in ranges and allows to get an interval of strings between two strings.
+Strings can also be used in ranges and allow one to get an interval of strings between two strings.
 But its behavior is a bit different than with chars, when using multiple characters in a string range.
-Its behavior can become when doing more complex string ranges, so use with caution.
+Its behavior can become when doing more complex string ranges, so use it with caution.
 
 ```crystal
 "aa".."az" # => "aa", "ab", "ac", ..., "az"

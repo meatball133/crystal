@@ -122,6 +122,14 @@
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "chess-game",
+        "name": "Chess Game",
+        "uuid": "ce74b2e6-153d-4862-84b5-582ec0b90b84",
+        "concepts": ["ranges"],
+        "prerequisites": ["chars"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1096,6 +1104,11 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "f9c99e5c-43da-4117-9a55-308cca52fcd1",
+      "slug": "ranges",
+      "name": "Ranges"
     }
   ],
   "key_features": [
