@@ -4,11 +4,11 @@ require "../src/*"
 describe Chess do
   describe "Files & Ranks" do
     it "should have 8 files" do
-      Chess::Files.should eq 'A'..'H'
+      Chess::FILES.should eq 'A'..'H'
     end
 
     it "should have 8 ranks" do
-      Chess::Ranks.should eq 1..8
+      Chess::RANKS.should eq 1..8
     end
   end
 
