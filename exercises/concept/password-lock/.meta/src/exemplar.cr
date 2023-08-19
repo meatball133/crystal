@@ -1,9 +1,9 @@
 class PasswordLock
   def initialize(password : (Int32 | String | Float64))
-    @password = "password"
+    @password = password
   end
 
-  def encrypt_password
+  def encrypt
     password = @passwords
     if password.is_a?(Int32)
       password = (password / 2).round
