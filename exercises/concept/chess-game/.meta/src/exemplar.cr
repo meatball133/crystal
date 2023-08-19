@@ -7,7 +7,7 @@ module Chess
   end
 
   def self.nick_name(first_name, last_name)
-    "#{first_name[0..2]}#{last_name[-2..]}".upcase
+    "#{first_name[0...2]}#{last_name[-2..]}".upcase
   end
 
   def self.move_message(first_name, last_name, square)
