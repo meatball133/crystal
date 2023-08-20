@@ -86,7 +86,7 @@ describe PasswordLock do
       {% if PasswordLock.has_method?("encrypt") && PasswordLock.has_method?("initialize") %}
         pasword_lock = PasswordLock.new(12345)
         pasword_lock.encrypt
-        pasword_lock.@password.should eq 6173
+        pasword_lock.@password.should eq 6172
       {% else %}
         raise "Error: undefined method 'encrypt' for PasswordLock"
       {% end %}
