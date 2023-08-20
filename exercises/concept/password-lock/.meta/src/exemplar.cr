@@ -1,5 +1,4 @@
 class PasswordLock
-
   def initialize(password : (Int32 | String | Float64))
     @password = password
   end
