@@ -2,17 +2,17 @@
 
 ## 1. Get first letter of title
 
-- There is [a method][index] that returns a Char from a String at a given index.
+- There is [a method][index] that returns a `Char` from a `String` at a given index.
 
 ## 2. Get authors initials
 
-- You can use already implemented methods to get the first letter of a String.
-- To combine values into a String you can use [string interpolation][string-interpolation].
+- You can use already implemented methods to get the first letter of a `String`.
+- To combine values into a `String` you can use [string interpolation][string-interpolation].
 
 ## 3. Decrypt letter
 
-- There is [a method][uppercase] to check if a Char is uppercase.
-- There is [a method][ord] to get the code point of a Char.
+- There is [a method][uppercase] to check if a `Char` is uppercase.
+- There is [a method][ord] to get the code point of a `Char`.
 
 ## 4. Decrypt text
 

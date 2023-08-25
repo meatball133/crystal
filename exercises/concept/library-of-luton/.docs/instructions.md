@@ -1,9 +1,9 @@
 # Instructions
 
 The library of Luton is a large library with a big collection of different kinds of literature varying from books to art.
-The library does have a section where they study literature and also add books to the computer system.
+The library has a section where they study literature and add books to the computer system.
 
-There are certain parts that aims to be automated and you are asked to help them with this.
+There are certain parts that aim to be automated and you are asked to help them with this.
 This includes helping things from automating the inscribe process forms to helping decrypting texts.
 
 ## 1. Get first letter of title
@@ -21,7 +21,7 @@ Library.first_letter("Mystery of the Crystal Skull")
 ## 2. Get authors initials
 
 The library has a lot of books and they are all written by different authors.
-Often are authors referred to by their initials and therefore the library requested a system that gives the initials of the author, by inputting the author's first name and last name.
+Often authors are referred to by their initials and therefore the library requested a system that gives the initials of the author, by inputting the author's first name and last name.
 The initials should be formatted as such: `{first_letter_of_first_name}.{first_letter_of_last_name}`
 
 Implement the `Library.initials` method that takes two arguments `first_name` and `last_name` which hold the first name and last name of the author.

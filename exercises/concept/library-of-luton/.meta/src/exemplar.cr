@@ -9,9 +9,9 @@ class Library
 
   def self.decrypt_character(character : Char) : Char
     if character.uppercase?
-      character = character.ord == 65 ? 'Z' : character - 1
+      character = character.ord == 65 ? 'Z' : character.pred
     else
-      character = character.ord == 97 ? 'z' : character - 1
+      character = character.ord == 97 ? 'z' : character.pred
     end
     character
   end
