@@ -2,7 +2,7 @@
 
 ## General
 
-- You need to define all methods out of initialize in the `module`, `TicketingReservation`-
+- You need to define all methods out of initialize in the `module`, `TicketingReservation`.
 - The module needs to be placed above the `TicketSystem` class.
 
 ## 1. Create a ticketing system
@@ -21,7 +21,7 @@
 ## 3. Order tickets
 
 - Create a method called `order_ticket?` inside the module.
-- Use a [comparison operator][equality-and-comparison] to check there is at least 100 tickets are available.
+- Use a [comparison operator][equality-and-comparison] to check that there are at least 100 tickets available.
 - If there are at least 100 tickets available, subtract 1 from the `@tickets_available` [instance variable][instance-variable].
 - Return `true` if there are at least 100 tickets available, otherwise return `false`.
 

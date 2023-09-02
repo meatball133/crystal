@@ -1,5 +1,5 @@
 {
-  "authors": ["meatball133"],
+  "authors": ["meatball133", "ryanplusplus"],
   "contributors": [],
   "files": {
     "solution": ["src/bellebrook_basket_league.cr"],

@@ -1,6 +1,6 @@
 ## Goal
 
-The goal of this exercise is to teach the student about modules in Crystl
+The goal of this exercise is to teach the student about modules in Crystal.
 
 ## Learning objectives
 

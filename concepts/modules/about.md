@@ -1,15 +1,15 @@
 # Modules
 
-[Modules][modules] in Crystal serves 2 purposes:
+[Modules][modules] in Crystal serve 2 purposes:
 
-The first purpose is to use it as a [namespace][namespace], this is mainly to avoid name clashes.
+The first purpose is to create a [namespace][namespace] to avoid name collisions.
 But it also forms as a form of grouping code together, this is to make it easier to understand what the code is for.
 
-The second purpose is to use it as a [mixin][mixin], this is to share code to types.
+The second purpose is to define [mixins][mixin] to share code to types.
 
-Modules has similarities to classes, but the main difference is that modules can not be instantiated, and thereby don't have instance variables.
+Modules have similarities to classes, but the main difference is that modules cannot be instantiated, and thereby don't have instance variables.
 
-To declare a module you use the `module` keyword, followed by the name of the module.
+To declare a module you use the `module` keyword followed by the name of the module.
 
 ```crystal
 module Foo
@@ -32,11 +32,10 @@ Foo::Bar.new
 
 ## Use it as a mixin
 
-A mixin is a way for another type to be able to use the code inside the module.
-This can be useful when for example wanting multiple classes to have the same "base" functionality.
+This can be useful when, for example, wanting multiple classes to have the same "base" functionality or when wanting to share code between classes that are not related.
 Or when wanting to share code between classes that are not related.
 
-There are 2 different ways to use a module as a mixin, the first one is to use the `include` keyword, the second one is to use the `extend` keyword.
+There are 2 different ways to use a module as a mixin: the first one is to use the `include` keyword, the second one is to use the `extend` keyword.
 
 Both methods will make constants available to the type that includes or extends the module.
 
@@ -61,8 +60,8 @@ Bar.new.foo # => "foo"
 
 ### Extend
 
-Extend works similarly to include, but instead of making the methods available as instance methods, it will make them available as class methods.
-The `extend` keyword should be written at the top of the type, followed by the name of the module.
+Extend works similarly to include, but instead of making the methods available as instance methods, it makes them available as class methods.
+The `extend` keyword should be written at the top of the type followed by the name of the module.
 
 ```crystal
 module Foo
@@ -81,7 +80,9 @@ Bar.foo # => "foo"
 ## Extend self
 
 A quite common pattern in Crystal is to use the [`extend self`][extend self] pattern, in a module.
-This will make all methods in the module available as class methods on the module itself, which means you don't have to assign each method to the module itself, using the `def self.method_name` syntax.
+This will make all methods in the module available as class methods on the module itself.
+This means you don't have to assign each method to the module itself using the `def self.method_name` syntax.
+
 
 ```crystal
 module Foo

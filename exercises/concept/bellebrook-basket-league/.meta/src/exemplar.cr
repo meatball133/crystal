@@ -18,7 +18,7 @@ module TicketingReservation
     if order_ticket?()
       "#{name}, your purchase was successful, your ticket number is ##{amount}, and the game is played at the #{@stadium} stadium."
     else
-      "#{name}, your purchase was unsuccessful, there is not enough tickets available."
+      "#{name}, your purchase was unsuccessful, there are not enough tickets available."
     end
   end
 end
