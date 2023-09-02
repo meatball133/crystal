@@ -802,6 +802,15 @@
         "topics": []
       },
       {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "cf967aae-fb56-45ca-ad47-02df6b72614c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": []
+      },
+      {
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
