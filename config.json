@@ -130,6 +130,14 @@
         "concepts": ["char"],
         "prerequisites": ["while-loops"],
         "status": "wip"
+      },
+      {
+        "slug": "castle-dinner",
+        "name": "Castle Dinner",
+        "uuid": "2d60caf1-074a-455d-b59d-1ed6f3992c36",
+        "concepts": ["nil"],
+        "prerequisites": ["conditionals"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -789,6 +797,24 @@
         ]
       },
       {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "2b18edd0-c07e-4125-b21d-20bf07828cac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "c7482e09-16f3-4d52-a410-e00d820c2d8e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -936,6 +962,14 @@
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "18510219-c432-4280-bd22-de0ed6cb40c1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "679d0ac6-f14a-475d-836a-08ce39750216",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -1126,6 +1160,11 @@
       "uuid": "2c28dd98-4628-4d88-b410-8f742ad978ab",
       "slug": "char",
       "name": "Char"
+    },
+    {
+      "uuid": "af170079-e697-4ce9-b9fe-30dd210dc60c",
+      "slug": "nil",
+      "name": "Nil"
     }
   ],
   "key_features": [
