@@ -1,14 +1,16 @@
 # Case
 
-Case (similar to switch in other languages) is a form of control expression like if-else.
+[Case][case] (often referred to as switch in other languages) is a form of control expression like if-else.
 Case allows for chaining of multiple if-else-if statements and can be more readable and also allows for powerful constructs.
 
-A case is defined by the keyword case followed by an optional expression.
-Then for each case, the keyword when is used followed by an expression on a new line.
+A case is defined by the keyword `case` followed by an optional expression.
+Then for each case, the keyword `when` is used followed by an expression which is compared to the case expression.
+The `when` keyword should not be indented from the `case` keyword.
+After the `when` keyword is the code that should be executed if the case expression matches the when expression.
 Case allows for an optional else statement which is executed if no other case matches.
 
 The case expression is evaluated and then compared to each when expression.
-The expression is compared using the [case subsumption operator (`===`)].
+The expression is compared using the [case subsumption operator (`===`)][case-subsumption].
 
 ```Crystal
 case 1
@@ -34,10 +36,10 @@ end
 
 ## Case subsumption operator (`===`)
 
-The case subsumption operator (`===`) is a bit different from the normal equality operator (`==`).
+The case subsumption operator (`===`) is a bit different from the equality operator (`==`).
 The operator checks if the right side is a member of the set described by the left side.
 This means that it does matter where each operand is placed.
-How this works depends on the type of the left side, for example a range would check if the right side is in the range or a class would check if the right side is an instance of the class.
+How this works depends on the type of the left side, for example a `Range` would check if the right side is in the range or a `Object` would check if the right side is an instance of the `Object`.
 
 ```Crystal
 (1..3) == 1  # => false
@@ -64,11 +66,11 @@ end
 
 ## Cases with ranges
 
-Cases can also use ranges to compare with.
-This can be useful when you want to check if a value is in a range.
+Cases can also check if a value is in a range.
+This is done by having a range as the when expression.
 
 ```Crystal
-case 1
+case var
 when 1..3
   puts "One to three"
 else
@@ -79,7 +81,8 @@ end
 ## Cases with no case expression
 
 When there is no need for a case expression then it is possible to omit it.
-Doing this will make so each case expression is evaluated for truthiness, and it is possible to have comparison operators in the case expression.
+Doing this will make so each case expression is evaluated for truthiness.
+And makes them behave like if-else-if statements.
 
 ```Crystal
 case
@@ -94,13 +97,13 @@ end
 
 ## Single line when
 
-Crystal allows for single line when statements.
+Crystal allows for single line case statements.
 This can be used when you have a simple single line statement.
 The single line when statement is written as `when <expression> then <statement>`.
 And when used in the else statement it is written as `else <statement>`.
 
 ```Crystal
-case 1
+case var
 when 1 then puts "One"
 when 2 then puts "Two"
 else puts "Other"
@@ -110,4 +113,70 @@ end
 ## Case with types
 
 Case allows for the matching with types.
-This allows for comparing with 
+The comparison will use the `is_a?` operator to check the type of the variable.
+This allows for example to have one branch for each type in a union type.
+
+```Crystal
+case var
+when Int32
+  puts "Int32"
+when String
+  puts "String"
+else
+  puts "Other"
+end
+```
+
+## Implicit object
+
+Case allows for the use of an implicit object.
+This allows for example a when expression to be a method call on the case expression.
+Based on if the method returns a truthy or falsey value will the case be matched or not.
+
+```Crystal
+case 1
+when .odd?
+  puts "Odd"
+when .even?
+  puts "Even"
+end
+```
+
+## Exhaustive case
+
+Case allows for exhaustive cases, this means that it is possible to ensure that all possible values are handled.
+It is written similar to the when statement, but with a `in` keyword instead of `when`.
+When a case is exhaustive, so does it not support any `when` or `else` statements.
+
+Exhaustive cases can be used on `Bools`, `Union` types, `Enum`, and `Tuples`.
+The two latter ones will be covered in later concepts.
+
+Exhaustive cases means that all possibilities will have to be handled, otherwise will a compile error be raised.
+Handling `Union` types as an exhaustive case is very similar to a non-exhaustive case.
+
+```Crystal
+var : (Int32 | String | Bool)
+case var 
+in Int32
+  puts "Int32"
+in String
+  puts "String"
+in Bool
+  puts "Bool"
+end
+```
+
+`Bools` can be handled as an exhaustive case by using the `true` and `false` keywords.
+
+```Crystal
+var : Bool
+case var
+in true
+  puts "True"
+in false
+  puts "False"
+end
+```
+
+[case]: https://crystal-lang.org/reference/latest/syntax_and_semantics/case.html
+[case-subsumption]: https://crystal-lang.org/reference/latest/syntax_and_semantics/operators.html#subsumption
