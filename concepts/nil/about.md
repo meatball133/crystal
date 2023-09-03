@@ -17,7 +17,7 @@ In turn this means that the compiler will automatically check for null reference
 
 To be able to handle `nil` values, are there certain approaches that can be taken.
 `nil` is a [falsey][truthy-falsey] value as well are `false`.
-This means that in if statements and other places where a falsey or truthy value is expected it will be treated as false.
+This means that in if statements and other places where a falsey or truthy value is expected so will it be treated the same as `false`.
 
 ```crystal
 if nil
@@ -58,8 +58,8 @@ Here only `nil` is treated as falsy, since if it was false it wouldn't have been
 ## Or operator
 
 The easiest way to deal with `nil` values is by ensuring that the value never becomes `nil` in the first place.
-The or operator ([`||`][or]) is often used when dealing with `booleans` but if understood correctly it can be used to deal with `nil` values as well.
-The or operator checks if the first value is truthy, if not it will use the second value.
+The or operator ([`||`][or]) is often used when dealing with `Bools` but if understood correctly it can be used to deal with `nil` values as well.
+The or operator checks if the first value is truthy, if not so is the second value used.
 This can be used to make if the value is `nil` it will be falsey and thereby the second value will be used.
 
 ```crystal

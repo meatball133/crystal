@@ -16,8 +16,8 @@ In turn this means that the compiler will automatically check for null reference
 ## Falsey value
 
 To be able to handle `nil` values, are there certain approaches that can be taken.
-`nil` is a [falsey][truhy-falsey] value as well are `false`.
-This means that in if statements and other places where a falesy or truthy value is expected it will be treated as false.
+`nil` is a [falsey][truthy-falsey] value as well are `false`.
+This means that in if statements and other places where a falsey or truthy value is expected so will it be treated the same as `false`.
 
 ```crystal
 if nil
@@ -29,7 +29,7 @@ end
 # => nil is falsey
 ```
 
-This means for a variable that has the possibility of being `nil`, will ensure that the variable doesn't hold a `nil` value in the truthy branch.
+This means that the truthy branch won't be taken if a nilable variable has a value of `nil`.
 
 ```crystal
 foo = "foo"[2]? # It is possible that foo is nil
@@ -40,8 +40,8 @@ end
 
 ## Check for nil
 
-Crystal does have a specific method that can be used to check if a value is `nil`.
-It is called [`nil?`][nil?] and is a method that is available on all objects.
+Crystal has a method that can be used to check if a value is `nil`.
+It is called [`nil?`][nil?] and it is available on all objects.
 
 ```crystal
 foo = "foo"[2]?
@@ -58,8 +58,8 @@ Here only `nil` is treated as falsy, since if it was false it wouldn't have been
 ## Or operator
 
 The easiest way to deal with `nil` values is by ensuring that the value never becomes `nil` in the first place.
-The or operator ([`||`][or]) is often used when dealing with `booleans` but if understood correctly it can be used to deal with `nil` values as well.
-The or operator checks if the first value is truthy, if not it will use the second value.
+The or operator ([`||`][or]) is often used when dealing with `Bools` but if understood correctly it can be used to deal with `nil` values as well.
+The or operator checks if the first value is truthy, if not so is the second value used.
 This can be used to make if the value is `nil` it will be falsey and thereby the second value will be used.
 
 ```crystal
@@ -68,7 +68,7 @@ This can be used to make if the value is `nil` it will be falsey and thereby the
 
 [nil]: https://crystal-lang.org/reference/syntax_and_semantics/literals/nil.html
 [null-pointer]: https://en.wikipedia.org/wiki/Null_pointer
-[truhy-falsey]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
+[truthy-falsey]: https://crystal-lang.org/reference/latest/syntax_and_semantics/truthy_and_falsey_values.html
 [nil?]: https://crystal-lang.org/api/latest/Object.html#nil?:Bool-instance-method
 [string-index]: https://crystal-lang.org/api/latest/String.html#%5B%5D%3F%28index%3AInt%29%3AChar%7CNil-instance-method
 [or]: https://crystal-lang.org/reference/latest/syntax_and_semantics/or.html
