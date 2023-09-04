@@ -1,0 +1,20 @@
+require "spec"
+require "../src/*"
+
+describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
+<%- @json["cases"].as_a.each do |cases| %>
+    <%= status()%> "<%-= cases["description"] %>" do
+        grade_school = <%= to_capitalized(@json["exercise"].to_s) %>.new()
+        <%- if cases["property"].to_s == "roster" ||  cases["property"].to_s == "grade" -%>
+            <%- cases["input"]["students"].as_a.each_with_index do |student, idx| -%>
+                grade_school.add("<%= student[0] %>", <%= student[1] %>)
+            <%- end -%>
+            grade_school.<%= cases["property"] %>(<%= cases["input"]["desiredGrade"]? %>).should eq <%= cases["expected"] %> <%= cases["expected"].size == 0 ? "of String" : "" %>
+        <%- elsif cases["property"].to_s == "add" -%>
+            <%- cases["input"]["students"].as_a.each_with_index do |student, idx| -%>
+                grade_school.add("<%= student[0] %>", <%= student[1] %>).should be_<%= cases["expected"][idx] %>
+            <%- end %>
+        <%- end %>
+    end
+<% end %>
+end
