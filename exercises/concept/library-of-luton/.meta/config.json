@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": ["eriksheirboom"],
+  "contributors": ["erikschierboom"],
   "files": {
     "solution": ["src/library_of_luton.cr"],
     "test": ["spec/library_of_luton_spec.cr"],
