@@ -1,5 +1,5 @@
 {
-  "blurb": "Case is a control expression which works a bit like pattern matching, and allows for writing more readable if-else-if statements.",
+  "blurb": "Case is a form of control expression, and allows for writing large readable if-else-if statements.",
   "authors": ["meatball133"],
   "contributors": []
 }

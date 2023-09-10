@@ -122,6 +122,14 @@
         "concepts": ["while-loops", "return"],
         "prerequisites": ["conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "blackjack",
+        "name": "Blackjack",
+        "uuid": "796d19e6-ab78-4d16-b51b-f00804ec4b44",
+        "concepts": ["case"],
+        "prerequisites": ["modules", "union-type"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1113,6 +1121,11 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "2d44a16f-8745-43be-9c6a-2279224d871c",
+      "slug": "case",
+      "name": "Case"
     }
   ],
   "key_features": [
