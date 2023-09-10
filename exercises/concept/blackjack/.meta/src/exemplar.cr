@@ -1,17 +1,17 @@
 module Blackjack
   def self.parse_card(card)
     case card
-    when "ace" then 11
+    when "ace"                          then 11
     when "jack", "queen", "king", "ten" then 10
-    when "nine" then 9
-    when "eight" then 8
-    when "seven" then 7
-    when "six" then 6
-    when "five" then 5
-    when "four" then 4
-    when "three" then 3
-    when "two" then 2
-    else 0
+    when "nine"                         then 9
+    when "eight"                        then 8
+    when "seven"                        then 7
+    when "six"                          then 6
+    when "five"                         then 5
+    when "four"                         then 4
+    when "three"                        then 3
+    when "two"                          then 2
+    else                                     0
     end
   end
 
