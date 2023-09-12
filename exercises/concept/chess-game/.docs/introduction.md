@@ -25,6 +25,7 @@ This is because the otherwise will the method be called on the 2nd argument of t
 ```crystal
 (1..5).size # => 5
 1..5.size # => Error: undefined method 'size' for Int32
+```
 ````
 
 ## Getting substrings
