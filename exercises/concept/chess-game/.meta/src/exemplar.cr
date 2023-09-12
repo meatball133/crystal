@@ -15,9 +15,9 @@ module Chess
     file = square[0]
     name = nick_name(first_name, last_name)
     if valid_square?(rank, file)
-      "#{name} moved to #{file}#{rank}"
+      "#{name} moved to #{square}"
     else
-      "#{name} attempted to move to #{file}#{rank}, but that is not a valid square"
+      "#{name} attempted to move to #{square}, but that is not a valid square"
     end
   end
 end
