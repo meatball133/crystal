@@ -7,6 +7,6 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "forked_from": ["elixir/chess-board"],
-  "blurb": "Learn about the ranges while making a chess game.",
+  "blurb": "Learn about ranges while making a chess game.",
   "icon": "chessboard"
 }
