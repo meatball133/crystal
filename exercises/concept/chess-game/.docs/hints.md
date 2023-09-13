@@ -22,6 +22,7 @@
 - You can index the square string to get the rank and file.
 - You can use already defined methods to get the nickname of the player, and to check if the move is valid.
 
+[range]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/range.html
 [constants]: https://crystal-lang.org/reference/syntax_and_semantics/constants.html
 [integers]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html
 [characters]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/characters.html
