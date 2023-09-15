@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has a Char type, which represents a 32 bit unicode code point. They are created with a single quote and can be escaped with a backslash.",
+  "authors": ["meatball133"],
+  "contributors": ["eriksheirboom"]
+}

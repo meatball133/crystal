@@ -8,7 +8,7 @@ A while loop is a control structure that allows code to be executed repeatedly b
 The code within a while loop will continue to execute while the condition evaluates to truthy.
 While loops are often used when the number of iterations is not known beforehand but can be used in any situation where a loop is needed.
 
-The condition is evaluated before the code within the loop is executed, which means that if the condition is true the code within the loop will never be executed.
+The condition is evaluated before the code within the loop is executed, which means that if the condition is false the code within the loop will never be executed.
 
 ```crystal
 i = 0
@@ -126,7 +126,7 @@ end
 
 ## Return
 
-In Crystal so does always the last expression in a method return its value.
+In Crystal, the last expression in a method returns its value.
 Although sometimes you need to return a value before the last expression.
 For this, you can use the `return` keyword, which will return the value of the expression that follows it.
 Code written after a `return` keyword will not be executed.
