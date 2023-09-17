@@ -1,16 +1,16 @@
 # Ranges
 
-[Ranges][ranges] represents an interval between two values.
+[Ranges][ranges] represent an interval between two values.
 The most common types that support ranges are Ints, Chars, and Strings.
-They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range and iteration.
-They are created using the range operator `..` or `...` (inclusive and exclusive respectively).
+They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range, and iteration.
+They are created using the range operator `..` or `...` (inclusive and exclusive, respectively).
 
 ```crystal
 1..5  # A range containing 1..5
 1...5 # A range containing 1...5
 ```
 
-The reason for having two range operators is to allow to create ranges that are inclusive or exclusive of the end value, which can be useful when for example working with indexes, that are zero based.
+The reason for having two range operators is to allow to create ranges that are inclusive or exclusive of the end value, which can be useful when for example working with indexes that are zero based.
 
 Ranges can also be created using the `Range` initializer.
 
@@ -48,7 +48,7 @@ You can also use negative indexes to get the substring from the end of the strin
 ## Range methods
 
 Ranges do have a set of methods that can be used to work with them.
-These methods when for example want to get the sum of all the values in the range, or check if the range includes a value.
+For example, these methods can be used to get the sum of all the values in the range or check if the range includes a value.
 
 | Method                  | Description                                                             | Example                         |
 | ----------------------- | ----------------------------------------------------------------------- | ------------------------------- |
@@ -59,7 +59,7 @@ These methods when for example want to get the sum of all the values in the rang
 ## Endless & Beginningless ranges
 
 A range can be endless and beginless.
-The endless or beginless range has their start or end value being `nil`, but when defining the range so can nil be omitted.
+The endless or beginless range has their start or end value being `nil`, but when defining the range the `nil` can be omitted.
 
 Using beginless and endless ranges is useful when you want to, for example, slice a string from the beginning or to the end.
 
@@ -75,8 +75,8 @@ If not used on a collection, the endless range can cause an endless sequence, if
 
 ## Char ranges
 
-Chars can be used in ranges and allow to get an interval of chars between two chars.
-This can be handy when you want to for example get the alphabet.
+Chars can be used in ranges and allow you to get an interval of chars between two chars.
+This can be handy when you want to, for example, get the alphabet.
 
 ```crystal
 'a'..'z' # => 'a', 'b', 'c', ..., 'z'
@@ -85,8 +85,8 @@ This can be handy when you want to for example get the alphabet.
 ## String ranges
 
 Strings can also be used in ranges and allow one to get an interval of strings between two strings.
-But its behavior is a bit different than with `Char`, when using multiple characters in a string range.
-Its behavior can become when doing more complex string ranges, so use it with caution.
+But its behavior is a bit different than with `Char` when using multiple characters in a string range.
+Its behavior can become confusing when doing more complex string ranges, so use it with caution.
 
 ```crystal
 ("aa".."az") # A range containing ["aa", "ab", "ac", ..., "az"]
@@ -95,13 +95,14 @@ Its behavior can become when doing more complex string ranges, so use it with ca
 ## Custom objects in ranges
 
 ````exercism/advanced
-Crystal allows to use custom objects in ranges, the requirement for this is that the object implements the following:
+Crystal allows you to use custom objects in ranges.
+The requirement for this is that the object implements the following:
 
 - include the `Comparable` module
 - `succ` method
 - `<=>` method
 
-These methods make it so that the range can iterate over the object, and compare the objects in the range.
+These methods make it so that the range can iterate over the object and compare the objects in the range.
 
 ```crystal
 class Foo
