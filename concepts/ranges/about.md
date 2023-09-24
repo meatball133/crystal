@@ -1,7 +1,7 @@
 # Ranges
 
-[Ranges][ranges] represent an interval between two values.
-The most common types that support ranges are Ints, Chars, and Strings.
+[Ranges][range] represent an interval between two values.
+The most common types that support ranges are `Int`, `Char`, and `String`.
 They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range, and iteration.
 They are created using the range operator `..` or `...` (inclusive and exclusive, respectively).
 
@@ -42,7 +42,7 @@ You can also use negative indexes to get the substring from the end of the strin
 
 ```crystal
 "Hello World"[-5..-1] # => "World"
-"Hello World"[6..-4] # => "Wor"
+"Hello World"[6..-4] # => "Wo"
 ```
 
 ## Range methods
@@ -79,7 +79,7 @@ Chars can be used in ranges and allow you to get an interval of chars between tw
 This can be handy when you want to, for example, get the alphabet.
 
 ```crystal
-'a'..'z' # => 'a', 'b', 'c', ..., 'z'
+'a'..'z' # A range containing ['a', 'b', 'c', ..., 'z']
 ```
 
 ## String ranges
