@@ -4,11 +4,11 @@
     "description": "Crystal docs: Strings"
   },
   {
-    "url": "https://crystal-lang.org/reference/letest/tutorials/basics/40_strings.html",
+    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/40_strings.html",
     "description": "Crystal tutorial: Strings"
   },
   {
     "url": "https://crystal-lang.org/api/latest/String.html",
-    "description": "Crystal api: Strings"
+    "description": "Crystal API: Strings"
   }
 ]

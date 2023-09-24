@@ -7,7 +7,6 @@ class PasswordLock
     elsif password.is_a?(Float64)
       password *= 4
     end
-    return password
   end
 
   def initialize(password : (Int32 | String | Float64))

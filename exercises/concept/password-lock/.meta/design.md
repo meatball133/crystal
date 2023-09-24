@@ -4,7 +4,7 @@ The goal of this exercise is to teach the student about Union Type in crystal.
 
 ## Learning objectives
 
-- Know of to define a union type
+- Know how to define a union type
 - Know how to use a union type
 - Know how to "unpack" a union type
 - Know how to use a union type in a method
