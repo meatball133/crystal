@@ -4,7 +4,7 @@ class PasswordLock
       password = (password / 2).round
     elsif password.is_a?(String)
       password = password.reverse
-    elsif password.is_a?(Float64)
+    else
       password *= 4
     end
   end
