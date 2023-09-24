@@ -36,7 +36,7 @@ a = 1.0
 
 There are 2 ways to get the type of a variable.
 Either by using [`typeof`][typeof] or by using [`Object#class`][Object#class].
-The difference between them is that `typeof` will return a variables type at compile time, while `Object#class` will return the type at runtime.
+The difference between them is that `typeof` will return a variable's type at compile time, while `Object#class` will return the type at runtime.
 Meaning if you want to for example see if a variable is a union type, then `Object#class` will not be able to tell you that as it will only return the type at runtime, which is a single type.
 
 ```crystal
