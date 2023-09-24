@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has Range objects which represents an interval between two values.",
+  "authors": ["meatball133"],
+  "contributors": ["kotp", "ryanplusplus"]
+}

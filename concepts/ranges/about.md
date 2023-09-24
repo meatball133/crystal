@@ -1,0 +1,133 @@
+# Ranges
+
+[Ranges][ranges] represent an interval between two values.
+The most common types that support ranges are Ints, Chars, and Strings.
+They can be used for many things like quickly creating a collection, slicing strings, checking if a value is in a range, and iteration.
+They are created using the range operator `..` or `...` (inclusive and exclusive, respectively).
+
+```crystal
+1..5  # A range containing 1..5
+1...5 # A range containing 1...5
+```
+
+The reason for having two range operators is to allow to create ranges that are inclusive or exclusive of the end value, which can be useful when for example working with indexes that are zero based.
+
+Ranges can also be created using the `Range` initializer.
+
+```crystal
+Range.new(1, 5) # A range containing 1, 2, 3, 4, 5
+```
+
+````exercism/note
+When creating a range in Crystal using the range operators `..` or `...`, and wanting to call a method on the range, you need to wrap the range in parentheses.
+This is because the otherwise will the method be called on the 2nd argument of the range operator.
+
+```crystal
+(1..5).size # => 5
+1..5.size # => Error: undefined method 'size' for Int32
+```
+````
+
+## Getting substrings
+
+When wanting to slice a string, you can use the range operator to get a sub-string.
+That is, by creating a range with the start and end index of the sub-string.
+
+```crystal
+"Hello World"[0..4] # => "Hello"
+"Hello World"[6..10] # => "World"
+```
+
+You can also use negative indexes to get the substring from the end of the string.
+
+```crystal
+"Hello World"[-5..-1] # => "World"
+"Hello World"[6..-4] # => "Wor"
+```
+
+## Range methods
+
+Ranges do have a set of methods that can be used to work with them.
+For example, these methods can be used to get the sum of all the values in the range or check if the range includes a value.
+
+| Method                  | Description                                                             | Example                         |
+| ----------------------- | ----------------------------------------------------------------------- | ------------------------------- |
+| [`sum`][sum]            | Returns the sum of all the values in the range                          | `(1..5).sum # => 15`            |
+| [`size`][size]          | Returns the size of the range                                           | `(1..5).size # => 5`            |
+| [`includes?`][indludes] | Returns `true` if the range includes the given value, otherwise `false` | `(1..5).includes?(3) # => true` |
+
+## Endless & Beginningless ranges
+
+A range can be endless and beginless.
+The endless or beginless range has their start or end value being `nil`, but when defining the range the `nil` can be omitted.
+
+Using beginless and endless ranges is useful when you want to, for example, slice a string from the beginning or to the end.
+
+```crystal
+"Hello World"[0..] # => "Hello World"
+"Hello World"[4..] # => "o World"
+"Hello World"[..5] # => "Hello"
+```
+
+```exercism/caution
+If not used on a collection, the endless range can cause an endless sequence, if not used with caution.
+```
+
+## Char ranges
+
+Chars can be used in ranges and allow you to get an interval of chars between two chars.
+This can be handy when you want to, for example, get the alphabet.
+
+```crystal
+'a'..'z' # => 'a', 'b', 'c', ..., 'z'
+```
+
+## String ranges
+
+Strings can also be used in ranges and allow one to get an interval of strings between two strings.
+But its behavior is a bit different than with `Char` when using multiple characters in a string range.
+Its behavior can become confusing when doing more complex string ranges, so use it with caution.
+
+```crystal
+("aa".."az") # A range containing ["aa", "ab", "ac", ..., "az"]
+```
+
+## Custom objects in ranges
+
+````exercism/advanced
+Crystal allows you to use custom objects in ranges.
+The requirement for this is that the object implements the following:
+
+- include the `Comparable` module
+- `succ` method
+- `<=>` method
+
+These methods make it so that the range can iterate over the object and compare the objects in the range.
+
+```crystal
+class Foo
+  include Comparable(Foo)
+
+  getter value
+
+  def initialize(@value : Int32)
+  end
+
+  def succ
+    Foo.new(value + 1)
+  end
+
+  def <=>(other : Foo)
+    value <=> other.value
+  end
+end
+
+p (Foo.new(1)..Foo.new(5))
+# => #<Foo:0x7f3552bebe70 @value=1>, #<Foo:0x7f3552bebe50 @value=2>, #<Foo:0x7f3552bebe40 @value=3>, #<Foo:0x7f3552bebe30 @value=4>, #<Foo:0x7f3552bebe20 @value=5>
+```
+````
+
+[range]: https://crystal-lang.org/api/latest/Range.html
+[sum]: https://crystal-lang.org/api/latest/Range.html#sum%28initial%29-instance-method
+[size]: https://crystal-lang.org/api/latest/Range.html#size-instance-method
+[indludes]: https://crystal-lang.org/api/latest/Range.html#includes%3F%28value%29%3ABool-instance-method
