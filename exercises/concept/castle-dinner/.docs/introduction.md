@@ -10,7 +10,7 @@ Nil values can be returned from various methods for example [`String#[]?`][strin
 ```
 
 Crystal has what is known as **NULL REFERENCE CHECKS**, which means that all types are non-nilable by default.
-This means that you can not assign `nil` to a variable unless you explicitly declare it as a `nil` type.
+This means that you can not assign `nil` to a variable unless you explicitly declare it as a `Nil` type.
 In turn this means that the compiler will automatically check for null references.
 
 ## Falsey value
@@ -32,7 +32,7 @@ end
 This means that the truthy branch won't be taken if a nilable variable has a value of `nil`.
 
 ```crystal
-foo = "foo"[2]? # It is possible that foo is nil
+foo = "boo"[2]? # It is possible that foo is nil
 if foo
   p foo.class # => Char
 end
@@ -44,7 +44,7 @@ Crystal has a method that can be used to check if a value is `nil`.
 It is called [`nil?`][nil?] and it is available on all objects.
 
 ```crystal
-foo = "foo"[2]?
+foo = "boo"[2]?
 if foo.nil?
   puts "foo is nil"
 else
