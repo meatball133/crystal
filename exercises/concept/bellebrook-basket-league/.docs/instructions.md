@@ -9,7 +9,7 @@ The league has contacted you and asked you to create a system that can handle th
 ## 1. Create a ticketing system
 
 First, you need to create a ticketing system that can handle the ticket sales.
-The ticketing system has to told how many tickets are available for a given game.
+The ticketing system has to tell how many tickets are available for a given game.
 
 For each game an instance of a class called `TicketSystem` should be created.
 The initialized state should hold the following information:
@@ -49,7 +49,7 @@ The game needs to have 100 tickets in reserve.
 This is to make sure that there are always tickets available for the people who buy tickets at the entrance of the stadium.
 
 Inside the module `TicketingReservation`, define a method called `order_ticket?`.
-The method should return `true` if there are at least 100 tickets available and false otherwise.
+The method should return `true` if there are at least 100 tickets available and `false` otherwise.
 If there are at least 100 tickets available, the method should also decrease the amount of tickets available by 1.
 
 ```crystal

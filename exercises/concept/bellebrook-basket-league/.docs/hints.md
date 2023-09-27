@@ -29,7 +29,7 @@
 
 - Create a method called `order_message` inside the module.
 - You can use already defined methods to check if there are enough tickets available.
-- To form the message, you can use [string interpolation][string-interpolation] syntax.
+- To form the message, you can use [string interpolation][string-interpolation].
 
 [equality-and-comparison]: https://crystal-lang.org/reference/latest/syntax_and_semantics/operators.html#equality-and-comparison
 [include]: https://crystal-lang.org/reference/syntax_and_semantics/modules.html#include
