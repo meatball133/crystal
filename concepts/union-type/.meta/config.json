@@ -1,0 +1,5 @@
+{
+  "blurb": "Union type is a type that can be one of several types. It for example can be used to represent a value that can be either a string or nil.",
+  "authors": ["meatball133"],
+  "contributors": ["ryanplusplus"]
+}

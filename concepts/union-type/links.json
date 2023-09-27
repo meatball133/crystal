@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/string.html",
+    "description": "Crystal docs: Strings"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/40_strings.html",
+    "description": "Crystal tutorial: Strings"
+  },
+  {
+    "url": "https://crystal-lang.org/api/latest/String.html",
+    "description": "Crystal API: Strings"
+  }
+]

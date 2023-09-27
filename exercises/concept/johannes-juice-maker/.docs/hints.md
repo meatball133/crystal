@@ -35,3 +35,7 @@
 - Define an instance method called `stop`, that takes an integer as an argument.
 - Set the [instance variable][instance-variable] `@running` to `false`.
 - Set the [instance variable][instance-variable] `@fluid` to the current value of `@fluid` minus the argument passed to the method times 5.
+
+[class-methods]: https://crystal-lang.org/reference/latest/syntax_and_semantics/class_methods.html#class-methods
+[new-initialize]: https://crystal-lang.org/reference/latest/syntax_and_semantics/new%2C_initialize_and_allocate.html
+[instance-variable]: https://crystal-lang.org/reference/latest/syntax_and_semantics/methods_and_instance_variables.html

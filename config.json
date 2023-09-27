@@ -124,6 +124,46 @@
         "status": "beta"
       },
       {
+        "slug": "chess-game",
+        "name": "Chess Game",
+        "uuid": "ce74b2e6-153d-4862-84b5-582ec0b90b84",
+        "concepts": ["ranges"],
+        "prerequisites": ["char"],
+        "status": "wip"
+      },
+      {
+        "slug": "library-of-luton",
+        "name": "Library of Luton",
+        "uuid": "d98302fa-fd76-469d-83dd-235c71363b43",
+        "concepts": ["char"],
+        "prerequisites": ["while-loops"],
+        "status": "wip"
+      },
+      {
+        "slug": "bellebrook-basket-league",
+        "name": "Bellebrook Basket League",
+        "uuid": "e3f34342-65f8-4f3e-9277-c6df08c8a8e4",
+        "concepts": ["modules"],
+        "prerequisites": ["return"],
+        "status": "wip"
+      },
+      {
+        "slug": "castle-dinner",
+        "name": "Castle Dinner",
+        "uuid": "2d60caf1-074a-455d-b59d-1ed6f3992c36",
+        "concepts": ["nil"],
+        "prerequisites": ["conditionals"],
+        "status": "wip"
+      },
+      {
+        "slug": "password-lock",
+        "name": "Password Lock",
+        "uuid": "da64a912-5041-4b86-9a3c-3b2d90d7cd64",
+        "concepts": ["union-type"],
+        "prerequisites": ["nil", "char"],
+        "status": "wip"
+      },
+      {
         "slug": "blackjack",
         "name": "Blackjack",
         "uuid": "796d19e6-ab78-4d16-b51b-f00804ec4b44",
@@ -789,6 +829,51 @@
         ]
       },
       {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "2b18edd0-c07e-4125-b21d-20bf07828cac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "c7482e09-16f3-4d52-a410-e00d820c2d8e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "70be18b6-b153-466f-b270-c94d5406b1ab",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "transpose",
+        "name": "Transpose",
+        "uuid": "0c4fd479-201f-4586-b1c9-3a05af73eda9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "ca3477f3-8bf0-46b6-9495-77ea6eded945",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
@@ -804,6 +889,15 @@
         "slug": "forth",
         "name": "Forth",
         "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": []
+      },
+      {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "cf967aae-fb56-45ca-ad47-02df6b72614c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -936,6 +1030,22 @@
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "18510219-c432-4280-bd22-de0ed6cb40c1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "679d0ac6-f14a-475d-836a-08ce39750216",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "15257768-af28-4066-bc5c-effc189c4b8e",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -1121,6 +1231,31 @@
       "uuid": "e0f1bb58-def6-4195-a0f2-661ba351858f",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+    {
+      "uuid": "f9c99e5c-43da-4117-9a55-308cca52fcd1",
+      "slug": "ranges",
+      "name": "Ranges"
+    },
+    {
+      "uuid": "2c28dd98-4628-4d88-b410-8f742ad978ab",
+      "slug": "char",
+      "name": "Char"
+    },
+    {
+      "uuid": "686e2660-f614-4603-b6c6-e2110415bcc5",
+      "slug": "modules",
+      "name": "Modules"
+    },
+    {
+      "uuid": "af170079-e697-4ce9-b9fe-30dd210dc60c",
+      "slug": "nil",
+      "name": "Nil"
+    },
+    {      
+      "uuid": "1c734ab0-2bec-4521-ae8b-dcb07f7e7357",
+      "slug": "union-type",
+      "name": "Union Type"
     },
     {
       "uuid": "2d44a16f-8745-43be-9c6a-2279224d871c",

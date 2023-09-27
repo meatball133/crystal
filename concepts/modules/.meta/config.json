@@ -1,0 +1,5 @@
+{
+  "blurb": "Crystal has modules which can be used for namespacing and organizing code. It can also be used to create mixins and to extend classes.",
+  "authors": ["meatball133"],
+  "contributors": ["ryanplusplus"]
+}

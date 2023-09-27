@@ -1,0 +1,5 @@
+{
+  "blurb": "Nil is a type that is used to represent the absence of a value. It is used by many methods to indicate that a value is not present.",
+  "authors": ["meatball133"],
+  "contributors": ["ryanplusplus"]
+}
