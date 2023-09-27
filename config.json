@@ -129,7 +129,7 @@
         "uuid": "ce74b2e6-153d-4862-84b5-582ec0b90b84",
         "concepts": ["ranges"],
         "prerequisites": ["char"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "library-of-luton",
@@ -137,7 +137,7 @@
         "uuid": "d98302fa-fd76-469d-83dd-235c71363b43",
         "concepts": ["char"],
         "prerequisites": ["while-loops"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "bellebrook-basket-league",
@@ -145,7 +145,7 @@
         "uuid": "e3f34342-65f8-4f3e-9277-c6df08c8a8e4",
         "concepts": ["modules"],
         "prerequisites": ["return"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "castle-dinner",
@@ -153,7 +153,7 @@
         "uuid": "2d60caf1-074a-455d-b59d-1ed6f3992c36",
         "concepts": ["nil"],
         "prerequisites": ["conditionals"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "password-lock",
