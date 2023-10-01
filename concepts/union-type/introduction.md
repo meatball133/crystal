@@ -6,8 +6,8 @@ In Crystal it is quite common for a union type to be inferred by the compiler.
 
 ~~~~exercism/note
 A union type, even if it consists of multiple types, is still a single type at runtime.
-Meaning a union type is built of String and Int32 so it will not be both at the same time.
-Instead, it will be either a String or an Int32.
+Meaning a union type is built of `String` and `Int32` so it will not be both at the same time.
+Instead, it will be either a `String` or an `Int32`.
 ~~~~
 
 A union type is declared by separating the types with a pipe (`|`).
@@ -16,20 +16,20 @@ The most common union type is `(T | Nil)` where `T` is a type, which can occur i
 This is also known as a variable being **nilable**.
 
 ```crystal
-a : String = "Hello"
-a = nil # Error: type must be String, not (String | Nil)
+foo : String = "Hello"
+foo = nil # Error: type must be String, not (String | Nil)
 
-a : (String | Nil) = "Hello"
-a = nil
+foo : (String | Nil) = "Hello"
+foo = nil
 ```
 
 It is not limited to just 2 types, but can be as many as you want.
 
 ```crystal
-a : (String | Int32 | Nil | Float64) = "Hello"
-a = 1
-a = nil
-a = 1.0
+foo : (String | Int32 | Nil | Float64) = "Hello"
+foo = 1
+foo = nil
+foo = 1.0
 ```
 
 ## `typeof` vs `Object#class`
@@ -40,9 +40,9 @@ The difference between them is that `typeof` will return a variable's type at co
 Meaning if you want to for example see if a variable is a union type, then `Object#class` will not be able to tell you that as it will only return the type at runtime, which is a single type.
 
 ```crystal
-a : (String | Int32) = "Hello"
-typeof(a) # => (String | Int32)
-a.class # => String
+foo = 0 == 0 ? "a" : 1
+typeof(foo) # => (String | Int32)
+foo.class # => String
 ```
 
 ## Operations on union types
@@ -52,8 +52,8 @@ But when compiling the code the compiler will not know which type it is.
 Thereby the code has to be setup in such a way that it can only be one of the types when wanting to use the type-specific operations.
 
 ```crystal
-a : (String | Int32) = "Hello"
-a.downcase # Error: undefined method 'downcase' for (String | Int32)
+foo : (String | Int32) = "Hello"
+foo.downcase # Error: undefined method 'downcase' for (String | Int32)
 ```
 
 Crystal does have a special method for union types: the `is_a?` method, which takes a type as an argument and returns a boolean.
@@ -62,10 +62,10 @@ Putting the `is_a?` method in an control expression will make the compiler know 
 And for an else branch it will be guaranteed that it is not that type.
 
 ```crystal
-a : (String | Int32) = "Hello"
-if a.is_a?(String)
-  typeof(a) # => String
-  a.downcase # => "hello"
+foo : (String | Int32) = "Hello"
+if foo.is_a?(String)
+  typeof(foo)  # => String
+  foo.downcase # => "hello"
 end
 ```
 
@@ -85,10 +85,10 @@ This will make an union type into a single type by doing a runtime check.
 If the type is not the expected type, it will raise an exception.
 
 ```crystal
-a : String | Int32 = "Hello"
-a.as(String).downcase # => "hello"
+foo : String | Int32 = "Hello"
+foo.as(String).downcase # => "hello"
 
-a.as(Int32) # Error: can't cast String to Int32
+foo.as(Int32) # Error: can't cast String to Int32
 ```
 
 ~~~~exercism/caution
@@ -103,10 +103,10 @@ Using this approach with an improper setup can lead to unexpected behavior.
 This means that it will return a union type of the expected type and `Nil`.
 
 ```crystal
-a : (String | Int32) = "Hello"
-a.as?(String).downcase # => "hello"
+foo : (String | Int32) = "Hello"
+foo.as?(String).downcase # => "hello"
 
-a.as?(Int32) # => nil
+foo.as?(Int32) # => nil
 ```
 
 ## Nilable shorthand
@@ -116,11 +116,11 @@ This can be written as `(T | Nil)`.
 But since Nilable types are rather common, there is a shorthand for it: `T?`.
 
 ```crystal
-a : (String | Nil) = "Hello"
-a = nil
+foo : (String | Nil) = "Hello"
+foo = nil
 
-a : String? = "Hello"
-a = nil
+foo : String? = "Hello"
+foo = nil
 ```
 
 [union-type]: https://crystal-lang.org/reference/latest/syntax_and_semantics/union_types.html
