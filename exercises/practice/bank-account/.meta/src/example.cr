@@ -5,21 +5,21 @@ class BankAccount
   end
 
   def balance
-    if @status == false
+    unless @status
       raise ArgumentError.new("You can't check the balance of a closed account")
     end
     @balance
   end
 
   def open
-    if @status == true
+    if @status
       raise ArgumentError.new("You can't open an already open account")
     end
     @status = true
   end
 
   def close
-    if @status == false
+    unless @status
       raise ArgumentError.new("You can't close an already closed account")
     end
     @balance = 0
@@ -29,7 +29,7 @@ class BankAccount
   def deposit(amount)
     if amount < 0
       raise ArgumentError.new("You can't deposit a negative amount")
-    elsif @status == false
+    elsif !@status
       raise ArgumentError.new("You can't deposit money into a closed account")
     end
     @balance += amount
@@ -40,7 +40,7 @@ class BankAccount
       raise ArgumentError.new("You can't withdraw a negative amount")
     elsif amount > @balance
       raise ArgumentError.new("You can't withdraw more than you have")
-    elsif @status == false
+    elsif !@status
       raise ArgumentError.new("You can't withdraw money into a closed account")
     end
     @balance -= amount
