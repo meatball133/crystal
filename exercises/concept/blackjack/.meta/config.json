@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["ryanplusplus"],
   "files": {
     "solution": ["src/blackjack.cr"],
     "test": ["spec/blackjack_spec.cr"],

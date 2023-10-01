@@ -51,7 +51,7 @@ String === "foo" # => true
 
 ## Case with multiple expressions
 
-Cases allows for matching multiple expressions in a single case, each possible value is separated by a comma.
+Cases allow for matching multiple expressions in a single case with each possible value separated by a comma.
 It will execute the code if any of the expressions match.
 This can be useful when you want a single case to have multiple possible values.
 
@@ -80,8 +80,8 @@ end
 
 ## Cases with no case expression
 
-When there is no need for a case expression then it is possible to omit it.
-Doing this will make so each case expression is evaluated for truthiness.
+When there is no need for a case expression, it is possible to omit it.
+Doing this will make it so that each case expression is evaluated for truthiness.
 And makes them behave like if-else-if statements.
 
 ```Crystal
