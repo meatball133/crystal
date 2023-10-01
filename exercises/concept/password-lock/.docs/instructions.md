@@ -29,9 +29,9 @@ The company has decided that they want to encrypt the password so that it is not
 
 Each password type has its own unique way of being encrypted:
 
-- Digit password: The password is divided by 2 and rounded to the nearest integer.
-- String password: The password is reversed.
-- Float64 password: The password is multiplied by 4.
+- `Int32` password: The password is divided by 2 and rounded to the nearest integer.
+- `String` password: The password is reversed.
+- `Float64` password: The password is multiplied by 4.
 
 Implement an instance method called `encrypt` that takes no arguments and modifies the `@password` instance variable so that it is encrypted.
 
