@@ -161,7 +161,7 @@
         "uuid": "da64a912-5041-4b86-9a3c-3b2d90d7cd64",
         "concepts": ["union-type"],
         "prerequisites": ["nil", "char"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "blackjack",
@@ -169,7 +169,7 @@
         "uuid": "796d19e6-ab78-4d16-b51b-f00804ec4b44",
         "concepts": ["case"],
         "prerequisites": ["modules", "union-type"],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
