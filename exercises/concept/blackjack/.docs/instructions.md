@@ -34,7 +34,7 @@ The ranges that are used are:
 
 |   range   |  value   |
 | :-------: | :------: |
-|    low    | [2, 11]  |
+|    low    | [4, 11]  |
 |    mid    | [12, 16] |
 |   high    | [17, 20] |
 | blackjack |   [21]   |
