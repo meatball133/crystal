@@ -70,15 +70,15 @@ describe Blackjack do
     end
 
     it "upper low range" do
-      Blackjack.card_range("three", "seven").should eq("low")
+      Blackjack.card_range("four", "seven").should eq("low")
     end
 
     it "lower mid range" do
-      Blackjack.card_range("seven", "four").should eq("mid")
+      Blackjack.card_range("seven", "five").should eq("mid")
     end
 
     it "mid mid range" do
-      Blackjack.card_range("six", "seven").should eq("mid")
+      Blackjack.card_range("seven", "seven").should eq("mid")
     end
 
     it "upper mid range" do
