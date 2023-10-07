@@ -1,34 +1,33 @@
 ## Goal
 
-The goal of this exercise is to teach the student about classes in crystal.
+The goal of this exercise is to teach the student about arrays in Crystal.
 
 ## Learning objectives
 
-- Know that classes are templates to create objects.
-- Understand constructors of classes.
-- Know that you can set up custom constructors.
-- Understand that classes can hold methods.
-- Understand instance variables.
-- Understand how to assign types and why you have to assign types.
-- Know what a class method is.
+- Know how to create an array
+- Know how to add an element to an array
+- Know how to remove an element from an array
+- Know how to get an element from an array
+- Know how to create an empty array
+- Know how to get an array from a string
 
 ## Out of scope
 
-- Class variables
-- Macro shortcuts(getter etc)
-- extend, include
+- Array Methods
+- Enumeration
 
 ## Concepts
 
-`classes`:
+`array`:
 
-- initialize
-- `.new`
-- `@<variables>` (instance variables)
-- Assigning types, `<variable> : <Type>`
-- Using methods which belong to a class
-- Using methods which belong to an instance
+- `[]`
+- `<<`
+- `pop` & `delete_at`
+- `[] of T`
+- `split`
 
 ## Prerequisites
 
-- Number Types, Bools
+- Union Types
+- Ranges
+- Nil

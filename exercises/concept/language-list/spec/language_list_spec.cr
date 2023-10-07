@@ -1,126 +1,88 @@
 require "spec"
 require "../src/*"
 
-describe "JuiceMaker" do
-  describe "debug_light_on?" do
-    it "should be on if the machine is running" do
-      JuiceMaker.debug_light_on?.should be_true
+describe "LanguageList" do
+  describe "list" do
+    it "new array" do
+      language_list = LanguageList.list
+      language_list.should eq [] of String
     end
   end
 
-  describe "initialize" do
-    it "should create a new JuiceMaker" do
-      {% if JuiceMaker.has_method? "initialize" %}
-        juice_maker = JuiceMaker.new(0)
-        juice_maker.@fluid.should eq 0
-        juice_maker.@running.should be_false
-      {% else %}
-        raise "Error: wrong number of arguments for 'JuiceMaker.new' (given 1, expected 0)"
-      {% end %}
+  describe "add" do
+    it "add a language to a array" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list.should eq ["Crystal"]
     end
 
-    it "Can take a fluid as input" do
-      {% if JuiceMaker.has_method? "initialize" %}
-        juice_maker = JuiceMaker.new(5)
-        juice_maker.@fluid.should eq 5
-        juice_maker.@running.should be_false
-      {% else %}
-        raise "Error: wrong number of arguments for 'JuiceMaker.new' (given 1, expected 0)"
-      {% end %}
+    it "add several languages to a array" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list = LanguageList.add(language_list, "Ruby")
+      language_list = LanguageList.add(language_list, "C#")
+      language_list = LanguageList.add(language_list, "Java")
+      language_list.should eq ["Crystal", "Ruby", "C#", "Java"]
     end
   end
 
-  describe "start" do
-    it "Can start the machine" do
-      {% if JuiceMaker.has_method?("initialize") && JuiceMaker.has_method?("start") %}
-        juice_maker = JuiceMaker.new(50)
-        juice_maker.start
-        juice_maker.@running.should be_true
-      {% else %}
-        raise "Error: undefined method 'start' for JuiceMaker"
-      {% end %}
+  describe "remove" do
+    it "add then remove results in empty list" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list = LanguageList.remove(language_list)
+      language_list.should eq [] of String
     end
 
-    it "Can start the machine even if there is no fluid" do
-      {% if JuiceMaker.has_method?("start") && JuiceMaker.has_method?("initialize") %}
-        juice_maker = JuiceMaker.new(0)
-        juice_maker.start
-        juice_maker.@running.should be_true
-      {% else %}
-        raise "Error: undefined method 'start' for JuiceMaker"
-      {% end %}
+    it "adding two languages, when removed, removes last item" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list = LanguageList.add(language_list, "Ruby")
+      language_list = LanguageList.remove(language_list)
+      language_list.should eq ["Crystal"]
     end
   end
 
-  describe "running?" do
-    it "Status should return true if the machine is started" do
-      {% if JuiceMaker.has_method?("start") && JuiceMaker.has_method?("initialize") && JuiceMaker.has_method?("running?") %}
-        juice_maker = JuiceMaker.new(50)
-        juice_maker.start
-        juice_maker.running?.should be_true
-      {% else %}
-        raise "Error: undefined method 'running?' for JuiceMaker"
-      {% end %}
+  describe "at" do
+    it "add one language, then get the first language" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      LanguageList.at(language_list, 0).should eq "Crystal"
     end
 
-    it "Status return false if the machine is not started" do
-      {% if JuiceMaker.has_method?("start") && JuiceMaker.has_method?("initialize") && JuiceMaker.has_method?("running?") %}
-        juice_maker = JuiceMaker.new(0)
-        juice_maker.running?.should be_false
-      {% else %}
-        raise "Error: undefined method 'running?' for JuiceMaker"
-      {% end %}
+    it "add a few languages, then get the 2nd language" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list = LanguageList.add(language_list, "Ruby")
+      language_list = LanguageList.add(language_list, "C#")
+      language_list = LanguageList.add(language_list, "Java")
+      LanguageList.at(language_list, 1).should eq "Ruby"
+    end
+
+    it "add a few languages, then get the last language" do
+      language_list = LanguageList.list
+      language_list = LanguageList.add(language_list, "Crystal")
+      language_list = LanguageList.add(language_list, "Ruby")
+      language_list = LanguageList.add(language_list, "C#")
+      language_list = LanguageList.add(language_list, "Java")
+      LanguageList.at(language_list, 3).should eq "Java"
     end
   end
 
-  describe "add_fluid" do
-    it "Can add fluid to the machine" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") %}
-        juice_maker = JuiceMaker.new(0)
-        juice_maker.add_fluid(5)
-        juice_maker.@fluid.should eq 5
-      {% else %}
-        raise "Error: undefined method 'add_fluid' for JuiceMaker"
-      {% end %}
-    end
-    it "Can add fluid multiple times" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") %}
-        juice_maker = JuiceMaker.new(5)
-        juice_maker.add_fluid(5)
-        juice_maker.add_fluid(20)
-        juice_maker.add_fluid(1)
-        juice_maker.@fluid.should eq 31
-      {% else %}
-        raise "Error: undefined method 'add_fluid' for JuiceMaker"
-      {% end %}
-    end
-  end
-
-  describe "stop" do
-    it "Can stop the machine" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") && JuiceMaker.has_method?("start") && JuiceMaker.has_method?("running?") && JuiceMaker.has_method?("stop") %}
-        juice_maker = JuiceMaker.new(50)
-        juice_maker.start
-        juice_maker.running?.should be_true
-        juice_maker.stop(5)
-        juice_maker.running?.should be_false
-        juice_maker.@fluid.should eq 25
-      {% else %}
-        raise "Error: undefined method 'stop' for JuiceMaker"
-      {% end %}
+  describe "parse" do
+    it "Can parse a string with only one language" do
+      language_list = LanguageList.parse("Crystal")
+      language_list.should eq ["Crystal"]
     end
 
-    it "Doesn't remove any fluid if the machine stops right after start" do
-      {% if JuiceMaker.has_method?("add_fluid") && JuiceMaker.has_method?("initialize") && JuiceMaker.has_method?("start") && JuiceMaker.has_method?("running?") && JuiceMaker.has_method?("stop") %}
-        juice_maker = JuiceMaker.new(50)
-        juice_maker.start
-        juice_maker.running?.should be_true
-        juice_maker.stop(0)
-        juice_maker.running?.should be_false
-        juice_maker.@fluid.should eq 50
-      {% else %}
-        raise "Error: undefined method 'stop' for JuiceMaker"
-      {% end %}
+    it "Can parse a string with multiple languages" do
+      language_list = LanguageList.parse("Crystal, Ruby, C#, Java")
+      language_list.should eq ["Crystal", "Ruby", "C#", "Java"]
+    end
+
+    it "Can parse a string with a language made of 2 words" do
+      language_list = LanguageList.parse("Crystal, Ruby, C#, Visual Basic, Java, C++")
+      language_list.should eq ["Crystal", "Ruby", "C#", "Visual Basic", "Java", "C++"]
     end
   end
 end

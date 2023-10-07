@@ -1,178 +1,154 @@
-# Basics
+# Array
 
-## Getting Started
+[Array][array] is a mutable data structure that stores a collection of elements of a specific type.
+An array is an [indexable][indexable] data structure.
+Arrays being mutable means that if a method is called on an array that modifies the array, the array will be modified.
+Meaning it doesn't have to be reassigned to the variable.
 
-### Variables
-
-To declare a [variable][variables], you must use the `=` assignment operator.
-In Crystal variables should be written in [snake_case][snake-case].
-
-```crystal
-number = 1
-puts number # => 1
-
-number = 2
-puts number # => 2
-```
-
-### Constants
-
-[Constants][constants] are declared using the same `=` assignment operator, but use all uppercase letters, also known as SCREAMING_SNAKE_CASE.
+To create an array, use the array literal denotation syntax (`[]`) and within it, specify the elements of the array separated by a comma.
 
 ```crystal
-NUMBER = 1
-puts NUMBER # => 1
+[1, 2, 3] # => [1, 2, 3]
 ```
 
-Assigning a value to a constant that is already defined will result in a compile-time error.
+Crystal will infer the type of the array from the elements.
 
 ```crystal
-NUMBER = 1
-
-NUMBER = 2
-# Error: already initialized constant NUMBER
+[1, 2, 3].class # => Array(Int32)
 ```
 
-### Types
+## Multi type Arrays
 
-Crystal is a compiled language, which means that every variable or method argument is assigned a type at compile time.
-The compiler is capable of inferring the type of a variable or method argument.
-Although in some cases it is necessary to specify the type.
-The cases that requires a type to be set will be explained in later concepts.
-
-### Methods
-
-[Methods][methods] are a way to group together a set of instructions that can be reused.
-In Crystal methods are often defined in a class, module or struct.
-But methods can also be defined outside of a class, module or struct.
-Methods are declared using the `def` keyword, followed by the name of the method.
-In Crystal methods should be written in snake_case.
-When a method doesn't have any arguments, you can omit the parentheses.
-To declare the end of a method, you must use the `end` keyword.
+Even if mentioned earlier about arrays being a collection of elements of a specific type, you can create an array with multiple types through the use of [union types][union-types].
+This makes so that the array can contain elements of any of the types specified in the union type.
+Crystal will infer the type of the array from the elements.
 
 ```crystal
-def hello
-  puts "Hello World!"
-end
+[1, "2", 3.0] # => [1, "2", 3.0]
+
+[1, "2", 3.0].class # => Array(Int32 | Float64 | String)
 ```
 
-Using a method that doesn't exist on the type of the variable or method argument will result in a compile-time error.
+## Add an element to an array
+
+To add an element to an array, use the [`<<` (append) operator][append].
 
 ```crystal
-number = 1
-number + "1"
+[1, 2, 3] << 4 # => [1, 2, 3, 4]
 ```
 
-```console
-In test.cr:2:7
-
- 2 | number + "1"
-           ^
-Error: no overload matches 'Int32#+' with type String
-```
-
-### Arguments
-
-Methods can have [arguments][arguments].
-Arguments are data that is passed to a method.
-To be able to give a method arguments, you must specify the name of the argument.
-In Crystal arguments should be written in snake_case.
-A method can have multiple arguments, but the arguments must be separated by a comma.
+It is important that the type of the element you want to add is the same as the type of the array, if it is not an error will be raised.
 
 ```crystal
-def hello(name)
-  puts "Hello #{name}!"
-end
+numbers : Array(Int32 | Float64) = [1, 2, 3]
+numbers << 4.0
+numbers # => [1, 2, 3, 4.0]
+numbers << "5" # => Error: no overload matches 'Array(Int32 | Float64)#<<' with type String
 ```
 
-Methods can also have multiple arguments.
-In this case, the arguments must be separated by a comma.
+## Size of an Array
+
+As with `String`, can you get the size of an array by using the [`size`][size] method.
 
 ```crystal
-def hello(name, language)
-  puts "Hello #{name}! You are learning #{language}."
-end
+[1, 2, 3].size # => 3
 ```
 
-### Calling Methods
+## Empty Arrays
 
-When calling a method that belongs to a class, module or struct, you must use the dot operator(`.`).
-Like following: `<ClassName>.<method_name>`.
-When the method doesn't belong to a class, module or struct, then you can simple call it by writing its name.
-Methods always implicitly return the value of the last expression in the method.
-
-When a method has arguments, you may use parentheses when specifying the arguments in the method call and definition, like following: `<method_name>(<argument_1>, <argument_2>)`.
-When a method has no arguments, parentheses should be omitted.
+When creating an empty array, can the compiler not infer which type the array is built of.
+Therefore, you need to specify the type of the array.
+This can be done by either specifying the type of the array or by using the `of` keyword.
+Or by using the array initializer syntax, which is: `Array(T).new`.
 
 ```crystal
-def hello(name)
-  "Hello #{name}!"
-end
-
-hello("Crystal")
-# => Hello Crystal!
+[] of (Int32 | Float64 | String)    # => []
+Array(Int32 | Float64 | String).new # => []
 ```
 
-When calling a method with multiple arguments, the arguments should be separated by a comma.
-The arguments must be given in the same order as the method arguments.
+## Accessing Elements
+
+As with `String`, can you access elements in an array by using the [`[]` (index) operator][index] and giving it the index of the element you want to access.
 
 ```crystal
-def hello_language(name, language)
-  puts "Hello #{name}! You are learning #{language}."
-end
-
-hello_language("World", "Crystal")
-# => Hello World! You are learning Crystal.
+[1, 2, 3][0] # => 1
 ```
 
-Calling a method with the wrong number of arguments will result in a compile-time error.
+It is also possible to access elements by using a range.
 
 ```crystal
-hello_language("Crystal")
+[1, 2, 3][0..1] # => [1, 2]
 ```
 
-```console
-In test.cr:1:1
+## Create an array from a range
 
- 1 | hello_language("Crystal")
-     ^----
-Error: wrong number of arguments for 'hello_language' (given 1, expected 2)
-```
-
-### Addition & Subtraction & Multiplication
-
-In Crystal, you can use the `+` operator to add two numbers together.
-You can also use the `-` operator to subtract two numbers.
-And you can use the `*` operator to multiply two numbers.
+To create an array from a range, use the [`to_a` method][to_a].
+This can be useful when you want to create an array of numbers.
 
 ```crystal
-1 + 1
-# => 2
-
-2 - 1
-# => 1
-
-2 * 2
-# => 4
+(1..3).to_a # => [1, 2, 3]
 ```
 
-### Comments
+## Create an array from a string
 
-In Crystal [comments][comments] are written with the `#` character, followed by a space and then the comment.
-Comments are used to document code.
-Comments are not executed by the compiler.
+To create an array from a string, use the [`split`][split] method.
+This lets you split a string into an array of strings by using a delimiter.
 
 ```crystal
-# This is a comment
+"1,2,3".split(",") # => ["1", "2", "3"]
 ```
 
-[arguments]: https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html#arguments
-[assignement]: https://crystal-lang.org/reference/latest/syntax_and_semantics/assignment.html#assignment
-[comments]: https://crystal-lang.org/reference/latest/syntax_and_semantics/comments.html
-[constants]: https://crystal-lang.org/reference/latest/syntax_and_semantics/constants.html
-[default_arguments]: https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html#default-arguments
-[methods]: https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html#methods
-[return]: https://crystal-lang.org/reference/latest/tutorials/basics/60_methods.html#returning-a-value
-[snake-case]: https://en.wikipedia.org/wiki/Snake_case
-[type]: https://crystal-lang.org/reference/latest/tutorials/basics/20_variables.html#type
-[variables]: https://crystal-lang.org/reference/latest/tutorials/basics/20_variables.html
+It is also possible to get an array of characters from a string by using the [`chars`][chars] method.
+
+```crystal
+"123".chars # => ['1', '2', '3']
+```
+
+To convert an array of `Char` or `String` to a `String` you can use the [`join`][join] method which takes a delimiter as an argument.
+
+```crystal
+['1', '2', '3'].join(".") # => "1.2.3"
+```
+
+## Deleting element from an array
+
+When wanting to delete an element from the end of an array, you can use [`pop`][pop] method which takes an optional argument specifying how many elements to remove from the end of the array.
+The method returns the element that was removed.
+
+```crystal
+numbers = [1, 2, 3]
+[1, 2, 3].pop # => 3
+numbers       # => [1, 2]
+```
+
+When wanting to delete an element of a specific index from an array, you can use the [`delete_at`][delete_at] method which takes the index of the element to remove as an argument.
+
+```crystal
+numbers = [1, 2, 3]
+[1, 2, 3].delete_at(1) # => 2
+numbers                # => [1, 3]
+```
+
+## Modifying values in an array
+
+When wanting to modify an element of a specific index from an array, you can use the [`[]=` (index assign) operator][index-assign] which takes the index of the element to modify and the new value as arguments.
+
+```crystal
+numbers = [1, 2, 3]
+numbers[1] = 4
+numbers # => [1, 4, 3]
+```
+
+[array]: https://crystal-lang.org/reference/syntax_and_semantics/literals/array.html
+[pop]: https://crystal-lang.org/api/Array.html#pop%3AT-instance-method
+[index]: https://crystal-lang.org/api/Indexable.html#%5B%5D%28index%3AInt%29-instance-method
+[split]: https://crystal-lang.org/api/String.html#split%28separator%3AString%2Climit%3Dnil%2C%2A%2Cremove_empty%3Dfalse%29%3AArray%28String%29-instance-method
+[indexable]: https://crystal-lang.org/api/Indexable.html
+[union-types]: https://crystal-lang.org/reference/syntax_and_semantics/union_types.html
+[append]: https://crystal-lang.org/api/Array.html#%3C%3C%28value%3AT%29%3Aself-instance-method
+[size]: https://crystal-lang.org/api/Array.html#size%3AInt32-instance-method
+[to_a]: https://crystal-lang.org/api/Enumerable.html#to_a-instance-method
+[chars]: https://crystal-lang.org/api/String.html#chars%3AArray%28Char%29-instance-method
+[join]: https://crystal-lang.org/api/Indexable.html#join%28separator%3AString%7CChar%7CNumber%3D%22%22%29%3AString-instance-method
+[index-assign]: https://crystal-lang.org/api/Indexable/Mutable.html#%5B%5D%3D%28index%3AInt%2Cvalue%3AT%29%3AT-instance-method
+[delete_at]: https://crystal-lang.org/api/Array.html#delete_at%28index%3AInt%29%3AT-instance-method

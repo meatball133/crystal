@@ -7,7 +7,7 @@ module LanguageList
     list << language
   end
 
-  def self.remove(list, language)
+  def self.remove(list)
     list.pop()
     list
   end

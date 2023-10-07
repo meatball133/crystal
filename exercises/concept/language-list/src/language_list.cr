@@ -7,7 +7,7 @@ module LanguageList
     raise "Please implement the Library.add method"
   end
 
-  def self.remove(list, language)
+  def self.remove(list)
     raise "Please implement the Library.remove method"
   end
 

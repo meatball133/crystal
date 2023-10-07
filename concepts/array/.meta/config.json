@@ -1,5 +1,5 @@
 {
-  "blurb": "Crystal is a static, strongly typed, object-oriented programming language with a focus on performance, type safety, and developer productivity",
+  "blurb": "Array is a data structure which stores a collection of elements of a certain type. Arrays are indexable and mutable",
   "authors": ["meatball133"],
   "contributors": []
 }

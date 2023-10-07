@@ -1,222 +1,154 @@
-# classes
+# Array
 
-Classes are a central concept in [object-oriented programming][object-oriented-programming].
-[In Crystal, everything is an object][everything-is-an-object], every object has a type, and it can respond to some methods.
-Classes are blueprints to create objects, providing initial values for state, like variables, and implementations of behavior, like methods.
-Objects are an instance of a class, that hold all the instance variables and states.
+[Array][array] is a mutable data structure that stores a collection of elements of a specific type.
+An array is an [indexable][indexable] data structure.
+Arrays being mutable means that if a method is called on an array that modifies the array, the array will be modified.
+Meaning it doesn't have to be reassigned to the variable.
 
-## Class definition
-
-A class is defined using the `class` keyword, followed by the name of the class written in `UpperCamelCase`.
+To create an array, use the array literal denotation syntax (`[]`) and within it, specify the elements of the array separated by a comma.
 
 ```crystal
-class Account
-end
+[1, 2, 3] # => [1, 2, 3]
 ```
 
-## Creating an instance
-
-To [create an instance of a class][new-initialize], you call the class name with the `new` method.
+Crystal will infer the type of the array from the elements.
 
 ```crystal
-class Account
-end
-
-account = Account.new
+[1, 2, 3].class # => Array(Int32)
 ```
 
-In the example above the variable `account` is an instance of the class `Account`.
+## Multi type Arrays
 
-When creating an instance, there is a special method called `initialize` that acts as a constructor.
-It is called when an instance is created.
-The constructor allows you to set the initial state of the instance.
-The `initialize` method can take arguments, which are passed when creating an instance.
+Even if mentioned earlier about arrays being a collection of elements of a specific type, you can create an array with multiple types through the use of [union types][union-types].
+This makes so that the array can contain elements of any of the types specified in the union type.
+Crystal will infer the type of the array from the elements.
 
 ```crystal
-class Account
-  def initialize(number)
-    5 + number # => 9
-  end
-end
+[1, "2", 3.0] # => [1, "2", 3.0]
 
-Account.new(4)
+[1, "2", 3.0].class # => Array(Int32 | Float64 | String)
 ```
 
-~~~~exercism/note
-The `initialize` method cannot manually return a value, instead, `new` returns the newly created instance.
+## Add an element to an array
+
+To add an element to an array, use the [`<<` (append) operator][append].
 
 ```crystal
-class Account
-  def initialize(number)
-    5 + number
-  end
-end
-
-Account.new(4)
-# => #<Account:0x7f5dc33dcea0>
+[1, 2, 3] << 4 # => [1, 2, 3, 4]
 ```
-~~~~
 
-## Instance methods
-
-An instance method is a method that is available to an instance of a class, and can be called on that instance.
-Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
+It is important that the type of the element you want to add is the same as the type of the array, if it is not an error will be raised.
 
 ```crystal
-class Account
-  def balance
-    100
-  end
-end
-
-account = Account.new
-account.balance # => 100
+numbers : Array(Int32 | Float64) = [1, 2, 3]
+numbers << 4.0
+numbers # => [1, 2, 3, 4.0]
+numbers << "5" # => Error: no overload matches 'Array(Int32 | Float64)#<<' with type String
 ```
 
-## Instance variables
+## Size of an Array
 
-[Instance variables][instance-variable] are variables that are available in all methods of the instance.
-To access an instance variable you need to define an instance method.
-They can be initialized in the `initialize` method.
-They are defined using the `@` prefix.
+As with `String`, can you get the size of an array by using the [`size`][size] method.
 
 ```crystal
-class Account
-  def initialize
-    @balance = 100
-  end
-
-  def balance
-    @balance
-  end
-end
-
-account = Account.new
-account.balance
-# => 100
+[1, 2, 3].size # => 3
 ```
 
-Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
+## Empty Arrays
+
+When creating an empty array, can the compiler not infer which type the array is built of.
+Therefore, you need to specify the type of the array.
+This can be done by either specifying the type of the array or by using the `of` keyword.
+Or by using the array initializer syntax, which is: `Array(T).new`.
 
 ```crystal
-class Account
-  @age = 0
-end
+[] of (Int32 | Float64 | String)    # => []
+Array(Int32 | Float64 | String).new # => []
 ```
 
-### Instance variables with initialization
+## Accessing Elements
 
-Instance variables can be initialized with an argument passed to the `initialize` method.
-Since Crystal can't infer the type of an argument during initialization, it needs to be specified.
-If you want to read more about this, you can read: [type-inference][type-inference].
-To specify the type of the variable you can use the `:` symbol, followed by the type.
-For example, if you want to create an instance variable called `balance` of type `Int32`, you can do the following: `@balance : Int32`.
-Or if you want to create an instance variable called `raining` of type `Bool`, you can do the following: `@raining : Bool`.
-
-There are a few ways to implement this, either by in the `initialize` method declaring the argument with the type, and then assigning the instance variable to the argument, like the following example:
+As with `String`, can you access elements in an array by using the [`[]` (index) operator][index] and giving it the index of the element you want to access.
 
 ```crystal
-class Account
-  def initialize(balance : Int32)
-    @balance = balance
-  end
-
-  def balance
-    @balance
-  end
-end
-
-account = Account.new(1)
-account_2 = Account.new(5)
-
-account.balance
-# => 1
-
-account_2.balance
-# => 5
+[1, 2, 3][0] # => 1
 ```
 
-Another way is to declare the instance variable type in the class definition in the form: `@<variable> : <Type>`, like the following example:
+It is also possible to access elements by using a range.
 
 ```crystal
-class Weather
-
-  @raining : Bool
-
-  def initialize(raining)
-    @raining = raining
-  end
-
-  def raining
-    @raining
-  end
-end
-
-weather = Weather.new(true)
-weather.raining
-# => true
+[1, 2, 3][0..1] # => [1, 2]
 ```
 
-## Modify instance variables
+## Create an array from a range
 
-Instance variables can be modified by methods.
-These methods can be called on the instance of the class.
-When a method modifies an instance variable, that change is only available in the instance of the class you called it on.
+To create an array from a range, use the [`to_a` method][to_a].
+This can be useful when you want to create an array of numbers.
 
 ```crystal
-class Account
-  def initialize(balance : Int32)
-    @balance = balance
-  end
-
-  def withdraw(amount)
-    @balance -= amount
-  end
-
-  def balance
-    @balance
-  end
-end
-
-account = Account.new(10)
-account_2 = Account.new(10)
-account.balance
-# => 10
-
-account_2.balance
-# => 10
-
-account.withdraw(5)
-account.balance
-# => 5
-
-account_2.balance
-# => 10
+(1..3).to_a # => [1, 2, 3]
 ```
 
-## Class methods
+## Create an array from a string
 
-[Class methods][class-methods], are methods that are defined on a class, but not on the instances of that class.
-They offer a way to create methods that are not dependent on the state of the instance.
-They are defined using the `def` keyword, followed by `self.<method name>`.
-`self` is a reference to the namespace which self is being called from.
-In this case, it is a reference to the class, `Account`.
-It would be the same as if you would have written `Account.`, but `self.` is the preferred way to do it.
+To create an array from a string, use the [`split`][split] method.
+This lets you split a string into an array of strings by using a delimiter.
 
 ```crystal
-class Account
-  def self.balance
-    100
-  end
-end
-
-Account.balance
-# => 100
+"1,2,3".split(",") # => ["1", "2", "3"]
 ```
 
-[object-oriented-programming]: https://en.wikipedia.org/wiki/Object-oriented_programming
-[everything-is-an-object]: https://crystal-lang.org/reference/latest/syntax_and_semantics/everything_is_an_object.html
-[new-initialize]: https://crystal-lang.org/reference/latest/syntax_and_semantics/new%2C_initialize_and_allocate.html
-[instance-variable]: https://crystal-lang.org/reference/latest/syntax_and_semantics/instance_variables.html
-[type-inference]: https://crystal-lang.org/reference/latest/syntax_and_semantics/type_inference.html
-[class-methods]: https://crystal-lang.org/reference/latest/syntax_and_semantics/class_methods.html
+It is also possible to get an array of characters from a string by using the [`chars`][chars] method.
+
+```crystal
+"123".chars # => ['1', '2', '3']
+```
+
+To convert an array of `Char` or `String` to a `String` you can use the [`join`][join] method which takes a delimiter as an argument.
+
+```crystal
+['1', '2', '3'].join(".") # => "1.2.3"
+```
+
+## Deleting element from an array
+
+When wanting to delete an element from the end of an array, you can use [`pop`][pop] method which takes an optional argument specifying how many elements to remove from the end of the array.
+The method returns the element that was removed.
+
+```crystal
+numbers = [1, 2, 3]
+[1, 2, 3].pop # => 3
+numbers       # => [1, 2]
+```
+
+When wanting to delete an element of a specific index from an array, you can use the [`delete_at`][delete_at] method which takes the index of the element to remove as an argument.
+
+```crystal
+numbers = [1, 2, 3]
+[1, 2, 3].delete_at(1) # => 2
+numbers                # => [1, 3]
+```
+
+## Modifying values in an array
+
+When wanting to modify an element of a specific index from an array, you can use the [`[]=` (index assign) operator][index-assign] which takes the index of the element to modify and the new value as arguments.
+
+```crystal
+numbers = [1, 2, 3]
+numbers[1] = 4
+numbers # => [1, 4, 3]
+```
+
+[array]: https://crystal-lang.org/reference/syntax_and_semantics/literals/array.html
+[pop]: https://crystal-lang.org/api/Array.html#pop%3AT-instance-method
+[index]: https://crystal-lang.org/api/Indexable.html#%5B%5D%28index%3AInt%29-instance-method
+[split]: https://crystal-lang.org/api/String.html#split%28separator%3AString%2Climit%3Dnil%2C%2A%2Cremove_empty%3Dfalse%29%3AArray%28String%29-instance-method
+[indexable]: https://crystal-lang.org/api/Indexable.html
+[union-types]: https://crystal-lang.org/reference/syntax_and_semantics/union_types.html
+[append]: https://crystal-lang.org/api/Array.html#%3C%3C%28value%3AT%29%3Aself-instance-method
+[size]: https://crystal-lang.org/api/Array.html#size%3AInt32-instance-method
+[to_a]: https://crystal-lang.org/api/Enumerable.html#to_a-instance-method
+[chars]: https://crystal-lang.org/api/String.html#chars%3AArray%28Char%29-instance-method
+[join]: https://crystal-lang.org/api/Indexable.html#join%28separator%3AString%7CChar%7CNumber%3D%22%22%29%3AString-instance-method
+[index-assign]: https://crystal-lang.org/api/Indexable/Mutable.html#%5B%5D%3D%28index%3AInt%2Cvalue%3AT%29%3AT-instance-method
+[delete_at]: https://crystal-lang.org/api/Array.html#delete_at%28index%3AInt%29%3AT-instance-method
