@@ -8,7 +8,7 @@ module LanguageList
   end
 
   def self.remove(list)
-    list.pop()
+    list.pop
     list
   end
 
