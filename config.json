@@ -170,6 +170,14 @@
         "concepts": ["case"],
         "prerequisites": ["modules", "union-type"],
         "status": "wip"
+      },
+      {
+        "slug": "language-list",
+        "name": "Language List",
+        "uuid": "007938eb-243d-466f-81ab-ad6bf5bbcdb9",
+        "concepts": ["array"],
+        "prerequisites": ["nil", "union-type", "ranges"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1281,6 +1289,11 @@
       "uuid": "2d44a16f-8745-43be-9c6a-2279224d871c",
       "slug": "case",
       "name": "Case"
+    },
+    {
+      "uuid": "cf44cbcb-6bb3-460e-a4b4-d7e11eea517b",
+      "slug": "array",
+      "name": "Array"
     }
   ],
   "key_features": [
