@@ -17,11 +17,11 @@ module Blackjack
 
   def self.card_range(card1, card2)
     case parse_card(card1) + parse_card(card2)
-    when 2..6
+    when 4..11
       "low"
-    when 7..11
+    when 12..16
       "mid"
-    when 12..20
+    when 17..20
       "high"
     when 21
       "blackjack"

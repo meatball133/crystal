@@ -7,7 +7,7 @@ describe Blackjack do
       Blackjack.parse_card("ace").should eq(11)
     end
 
-    it "pase two" do
+    it "parse two" do
       Blackjack.parse_card("two").should eq(2)
     end
 
@@ -66,27 +66,27 @@ describe Blackjack do
     end
 
     it "mid low range" do
-      Blackjack.card_range("two", "three").should eq("low")
-    end
-
-    it "upper low range" do
       Blackjack.card_range("three", "three").should eq("low")
     end
 
+    it "upper low range" do
+      Blackjack.card_range("four", "seven").should eq("low")
+    end
+
     it "lower mid range" do
-      Blackjack.card_range("four", "three").should eq("mid")
+      Blackjack.card_range("seven", "five").should eq("mid")
     end
 
     it "mid mid range" do
-      Blackjack.card_range("six", "three").should eq("mid")
+      Blackjack.card_range("seven", "seven").should eq("mid")
     end
 
     it "upper mid range" do
-      Blackjack.card_range("four", "seven").should eq("mid")
+      Blackjack.card_range("seven", "nine").should eq("mid")
     end
 
     it "lower high range" do
-      Blackjack.card_range("eight", "four").should eq("high")
+      Blackjack.card_range("eight", "nine").should eq("high")
     end
 
     it "mid high range" do
@@ -97,7 +97,7 @@ describe Blackjack do
       Blackjack.card_range("ten", "king").should eq("high")
     end
 
-    it "blacjack" do
+    it "blackjack" do
       Blackjack.card_range("ace", "ten").should eq("blackjack")
     end
   end
