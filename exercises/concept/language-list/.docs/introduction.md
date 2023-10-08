@@ -56,10 +56,9 @@ As with `String`, can you get the size of an array by using the [`size`][size] m
 
 ## Empty Arrays
 
-When creating an empty array, can the compiler not infer which type the array is built of.
+When creating an empty array, the compiler cannot infer the type of the array.
 Therefore, you need to specify the type of the array.
-This can be done by either specifying the type of the array or by using the `of` keyword.
-Or by using the array initializer syntax, which is: `Array(T).new`.
+This can be done by specifying the type of the array, by using the `of` keyword, or by using the array initializer syntax, which is: `Array(T).new`.
 
 ```crystal
 [] of (Int32 | Float64 | String)    # => []
@@ -68,7 +67,7 @@ Array(Int32 | Float64 | String).new # => []
 
 ## Accessing Elements
 
-As with `String`, can you access elements in an array by using the [`[]` (index) operator][index] and giving it the index of the element you want to access.
+As with `String`, you can access elements in an array by using the [`[]` (index) operator][index] and giving it the index of the element you want to access.
 
 ```crystal
 [1, 2, 3][0] # => 1
@@ -112,7 +111,7 @@ To convert an array of `Char` or `String` to a `String` you can use the [`join`]
 
 ## Deleting element from an array
 
-When wanting to delete an element from the end of an array, you can use [`pop`][pop] method which takes an optional argument specifying how many elements to remove from the end of the array.
+When you want to delete an element from the end of an array, you can use [`pop`][pop] method which takes an optional argument specifying how many elements to remove from the end of the array.
 The method returns the element that was removed.
 
 ```crystal
@@ -121,7 +120,7 @@ numbers = [1, 2, 3]
 numbers       # => [1, 2]
 ```
 
-When wanting to delete an element of a specific index from an array, you can use the [`delete_at`][delete_at] method which takes the index of the element to remove as an argument.
+When you want to delete an element of a specific index from an array, you can use the [`delete_at`][delete_at] method which takes the index of the element to remove as an argument.
 
 ```crystal
 numbers = [1, 2, 3]
@@ -131,7 +130,7 @@ numbers                # => [1, 3]
 
 ## Modifying values in an array
 
-When wanting to modify an element of a specific index from an array, you can use the [`[]=` (index assign) operator][index-assign] which takes the index of the element to modify and the new value as arguments.
+When you want to modify an element of a specific index from an array, you can use the [`[]=` (index assign) operator][index-assign] which takes the index of the element to modify and the new value as arguments.
 
 ```crystal
 numbers = [1, 2, 3]

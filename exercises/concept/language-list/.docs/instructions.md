@@ -42,7 +42,7 @@ language_list = LanguageList.remove(language_list)
 # => ["Crystal"]
 ```
 
-## 4. Define a function to return the first item in the array
+## 4. Define a method to return the nth item in the array
 
 Define the `LanguageList.at` function that takes 2 argument (a _language array_ and an index).
 The method should return the language at n index in the array.

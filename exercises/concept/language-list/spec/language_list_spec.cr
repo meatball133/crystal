@@ -10,13 +10,13 @@ describe "LanguageList" do
   end
 
   describe "add" do
-    it "add a language to a array" do
+    it "add a language to an array" do
       language_list = LanguageList.list
       language_list = LanguageList.add(language_list, "Crystal")
       language_list.should eq ["Crystal"]
     end
 
-    it "add several languages to a array" do
+    it "add several languages to an array" do
       language_list = LanguageList.list
       language_list = LanguageList.add(language_list, "Crystal")
       language_list = LanguageList.add(language_list, "Ruby")
@@ -70,17 +70,17 @@ describe "LanguageList" do
   end
 
   describe "parse" do
-    it "Can parse a string with only one language" do
+    it "can parse a string with only one language" do
       language_list = LanguageList.parse("Crystal")
       language_list.should eq ["Crystal"]
     end
 
-    it "Can parse a string with multiple languages" do
+    it "can parse a string with multiple languages" do
       language_list = LanguageList.parse("Crystal, Ruby, C#, Java")
       language_list.should eq ["Crystal", "Ruby", "C#", "Java"]
     end
 
-    it "Can parse a string with a language made of 2 words" do
+    it "can parse a string with a language made of 2 words" do
       language_list = LanguageList.parse("Crystal, Ruby, C#, Visual Basic, Java, C++")
       language_list.should eq ["Crystal", "Ruby", "C#", "Visual Basic", "Java", "C++"]
     end

@@ -18,7 +18,7 @@
 
 - Crystal [provides a method][pop] to remove the last item from an array.
 
-## 4. Define a function to return the first item in the array
+## 4. Define a method to return the nth item in the array
 
 - Crystal [provides a method][index] to get the item at a specific index in an array.
 
