@@ -15,7 +15,9 @@ module ColossalCoaster
 
   def self.add_with_friends(queue, person_name, friend_name)
     friend_index = ColossalCoaster.find_my_friend(queue, friend_name)
-    queue.insert(friend_index, person_name)
+    unless friend_index.nil?
+      queue.insert(friend_index, person_name)
+    end
     queue
   end
 
