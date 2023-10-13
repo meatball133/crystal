@@ -23,7 +23,7 @@ module ColossalCoaster
     queue.delete(person_name)
     queue
   end
-    
+
   def self.sorted_queue(queue)
     queue.sort
   end

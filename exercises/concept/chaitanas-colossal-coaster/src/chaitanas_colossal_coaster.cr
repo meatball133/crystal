@@ -14,7 +14,7 @@ module ColossalCoaster
   def self.remove_from_queue(queue, person_name)
     raise "Please implement the ColossalCoaster.remove_from_queue method"
   end
-    
+
   def self.sorted_queue(queue)
     raise "Please implement the ColossalCoaster.sorted_queue method"
   end
