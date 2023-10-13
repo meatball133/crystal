@@ -35,19 +35,19 @@ describe ColossalCoaster do
     it "should add person to the start of the queue" do
       queue = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
       expected = ["Bucky", "Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
-      ColossalCoaster.add_with_friends(queue, 0, "Bucky").should eq expected
+      ColossalCoaster.add_with_friends(queue, "Natasha", "Bucky").should eq expected
     end
 
     it "should add person to the middle of the queue" do
       queue = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
       expected = ["Natasha", "Steve", "Tchalla", "Bucky", "Wanda", "Rocket"]
-      ColossalCoaster.add_with_friends(queue, 3, "Bucky").should eq expected
+      ColossalCoaster.add_with_friends(queue, "Wanda", "Bucky").should eq expected
     end
 
     it "should add person to the end of the queue" do
       queue = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
       expected = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket", "Bucky"]
-      ColossalCoaster.add_with_friends(queue, 5, "Bucky").should eq expected
+      ColossalCoaster.add_with_friends(queue, "Rocket", "Bucky").should eq expected
     end
   end
 
