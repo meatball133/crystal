@@ -178,6 +178,14 @@
         "concepts": ["array"],
         "prerequisites": ["nil", "union-type", "ranges"],
         "status": "wip"
+      },
+      {
+        "slug": "chaitanas-colossal-coaster",
+        "name": "Chaitanas Colossal Coaster",
+        "uuid": "c9fb4ef4-1caa-4143-8b30-39efc7a19e03",
+        "concepts": ["array-methods"],
+        "prerequisites": ["array"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1206,7 +1214,7 @@
         ],
         "prerequisites": [],
         "difficulty": 6
-      }
+      }  
     ]
   },
   "concepts": [
@@ -1294,6 +1302,11 @@
       "uuid": "cf44cbcb-6bb3-460e-a4b4-d7e11eea517b",
       "slug": "array",
       "name": "Array"
+    },
+    {
+      "uuid": "08a273b4-5067-4876-9eeb-59ab9904fc5d",
+      "slug": "array-methods",
+      "name": "Array Methods"
     }
   ],
   "key_features": [
