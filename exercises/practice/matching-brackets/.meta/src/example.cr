@@ -3,7 +3,7 @@ module MatchingBrackets
   MAP = {'}' => '{', ']' => '[', ')' => '('}
 
   def valid?(str : String)
-    create_stack(filter_brackets(str)).size == 0
+    create_stack(filter_brackets(str)).empty?
   end
 
   private def filter_brackets(brackets : String) : Array(Char)
