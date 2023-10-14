@@ -3,7 +3,7 @@ module Proverb
 
   def recite(strings : Array(String)) : Array(String)
     proverb = [] of String
-    if strings.size > 0
+    unless strings.empty?
       strings.each_cons(2) do |h|
         proverb << "For want of a #{h[0]} the #{h[1]} was lost."
       end
