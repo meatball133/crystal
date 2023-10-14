@@ -7,13 +7,13 @@ module CollatzConjecture
     n = input
     steps = 0
     until n == 1
-      if n.divisible_by?(2)
+      if n % 2 == 0
         n /= 2
       else
         n = 3 * n + 1
       end
 
-      steps += steps
+      steps += 1
     end
 
     steps
