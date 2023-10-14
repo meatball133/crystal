@@ -1,6 +1,6 @@
 module ColossalCoaster
   def self.add_to_queue(express_queue, normal_queue, express, person_name)
-    if express
+    if express == 1
       express_queue << person_name
       express_queue
     else
@@ -13,7 +13,7 @@ module ColossalCoaster
     queue.index(friend_name)
   end
 
-  def self.add_with_friends(queue, person_name, friend_name)
+  def self.add_with_friends(queue, friend_name, person_name)
     friend_index = ColossalCoaster.find_my_friend(queue, friend_name)
     unless friend_index.nil?
       queue.insert(friend_index, person_name)

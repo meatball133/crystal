@@ -46,7 +46,7 @@ describe ColossalCoaster do
 
     it "should add person to the end of the queue" do
       queue = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
-      expected = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket", "Bucky"]
+      expected = ["Natasha", "Steve", "Tchalla", "Wanda", "Bucky", "Rocket"]
       ColossalCoaster.add_with_friends(queue, "Rocket", "Bucky").should eq expected
     end
   end
