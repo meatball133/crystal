@@ -10,6 +10,6 @@ module ScrabbleScore
   } of Char => Int32
 
   def score(word : String) : Int32
-    word.upcase.chars.map { |c| SCORES[c] }.sum()
+    word.upcase.chars.map { |c| SCORES[c] }.sum
   end
 end
