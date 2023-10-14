@@ -29,6 +29,18 @@ Crystal will infer the type of the array from the elements.
 [1, "2", 3.0].class # => Array(Int32 | Float64 | String)
 ```
 
+## Multi-dimensional arrays
+
+A multi-dimensional array is an array of arrays.
+This means that each element in the array is an array itself.
+This can be useful when wanting to store data in a table format.
+To define a multi-dimensional array, you can either write an array of arrays literal or use the `Array.new` constructor.
+
+```crystal
+[[1, 2], [3, 4]]                    # => [[1, 2], [3, 4]]
+numbers = Array(Array(Int32)).new() # => []
+numbers << [1, 2]                   # => [[1, 2]]
+
 ## Add an element to an array
 
 To add an element to an array, use the [`<<` (append) operator][append].
@@ -43,6 +55,7 @@ It is important that the type of the element you want to add is the same as the 
 numbers : Array(Int32 | Float64) = [1, 2, 3]
 numbers << 4.0
 numbers # => [1, 2, 3, 4.0]
+
 numbers << "5" # => Error: no overload matches 'Array(Int32 | Float64)#<<' with type String
 ```
 
@@ -68,9 +81,12 @@ Array(Int32 | Float64 | String).new # => []
 ## Accessing Elements
 
 As with `String`, you can access elements in an array by using the [`[]` (index) operator][index] and giving it the index of the element you want to access.
+If the index is out of bounds, an `IndexError` will be raised.
 
 ```crystal
 [1, 2, 3][0] # => 1
+
+[1, 2, 3][3] # => Index out of bounds (IndexError)
 ```
 
 It is also possible to access elements by using a range.
@@ -113,29 +129,40 @@ To convert an array of `Char` or `String` to a `String` you can use the [`join`]
 
 When you want to delete an element from the end of an array, you can use [`pop`][pop] method which takes an optional argument specifying how many elements to remove from the end of the array.
 The method returns the element that was removed.
+If the array is empty an `IndexError` will be raised.
 
 ```crystal
 numbers = [1, 2, 3]
 [1, 2, 3].pop # => 3
 numbers       # => [1, 2]
+
+empty_numbers = [] of Int32
+empty_numbers.pop # => Index out of bounds (IndexError)
 ```
 
 When you want to delete an element of a specific index from an array, you can use the [`delete_at`][delete_at] method which takes the index of the element to remove as an argument.
+If the array is empty an `IndexError` will be raised.
 
 ```crystal
 numbers = [1, 2, 3]
 [1, 2, 3].delete_at(1) # => 2
 numbers                # => [1, 3]
+
+empty_numbers = [] of Int32
+empty_numbers.delete_at(0) # => Index out of bounds (IndexError)
 ```
 
 ## Modifying values in an array
 
 When you want to modify an element of a specific index from an array, you can use the [`[]=` (index assign) operator][index-assign] which takes the index of the element to modify and the new value as arguments.
+If the index is out of bounds, an `IndexError` will be raised.
 
 ```crystal
 numbers = [1, 2, 3]
 numbers[1] = 4
 numbers # => [1, 4, 3]
+
+numbers[3] = 5 # => Index out of bounds (IndexError)
 ```
 
 ## Array pointer
