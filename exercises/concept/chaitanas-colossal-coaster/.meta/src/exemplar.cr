@@ -2,10 +2,8 @@ module ColossalCoaster
   def self.add_to_queue(express_queue, normal_queue, express, person_name)
     if express == 1
       express_queue << person_name
-      express_queue
     else
       normal_queue << person_name
-      normal_queue
     end
   end
 

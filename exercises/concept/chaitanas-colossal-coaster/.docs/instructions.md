@@ -41,7 +41,6 @@ ColossalCoaster.find_my_friend(["Natasha", "Steve", "T'challa", "Wanda", "Rocket
 # => 1
 ```
 
-
 ## 3. Can I please join them?
 
 Now that their friends have been found (in task #2 above), the late arriver would like to join them at their place in the queue.
@@ -50,7 +49,7 @@ Define the `ColossalCoaster.add_with_friends` method that takes 2 arguments `que
 1. `<queue>` is an `array` of people standing in the queue.
 2. `<person_name>` is the name of the person to add at the index position.
 
-Return the queue updated with the late arrivals name.
+Return the queue updated with the late arrival's name.
 
 ```crystal
 ColossalCoaster.add_with_friends(["Natasha", "Steve", "T'challa", "Wanda", "Rocket"], "Bucky")
@@ -78,7 +77,7 @@ ColossalCoaster.remove_from_queue(["Natasha", "Steve", "Eltran", "Wanda", "Rocke
 
 For administrative purposes, you need to get all the names in a given queue in alphabetical order.
 
-Define the `ColossalCoaster.sorted_queue` method that takes 1 argument, `queue`, (the `array` of people standing in the queue).
+Define the `ColossalCoaster.sorted_queue` method that takes 1 argument, `queue` (the `array` of people standing in the queue).
 The method should return a sorted copy of the `array`.
 
 ```crystal

@@ -5,7 +5,7 @@ Thereby are there a collection of methods that can be used to deal with arrays.
 Which includes sorting, reversing, inserting, and many more.
 
 Some of these methods are destructive, which means that they modify the original array.
-While others are non-destructive, which means that they return a new array and do not modify the original array.
+Others are non-destructive, which means that they return a new array and do not modify the original array.
 
 Here are a few of the most common methods that can be used when dealing with arrays:
 
@@ -71,7 +71,7 @@ numbers          # => [3, 2, 1]
 
 ## flatten & compact & transpose & uniq
 
-The following methods are useful when wanting to do operations, like making an array one-dimensional, removing `nil` elements, wanting to remove duplicates or transposing an array of arrays.
+The following methods are useful when wanting to do operations like making an array one-dimensional, removing `nil` elements, removing duplicates, or transposing an array of arrays.
 As with `reverse`, these methods return a new array and do not modify the original array.
 
 | Method | Description | example |
