@@ -1,11 +1,11 @@
 class PasswordLock
   def self.encrypt(password : (Int32 | String | Float64)) : (Int32 | String | Float64)
     if password.is_a?(Int32)
-      password = (password / 2).round
+      (password / 2).round
     elsif password.is_a?(String)
-      password = password.reverse
+      password.reverse
     else
-      password *= 4
+      password * 4
     end
   end
 
@@ -19,9 +19,9 @@ class PasswordLock
 
   def unlock?(password_attempt : (Int32 | String | Float64)) : String | Nil
     if PasswordLock.encrypt(password_attempt) == @password
-      return "Unlocked"
+      "Unlocked"
     else
-      return nil
+      nil
     end
   end
 end
