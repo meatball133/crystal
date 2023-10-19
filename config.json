@@ -177,7 +177,7 @@
         "uuid": "007938eb-243d-466f-81ab-ad6bf5bbcdb9",
         "concepts": ["array"],
         "prerequisites": ["nil", "union-type", "ranges"],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "chaitanas-colossal-coaster",
@@ -185,7 +185,7 @@
         "uuid": "c9fb4ef4-1caa-4143-8b30-39efc7a19e03",
         "concepts": ["array-methods"],
         "prerequisites": ["array"],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
