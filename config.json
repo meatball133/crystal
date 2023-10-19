@@ -16,7 +16,7 @@
     "highlightjs_language": "crystal"
   },
   "test_runner": {
-    "average_run_time": 6
+    "average_run_time": 6.0
   },
   "files": {
     "solution": [
@@ -233,7 +233,7 @@
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "b52b0ee3-2dc3-4ab7-9fb1-22731d4b2fcd",
-        "practices": ["while-loops", "conditionals"],
+        "practices": ["while-loops"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -273,7 +273,7 @@
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "080b6ab1-576f-4566-a065-5aae761f51af",
-        "practices": ["strings", "while-loops"],
+        "practices": ["string-methods"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -289,7 +289,7 @@
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "bba4f22b-1afc-46a5-bb99-046f7f4bee8c",
-        "practices": ["bools", "strings"],
+        "practices": ["strings"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -353,7 +353,7 @@
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "5c66a23b-e7af-451e-9aeb-1b79d971bc98",
-        "practices": ["strings", "conditionals"],
+        "practices": ["strings"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -369,7 +369,7 @@
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "bed338cd-2308-4a15-9225-699d1d09ed49",
-        "practices": ["strings", "char", "while-loops"],
+        "practices": ["char", "while-loops"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -377,7 +377,7 @@
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "0768322b-89aa-4aa1-9dac-d694c4417f52",
-        "practices": ["hash", "numbers"],
+        "practices": ["hash"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -393,7 +393,7 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
-        "practices": ["conditionals", "numbers"],
+        "practices": ["conditionals"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -425,7 +425,7 @@
         "slug": "resistor-color-expert",
         "name": "Resistor Color Expert",
         "uuid": "64646ca3-ca2e-4ae2-84ad-8c3425a524b0",
-        "practices": ["array", "conditionals", "ranges", "hash"],
+        "practices": ["array-methods", "conditionals", "ranges", "hash"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -433,7 +433,7 @@
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "0b6c8c53-04ae-4969-8bc0-1f1205df3420",
-        "practices": ["bools", "strings", "numbers"],
+        "practices": ["bools", "strings"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -441,7 +441,7 @@
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "57594931-5c91-4c1b-b5c5-04ea354c581e",
-        "practices": ["bools", "strings", "numbers"],
+        "practices": ["bools", "numbers"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -697,7 +697,7 @@
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "ca3477f3-8bf0-46b6-9495-77ea6eded945",
-        "practices": ["enum", "array", "conditionals", "case"],
+        "practices": ["enum", "array-methods", "conditionals", "case"],
         "prerequisites": [],
         "difficulty": 3
       },
@@ -713,7 +713,7 @@
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "1fd5c0db-dbfd-4956-bcb8-d874bff26258",
-        "practices": ["case", "conditionals", "strings", "symbol", "classes", "char"],
+        "practices": ["case", "symbol", "classes", "char"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -745,7 +745,7 @@
         "slug": "killer-sudoku-helper",
         "name": "Killer Sudoku Helper",
         "uuid": "17957877-0e43-4069-b806-f35d9212ff23",
-        "practices": ["numbers", "array"],
+        "practices": ["array"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -753,7 +753,7 @@
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "b6825bf9-df41-4b00-8d70-04c64fb95fa5",
-        "practices": ["array", "conditionals"],
+        "practices": ["array"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -777,7 +777,7 @@
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
-        "practices": ["numbers", "conditionals", "ranges"],
+        "practices": ["numbers", "nil", "ranges"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -785,7 +785,7 @@
         "slug": "linked-list",
         "name": "Linked List",
         "uuid": "3941b2c4-19d1-478e-96d7-1cc596197ccd",
-        "practices": ["number-types", "classes", "array"],
+        "practices": ["number-types", "classes", "array", "nil"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -913,7 +913,7 @@
         "slug": "ocr-numbers",
         "name": "OCR Numbers",
         "uuid": "26bebd08-8867-4a90-94ba-5b620ab3af84",
-        "practices": ["array", "strings"],
+        "practices": ["enumeration", "strings"],
         "prerequisites": [],
         "difficulty": 5
       },
@@ -929,7 +929,7 @@
         "slug": "react",
         "name": "React",
         "uuid": "2da645e4-7e72-4377-a7ac-184b67ff8a63",
-        "practices": ["modules", "classes", "union-types"],
+        "practices": ["modules", "classes", "union-type"],
         "prerequisites": [],
         "difficulty": 6
       },
@@ -945,7 +945,7 @@
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "20c471f8-e45e-4313-a23a-85d4a36c7185",
-        "practices": ["enum", "while-loops", "conditionals", "numbers"],
+        "practices": ["enum", "while-loops", "conditionals"],
         "prerequisites": [],
         "difficulty": 6
       },
@@ -953,7 +953,7 @@
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "415605d8-cc98-4eb1-9467-5c970e69f137",
-        "practices": ["array", "classes"],
+        "practices": ["classes", "nil"],
         "prerequisites": [],
         "difficulty": 6
       },
@@ -961,7 +961,7 @@
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "d8a1b1c8-41ba-43a9-a4d6-b8325e438dc6",
-        "practices": ["conditionals", "hash", "char", "strings"],
+        "practices": ["conditionals", "hash", "char"],
         "prerequisites": [],
         "difficulty": 6
       },
@@ -970,8 +970,7 @@
         "name": "Simple Cipher",
         "uuid": "d01026c6-3829-449c-852c-e0a13fc1db40",
         "practices": [
-          "string-methods",
-          "classes"
+          "string-methods"
         ],
         "prerequisites": [],
         "difficulty": 6
