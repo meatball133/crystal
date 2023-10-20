@@ -1,12 +1,6 @@
 require "spec"
 require "../src/*"
 
-struct Time
-  def leap_year?
-    raise "That's too easy! Implement this method in your own way!"
-  end
-end
-
 describe "Luhn" do
   it "single digit strings can not be valid" do
     Luhn.valid?("1").should be_false
