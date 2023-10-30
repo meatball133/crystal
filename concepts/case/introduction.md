@@ -7,7 +7,7 @@ A case is defined by the keyword `case` followed by an optional expression.
 Then for each case, the keyword `when` is used followed by an expression which is compared to the case expression.
 The `when` keyword should not be indented from the `case` keyword.
 After the `when` keyword is the code that should be executed if the case expression matches the when expression.
-Case allows for an optional else statement which is executed if no other case matches.
+Case allows for an optional `else` statement which is executed if no other case matches.
 
 The case expression is evaluated and then compared to each when expression.
 The expression is compared using the [case subsumption operator (`===`)][case-subsumption].

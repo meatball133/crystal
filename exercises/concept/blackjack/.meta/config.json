@@ -7,6 +7,6 @@
     "exemplar": [".meta/src/exemplar.cr"]
   },
   "forked_from": ["go/blackjack"],
-  "blurb": "Learn about the cases while simulating blackjack",
+  "blurb": "Learn about cases while simulating blackjack",
   "icon": "blackjack"
 }
