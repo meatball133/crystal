@@ -5,8 +5,8 @@
 - The `Blackjack.parse_card` method should take a string (e.g. `"ace"`) and return its value (e.g. 11).
 - Define a [`case` statement][case] and assign the value of the card as the case's value.
 - King, Queen, Jack and 10 can be handled with a single case.
-- The switch can have an `else` case.
-  In any `case` the function should return `0` for unknown cards.
+- The case can have an `else` case.
+  In any case the function should return `0` for unknown cards.
 
 ## 2. Name ranges of values.
 
