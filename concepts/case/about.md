@@ -27,7 +27,7 @@ end
 tmp = 1
 if 1 === tmp
   puts "One"
-elsif 1 === tmp
+elsif 2 === tmp
   puts "Two"
 else
   puts "Other"
