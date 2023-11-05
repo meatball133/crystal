@@ -114,7 +114,7 @@ elsif 1 > 2
 else
   puts "1 is not equal to 1 and 1 is not greater than 2"
 end
-# => 1 is greater than 2
+# => 1 is not equal to 1 and 1 is not greater than 2
 ```
 
 ## Ternary Operator
