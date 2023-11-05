@@ -1,6 +1,6 @@
 # Conditionals
 
-Crystal has what is known as control expressions, these are used to control the way the program will run and they take a truthy or falsey value.
+Crystal has what are known as control expressions, these are used to control the way the program will run and they take a truthy or falsey value.
 There are operators that can be used to create truthy or falsey values, these are known as [equality and comparison operators][equality-and-comparison].
 
 There are two main control expressions that are used to control which code will run and which will not.
