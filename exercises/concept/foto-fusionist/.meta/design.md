@@ -1,16 +1,16 @@
 ## Goal
 
-The goal of this exercise is to teach the student about binary & octal & hexadecimal in Crystal.
+The goal of this exercise is to teach the student about binary, octal, and hexadecimal in Crystal.
 
 ## Learning objectives
 
-- Learn about binary & octal & hexadecimal in Crystal
-- Learn how to convert from binary & octal & hexadecimal to integer
-- Learn how to convert from integer to binary & octal & hexadecimal
+- Learn about binary, octal, and hexadecimal in Crystal
+- Learn how to convert from binary, octal, and hexadecimal to integer
+- Learn how to convert from integer to binary, octal, and hexadecimal
 
 ## Out of scope
 
-- binary manipulation
+- Binary manipulation
 
 ## Concepts
 

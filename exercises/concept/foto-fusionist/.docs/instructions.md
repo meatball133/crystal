@@ -22,7 +22,8 @@ FotoFusionist.binary_to_int("10011")
 ## 2. Get least significant bit from integer
 
 The second feature your friend wants is to be able to get the [least significant bit][least-significant-bit] from an integer.
-The least significant bit is the bit that is the furthest to the right, it is called the least significant bit because it has the least value.
+The least significant bit is the bit that is the furthest to the right.
+It is called the least significant bit because it has the least value.
 
 The least significant bit is needed to evaluate if an image can be optimized by reducing the number of bits used to represent the color channel.
 
@@ -54,12 +55,12 @@ FotoFusionist.hex_value(19)
 
 The fourth feature your friend wants is to be able to get the hex value from a RGB color.
 This is needed so a user can get a single string representation of a color.
-An RGB color is a color that is represented by three color channels, red, green, and blue.
+An RGB color is a color that is represented by three color channels: red, green, and blue.
 Each color channel is represented by a number between 0 and 255.
 
-The hex value of a RGB color is a string representation of the color in hexadecimal, with the red color channel first, then the green color channel, and lastly the blue color channel.
+The hex value of a RGB color is a string representation of the color in hexadecimal with the red color channel first, then the green color channel, and lastly the blue color channel.
 
-Implement the method `FotoFusionist.hex_value_from_rgb` that takes three arguments `red`, `green`, and `blue` of type `Int32`.
+Implement the method `FotoFusionist.hex_value_from_rgb` that takes three arguments: `red`, `green`, and `blue` of type `Int32`.
 The method should return the hex value of the RGB color as a `String`.
 
 ```crystal

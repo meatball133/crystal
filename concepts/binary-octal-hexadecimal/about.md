@@ -4,7 +4,7 @@ Binary, octal, and hexadecimal (_also known as hex_) are different [numeral syst
 Binary is base 2, octal is base 8, and hexadecimal is base 16.
 Normal integers are base 10 in Crystal.
 Binary, octal, and hexadecimal are all representations of integers.
-This means that they represent positive and negative numbers (_including zero_) without fractions or decimals, and support all the operations that we can do with integers.
+This means that they represent positive and negative numbers (_including zero_) without fractions or decimals and support all the operations that we can do with integers.
 
 ## Binary
 
@@ -48,7 +48,7 @@ typeof(0b10011)
 # => Int32
 ```
 
-If you write a number with a `0b` prefix that is not in the binary system, it will raise a compile error.
+If you write a number with a `0b` prefix that is not in the binary system, it will raise a compilation error.
 
 ```crystal
 0b10211
@@ -73,8 +73,8 @@ Since binary numbers are integers, we can perform all operations on them that we
 ### Converting to and from Binary Representation
 
 Crystal will automatically convert a binary literal into `Int32`.
-To convert an `Int32` into a binary representation, use the method [`<int>.to_s(base)`][to_s] with the base argument set to 2:
-The method will return a string representation of the binary number.
+To convert an `Int32` into a binary representation, use the method [`<int>.to_s(base)`][to_s] with the base argument set to 2.
+The method will return a string representation of the binary number:
 
 ```crystal
 19.to_s(2)
@@ -129,7 +129,7 @@ As with binary, Crystal automatically converts an octal representation to an `In
 # => 83
 ```
 
-Prefixing a number with `0o` that is not in the octal system will raise a compile error.
+Prefixing a number with `0o` that is not in the octal system will raise a compilation error.
 
 ### Converting to and from Octal Representation 
 
@@ -160,7 +160,7 @@ As with binary and octal, Crystal will automatically convert hexadecimal literal
 291
 ```
  
-Prefixing a non-hexadecimal number with `0x` will raise a compile error.
+Prefixing a non-hexadecimal number with `0x` will raise a compilation error.
 
 ###  Converting to and from Hexadecimal Representation
 

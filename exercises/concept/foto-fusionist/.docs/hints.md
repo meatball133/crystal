@@ -7,7 +7,8 @@
 ## 2. Get least significant bit from integer
 
 - There is a [built-in method][integer-bit] to get a bit from an integer given an index.
-- The least significant bit is the bit that is the furthest to the right, it is placed at index 0.
+- The least significant bit is the bit that is the furthest to the right.
+  It is placed at index 0.
 
 ## 3. Get hex value from color channel
 
