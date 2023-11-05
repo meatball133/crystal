@@ -4,7 +4,7 @@ Binary, octal, and hexadecimal (_also known as hex_) are different [numeral syst
 Binary is base 2, octal is base 8, and hexadecimal is base 16.
 Normal integers are base 10 in Crystal.
 Binary, octal, and hexadecimal are all representations of integers.
-Which means that they represent positive and negative numbers (_including zero_) without fractions or decimals, and support all the operations that we can do with integers.
+This means that they represent positive and negative numbers (_including zero_) without fractions or decimals, and support all the operations that we can do with integers.
 
 ## Binary
 
@@ -88,7 +88,7 @@ To convert a string representation of a binary to an integer, we can use the [`<
 # => 19
 ```
 
-Giving the wrong base (_or an invalid binary representation_) will raise a `ArgumentError`:
+Giving the wrong base (_or an invalid binary representation_) will raise an `ArgumentError`:
 
 ```crystal
 "011021".to_i(2)
@@ -144,7 +144,7 @@ And we can use the [`<int>.to_i(base)`][to_s] method to convert an octal represe
 # => 83
 ```
 
-As with binary, giving the wrong base will raise a `ArgumentError`.
+As with binary, giving the wrong base will raise an `ArgumentError`.
 
 ## Hexadecimal
 
@@ -164,8 +164,8 @@ Prefixing a non-hexadecimal number with `0x` will raise a compile error.
 
 ###  Converting to and from Hexadecimal Representation
 
-As with binary, we can use the [`<int>.to_s(base)`][to_i] method to convert an `Int32` into an hexadecimal representation.
-And we can use the [`<int>.to_i(base)`][to_s] method to convert an hexadecimal representation into an `Int32`.
+As with binary, we can use the [`<int>.to_s(base)`][to_i] method to convert an `Int32` into a hexadecimal representation.
+And we can use the [`<int>.to_i(base)`][to_s] method to convert a hexadecimal representation into an `Int32`.
 
 ```crystal
 291.to_s(16)
@@ -175,7 +175,35 @@ And we can use the [`<int>.to_i(base)`][to_s] method to convert an hexadecimal r
 # => 291
 ```
 
-As with binary and octal, giving the wrong base will raise a `ArgumentError`.
+As with binary and octal, giving the wrong base will raise an `ArgumentError`.
+
+## Precision
+
+When converting a number to a string representation, we can specify the precision of the number.
+Meaning the **minimum** amount of numbers used to represent the number.
+If the number has fewer digits than the precision, leading zeros will be added to the string representation.
+This is done by passing the `precision` argument to the [`<int>.to_s(<base>, precision: <value>)`][to_s] method.
+
+```crystal
+291.to_s(16, precision: 5)
+# => "00123"
+
+543.to_s(precision: 2)
+# => "543"
+```
+
+## Upcase
+
+When converting a number to a string representation, we can specify if we want the letters in the string to be uppercased.
+This is done by passing the `upcase` argument to the [`<int>.to_s(<base>, upcase: <value>)`][to_s] method.
+
+```crystal
+255.to_s(16, upcase: true)
+# => "FF"
+
+255.to_s(16, upcase: false)
+# => "ff"
+```
 
 [binary]: https://en.wikipedia.org/wiki/Binary_number
 [bit]: https://crystal-lang.org/api/Int.html#bit%28bit%29-instance-method
