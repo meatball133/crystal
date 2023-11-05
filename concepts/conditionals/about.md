@@ -1,17 +1,17 @@
 # Conditionals
 
-Crystal has what is known as Control expressions, these are used to control the way the program will run and they take a truthy or falsey value.
+Crystal has what is known as control expressions, these are used to control the way the program will run and they take a truthy or falsey value.
 There are operators that can be used to create truthy or falsey values, these are known as [equality and comparison operators][equality-and-comparison].
 
-There are 2 main control expressions that are used to control which code will run and which will not.
+There are two main control expressions that are used to control which code will run and which will not.
 Also known as which given branch will run.
 
-Those 2 are: `if` and the `unless` expression.
+Those two are: `if` and the `unless` expression.
 
 ## Comparison operators
 
 Comparison operators are used to compare values and return a `true` or `false` value.
-These operators require 2 values to be compared of the same type.
+These operators require two values to be compared of the same type.
 If the values are not of the same type then the compiler will throw an error.
 Here is a list of the comparison operators and an example of when they give a `true` value:
 
@@ -24,9 +24,9 @@ Here is a list of the comparison operators and an example of when they give a `t
 
 ## Equality operators
 
-Equality operators are similar to comparison operators but they are used to check if 2 values are equal or not equal.
+Equality operators are similar to comparison operators but they are used to check if two values are equal or not equal.
 
-The `==` operator is used to check if 2 values are equal, and that includes checking the type of the value.
+The `==` operator is used to check if two values are equal, and that includes checking the type of the value.
 If the values are the same then it will return `true` otherwise it will return `false`.
 The `==` operator can compare any type of value with any other type of value.
 The `!=` works the same way but it will return `true` if the values are not equal and `false` if they are equal.
@@ -64,7 +64,7 @@ end
 
 ## Unless statement
 
-The [`unless`][unless] statement works very similarly to the If statement but it will run the code inside the `unless` statement if the condition is falsey.
+The [`unless`][unless] statement works very similarly to the `if` statement but it will run the code inside the `unless` statement if the condition is falsey.
 
 ```crystal
 unless 1 == 1
@@ -80,7 +80,7 @@ end
 
 ## Else statement
 
-The `else` statement can be used in conjunction with the if and unless statements.
+The `else` statement can be used in conjunction with the `if` and `unless` statements.
 The `else` statement will be executed if the `if` branch or the `unless` branch is not executed.
 
 ```crystal
