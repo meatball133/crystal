@@ -108,7 +108,7 @@ There can also be an else statement at the end of the if statement which will ru
 
 ```crystal
 if 1 != 1
-  puts "1 is equal to 1"
+  puts "1 is not equal to 1"
 elsif 1 > 2
   puts "1 is greater than 2"
 else
