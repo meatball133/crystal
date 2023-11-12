@@ -192,7 +192,7 @@
         "name": "Foto Fusionist",
         "uuid": "e2b0e636-6538-4fe9-8db8-fccedcca26d5",
         "concepts": ["binary-octal-hexadecimal"],
-        "prerequisites": ["string"],
+        "prerequisites": ["strings"],
         "status": "wip"
       }
     ],
