@@ -206,6 +206,14 @@
     ],
     "practice": [
       {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "4078cf4d-4361-4c55-aa18-63a3fe269be1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "acronym",
         "name": "Acronym",
         "uuid": "5373e713-f2ab-4b1e-b934-92969174bc48",
@@ -290,14 +298,6 @@
         "name": "Hamming",
         "uuid": "080b6ab1-576f-4566-a065-5aae761f51af",
         "practices": ["string-methods"],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
-        "slug": "hello-world",
-        "name": "Hello World",
-        "uuid": "4078cf4d-4361-4c55-aa18-63a3fe269be1",
-        "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -481,7 +481,7 @@
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "42296e84-233a-4251-9910-bf1fb9a1563c",
-        "practices": ["strings", "hash", "char"],
+        "practices": ["hash", "char"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -489,7 +489,7 @@
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
-        "practices": ["struct", "hash", "strings", "numbers"],
+        "practices": ["struct", "hash", "numbers"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -521,7 +521,7 @@
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
-        "practices": ["numbers"],
+        "practices": ["binary-octal-hexadecimal", "bit-manipulation"],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -545,7 +545,7 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "c8dd3c53-e4fc-434e-9e4e-3def1361cf58",
-        "practices": ["array", "numbers"],
+        "practices": ["binary-octal-hexadecimal"],
         "prerequisites": [],
         "difficulty": 3
       },
@@ -681,7 +681,7 @@
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
-        "practices": ["conditionals", "strings"],
+        "practices": ["strings", "enumeration"],
         "prerequisites": [],
         "difficulty": 3
       },
@@ -801,7 +801,7 @@
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "80f4bfda-24a7-41b7-b58e-7b93ccb5e543",
-        "practices": ["numbers", "nil", "ranges"],
+        "practices": ["nil", "ranges"],
         "prerequisites": [],
         "difficulty": 4
       },
@@ -913,7 +913,7 @@
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "5b5bf7c3-6aad-4648-a6e1-964bbbad838c",
-        "practices": ["array", "numbers"],
+        "practices": ["numbers"],
         "prerequisites": [],
         "difficulty": 5
       },
@@ -921,7 +921,7 @@
         "slug": "state-of-tic-tac-toe",
         "name": "State of Tic-Tac-Toe",
         "uuid": "121b6ec7-ae79-4665-8c6b-7c5b41fa8abf",
-        "practices": ["enum", "bools", "array", "char"],
+        "practices": ["enum", "bools", "char"],
         "prerequisites": [],
         "difficulty": 5
       },
