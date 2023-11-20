@@ -40,6 +40,7 @@ To define a multi-dimensional array, you can either write an array of arrays lit
 [[1, 2], [3, 4]]                    # => [[1, 2], [3, 4]]
 numbers = Array(Array(Int32)).new() # => []
 numbers << [1, 2]                   # => [[1, 2]]
+```
 
 ## Add an element to an array
 
