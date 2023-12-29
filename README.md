@@ -64,7 +64,7 @@ Please keep in mind [Chesterton's Fence][chestertons-fence].
 
 ## Crystal Software and Documentation
 
-**Copyright © 2012-2023 Manas Technology Solutions. All rights reserved.**
+**Copyright © 2012-2024 Manas Technology Solutions. All rights reserved.**
 
 Crystal software and documentation are licensed under the [Apache License v2.0][crystal-license].
 
