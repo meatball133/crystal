@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html",
+    "description": "Crystal docs: Int"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/floats.html",
+    "description": "Crystal docs: Float"
+  },
+  {
+    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/30_math.html",
+    "description": "Crystal introduction: Math"
+  }
+]
