@@ -1,6 +1,6 @@
 class DocumentGenerator
-    alias Docs = Hash(String, Hash(String, Hash(String, String) | String))
-    @documents : Docs
+    alias Docs = Hash(String, Hash(String, Hash(String, String)))
+    getter documents : Docs
     def initialize  
         @documents = Docs.new
     end
@@ -9,7 +9,7 @@ class DocumentGenerator
         Dir.new(path).each_child do |folder|
             Dir.new(Path.new(path, folder)).each_child do |file|
                 if file == "about.md"
-                    p read_markdown(File.read(Path.new(path, folder, file)))
+                    @documents[folder] = read_markdown(File.read(Path.new(path, folder, file)))
                 end
             end
         end
@@ -17,7 +17,6 @@ class DocumentGenerator
 
     private def read_markdown(content : String)
         data = Hash(String, Hash(String, String)).new
-        #data["content"] = content
         data["chapter"] = {} of String => String
         name = ""
 
@@ -25,6 +24,12 @@ class DocumentGenerator
             if line.starts_with?("#")
                 name = line.lstrip("# ")
                 data["chapter"][name] = line + "\n"
+            elsif line =~ /^\s*\[[^\]]+\]\s*:\s*https?:\/\/[^\s]+\s*$/
+                if data["chapter"].has_key?("links")
+                    data["chapter"]["links"] += line + "\n"
+                else
+                    data["chapter"]["links"] = line + "\n"
+                end
             else
                 data["chapter"][name] += line + "\n"
             end
@@ -34,9 +39,20 @@ class DocumentGenerator
 
     def load_template(path : String)
         content = File.read(path)
+        content.each_line do |line|
+            match = line.match(/{%\s*([^%\s]+)\s*%}/)
+            p match
+            if match
+                p match[1]
+            end
+        end
         
     end
 end
 
 document = DocumentGenerator.new 
 document.read_documents("./concepts")
+
+#p document.documents
+
+document.load_template("./template.md")
