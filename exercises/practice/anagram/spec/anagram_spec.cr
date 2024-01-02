@@ -43,7 +43,7 @@ describe "Anagram" do
   end
 
   pending "does not detect an anagram if the original word is repeated" do
-    Anagram.find("go", ["go Go GO"]).should eq([] of String)
+    Anagram.find("go", ["goGoGO"]).should eq([] of String)
   end
 
   pending "anagrams must use all letters exactly once" do
