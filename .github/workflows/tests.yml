@@ -51,7 +51,9 @@ jobs:
         uses: crystal-lang/install-crystal@v1
         with:
           crystal: "1.10.1"
-      - name: Install jq
-        run: winget install jqlang.jq
+      - name: 'Setup jq'
+        uses: dcarbone/install-jq-action@v2
+        with:
+          version: '1.7'
       - name: Run tests
         run: ./bin/test-exercises.ps1
