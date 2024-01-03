@@ -52,8 +52,6 @@ jobs:
         with:
           crystal: "1.10.1"
       - name: 'Setup jq'
-        uses: dcarbone/install-jq-action@v2
-        with:
-          version: '1.7'
+        run: choco install jq
       - name: Run tests
         run: ./bin/test-exercises.ps1
