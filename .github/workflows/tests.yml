@@ -28,7 +28,7 @@ jobs:
       - name: Run file formatting
         run: crystal ./bin/check-format.cr
   exercises:
-    name: Check exercises crystal ${{ matrix.crystal }}
+    name: Check exercises Crystal ${{ matrix.crystal }}
     runs-on: ubuntu-22.04
     strategy:
       # Allows running the job multiple times with different configurations
@@ -42,3 +42,14 @@ jobs:
         run: apt-get update && apt-get install -y jq
       - name: Run tests
         run: ./bin/test-exercises.sh
+  exercises-windows:
+    name: Check exercises Crystal on Windows
+    runs-on: windows-2022
+    container:
+      image: crystallang/crystal:1.10.1
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Install jq
+        run: winget install jqlang.jq
+      - name: Run tests
+        run: ./bin/test-exercises.ps1
