@@ -18,6 +18,9 @@
   "test_runner": {
     "average_run_time": 6
   },
+  "approaches": {
+    "snippet_extension": "cr"
+  },
   "files": {
     "solution": [
       "src/%{snake_slug}.cr"

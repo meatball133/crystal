@@ -1,0 +1,22 @@
+{
+  "introduction": {
+    "authors": ["meatball133"],
+    "contributors": []
+  },
+  "approaches": [
+    {
+      "uuid": "5d42dc83-2473-425a-90bd-bf03f92b8c8b",
+      "slug": "array",
+      "title": "Use an array",
+      "blurb": "Use an array to store the values.",
+      "authors": ["meatball133"]
+    },
+    {
+      "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
+      "slug": "string-builder",
+      "title": "Uses String::Builder",
+      "blurb": "Uses String::Builder to build the string.",
+      "authors": ["meatball133"]
+    }
+  ]
+}
