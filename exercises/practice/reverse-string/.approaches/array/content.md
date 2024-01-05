@@ -3,7 +3,7 @@
 ```crystal
 module ReverseString
   def self.reverse(input : String) : String
-    result = [] of Char
+    result = Array(Char).new(input.size)
     input.each_char do |char|
       result.unshift(char)
     end
@@ -15,6 +15,7 @@ end
 The method takes a `String` as an argument and returns a `String`.
 An empty array is created to store the reversed string which stores [`Char`][char].
 The reason for using `Char` instead of `String` is because `Char` is lighter than `String`, and we are only storing one character at a time.
+The Array is given the size of the string to be reversed, this makes so the array doesn't have to be resized later which is more efficient.
 
 The [`each_char`][each-char] method iterates over each character in the string.
 For each character so are they unshifted into the array.

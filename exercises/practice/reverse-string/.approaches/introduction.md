@@ -28,7 +28,7 @@ This approach converts the string to an array, reverses the array, and then conv
 ```crystal
 module ReverseString
   def self.reverse(input : String) : String
-    result = [] of Char
+    result = Array(Char).new(input.size)
     input.each_char do |char|
         result.unshift(char)
     end

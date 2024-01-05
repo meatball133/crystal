@@ -8,7 +8,7 @@ end
 
 module ReverseStringArray
   def self.reverse(input : String) : String
-    result = [] of Char
+    result = Array(Char).new(input.size)
     input.each_char do |char|
         result.unshift(char)
     end
