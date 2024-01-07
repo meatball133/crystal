@@ -39,7 +39,7 @@ end
 
 For more information, check the [Array approach][approach-array].
 
-## Approach: Using a String::Builder
+## Approach: Using String::Builder
 
 This approach uses the [`String::Builder` class][string-builder] to build the reversed string.
 

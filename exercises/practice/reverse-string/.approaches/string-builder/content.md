@@ -1,4 +1,4 @@
-# Using an array
+# Using String::Builder
 
 ```crystal
 module ReverseString

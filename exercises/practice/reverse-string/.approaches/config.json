@@ -5,14 +5,14 @@
   },
   "approaches": [
     {
-      "uuid": "5d42dc83-2473-425a-90bd-bf03f92b8c8b",
+      "uuid": "f7b0f17c-4e8e-43a7-92e2-56580aea818c",
       "slug": "array",
       "title": "Use an array",
       "blurb": "Use an array to store the values.",
       "authors": ["meatball133"]
     },
     {
-      "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
+      "uuid": "c298d774-b9b8-48e6-98c3-256dffcf8c73",
       "slug": "string-builder",
       "title": "Uses String::Builder",
       "blurb": "Uses String::Builder to build the string.",
