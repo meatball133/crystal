@@ -1,0 +1,22 @@
+{
+  "introduction": {
+    "authors": ["meatball133"],
+    "contributors": []
+  },
+  "approaches": [
+    {
+      "uuid": "5d42dc83-2473-425a-90bd-bf03f92b8c8b",
+      "slug": "divisible-by",
+      "title": "Use divisible-by",
+      "blurb": "Use divisible-by to check number.",
+      "authors": ["meatball133"]
+    },
+    {
+      "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
+      "slug": "modolus",
+      "title": "Uses modolus",
+      "blurb": "Use modolus to check number.",
+      "authors": ["meatball133"]
+    }
+  ]
+}
