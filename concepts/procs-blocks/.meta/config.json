@@ -1,5 +1,5 @@
 {
-  "blurb": "Crystal has a Number type, there are 2 main number types, Int and Float. Crystal has arithmetic operators to be able to do mathematical operations.",
-  "authors": ["meatball133"],
-  "contributors": ["ryanplusplus", "glennj"]
+  "blurb": "Blocks and Procs, are two core concepts of Crystal. They are used to pass around code as if it were data. They are used for callbacks, iterators and to build DSLs.", 
+  "contributors": [],
+  "authors": ["meatball133"]
 }

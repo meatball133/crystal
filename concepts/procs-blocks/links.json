@@ -1,14 +1,18 @@
 [
   {
-    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html",
-    "description": "Crystal docs: Int"
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/proc.html",
+    "description": "Crystal docs: Proc"
   },
   {
-    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/floats.html",
-    "description": "Crystal docs: Float"
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/blocks_and_procs.html",
+    "description": "Crystal docs: Blocks and Procs"
   },
   {
-    "url": "https://crystal-lang.org/reference/latest/tutorials/basics/30_math.html",
-    "description": "Crystal introduction: Math"
+    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/capturing_blocks.html",
+    "description": "Crystal docs: Capturing Blocks"
+  }, 
+  {
+    "url": "https://crystal-lang.org/api/Proc.html",
+    "description": "Crystal API: Proc"
   }
 ]

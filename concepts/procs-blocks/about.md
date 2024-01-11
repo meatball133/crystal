@@ -1,8 +1,8 @@
 # Blocks & Procs
 
-Block is a piece of code that can be passed to a method.
-This is known as an anonymous function or lambda in other programming languages.
-A method can convert a block to a Proc which represents a block of code.
+[Block][block] is a piece of code that can be passed to a method.
+This is known as an [anonymous function or lambda][anonymous function] in other programming languages.
+A method can convert a block to a [Proc][proc] which represents a block of code.
 
 ```crystal
 def my_method(&block)
@@ -14,11 +14,11 @@ my_method { 2 }
 ```
 
 Blocks and Procs are very commonly used in Crystal, for things like iteration and callbacks.
-But also to create DSLs (Domain Specific Languages), some examples of DSLs are the web framework [Kemal][kemal] or the testing framework [Spec][spec] (which is what is used to test your Crystal solutions).
+But also to create [DSLs (Domain Specific Languages)][dsl], some examples of DSLs are the web framework [Kemal][kemal] or the testing framework [Spec][spec] (which is what is used to test your Crystal solutions).
 
 ## Blocks
 
-To create a method which can accept a block you need to add an ampersand(`&`) before the last argument.
+To create a method that can accept a block you need to add an ampersand(`&`) before the last argument.
 This will convert the block to a Proc and assign it to the argument.
 Then using `yield` will execute the block given to the method.
 
@@ -41,183 +41,189 @@ my_method { 2 }
 # => 3
 ```
 
+## Yield
 
-
-
-
-
-## Converting between Int and Float
-
-You can convert between Int and Float using the `to_i` and `to_f` methods.
-When converting from Float to Int the number is rounded down.
-
-```crystal
-1.to_f
-# => 1.0
-
-1.0.to_i
-# => 1
-
-1.9.to_i
-# => 1
-```
-
-## Arithmetic operators
-
-You can use the [basic arithmetic operators][math] on Int and Float.
-The operators are `+`, `-`, `*`, `/`, and `%`.
-You can mix and match Int and Float when using these operators.
-
-### Addition & Subtraction & Multiplication
-
-The `+` operator is used for addition, the `-` operator is used for subtraction, and the `*` operator is used for multiplication.
-
-| Operator | Example        |
-| -------- | -------------- |
-| `+`      | `4 + 6 => 10`  |
-| `-`      | `15 - 10 => 5` |
-| `*`      | `2 * 3 => 6`   |
-
-### Division
-
-Division is used to divide numbers.
-The `/` operator is used for division.
-The result will always be a Float.
+[`yield`][yield] is a keyword that executes the block given to the method.
+That means that the block will never be executed if `yield` is not called.
+It can also be given arguments which will be passed to the block.
+There is no limit to the number of arguments that can be passed to the block.
+To use the arguments in the block you use the `|x, y, ...|` syntax.
+There x, y, ... are the names of the arguments.
 
 ```crystal
-4 / 2
-# => 2.0
+def my_method(&block)
+  1 + yield 2
+end
 
-4.0 / 2
-# => 2.0
+# With curly braces:
+
+my_method { |x| x * 3 }
+# => 7
+
+# With do ... end:
+
+my_method do |x|
+  x * 3
+end
+# => 7
 ```
 
-~~~~exercism/caution
-In some programming languages when dividing by zero the result will be an error.
+In the example above the block is given the argument `2` and the block multiplies it by `3` and returns `6`.
+Then the method adds `1` to the result and returns `7`.
 
-In Crystal when dividing by zero the result will be `Infinity` or `-Infinity`.
-The Only exception is when dividing zero by zero, which will result in `NaN` (Not a Number).
-Infinity and NaN are special values in the Float type.
+If the number of arguments given to `yield` is more than the number of arguments the block expects, an error will be raised.
 
 ```crystal
-1 / 0
-# => Infinity
+def my_method(&block)
+  1 + yield
+end
 
--1 / 0
-# => -Infinity
-
-0 / 0
-# => NaN
+my_method { |x| x * 3 }
+# Error: too many block parameters (given 1, expected maximum 0)
 ```
-~~~~
 
-## Integer division
+## Types of blocks
 
-Integer division is used to divide numbers and get the whole part of the result.
-The result will always be rounded down to an Int.
+Blocks can be written explicitly or implicitly.
+Implicit blocks are the most common and are the ones shown in the examples above.
+You can even give the block different types of arguments and the compiler will infer the types and create a union type.
 
 ```crystal
-4.0 // 2
-# => 2
+def my_method(&block)
+  yield "a"
+  yield 1
+end
 
-4.5 // 2
-# => 2
+my_method do |x|
+  p typeof(x)
+end
+
+# output: (String | Int32)
 ```
 
-~~~~exercism/caution
-When dividing by zero when using integer division results in a `DivisionByZeroError`.
-This is different from normal division.
-~~~~
-
-### Modulus
-
-Modulus is used to get the remainder of a division.
-The `%` operator is used for modulus.
+When writing explicit blocks you can specify the types of the arguments and the return type.
+This is done by the `Arg1Type, Arg2Type, ... -> ResultType` syntax.
+There the arguments are separated by commas(`,`), and the result type is separated by `->`.
 
 ```crystal
-5 % 2
-# => 1
+def my_method(&block : Int32, Int32 -> Int32)
+  1 + yield(2, 3)
+end
 
-5.0 % 2
-# => 1.0
-
-5 % 3
-# => 2
+my_method { |x, y| x * y }
+# => 7
 ```
 
-~~~~exercism/caution
-Dividing by zero when using modulo results in a DivisionByZeroError.
-This is different from normal division.
+As with other explicit types so will the compiler enforce the types being what is expected.
+If the block does not match the type given to the method an error will be raised.
+
+## Shorthand
+
+[There is a shorthand][short-hand-syntax] for blocks that only take one argument and only call one method on it.
+Instead of using `|x|` you can use `&` before the argument name.
 
 ```crystal
-1 % 0
-# Error: Unhandled exception: Division by 0 (DivisionByZeroError)
+def my_method(&block)
+  yield "a"
+end
+
+# This is: 
+
+my_method { |x| x.upcase }
+# => "A"
+
+# Is the same as:
+
+my_method &.upcase
+# => "A"
 ```
-~~~~
 
-## Exponentiation
+## Procs
 
-Exponentiation is used to raise a number to a power.
-The `**` operator is used for exponentiation.
-When having an operation with a Float and an Int the result will be a Float.
+[`Proc`][procs] has a very strong connection to blocks.
+The key difference is that a `Proc` is a type and a block is not.
+A `Proc` represents a function pointer and can be passed around as a variable.
+
+To define a `Proc` you use the proc literal `->(args) { ... }` syntax.
+The arguments are separated by commas(`,`), and the block is separated by `{ ... }`.
+To invoke a Proc you use the `call` method and pass the arguments to it.
 
 ```crystal
-2 ** 2
-# => 4
-
-2.0 ** 2
-# => 4.0
+my_proc = ->(x, y) { x * y }
+my_proc.call(2, 3)
+# => 6
 ```
 
-## Rounding
-
-The `round` method takes an optional argument which is the number of decimal places to round to.
-The default number of decimal places is 0.
+They can also be explicitly typed like blocks.
 
 ```crystal
-1.0.round
-# => 1
-
-1.5.round
-# => 2
-
-1.234.round(2)
-# => 1.23
+my_proc = ->(x : Int32, y : Int32) : Int32 { x * y }
+my_proc.call(2, 3)
+# => 6
 ```
 
-### Rounding up and down
+## Capturing blocks
 
-You can also round up or down to an Int by using the `ceil` and `floor` methods.
-The `ceil` method rounds up and the `floor` method rounds down.
+[Capturing blocks][capturing-blocks] is a way to create a `Proc` from a block.
+This is done by using the `&` operator before the last argument of a method.
+That will convert the block to a `Proc` and assign it to the argument. 
 
 ```crystal
-1.0.ceil
-# => 1
+def my_method(&block)
+  block.call
+end
 
-1.2.ceil
-# => 2
-
-1.7.floor
-# => 1
+my_method { 1 + 2 }
+# => 3
 ```
 
-## Priority and parentheses
+### Passing procs to methods
 
-Crystal allows parentheses(`()`) which can be used to group expressions.
-This is useful when you want to change the order of operations.
-
-When using multiple arithmetic operators the order of operations is the same as in mathematics, also known as [PEMDAS][pemdas].
-It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) and division(`/`), and addition(`+`) and subtraction(`-`).
+Procs can be passed to methods that expect a block.
+This can be handy when wanting to be able to pass different blocks based on some condition.
 
 ```crystal
-2 + 3 - 4 * 4
-# => -11
+def my_method(&block)
+  yield 5
+end
 
-(2 + 3 - 4) * 4
-# => 4
+my_proc = -> (x) { x * 2 }
+my_method(&my_proc)
+# => 10
 ```
 
-[pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
-[math]: https://crystal-lang.org/reference/latest/tutorials/basics/30_math.html
-[int]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/integers.html
-[float]: https://crystal-lang.org/reference/latest/syntax_and_semantics/literals/floats.html
+### Declaring the type of variables
+
+When declaring a variable you can use the `: Type` syntax to declare the type of the variable.
+For procs, you use the `Proc((ArgType, ...), ResultType)` syntax.
+The last type will always be the return type and the rest will be the argument types.
+Meaning if there is only one type it will be the return type and the proc will take no arguments.
+
+```crystal
+my_proc : Proc(Int32, Int32, Int32) = ->(x, y) { x * y }
+other_proc : Proc(Int32) = -> { 1 }
+```
+
+### Declare procs from methods
+
+You can also [declare a proc from a method][proc-from-methods].
+
+```crystal
+def my_method(a, b)
+  a + b
+end
+
+my_proc = ->my_method(Int32, Int32)
+my_proc.call(2, 3)
+```
+
+[proc]: https://crystal-lang.org/reference/syntax_and_semantics/literals/proc.html
+[proc-from-methods]: https://crystal-lang.org/reference/syntax_and_semantics/literals/proc.html#from-methods
+[block]: https://crystal-lang.org/reference/syntax_and_semantics/blocks_and_procs.html
+[yield]: https://crystal-lang.org/reference/syntax_and_semantics/blocks_and_procs.html#yield-arguments
+[short-hand-syntax]: https://crystal-lang.org/reference/syntax_and_semantics/blocks_and_procs.html#short-one-parameter-syntax
+[capturing-blocks]: https://crystal-lang.org/reference/syntax_and_semantics/capturing_blocks.html
+[kemal]: https://kemalcr.com/
+[spec]: https://crystal-lang.org/reference/guides/testing.html
+[dsl]: https://en.wikipedia.org/wiki/Domain-specific_language
+[anonymous function]: https://en.wikipedia.org/wiki/Anonymous_function
