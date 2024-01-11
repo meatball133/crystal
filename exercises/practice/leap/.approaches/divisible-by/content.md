@@ -9,11 +9,11 @@ end
 ```
 
 The method takes a `Number` as an argument and returns a `Bool`.
-The method first checks if the number is divideable by 4 using the [`divisible_by?`][divisible_by] method.
+The method first checks if the number is dividable by 4 using the [`divisible_by?`][divisible_by] method.
 If the number is dividable by 4 it returns `true` otherwise `false`.
 
-Then is the same procedur done but with 400 and 100 instead of 4.
-But the result for when dividing by 100 is inverted using the `!` operator.
+Then is the same procedure  done but with 400 and 100 instead of 4.
+But the result when dividing by 100 is inverted using the `!` operator.
 Then the result of the division by 400 is checked with the `||` operator, which means or.
 If one of the two is true the result is true.
 

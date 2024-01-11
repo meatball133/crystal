@@ -13,9 +13,9 @@
     },
     {
       "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
-      "slug": "modolus",
-      "title": "Uses modolus",
-      "blurb": "Use modolus to check number.",
+      "slug": "modulus",
+      "title": "Uses modulus",
+      "blurb": "Use modulus to check number.",
       "authors": ["meatball133"]
     }
   ]
