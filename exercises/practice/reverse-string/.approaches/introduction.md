@@ -10,7 +10,7 @@ The goal of this exercise is to reverse a string.
 
 ## Approach: Using the built-in `reverse` method
 
-This is the most exemplar and straightforward solution.
+This is the most exemplary and straightforward solution.
 It uses the built-in [`reverse` method][reverse-method] to reverse the string.
 
 ```crystal

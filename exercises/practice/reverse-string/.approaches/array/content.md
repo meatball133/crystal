@@ -13,14 +13,14 @@ end
 ```
 
 The method takes a `String` as an argument and returns a `String`.
-An empty array is created to store the reversed string which stores [`Char`][char].
-The reason for using `Char` instead of `String` is because `Char` is lighter than `String`, and we are only storing one character at a time.
-The Array is given the size of the string to be reversed, this makes so the array doesn't have to be resized later which is more efficient.
+An empty array stores the reversed string which stores [`Char`][char].
+The reason for using `Char` instead of `String` is because `Char` is lighter than `String`, and we only store one character at a time.
+The Array is given the size of the string to be reversed, this makes the array doesn't have to be resized later which is more efficient.
 
 The [`each_char`][each-char] method iterates over each character in the string.
 For each character so are they unshifted into the array.
 The [`unshift`][unshift] method adds the character to the beginning of the array.
-Meaning the first character in the string will be the last character in the array.
+This means the first character in the string will be the last character in the array.
 
 The [`join`][join] method converts the array back to a string.
 

@@ -15,10 +15,10 @@ end
 The method takes a `String` as an argument and returns a `String`.
 The constructor, [`String.build`][string-build], takes the size of the string as an argument.
 The `String.build` method is from the [`String::Builder` class][string-builder].
-The `String::Builder` allows writting to a buffer in memory.
+The `String::Builder` allows writing to a buffer in memory.
 
 The constructor is given the size of the string to be reversed.
-This is due to fact that we already know the size of the string.
+This is due to the fact that we already know the size of the string.
 This is more efficient than using the default size of 16 and then resizing the string later.
 
 A [`Range`][range] is created from `0` to the size of the string (exclusive).
