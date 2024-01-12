@@ -1,0 +1,136 @@
+# Concept Tree
+
+This is a concept tree for the Crystal Syllabus. 
+It is a work in progress, it was last updated on 2024-01-13.
+All of the concept which has an exercise around it has been implemented, the rest is still to be implemented.
+
+
+```mermaid
+graph TD
+
+    subgraph A [Lasagna]
+        a[Basics]
+    end
+
+    subgraph B [Crystal Hunter]
+        b(bools)
+    end
+
+    subgraph J [Number Types]
+        ac(Number Types)
+    end
+
+    subgraph C [Wellington's Weather Station]
+        c(Numbers)
+    end
+
+    subgraph E [Johannes' Juice Maker]
+        e(Classes)
+    end
+
+    subgraph F [Party Robot]
+        f(Strings)
+    end
+
+    subgraph S [Foto Fusionist]
+        d(binary & octal & hexdecimal)
+    end
+
+    subgraph T [Secrets]
+        ad(Bit Manipulation)
+    end
+
+    subgraph G [High School Sweethear]
+        g(string methods)
+    end
+
+    subgraph H [Meltdown Mitigiation]
+        h(conditionals)
+    end
+
+    subgraph I [Intrest is intresting]
+        i(return)
+        j(while)
+    end
+
+    subgraph K [Bellebrook Basket League]
+        k(modules)
+    end
+
+    subgraph L [Blackjack]
+        v(case /switch/)
+    end
+
+    subgraph M [Castle Dinner]
+        o(Nil)
+    end
+
+    subgraph M [Castle Dinner]
+        o(Nil)
+    end
+
+    subgraph N [Library of Luton]
+        l(Char)
+    end
+
+    subgraph O [Password Lock]
+        w(Union type)
+    end
+
+    subgraph P [Chess Game]
+        n(Range)
+    end
+
+    subgraph Q [Language List]
+        q(Arrays)
+    end
+
+    subgraph R [Chaitanas Colossal Coaster]
+        r(Array-methods)
+    end
+
+    A --> B
+    A --> C
+    B --> J
+    C --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    J --> E
+    H --> K
+    H --> L
+    H --> M
+    I --> N
+    N --> O
+    M --> O
+    N --> P
+    P --> Q
+    O --> Q
+    Q --> R
+    F --> S
+    S --> T
+
+    m(Getters/setters)
+    p(raisining errors)
+    s(Blocks/proc/)
+    t(enumeration)
+    u(more enumeration)
+    x(symbols)
+    y(Tuples)
+    z(Hashes)
+    aa(Named Tuple)
+    ab(Decompositon & multiple assignment)
+
+    Q --> p
+    R --> s
+    s --> t
+    t --> u
+    u --> y
+    u --> x
+    x --> z
+    y --> z
+    z --> aa
+    aa --> ab
+    E --> m
+```
