@@ -22,7 +22,7 @@ Function Test-Run() {
     Copy-Item -Path $specFile -Destination "$tempFolderPath/spec/spec.cr"
     (Get-Content -Path "$tempFolderPath/spec/spec.cr") -replace "pending", "it" | Set-Content -Path "$tempFolderPath/spec/spec.cr"
     $absolutFolderPath = $tempFolderPath[2..($tempFolderPath.Length - 1)]
-    crystal spec "$absolutFolderPath/spec/spec.cr"
+    crystal spec "$tempFolderPath/spec/spec.cr"
 }
 
 
