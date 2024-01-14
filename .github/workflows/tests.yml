@@ -46,12 +46,12 @@ jobs:
     name: Check exercises Crystal on Windows
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
         with:
           crystal: "1.11.1"
       - name: 'Setup jq'
         run: choco install jq
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Run tests
         run: ./bin/test-exercises.ps1
