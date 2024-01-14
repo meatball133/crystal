@@ -21,7 +21,8 @@ Function Test-Run() {
     $specFile = "$Name/$(jq -r '.files.test[0]' $Name/.meta/config.json)"
     Copy-Item -Path $specFile -Destination "$tempFolderPath/spec/spec.cr"
     (Get-Content -Path "$tempFolderPath/spec/spec.cr") -replace "pending", "it" | Set-Content -Path "$tempFolderPath/spec/spec.cr"
-    crystal spec "$tempFolderPath/spec/spec.cr"
+    $absolutePath = Convert-Path -Path $tempFolderPath
+    crystal spec "$absolutePath/spec/spec.cr"
 }
 
 
