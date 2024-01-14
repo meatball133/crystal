@@ -10,6 +10,7 @@ if (!(Test-Path -Path $tempFolderPath/"src")) {
     New-Item -Path $tempFolderPath -Name "src" -ItemType Directory
 }
 Write-Host crystal -v 
+Write-Host Path
 
 Function Test-Run() {
     Param(
