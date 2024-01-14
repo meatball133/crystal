@@ -17,7 +17,7 @@ Function Test-Run() {
         [string]$Name,
         [string]$Type
     )
-    Write-Host "Testing "
+    Write-Host "Testing $Name"
     Copy-Item -Path "$Name/.meta/src/$Type.cr" -Destination "$tempFolderPath/src/$Type.cr"
     $specFile = "$Name/$(jq -r '.files.test[0]' $Name/.meta/config.json)"
     Copy-Item -Path $specFile -Destination "$tempFolderPath/spec/spec.cr"
@@ -32,8 +32,6 @@ foreach ($exercise in Get-ChildItem -Path ./exercises/practice/*) {
     Test-Run $exercise "example"
 }
 
-#if [ -d "./exercises/concept" ]; then
-#    for exercise in ./exercises/concept/*; do
-#        test_run ${exercise} "exemplar"
-#    done
-#fi
+foreach ($exercise in Get-ChildItem -Path ./exercises/concept/*) {
+    Test-Run $exercise "exemplar"
+}
