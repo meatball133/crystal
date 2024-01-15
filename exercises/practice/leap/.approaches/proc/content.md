@@ -28,7 +28,7 @@ end
 ```
 
 This solution relies heavily on the usage of [`Proc`s][proc].
-`Proc` is a datatype that represents a function pointer, it is recommended that you read the [concept:crystal/procs-block]() concept page before continuing.
+`Proc` is a datatype that represents a function pointer, it is recommended that you read the [concept:crystal/procs-blocks]() concept page before continuing.
 
 The `RULES` constant is an array of function pointers (`Proc`) that represent the rules that must be satisfied for a year to be a leap year.
 The first rule is that the year must be divisible by 4, the second rule is that the year must be divisible by 400 or not divisible by 100.
