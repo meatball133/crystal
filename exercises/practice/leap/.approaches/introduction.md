@@ -43,7 +43,7 @@ For more information, check the [modulus approach][approach-modulus].
 
 ## Approach: Using `Proc`s
 
-Using `Proc`s is a great way to create reusable logic, and makes for an interesting solution.
+Using `Proc`s is a great way to create reusable logic which makes so you can build things like block programming system and in general makes for an interesting solution.
 
 ```crystal
 module Year
