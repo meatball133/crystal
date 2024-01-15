@@ -9,16 +9,18 @@ end
 ```
 
 The method takes a `Number` as an argument and returns a `Bool`.
-The method first checks if the number is dividable by 4 using the [`divisible_by?`][divisible_by] method.
-If the number is dividable by 4 it returns `true` otherwise `false`.
+This method first checks if the number is divisible by 4 using the [`divisible_by?`][divisible_by] method.
+If the number is divisible by 4 it returns `true` otherwise `false`.
 
-Then is the same procedure  done but with 400 and 100 instead of 4.
+Then we repeat the `divisible_by?` method call with with 400 and 100.
 But the result when dividing by 100 is inverted using the `!` operator.
-Then the result of the division by 400 is checked with the `||` operator, which means or.
+Finally, we evaluate the result of the division by 400 using the [`||` operator][or], the logical OR operator.
 If one of the two is true the result is true.
 
-After that are the two results combined with the `&&` operator, which means and.
+After those checks, the two resulting Boolean values are combined with the [`&&` operator][and], the logical AND operator.
 If both are true the result is true, otherwise false.
 Then the result is returned.
 
 [divisible_by]: https://crystal-lang.org/api/Int.html#divisible_by%3F%28num%29%3ABool-instance-method
+[and]: https://crystal-lang.org/reference/syntax_and_semantics/and.html
+[or]: https://crystal-lang.org/reference/syntax_and_semantics/or.html
