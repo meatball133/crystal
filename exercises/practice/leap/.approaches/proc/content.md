@@ -34,7 +34,7 @@ The `RULES` constant is an array of function pointers (`Proc`) that represent th
 The first rule is that the year must be divisible by 4, the second rule is that the year must be divisible by 400 or not divisible by 100.
 The 2nd rule includes a 3 level deep nested `Proc` that is created using the `p_or` and `p_negate` methods.
 The `leap?` method takes a year and checks if all the rules are satisfied.
-It does that by mapping all the function pointer in the `RULES` array and since all the elements are `Proc(Int32, Bool)`, then we can use the [`call`] method to call the function pointer with the year as an argument.
+It does that by mapping all the function pointer in the `RULES` array and since all the elements are `Proc(Int32, Bool)`, then we can use the [`call`][call] method to call the function pointer with the year as an argument.
 The result of the [`map`][map] method is an array of `Bool`s, since all the `Proc`s return a `Bool`.
 Then we use the [`all?`][all] method to check if all the elements in the array are `true`.
 
