@@ -10,7 +10,7 @@ on:
 
 jobs:
   test-generator:
-    name: Check Generator Templates
+    name: Test Generator
     runs-on: ubuntu-22.04
     container:
       image: crystallang/crystal
@@ -25,7 +25,7 @@ jobs:
       image: crystallang/crystal
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - name: Run generator tests
+      - name: Check generator templates tests
         run: ./bin/test_specs
   template:
     name: Check file formatting
