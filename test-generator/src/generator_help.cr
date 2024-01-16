@@ -69,21 +69,6 @@ class GeneratorHelp
     raise "Couldn't find the exercise in the config.json.\nMake sure you use the same slug name as in the config file."
   end
 
-  def to_cammel(input : String)
-    result = ""
-    input = input.capitalize
-    capitalized = false
-    input.each_char do |character|
-      if character == '-'
-        capitalized = true
-      else
-        result += capitalized ? character.upcase : character
-        capitalized = false
-      end
-    end
-    result
-  end
-
   def additional_json
     file_path = "./exercises/practice/#{@exercise}/.meta/additional_tests.json"
     if File.exists?(file_path)

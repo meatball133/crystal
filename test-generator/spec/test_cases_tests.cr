@@ -22,4 +22,33 @@ describe "Test case" do
         test_cases.should eq Array(String).new
     end
   end
+
+  describe "Test Cases" do
+    it "Can import test case" do
+        generator_help = GeneratorHelp.new("two-fer")
+        toml = generator_help.toml("./test-generator/spec/assets/toml-files/all-tests-included/.meta/tests.toml")
+        generator_help.remove_tests(toml)
+        json = generator_help.@json
+
+        json.should eq (JSON.parse(File.read("./test-generator/spec/assets/json-files/all-tests-included.json")))
+    end
+
+    it "Can import test case where one test case is removed" do
+        generator_help = GeneratorHelp.new("two-fer")
+        toml = generator_help.toml("./test-generator/spec/assets/toml-files/one-tests-removed/.meta/tests.toml")
+        generator_help.remove_tests(toml)
+        json = generator_help.@json
+
+        json.should eq (JSON.parse(File.read("./test-generator/spec/assets/json-files/one-tests-removed.json")))
+    end
+
+    it "Can import test case where all test cases are removed" do
+        generator_help = GeneratorHelp.new("two-fer")
+        toml = generator_help.toml("./test-generator/spec/assets/toml-files/all-tests-removed/.meta/tests.toml")
+        generator_help.remove_tests(toml)
+        json = generator_help.@json
+
+        json.should eq (JSON.parse(File.read("./test-generator/spec/assets/json-files/all-tests-removed.json")))
+    end
+  end
 end
