@@ -18,8 +18,7 @@ module GeneratorPlugins
   end
 
   def binary_search_tree(tree, last = [] of String) : String
-    case tree
-    when tree.as_h?
+    if tree.as_h?
       result = ""
       return "" if tree == nil
       if tree["data"]?
