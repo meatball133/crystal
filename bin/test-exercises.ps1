@@ -26,11 +26,13 @@ Function Test-Run() {
     crystal spec "./spec/spec.cr"
 }
 
-
+$currentLocation = Get-Location
 
 foreach ($exercise in Get-ChildItem -Path ./exercises/practice/*) {
     Test-Run $exercise "example"
 }
+
+Set-Location -Path $currentLocation
 
 foreach ($exercise in Get-ChildItem -Path ./exercises/concept/*) {
     Test-Run $exercise "exemplar"
