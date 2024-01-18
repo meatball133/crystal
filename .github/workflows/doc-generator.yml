@@ -17,7 +17,7 @@ jobs:
       - name: Run generator tests
         run: crystal document-generator/scripts/check_docs.cr
       - name: Comment on PR if test failed
-        if: ${{ steps.run_generator_tests.outputs.test_failed == 'true' }}
+        if: failure()
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.github_membership_token || secrets.GITHUB_TOKEN }}
