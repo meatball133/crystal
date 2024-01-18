@@ -8,6 +8,7 @@ on:
 
 jobs:
   comment_on_failed_test:
+    permissions: write-all
     name: Check Generator Templates
     runs-on: ubuntu-22.04
     container:
