@@ -59,7 +59,6 @@ class DocumentGenerator
     expression.scan(/(?:[^\s"]|"[^"]*")+/).each do |part|
       part = part.to_a[0].not_nil!.gsub("\"", "")
       if part.starts_with?("$") && exclude
-        p "Excluding #{part}"
         exclude = false
         if part.includes?(".")
           concept, chapter = part.split(".")
@@ -90,7 +89,6 @@ class DocumentGenerator
         raise "Unknown expression #{part}"
       end
     end
-    p chapters
     text = generete_text(chapters)
     fetch_links(chapters[0], text)
     text
@@ -99,7 +97,6 @@ class DocumentGenerator
   private def generete_text(chapters : Tuple(String, Array(String))) : String
     text = ""
     chapters[1].each do |concept|
-      p "Adding #{concept}"
       text += @documents[chapters[0]]["chapter"][concept]
     end
     if text[-3..] == "\n\n\n"
@@ -118,7 +115,6 @@ class DocumentGenerator
       match = line.match(/\[([^\]]*?)\]:/)
       if match
         result = match[1]
-        p result
         if text.includes?(result) && !@links.includes?("#{line}\n")
           new_links << "#{line}\n"
         end

@@ -14,18 +14,22 @@ OptionParser.parse do |parser|
   end
 
   parser.on "--all", "Generate all docs" do
-
-    Generator.new().generate_all
+    Generator.new.generate_all
     exit
   end
 
   parser.on "-d [DOC]", "--doc [DOC]", "Generate doc for a specific file" do |doc|
-    Generator.new().generate_doc(doc)
+    Generator.new.generate_doc(doc)
     exit
   end
 
   parser.on "-e [EXERCISE]", "--exercise [EXERCISE]", "Generate doc for a specific exercise" do |exercise|
-    Generator.new().generate_exercise_doc(exercise)
+    Generator.new.generate_exercise_doc(exercise)
     exit
-  end 
+  end
 end
+
+
+
+
+
