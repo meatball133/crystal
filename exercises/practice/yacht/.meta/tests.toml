@@ -33,6 +33,9 @@ description = "Fours"
 [f6125417-5c8a-4bca-bc5b-b4b76d0d28c8]
 description = "Yacht counted as threes"
 
+[464fc809-96ed-46e4-acb8-d44e302e9726]
+description = "Yacht of 3s counted as fives"
+
 [d054227f-3a71-4565-a684-5c7e621ec1e9]
 description = "Fives"
 
@@ -44,6 +47,9 @@ description = "Full house two small, three big"
 
 [1822ca9d-f235-4447-b430-2e8cfc448f0c]
 description = "Full house three small, two big"
+
+[b208a3fc-db2e-4363-a936-9e9a71e69c07]
+description = "Two pair is not a full house"
 
 [b90209c3-5956-445b-8a0b-0ac8b906b1c2]
 description = "Four of a kind is not a full house"

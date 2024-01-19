@@ -50,6 +50,12 @@ describe "Yacht" do
     Yacht.score(dice, category).should eq(15)
   end
 
+  pending "Yacht of 3s counted as fives" do
+    dice = [3, 3, 3, 3, 3]
+    category = Yacht::Category::Fives
+    Yacht.score(dice, category).should eq(0)
+  end
+
   pending "Fives" do
     dice = [1, 5, 3, 5, 3]
     category = Yacht::Category::Fives
@@ -72,6 +78,12 @@ describe "Yacht" do
     dice = [5, 3, 3, 5, 3]
     category = Yacht::Category::FullHouse
     Yacht.score(dice, category).should eq(19)
+  end
+
+  pending "Two pair is not a full house" do
+    dice = [2, 2, 4, 4, 5]
+    category = Yacht::Category::FullHouse
+    Yacht.score(dice, category).should eq(0)
   end
 
   pending "Four of a kind is not a full house" do
