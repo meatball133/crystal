@@ -27,19 +27,29 @@ end
 
 For more information, check the [`divisible_by?` approach][approach-divisible_by].
 
-## Approach: Using `%` (modulus)
+## Approach: Using `case` 
 
-Using `%` is a great way to check if a number is divisible by another and/or to get the rest of a division.
+Using `case` is a great way to create readable code, especially when you have multiple conditions.
+In this approach we use the fact that we can implicitly invoke a method on a case's when expression.
 
 ```crystal
 module Year
-  def self.leap?(year : Number) : Bool
-    year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)
+  def self.leap?(year)
+    case year
+    when .divisible_by? 400
+      true
+    when .divisible_by? 100
+      false
+    when .divisible_by? 4
+      true
+    else
+      false
+    end
   end
 end
 ```
 
-For more information, check the [modulus approach][approach-modulus].
+For more information, check the [case approach][approach-case].
 
 ## Approach: Using `Proc`s
 
@@ -79,7 +89,8 @@ For more information, check the [Proc approach][approach-proc].
 For more information, check the [Performance article][article-performance].
 
 [approach-divisible_by]: https://exercism.org/tracks/crystal/exercises/leap/approaches/divisible-by
-[approach-modulus]: https://exercism.org/tracks/crystal/exercises/leap/approaches/modolus
+[approach-case]: https://exercism.org/tracks/crystal/exercises/leap/approaches/case
+[approach-proc]: https://exercism.org/tracks/crystal/exercises/leap/approaches/proc
 [article-performance]: https://exercism.org/tracks/crystal/exercises/leap/articles/performance
 [leap-year]: https://crystal-lang.org/api/Time.html#leap_year%3F%28year%3AInt%29%3ABool-class-method
 [modulo operator]: https://wikipedia.org/wiki/Modulo_operation

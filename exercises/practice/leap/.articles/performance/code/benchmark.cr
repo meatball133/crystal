@@ -6,9 +6,18 @@ module YearDivisibleBy
   end
 end
 
-module YearModulus
+module YearCase
   def self.leap?(year : Number) : Bool
-    year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)
+    case year
+    when .divisible_by? 400
+      true
+    when .divisible_by? 100
+      false
+    when .divisible_by? 4
+      true
+    else
+      false
+    end
   end
 end
 
@@ -37,9 +46,9 @@ module YearProc
   end
 end
 
-puts "YearModulus"
+puts "YearCase"
 puts Benchmark.measure {
-  YearModulus.leap?(2014)
+  YearCase.leap?(2014)
 }
 
 puts "YearDivisibleBy"

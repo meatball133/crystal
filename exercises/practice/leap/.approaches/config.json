@@ -14,11 +14,11 @@
     },
     {
       "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
-      "slug": "modulus",
-      "title": "Uses modulus",
-      "blurb": "Use modulus to check number.",
+      "slug": "case",
+      "title": "Uses Case",
+      "blurb": "Use Case to check numbers.",
       "authors": ["meatball133"],
-      "contributors": ["BNAndras"]
+      "contributors": [""]
     },
     {
       "uuid": "5a0d8b86-57d7-4418-a730-09be7c9fbaa7",

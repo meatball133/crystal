@@ -21,6 +21,8 @@ After those checks, the two resulting Boolean values are combined with the [`&&`
 If both are true the result is true, otherwise false.
 Then the result is returned.
 
+This solution is also possible to be solved using the `%` (modulus) operator, but as we are only interested in knowing if a number is divisible by another number, the `divisible_by?` method is more exemplar.
+
 [divisible_by]: https://crystal-lang.org/api/Int.html#divisible_by%3F%28num%29%3ABool-instance-method
 [and]: https://crystal-lang.org/reference/syntax_and_semantics/and.html
 [or]: https://crystal-lang.org/reference/syntax_and_semantics/or.html
