@@ -202,6 +202,14 @@
         "concepts": ["bit-manipulation"],
         "prerequisites": ["binary-octal-hexadecimal"],
         "status": "beta"
+      },
+      {
+        "slug": "task-handler",
+        "name": "Task Handler",
+        "uuid": "2acbe0f3-bb3b-4eb7-bd6f-fd760e3816b0",
+        "concepts": ["procs-blocks"],
+        "prerequisites": ["array-methods"],
+        "status": "beta"
       }
     ],
     "practice": [
