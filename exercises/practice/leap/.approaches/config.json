@@ -6,25 +6,25 @@
   "approaches": [
     {
       "uuid": "5d42dc83-2473-425a-90bd-bf03f92b8c8b",
-      "slug": "divisible-by",
-      "title": "Use divisible-by",
-      "blurb": "Use divisible-by to check number.",
+      "slug": "boolean-chain",
+      "title": "Use boolean chain",
+      "blurb": "Use a chain of boolean expressions.",
       "authors": ["meatball133"],
       "contributors": ["BNAndras"]
     },
     {
       "uuid": "9952fef5-9f2f-4575-94fc-bc4e96593cd6",
       "slug": "case",
-      "title": "Uses Case",
+      "title": "Use Case",
       "blurb": "Use Case to check numbers.",
       "authors": ["meatball133"],
       "contributors": []
     },
     {
       "uuid": "5a0d8b86-57d7-4418-a730-09be7c9fbaa7",
-      "slug": "proc",
-      "title": "Uses Proc",
-      "blurb": "Use Proc to check number.",
+      "slug": "rules",
+      "title": "Use Rules",
+      "blurb": "Use a number of rules",
       "authors": ["meatball133"],
       "contributors": ["BNAndras"]
     }

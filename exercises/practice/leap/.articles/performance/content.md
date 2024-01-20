@@ -4,9 +4,9 @@ In this article, we'll examine the performance difference between approaches for
 
 The [approaches page][approaches] lists three approaches to this exercise:
 
-1. [Using `divisible_by?`][approach-divisible_by]
-2. [Using modulus][approach-case]
-3. [Using `Proc`s][approach-proc]
+1. [Using boolean-chain][approach-boolean-chain]
+2. [Using `case`][approach-case]
+3. [Using rules][approach-rules]
 
 ## Benchmarks
 
@@ -30,8 +30,8 @@ The `divisible_by?` approach is quite light when it comes to method calls, which
 Although as the difference is so small, and doesn't matter unless you want to do a ton of operations.
 
 [approaches]: https://exercism.org/tracks/crystal/exercises/leap/approaches
-[approach-divisible_by]: https://exercism.org/tracks/crystal/exercises/leap/approaches/divisible-by
+[approach-boolean-chain]: https://exercism.org/tracks/crystal/exercises/leap/approaches/boolean-chain
 [approach-case]: https://exercism.org/tracks/crystal/exercises/leap/approaches/case
-[approach-proc]: https://exercism.org/tracks/crystal/exercises/leap/approaches/proc
+[approach-rules]: https://exercism.org/tracks/crystal/exercises/leap/approaches/rules
 [benchmark-application]: https://github.com/exercism/crystal/blob/main/exercises/practice/leap/.articles/performance/code/benchmark.cr
 [benchmark-module]: https://crystal-lang.org/api/Benchmark.html

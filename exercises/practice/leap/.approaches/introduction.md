@@ -10,9 +10,11 @@ Otherwise, the built-in `leap_year?` method should be used in idiomatic Crystal 
 The goal of this exercise is to use various boolean logic to respond to if a year is a leap year or not.
 The most common solution is using some form of the [modulo operator (`%`)][modulo operator], which is an operator which returns the remainder of a division.
 
-## Approach: Using `divisible_by?`
+## Approach: Using a boolean-chain
 
-This is the most idiomatic approach. The built-in [`leap_year?`][leap-year] method is implemented using this approach (as of Crystal 1.11).
+Using a boolean-chain is a great way to create concise and performant code.
+The `divisible_by?` method is the most exemplar way to check if a number is divisible by another number.
+The built-in [`leap_year?`][leap-year] method is implemented using this approach with `divisible_by?` (as of Crystal 1.11).
 `divisible_by?` offers a clear indication of what the method does and is easy to read.
 Compared to using `number % 4 == 0` which is harder to read and understand.
 Although `%` can get the remainder which `divisible_by?` can't.
@@ -25,7 +27,7 @@ module Year
 end
 ```
 
-For more information, check the [`divisible_by?` approach][approach-divisible_by].
+For more information, check the [boolean-chain approach][approach-boolean-chain].
 
 ## Approach: Using `case` 
 
@@ -51,9 +53,10 @@ end
 
 For more information, check the [case approach][approach-case].
 
-## Approach: Using `Proc`s
+## Approach: Using rules
 
-Using `Proc`s is a great way to create reusable logic which makes so you can build things like block programming system and in general makes for an interesting solution.
+Using rules is a great way to create reusable logic which makes so you can build things like block programming system and in general makes for an interesting solution.
+This solution uses `Proc` to create a rule system.
 
 ```crystal
 module Year
@@ -82,15 +85,15 @@ module Year
 end
 ```
 
-For more information, check the [Proc approach][approach-proc].
+For more information, check the [rules approach][approach-rules].
 
 ## Benchmark
 
 For more information, check the [Performance article][article-performance].
 
-[approach-divisible_by]: https://exercism.org/tracks/crystal/exercises/leap/approaches/divisible-by
+[approach-divisible_by]: https://exercism.org/tracks/crystal/exercises/leap/approaches/boolean-chain
 [approach-case]: https://exercism.org/tracks/crystal/exercises/leap/approaches/case
-[approach-proc]: https://exercism.org/tracks/crystal/exercises/leap/approaches/proc
+[approach-proc]: https://exercism.org/tracks/crystal/exercises/leap/approaches/rules
 [article-performance]: https://exercism.org/tracks/crystal/exercises/leap/articles/performance
 [leap-year]: https://crystal-lang.org/api/Time.html#leap_year%3F%28year%3AInt%29%3ABool-class-method
 [modulo operator]: https://wikipedia.org/wiki/Modulo_operation
