@@ -17,16 +17,16 @@ Your system results may vary.
 ```
 YearCase
   0.000002   0.000000   0.000002 (  0.000002)
-YearDivisibleBy
+YearBooleanChain
   0.000001   0.000000   0.000001 (  0.000001)
-YearProc
+YearRules
   0.000002   0.000000   0.000002 (  0.000002)
 ```
 
 ## Conclusion
 
 It is hard to make a conclusion from these results, as the difference is so small.
-The `divisible_by?` approach is quite light when it comes to method calls, which is why it might be a tiny bit faster.
+The boolean-chain approach is quite light when it comes to method calls, which is why it might be a tiny bit faster.
 Although as the difference is so small, and doesn't matter unless you want to do a ton of operations.
 
 [approaches]: https://exercism.org/tracks/crystal/exercises/leap/approaches

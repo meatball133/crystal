@@ -1,4 +1,4 @@
-# Using `divisible_by?`
+# Using Boolean Chain
 
 ```crystal
 module Year

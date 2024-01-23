@@ -1,6 +1,6 @@
 require "benchmark"
 
-module YearDivisibleBy
+module YearBooleanChain
   def self.leap?(year : Number) : Bool
     year.divisible_by?(4) && (year.divisible_by?(400) || !year.divisible_by?(100))
   end
@@ -21,7 +21,7 @@ module YearCase
   end
 end
 
-module YearProc
+module YearRules
   RULES = [
     p_divisible_by?(4),
     p_or(
@@ -51,13 +51,13 @@ puts Benchmark.measure {
   YearCase.leap?(2014)
 }
 
-puts "YearDivisibleBy"
+puts "YearBooleanChain"
 puts Benchmark.measure {
-  YearDivisibleBy.leap?(2014)
+  YearBooleanChain.leap?(2014)
 }
 
-puts "YearProc"
+puts "YearRules"
 puts Benchmark.measure {
-  YearProc.leap?(2014)
+  YearRules.leap?(2014)
 }
 
