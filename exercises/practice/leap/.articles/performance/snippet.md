@@ -1,6 +1,6 @@
 YearCase
   0.000002   0.000000   0.000002 (  0.000002)
-YearDivisibleBy
+YearBooleanChain
   0.000001   0.000000   0.000001 (  0.000001)
-YearProc
+YearRules
   0.000002   0.000000   0.000002 (  0.000002)
