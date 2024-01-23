@@ -23,9 +23,12 @@ module Raindrops
 end
 ```
 
-For more information, check the [conditionals approach][approach-array].
+For more information, check the [conditionals approach][approach-conditionals].
 
 ## Approach: Using rules
+
+Using rules to create logic to create a `String` for result.
+This solution is very consise since it only uses only one if statement.
 
 ```crystal
 module Raindrops
@@ -36,7 +39,7 @@ module Raindrops
 end
 ```
 
-For more information, check the [Array approach][approach-array].
+For more information, check the [Rukes approach][approach-rules].
 
 ## Approach: Using String::Builder
 

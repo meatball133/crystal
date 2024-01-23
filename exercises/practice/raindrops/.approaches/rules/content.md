@@ -1,2 +1,11 @@
 # Rules
 
+```crystal
+module Raindrops
+  DROPS = {3 => "Pling", 5 => "Plang", 7 => "Plong"}
+  def self.convert(number : Int)
+    DROPS.join { |k, v| v if number.divisible_by?(k) }.presence || number.to_s
+  end
+end
+```
+
