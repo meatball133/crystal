@@ -89,6 +89,10 @@ graph TD
         r(Array-methods)
     end
 
+    subgraph U [Task Handler]
+        s(Blocks/proc/)
+    end
+
     A --> B
     A --> C
     B --> J
@@ -110,10 +114,13 @@ graph TD
     Q --> R
     F --> S
     S --> T
+    R --> U
+    U --> t
+
+
 
     m(Getters/setters)
     p(raisining errors)
-    s(Blocks/proc/)
     t(enumeration)
     u(more enumeration)
     x(symbols)
@@ -123,8 +130,6 @@ graph TD
     ab(Decompositon & multiple assignment)
 
     Q --> p
-    R --> s
-    s --> t
     t --> u
     u --> y
     u --> x
