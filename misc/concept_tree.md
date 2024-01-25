@@ -2,7 +2,7 @@
 
 This is a concept tree for the Crystal Syllabus. 
 It is a work in progress, it was last updated on 2024-01-13.
-All of the concept which has an exercise around it has been implemented, the rest is still to be implemented.
+Each concept with an exercise around it has been implemented, the rest is still to be implemented.
 
 
 ```mermaid
@@ -33,22 +33,22 @@ graph TD
     end
 
     subgraph S [Foto Fusionist]
-        d(binary & octal & hexdecimal)
+        d(binary & octal & hexadecimal)
     end
 
     subgraph T [Secrets]
         ad(Bit Manipulation)
     end
 
-    subgraph G [High School Sweethear]
+    subgraph G [High School Sweetheart]
         g(string methods)
     end
 
-    subgraph H [Meltdown Mitigiation]
+    subgraph H [Meltdown Mitigation]
         h(conditionals)
     end
 
-    subgraph I [Intrest is intresting]
+    subgraph I [Interest is intresting]
         i(return)
         j(while)
     end
@@ -59,10 +59,6 @@ graph TD
 
     subgraph L [Blackjack]
         v(case /switch/)
-    end
-
-    subgraph M [Castle Dinner]
-        o(Nil)
     end
 
     subgraph M [Castle Dinner]
@@ -85,7 +81,7 @@ graph TD
         q(Arrays)
     end
 
-    subgraph R [Chaitanas Colossal Coaster]
+    subgraph R [Chaitana's Colossal Coaster]
         r(Array-methods)
     end
 
@@ -120,14 +116,15 @@ graph TD
 
 
     m(Getters/setters)
-    p(raisining errors)
+    p(raising errors)
+    s(Blocks/proc/)
     t(enumeration)
     u(more enumeration)
     x(symbols)
     y(Tuples)
     z(Hashes)
     aa(Named Tuple)
-    ab(Decompositon & multiple assignment)
+    ab(Decomposition & multiple assignment)
 
     Q --> p
     t --> u
