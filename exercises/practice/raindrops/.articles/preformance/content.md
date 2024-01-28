@@ -23,7 +23,7 @@ RaindropsRules
 ## Conclusion
 
 It is hard to make a conclusion from these results, as the difference is so small.
-However, the rules approach is slightly faster than the conditionals approach, but the difference is so small so it is hard to make a definitive conclusion.
+However, the rules approach is slightly faster than the conditionals approach, but the difference is so small that it is hard to make a definitive conclusion.
 
 [approaches]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches
 [approach-conditionals]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/conditionals

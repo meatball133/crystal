@@ -2,7 +2,7 @@
 
 There are various ways to solve **raindrops**.
 Raindrops is a simple problem, but it can be solved in many different ways.
-It focus is about checking for divisibility and building a string based on conditions.
+Its focus is on checking for divisibility and building a string based on conditions.
 
 ## General guidance
 
@@ -28,8 +28,8 @@ For more information, check the [conditionals approach][approach-conditionals].
 
 ## Approach: Using rules
 
-Using rules to create logic to create a `String` for result.
-This solution is very consise since it only uses only one if statement, it does this by using looping and using the `||` operator.
+Using rules to create logic to create a `String` for the result.
+This solution is very concise since it only uses only one if statement, it does this by using looping and using the `||` operator.
 
 ```crystal
 module Raindrops
