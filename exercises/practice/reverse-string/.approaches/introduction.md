@@ -21,6 +21,8 @@ module ReverseString
 end
 ```
 
+For more information, check the [`reverse` approach][approach-reverse].
+
 ## Approach: Using an array
 
 This approach converts the string to an array, reverses the array, and then converts the array back to a string.
@@ -64,3 +66,4 @@ For more information, check the [Performance article][article-performance].
 [approach-array]: https://exercism.org/tracks/crystal/exercises/reverse-string/approaches/array
 [approach-string-builder]: https://exercism.org/tracks/crystal/exercises/reverse-string/approaches/string-builder
 [article-performance]: https://exercism.org/tracks/crystal/exercises/reverse-string/articles/performance
+[approach-reverse]: https://exercism.org/tracks/crystal/exercises/reverse-string/approaches/reverse

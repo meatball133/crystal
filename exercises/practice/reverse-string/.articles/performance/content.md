@@ -4,7 +4,7 @@ In this article, we'll examine the performance difference between approaches for
 
 The [approaches page][approaches] lists three approaches to this exercise:
 
-1. Using the built-in `reverse` method
+1. [Using the built-in `reverse` method][approach-reverse]
 2. [Using an array][approach-array]
 3. [Using String::Builder][approach-string-builder]
 
@@ -42,3 +42,4 @@ Although what can also be noticed is that giving the size of the string to the `
 [approach-string-builder]: https://exercism.org/tracks/crystal/exercises/reverse-string/approaches/string-builder
 [benchmark-application]: https://github.com/exercism/crystal/blob/main/exercises/practice/reverse-string/.articles/performance/code/benchmark.cr
 [benchmark-module]: https://crystal-lang.org/api/Benchmark.html
+[approach-reverse]: https://exercism.org/tracks/crystal/exercises/reverse-string/approaches/reverse
