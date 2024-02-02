@@ -6,9 +6,9 @@
   "approaches": [
     {
       "uuid": "9da625b3-e995-413e-8194-48e53aa47b66",
-      "slug": "rules",
-      "title": "Rules",
-      "blurb": "Using rules to conditionally add text to a string",
+      "slug": "data-driven",
+      "title": "Data Driven",
+      "blurb": "Using a data driven approach to conditionally add text to a string",
       "authors": [
         "meatball133"
       ]

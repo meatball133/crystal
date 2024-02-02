@@ -26,7 +26,7 @@ end
 
 For more information, check the [conditionals approach][approach-conditionals].
 
-## Approach: Using rules
+## Approach: Using a data-driven approach
 
 Using rules to create logic to create a `String` for the result.
 This solution is very concise since it only uses only one if statement, it does this by using looping and using the `||` operator.
@@ -40,12 +40,12 @@ module Raindrops
 end
 ```
 
-For more information, check the [Rukes approach][approach-rules].
+For more information, check the [data-driven approach][approach-data-driven].
 
 ## Benchmark
 
 For more information, check the [Performance article][article-performance].
 
-[approach-rules]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/rules
+[approach-data-driven]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/data-driven
 [approach-conditionals]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/conditionals
 [article-performance]: https://exercism.org/tracks/crystal/exercises/raindrops/articles/performance

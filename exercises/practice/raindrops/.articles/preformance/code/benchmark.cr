@@ -10,7 +10,7 @@ module RaindropsConditional
   end
 end
 
-module RaindropsRules
+module RaindropsDataDriven
   DROPS = {3 => "Pling", 5 => "Plang", 7 => "Plong"}
 
   def self.convert(number : Int)
@@ -23,7 +23,7 @@ puts Benchmark.measure {
     RaindropsConditional.convert(5130)
 }
 
-puts "RaindropsRules"
+puts "RaindropsDataDriven"
 puts Benchmark.measure {
-    RaindropsRules.convert(5130)
+    RaindropsDataDriven.convert(5130)
 }

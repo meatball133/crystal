@@ -1,4 +1,4 @@
-# Rules
+# Data Driven
 
 ```crystal
 module Raindrops
@@ -9,7 +9,7 @@ module Raindrops
 end
 ```
 
-Using rules to create logic to solve the raindrops problem, makes the solution both concise and flexible.
+Using a data-driven approach to create logic to solve the raindrops problem, makes the solution both concise and flexible.
 If the rules change, it is as easy as to change the rules.
 The solution starts by creating a `Hash` with the rules.
 Then it uses [`Enumerable#join`][enumerable-join] used on the newly created `Hash`.

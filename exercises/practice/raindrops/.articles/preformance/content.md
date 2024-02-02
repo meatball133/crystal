@@ -5,7 +5,7 @@ In this article, we'll examine the performance difference between approaches for
 The [approaches page][approaches] lists three approaches to this exercise:
 
 1. [Using conditionals][approach-conditionals]
-2. [Using rules][approach-rules]
+2. [Using data-driven][approach-data-driven]
 
 ## Benchmarks
 
@@ -16,7 +16,7 @@ Your system results may vary.
 ```
 RaindropsConditional
   0.000005   0.000000   0.000005 (  0.000003)
-RaindropsRules
+RaindropsDataDriven
   0.000003   0.000000   0.000003 (  0.000003)
 ```
 
@@ -27,6 +27,6 @@ However, the rules approach is slightly faster than the conditionals approach, b
 
 [approaches]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches
 [approach-conditionals]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/conditionals
-[approach-rules]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/rules
+[approach-data-driven]: https://exercism.org/tracks/crystal/exercises/raindrops/approaches/data-driven
 [benchmark-application]: https://github.com/exercism/crystal/blob/main/exercises/practice/raindrops/.articles/performance/code/benchmark.cr
 [benchmark-module]: https://crystal-lang.org/api/Benchmark.html
