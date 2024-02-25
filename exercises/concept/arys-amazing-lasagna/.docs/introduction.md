@@ -15,6 +15,8 @@ number = 2
 puts number # => 2
 ```
 
+test
+
 ### Constants
 
 [Constants][constants] are declared using the same `=` assignment operator, but use all uppercase letters, also known as SCREAMING_SNAKE_CASE.
