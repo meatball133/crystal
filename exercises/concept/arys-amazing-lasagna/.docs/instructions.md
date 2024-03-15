@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise you're going to write some code to help you cook a brilliant lasagna from your favorite cooking book.
+In this exercise, you'll write code to help you cook a brilliant lasagna from your favorite cookbook.
 
 You have four tasks, all related to the time spent cooking the lasagna.
 
@@ -25,7 +25,7 @@ Lasagna.new.remaining_minutes_in_oven(30)
 
 ## 3. Calculate the preparation time in minutes
 
-Define the `Lasagna#preparation_time_in_minutes` method that takes the number of layers you added to the lasagna as a parameter and returns how many minutes you spent preparing the lasagna, assuming each layer takes you 2 minutes to prepare.
+Define the `Lasagna#preparation_time_in_minutes` method, which takes the number of layers you added to the lasagna as a parameter and returns the number of minutes you spent preparing it, assuming each layer takes 2 minutes to prepare.
 
 ```Crystal
 Lasagna.new.preparation_time_in_minutes(2)
@@ -35,7 +35,7 @@ Lasagna.new.preparation_time_in_minutes(2)
 ## 4. Calculate the total working time in minutes
 
 Define the `Lasagna#total_time_in_minutes` method that takes two named parameters: the `number_of_layers` parameter is the number of layers you added to the lasagna, and the `actual_minutes_in_oven` parameter is the number of minutes the lasagna has been in the oven.
-The method should return how many minutes in total you've worked on cooking the lasagna, which is the sum of the preparation time in minutes, and the time in minutes the lasagna has spent in the oven at the moment.
+The method should return the total number of minutes you've worked on cooking the lasagna, which is the sum of the preparation time in minutes and the time the lasagna has spent in the oven at the moment.
 
 ```Crystal
 number_of_layers = 3
