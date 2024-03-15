@@ -111,7 +111,7 @@ The format should be: `<ClassName>.<method_name>`.
 When a method doesn't belong to a class, module, or struct, you can simply call it by writing its name.
 Methods always implicitly return the value of the last expression.
 
-When a method has arguments, you may use parentheses when specifying the arguments in the method call and definition, like the following: `<method_name>(<argument_1>, <argument_2>)`.
+When a method has arguments, you may use parentheses when specifying the arguments in the method call and definition, like the following: `<method_name>(<argument_1>, <argument_2>, ...)`.
 When a method has no arguments, parentheses should be omitted.
 
 ```crystal
