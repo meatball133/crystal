@@ -111,7 +111,7 @@ The arguments must be given in the same order as the method arguments.
 
 ```crystal
 def hello_language(name, language)
-  puts "Hello #{name}! You are learning #{language}."
+  "Hello #{name}! You are learning #{language}."
 end
 
 hello_language("World", "Crystal")
