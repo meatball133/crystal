@@ -1,0 +1,12 @@
+require "spec"
+require "../src/*"
+
+describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
+<%- @json["cases"].as_a.each do |cases| %>
+    <%= status()%> "<%-= cases["description"] %>" do
+        input = <%= cases["input"]["texts"] %> <%= cases["input"]["texts"].size == 0 ? "of Int32" : ""%>
+        expected = <%= cases["expected"] %> <%= cases["expected"].size == 0 ? "of Char => Int32" : ""%>
+        <%-= to_capitalized(@json["exercise"].to_s) %>.calculateFrequencies(input).should eq expected
+    end
+<% end %>
+end
