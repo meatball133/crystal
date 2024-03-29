@@ -1,10 +1,10 @@
 # Numbers
 
-Crystal has a type, `Number` which is the base type for all numeric types.
-Inside the Number type, there are two main sub-types: [`Int`][int] and [`Float`][float].
+Crystal has a type, `Number`, which is the base type for all numeric types.
+There are two main sub-types inside the Number type: [`Int`][int] and [`Float`][float].
 
-Int is short for integer and represents whole numbers.
-Int can be both negative and positive, and doesn't have a decimal point.
+`Int` is short for integer and represents whole numbers.
+`Int` can be both negative and positive, with no decimal point.
 
 ```crystal
 1.class
@@ -14,18 +14,18 @@ Int can be both negative and positive, and doesn't have a decimal point.
 # => Int32
 ```
 
-Float represents numbers with a decimal point.
-Floats can be both negative and positive.
+`Float` represents numbers with a decimal point.
+`Float`s can be both negative and positive.
 
 ```crystal
 10.5.class
 # => Float64
 ```
 
-## Converting between Int and Float
+## Converting between `Int` and `Float`
 
-You can convert between Int and Float using the `to_i` and `to_f` methods.
-When converting from Float to Int the number is rounded down.
+Using the 'to_i' and' to_f' methods, you can convert between `Int` and `Float`.
+The number is rounded down when converting from `Float` to `Int`.
 
 ```crystal
 1.to_f
@@ -40,9 +40,9 @@ When converting from Float to Int the number is rounded down.
 
 ## Arithmetic operators
 
-You can use the [basic arithmetic operators][math] on Int and Float.
+You can use the [basic arithmetic operators][math] on `Int` and `Float`.
 The operators are `+`, `-`, `*`, `/`, and `%`.
-You can mix and match Int and Float when using these operators.
+When using these operators, you can mix and match `Int` and `Float`.
 
 ### Addition & Subtraction & Multiplication
 
@@ -69,11 +69,11 @@ The result will always be a Float.
 ```
 
 ~~~~exercism/caution
-In some programming languages when dividing by zero the result will be an error.
+In some programming languages, when dividing by zero, the result will be an error.
 
-In Crystal when dividing by zero the result will be `Infinity` or `-Infinity`.
-The Only exception is when dividing zero by zero, which will result in `NaN` (Not a Number).
-Infinity and NaN are special values in the Float type.
+In Crystal, when dividing by zero, the result is `Infinity` or `-Infinity`.
+The only exception is dividing zero by zero, resulting in `NaN` (Not a Number).
+`Infinity` and `NaN` are particular values in the `Float` type.
 
 ```crystal
 1 / 0
@@ -101,7 +101,7 @@ The result will always be rounded down to an Int.
 ```
 
 ~~~~exercism/caution
-When dividing by zero when using integer division results in a `DivisionByZeroError`.
+Dividing by zero when using integer division results in a `DivisionByZeroError`.
 This is different from normal division.
 ~~~~
 
@@ -135,7 +135,7 @@ This is different from normal division.
 
 Exponentiation is used to raise a number to a power.
 The `**` operator is used for exponentiation.
-When having an operation with a Float and an Int the result will be a Float.
+The result of an operation with a `Float` and an `Int` will be a `Float`.
 
 ```crystal
 2 ** 2
@@ -147,7 +147,7 @@ When having an operation with a Float and an Int the result will be a Float.
 
 ## Rounding
 
-The `round` method takes an optional argument which is the number of decimal places to round to.
+The `round` method takes an optional argument: the number of decimal places to round to.
 The default number of decimal places is 0.
 
 ```crystal
@@ -163,8 +163,8 @@ The default number of decimal places is 0.
 
 ### Rounding up and down
 
-You can also round up or down to an Int by using the `ceil` and `floor` methods.
-The `ceil` method rounds up and the `floor` method rounds down.
+You can also round up or down to an `Int` using the `ceil` and `floor` methods.
+The `ceil` method rounds up, and the `floor` method rounds down.
 
 ```crystal
 1.0.ceil
@@ -179,10 +179,10 @@ The `ceil` method rounds up and the `floor` method rounds down.
 
 ## Priority and parentheses
 
-Crystal allows parentheses(`()`) which can be used to group expressions.
+Crystal allows parentheses(`()`), which can be used to group expressions.
 This is useful when you want to change the order of operations.
 
-When using multiple arithmetic operators the order of operations is the same as in mathematics, also known as [PEMDAS][pemdas].
+When using multiple arithmetic operators, the order of operations is the same as in mathematics, also known as [PEMDAS][pemdas].
 It follows the order of parentheses(`()`), exponents(`**`), multiplication(`*`) and division(`/`), and addition(`+`) and subtraction(`-`).
 
 ```crystal
