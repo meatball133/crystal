@@ -277,6 +277,13 @@
           "array-methods"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "spellbound-steel",
+        "name": "spellbound-steel",
+        "uuid": "8fed320d-59b8-4683-83fb-a87b6c1a6911",
+        "concepts": [],
+        "prerequisites": []
       }
     ],
     "practice": [

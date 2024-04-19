@@ -1,0 +1,15 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "src/spellbound_steel.cr"
+    ],
+    "test": [
+      "spec/spellbound_steel_spec.cr"
+    ],
+    "exemplar": [
+      ".meta/src/exemplar.cr"
+    ]
+  },
+  "blurb": ""
+}
