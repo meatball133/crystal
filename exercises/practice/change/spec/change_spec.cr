@@ -42,6 +42,11 @@ describe "Change" do
       .should eq [4, 4, 4, 5, 5, 5]
   end
 
+  pending "a greedy approach is not optimal" do
+    Change.find_fewest_coins(target: 20, coins: [1, 10, 11])
+      .should eq [10, 10]
+  end
+
   pending "no coins make 0 change" do
     Change.find_fewest_coins(target: 0, coins: [1, 5, 10, 21, 25])
       .should eq [] of Int32
