@@ -1,11 +1,11 @@
 # Iteration
 
-In programming, iteration refers to the process of repeating a block of code multiple times.
+In programming, [iteration][iteration] refers to the process of repeating a block of code multiple times.
 This can be done by using concepts such as while loops and until loops.
 It can also be done by using recursion, which is a function that calls itself.
 
 However, most often you want to iterate over a collection of items, such as an `Array`, `Range` or `String`.
-Both the `Array` and `Range` classes in Ruby include the `Enumerable` module, which provides a number of methods for iterating over the elements.
+Both the `Array` and `Range` classes in Ruby include the [`Enumerable`][enumerable] module, which provides a number of methods for iterating over the elements.
 Meanwhile, the `String` class has its own set of methods for iterating over the characters.
 
 Crystal also doesnt have any any for statement like other languages.
@@ -13,7 +13,7 @@ Instead it has several methods that can be used to iterate.
 
 ## Iterating
 
-The most common way to iterate over a collection is to use the `each` method, which yields each element in the collection to a block.
+The most common way to iterate over a collection is to use the [`each`][each] method, which yields each element in the collection to a block.
 This can be done easily with a `Range`.
 Say you would want to loop between 1 and 5, you can use the `each` method to iterate over the range.
 
@@ -28,7 +28,7 @@ end
 # 3
 ```
 
-Even simplier if you just want to iterate n numbers of times you can use the `times` method.
+Even simplier if you just want to iterate n numbers of times you can use the [`times`][times] method.
 
 ```crystal
 3.times do |n|
@@ -44,7 +44,7 @@ end
 ## Iterating over a `String`
 
 A `String` is a sequence of characters, and doesnt belong to the `Enumerable` module, which means it has its own set of methods for iterating over the characters.
-The most common way to iterate over a `String` is to use the `each_char` method, which yields each character in the `String` to a block.
+The most common way to iterate over a `String` is to use the [`each_char`][each_char] method, which yields each character in the `String` to a block.
 Note that the `each_char` method feeds a `Char` object and not a `String` object.
 
 ```crystal
@@ -61,7 +61,7 @@ end
 # o
 ```
 
-Another way of iterating over a `String` is to use the `each_line` method, this method is mostly used when reading a file line by line.
+Another way of iterating over a `String` is to use the [`each_line`][each_line] method, this method is mostly used when reading a file line by line.
 
 ```crystal
 str = "hello\nworld"
@@ -76,10 +76,10 @@ end
 
 ## Iterating over an object that includes the `Enumerable` module
 
-The `Enumerable` module provides a number of methods for iterating over the elements of a collection.
+The [`Enumerable`][enumerable] module provides a number of methods for iterating over the elements of a collection.
 Collections that include the `Enumerable` module are `Array`, `Range`, `Hash`, `Set`, and others, the later ones will be covered in later concepts.
 
-The most common way to iterate over an `Array` is to use the `each` method, which yields each element in the `Array` to a block.
+The most common way to iterate over an `Array` is to use the [`each`][each] method, which yields each element in the `Array` to a block.
 
 ```crystal
 arr = [1, 2, 3]
@@ -95,7 +95,9 @@ end
 
 ### Map
 
-The `map` method is another way to iterate over an `Array`, it returns a new `Array` containing the results of applying the block to each element.
+The [`map`][map] method is another way to iterate over an `Array`, it returns a new `Array` containing the results of applying the block to each element.
+It is similar to the `each` method, but it returns a new `Array` with the transformed elements.
+Transformation is very useful when you want to apply a function to each element of the collection, which is a common operation.
 
 ```crystal
 arr = [1, 2, 3]
@@ -109,7 +111,7 @@ new_arr
 
 ### With Index
 
-Sometimes you need to know the index of the element you are iterating over, you can use the `each_with_index` or `map_with_index` method for that.
+Sometimes you need to know the index of the element you are iterating over, you can use the [`each_with_index`][each_with_index] or [`map_with_index`][map_with_index] method for that.
 It yields each element and its index to a block, the method also accepts an optional argument to specify the starting index.
 
 ```crystal
@@ -124,12 +126,14 @@ end
 # Element: 3, Index: 6
 ```
 
+Note that the [`each_char_with_index`][each_char_with_index] method is also available for `String` objects.
+
 ### `present?`, `empty?`, `any?`, `all?`, `none?`, `one?`
 
 The `Enumerable` module provides a number of methods to check the state of a collection.
 This can be useful when you want to know if a collection is empty, or if it contains any elements that meet a certain condition.
-While the `present?` and `empty?` methods are specific to check if a collection is empty or not.
-The `any?`, `all?`, `none?`, and `one?` methods accept a block and return a boolean value based on the block's return value.
+While the [`present?`][present?] and [`empty?`][empty?] methods are specific to check if a collection is empty or not.
+The [`any?`][any?], [`all?`][all?], [`none?`][none?], and [`one?`][one?] methods accept a block and return a boolean value based on the block's return value.
 These methods listed return a boolean value.
 
 | Method | Description | Example |
@@ -155,7 +159,7 @@ The key take out of this method is that it is the opposite of `empty?`, but it d
 
 ### count
 
-The `count` method returns the number of elements in the collection that meet the condition specified in the block.
+The [`count`][count] method returns the number of elements in the collection that meet the condition specified in the block.
 Alternatively, the method can be called with an argument to count the number of elements that are equal to the argument.
 
 ```crystal
@@ -169,7 +173,7 @@ arr.count(2)
 
 ### find
 
-The `find` method returns the first element in the collection that meets the condition specified in the block.
+The [`find`][find] method returns the first element in the collection that meets the condition specified in the block.
 
 ```crystal
 arr = [1, 2, 3]
@@ -179,7 +183,7 @@ arr.find { |n| n > 1 }
 
 ### sum
 
-The `sum` method returns the sum of all elements in the collection, it also accepts an optional block to transform the elements before summing them.
+The [`sum`][sum] method returns the sum of all elements in the collection, it also accepts an optional block to transform the elements before summing them.
 It also accepts an optional argument to specify the initial value of the sum.
 
 ```crystal
@@ -193,7 +197,7 @@ arr.sum(2) { |n| n * 2 }
 
 ### reduce
 
-`reduce` or fold as it is known in other languages, is a method that with a combine method and an initial value, it will combine all the elements in the collection.
+[`reduce`][reduce] or fold as it is known in other languages, is a method that with a combine method and an initial value, it will combine all the elements in the collection.
 The `reduce` method has an accumulator that is passed to the block, the accumulator is the result of the previous iteration.
 This becomes a recursive process that will combine all the elements in the collection.
 
@@ -226,3 +230,26 @@ arr = [3, 1, 2]
 arr.sort_by { |n| -n }
 # => [3, 2, 1]
 ```
+
+[times]: https://crystal-lang.org/api/Int.html#times%28%26block%3Aself-%3E%29%3ANil-instance-method
+[enumerable]: https://crystal-lang.org/api/Enumerable.html
+[each_char]: https://crystal-lang.org/api/String.html#each_char%28%26%29%3ANil-instance-method
+[each_char_with_index]: https://crystal-lang.org/api/String.html#each_char_with_index%28offset%3D0%2C%26%29-instance-method
+[each_line]: https://crystal-lang.org/api/String.html#each_line%28chomp%3Dtrue%2C%26block%3AString-%3E%29%3ANil-instance-method
+[each]: https://crystal-lang.org/api/Enumerable.html#each%28%26%3AT-%3E%29-instance-method
+[map]: https://crystal-lang.org/api/Enumerable.html#map%28%26%3AT-%3EU%29%3AArray%28U%29forallU-instance-method
+[each_with_index]: https://crystal-lang.org/api/Enumerable.html#each_with_index%28offset%3D0%2C%26%29-instance-method
+[map_with_index]: https://crystal-lang.org/api/Enumerable.html#map_with_index%28offset%3D0%2C%26%3AT%2CInt32-%3EU%29%3AArray%28U%29forallU-instance-method
+[present?]: https://crystal-lang.org/api/Enumerable.html#present%3F%3ABool-instance-method
+[empty?]: https://crystal-lang.org/api/Enumerable.html#empty%3F%3ABool-instance-method
+[any?]: https://crystal-lang.org/api/Enumerable.html#any%3F%28%26%3AT-%3E%29%3ABool-instance-method
+[all?]: https://crystal-lang.org/api/Enumerable.html#all%3F%28%26%3AT-%3E%29%3ABool-instance-method
+[none?]: https://crystal-lang.org/api/Enumerable.html#none%3F%28%26%3AT-%3E%29%3ABool-instance-method
+[one?]: https://crystal-lang.org/api/Enumerable.html#one%3F%28%26%3AT-%3E%29%3ABool-instance-method
+[count]: https://crystal-lang.org/api/Enumerable.html#count%28%26%3AT-%3E%29%3AInt32-instance-method
+[find]: https://crystal-lang.org/api/Enumerable.html#find%28if_none%3Dnil%2C%26%3AT-%3E%29-instance-method
+[sum]: https://crystal-lang.org/api/Enumerable.html#sum%28initial%2C%26%3AT-%3E%29-instance-method
+[reduce]: https://crystal-lang.org/api/Enumerable.html#reduce%28memo%2C%26%29-instance-method
+[sort]: https://crystal-lang.org/api/Enumerable.html#sort%28%26%3AT%2CInt32-%3EU%29%3AArray%28U%29forallU-instance-method
+[sort_by]: https://crystal-lang.org/api/Enumerable.html#sort_by%28%26%3AT%2CInt32-%3EU%29%3AArray%28U%29forallU-instance-method
+[iteration]: https://en.wikipedia.org/wiki/Iteration
