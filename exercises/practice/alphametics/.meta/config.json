@@ -1,5 +1,7 @@
 {
-  "authors": ["ryanplusplus"],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "src/alphametics.cr"
@@ -11,5 +13,5 @@
       ".meta/src/example.cr"
     ]
   },
-  "blurb": "Write a function to solve alphametics puzzles."
+  "blurb": "Given an alphametics puzzle, find the correct solution."
 }
