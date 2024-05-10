@@ -1,9 +1,10 @@
 # String methods
 
-String has a number of methods that can be used to manipulate strings.  
-These methods are called on the string itself, and are often chained together to perform multiple operations on a string.
+`String` has several methods that can be used to manipulate strings.  
+These methods are called on the string itself and are often chained together to perform multiple operations on a string.
 
-Following is a list of some of the most common methods, for a full list of methods, see the [String API documentation][string-api].
+The following is a list of some of the most common methods.
+See the [`String` API documentation][string-api] for a complete list of methods.
 
 ## String#upcase & String#downcase
 
@@ -23,26 +24,26 @@ The [`downcase`][downcase] method returns a new string with all the characters c
 
 ## String#capitalize & String#camelcase & String#underscore & String#titleize
 
-There are a number of methods that can do more specific case conversions.
-That can be useful when you want to convert a string to a specific format.
+Several methods can do more specific case conversions.
+That can be useful when converting a string to a specific format.
 Here is a list of some of the most common methods:
 
-| Method                            | Description                                                                                                        | Example                                              |
+| Method                            | Description                                                                                                        | Example                                              |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lower case                                                  | `"hEllO" # => "Hello"`                               |
-| [`String#camelcase`][camel-case] | Converts underscore to camelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
-| `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lower cased                                                | `"empire_state_building" # => "empireStateBuilding"` |
-| [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
-| [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
+| [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lowercase                                                  | `"hEllO" # => "Hello"`                               |
+| [`String#camelcase`][camel-case] | Converts underscore to camelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
+| `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lowercased                                                | `"empire_state_building" # => "empireStateBuilding"` |
+| [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
+| [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
 
 ## String#sub & String#gsub
 
 Crystal has methods for replacing parts of a string.
 These are known as [`sub`][sub] (_substitution_) and [`gsub`][gsub] (_global substitution_).
 
-These methods can take a string, char or regex as the first argument, and a string or char as the second argument.
+These methods can take a string, char, or regex as the first argument and a string or char as the second argument.
 The first argument is the part of the string that will be replaced, and the second argument is the replacement.
-Chars and regex will be explained at later concepts.
+`Char` and regex will be explained in later concepts.
 
 The `sub` method will replace the first occurrence of the first argument with the second argument.
 
@@ -51,7 +52,7 @@ The `sub` method will replace the first occurrence of the first argument with th
 # => "herlo"
 ```
 
-The `gsub` method works the same as sub but will replace all occurrences of the first argument with the second argument.
+The `gsub` method works the same as `sub` but will replace all occurrences of the first argument with the second argument.
 
 ```crystal
 "hello".gsub("l", "r")
@@ -60,7 +61,7 @@ The `gsub` method works the same as sub but will replace all occurrences of the 
 
 ## String#chomp & String#strip
 
-Chomp and strip are methods that can be used to remove unwanted characters from a string.
+Chomp and strip can be used to remove unwanted characters from a string.
 
 The [`chomp`][chomp] method will be default remove the last `\r`, `\n` or `\r\n` characters from a string.
 If the method is called with an argument, it will remove the given value from the end of the string.
@@ -74,7 +75,7 @@ If it does exist at the end of the string.
 # => "he"
 ```
 
-The [`strip`][strip] method will by default remove all whitespace from the beginning and end of a string.
+By default, the [`strip`][strip] method will remove all whitespace from the beginning and end of a string.
 If the method is called with an argument, it will remove that argument from the beginning and end of the string.
 If it does exist at the beginning or end of the string.
 
@@ -85,7 +86,7 @@ If it does exist at the beginning or end of the string.
 
 ## String#reverse
 
-To reverse a string, you can use the [`reverse`][reverse] method.
+You can use the [`reverse`][reverse] method to reverse a string.
 This method will return a new string with the characters in reverse order.
 
 ```crystal
@@ -95,9 +96,9 @@ This method will return a new string with the characters in reverse order.
 
 ## String#index
 
-The [`index`][index] method can be used to find the index of a character in a string.
-The `index` method takes a string, char or regex as an argument.
-And can take an optional second argument to specify the index to start searching from.
+The [`index`][index] method can be used to find a character's index in a string.
+The `index` method takes a `String`, `Char`, or regex as an argument.
+It can take an optional second argument to specify the index from which to search.
 The `index` method will return the index of the first occurrence of the argument.
 
 ```crystal
@@ -110,7 +111,7 @@ The `index` method will return the index of the first occurrence of the argument
 
 ## String#delete_at
 
-To remove a character from a string, you can use the [`delete_at`][delete_at] method.
+You can use the [`delete_at`][delete_at] method to remove a character from a string.
 The `delete_at` method takes an index as an argument and will remove the character at that index.
 
 ```crystal
