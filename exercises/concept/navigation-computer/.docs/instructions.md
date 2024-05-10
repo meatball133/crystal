@@ -1,14 +1,14 @@
 # Instructions
 
 The ESA (Exercism Space Agency) is at full speed in planning a new mission to [Phobos][phobos], a moon of Mars.
-The mission's goal is to land a probe on the surface of Phobos and to send back data about the surface.
-ESA has requested your help to build the navigation computer for the probe.
-The navigation computer has limited memory so we need to keep the memory usage as low as possible.
-Thereby we need to use the right data types.
+The mission's goal is to land a probe on Phobos's surface and send back data about the surface.
+ESA has requested your help in building the navigation computer for the probe.
+The navigation computer has limited memory, so we need to keep the memory usage as low as possible.
+Therefore, we need to use the suitable data types.
 
 ## 1. Navigation constants
 
-The navigation computer needs to know the distance between some objects in space to do the right calculations, the distance is measured in km.
+The navigation computer needs to know the distance between some objects in space to do the correct calculations, the distance is measured in km.
 
 Define the following constants:
 
@@ -18,14 +18,18 @@ Define the following constants:
 
 ## 2. Correct area analysis
 
-The navigation computer needs to know the area of some objects in space to do the right calculations.
+The navigation computer needs to know the area of some objects in space to do the correct calculations.
 An area can **NOT** be negative.
-The engineers had the plan that the program would generate an overflow error when the area is negative.
-But the engineers forgot to change the signed integer to an unsigned integer.
+The engineers planned the program to generate an overflow error when the area was negative.
+However, the engineers forgot to change the signed integer to an unsigned integer.
 
-Thereby the engineers would like a program that converts the signed integer to an unsigned integer.
+Therefore, engineers would like a program that converts a signed integer to an unsigned integer.
 
 Implement the `Navigation#correct_area_analysis` method that takes a `measurement` as an argument and returns the area as an unsigned integer with 32 bits.
+
+~~~~exercism/note
+The given area will always fit as an unsigned integer with 32 bits.
+~~~~
 
 ```crystal
 measurement = 52554
@@ -44,10 +48,11 @@ Navigation.new.correct_area_analysis(measurement).class
 The navigation computer needs to know the velocity of the probe.
 The velocity is measured in m/s.
 
-To get the velocity we need to know the distance and the time it took to travel that distance.
-Then take the distance and divide it by the time.
+To calculate velocity, we need to know the distance traveled and the time it took to travel that distance.
+Then, take the distance and divide it by the time.
 
-The velocity doesn't have to be super accurate and will never be a big number, therefore we can use a `Float32`.
+The velocity can be something other than accurate and will never be a considerable number.
+Therefore, we can use a `Float32`.
 
 Implement the `Navigation#calculate_velocity` method that takes `distance` and `time` as arguments and returns the velocity as a `Float` with 32 bits.
 
