@@ -3,7 +3,7 @@
 Classes are a central concept in [object-oriented programming][object-oriented-programming].
 [In Crystal, everything is an object][everything-is-an-object], every object has a type, and it can respond to some methods.
 Classes are blueprints to create objects, providing initial values for state, like variables, and implementations of behavior, like methods.
-Objects are an instance of a class, that hold all the instance variables and states.
+Objects are class instances that hold all the instance variables and states.
 
 ## Class definition
 
@@ -16,7 +16,7 @@ end
 
 ## Creating an instance
 
-To [create an instance of a class][new-initialize], you call the class name with the `new` method.
+To [create an instance of a class][new-initialize], call the class name using the `new` method.
 
 ```crystal
 class Account
@@ -27,7 +27,7 @@ account = Account.new
 
 In the example above the variable `account` is an instance of the class `Account`.
 
-When creating an instance, there is a special method called `initialize` that acts as a constructor.
+When creating an instance, a special method called `initialize` acts as a constructor.
 It is called when an instance is created.
 The constructor allows you to set the initial state of the instance.
 The `initialize` method can take arguments, which are passed when creating an instance.
@@ -60,7 +60,8 @@ Account.new(4)
 ## Instance methods
 
 An instance method is a method that is available to an instance of a class, and can be called on that instance.
-Instance methods are defined using the `def` keyword, followed by the name of the method. They are defined inside the class definition.
+Instance methods are defined using the `def` keyword, followed by the method's name.
+They are defined inside the class definition.
 
 ```crystal
 class Account
@@ -107,7 +108,7 @@ end
 ### Instance variables with initialization
 
 Instance variables can be initialized with an argument passed to the `initialize` method.
-Since Crystal can't infer the type of an argument during initialization, it needs to be specified.
+Since Crystal can't infer the type of argument used during initialization, it must be specified.
 If you want to read more about this, you can read: [type-inference][type-inference].
 To specify the type of the variable you can use the `:` symbol, followed by the type.
 For example, if you want to create an instance variable called `balance` of type `Int32`, you can do the following: `@balance : Int32`.
@@ -171,7 +172,7 @@ end
 
 ## Modify instance variables
 
-Instance variables can be modified by methods.
+Methods can modify instance variables.
 These methods can be called on the instance of the class.
 When a method modifies an instance variable, that change is only available in the instance of the class you called it on.
 
@@ -208,12 +209,12 @@ account_2.balance
 
 ## Class methods
 
-[Class methods][class-methods], are methods that are defined on a class, but not on the instances of that class.
-They offer a way to create methods that are not dependent on the state of the instance.
+[Class methods][class-methods] are methods that are defined for a class but not for its instances.
+They offer a way to create methods not dependent on the instance's state.
 They are defined using the `def` keyword, followed by `self.<method name>`.
 `self` is a reference to the namespace which self is being called from.
-In this case, it is a reference to the class, `Account`.
-It would be the same as if you would have written `Account.`, but `self.` is the preferred way to do it.
+In this case, it refers to the class, `Account`.
+It would be the same as if you would have written `Account.`, but `self.` is the preferred way.
 
 ```crystal
 class Account

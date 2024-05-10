@@ -6,7 +6,7 @@ Johannes's goal is to be able to make fresh juice every morning.
 
 Johannes Juice maker has a lot of fancy features.
 Like a built-in measurement system, which can tell you how much juice is in the cup.
-It also has a timer, which can tell you how long the machine has been running.
+It also has a timer, telling you how long the machine has been running.
 
 Johannes isn't the best at programming, but they want to make a program to control the machine.
 They have thereby asked you to help them.
@@ -16,7 +16,7 @@ They have thereby asked you to help them.
 The machine has a debug light, it is a simple mechanic, if the machine has power the debug light is on.
 The program will only run if the debug light is on.
 
-This method should be a class method of a class called `JuiceMaker`.
+This method should be a class method called `JuiceMaker`.
 
 Define the class method `JuiceMaker.debug_light_on?` that returns `true`.
 
@@ -63,7 +63,7 @@ juice_maker
 The machine needs to be able to tell you the status of the machine.
 It should return `true` if the machine is running, and `false` if the machine is not running.
 
-Define the method `JuiceMaker#running?` that returns the status of the machine.
+Define the method `JuiceMaker#running?` that returns the machine's status.
 
 ```crystal
 juice_maker = JuiceMaker.new(5)
@@ -79,7 +79,7 @@ The machine can add juice to the cup.
 The machine can tell how much juice is added to the cup.
 The machine needs help to know how much juice is in the cup after the juice is added.
 
-Define the method `JuiceMaker#add_fluid` that takes the amount of juice added as a parameter, and updates the amount of juice in the cup.
+Define the method `JuiceMaker#add_fluid`, which takes the amount of juice added as a parameter and updates the amount of juice in the cup.
 
 ```crystal
 juice_maker = JuiceMaker.new(5)
@@ -95,8 +95,8 @@ The machine can be turned on and off.
 You need to define a method to turn off the machine
 This method will only be called when the machine is running.
 When the machine is turned off, the running state should be set to `false`.
-The machine also needs help to know how much juice is in the cup after the machine is turned off.
-The machine uses 5 units of juice per minute.
+The machine also needs help determining how much juice is in the cup after it is turned off.
+The machine uses five units of juice per minute.
 
 Define the method `JuiceMaker#stop` that takes the number of minutes the machine has been running as a parameter and returns the amount of juice in the cup after the machine has been turned off.
 
