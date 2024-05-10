@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Install Crystal
-        uses: crystal-lang/install-crystal@e4c9d197a5d1fa8329b55dadf309d06050ef5d07
+        uses: crystal-lang/install-crystal@cdf26dcd488490c9939e9d4d62cab169c9e4f20d
         with:
           crystal: "1.12.1"
-      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
+      - uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b
       - name: Run generator tests
         run: crystal spec ./document-generator/spec/*
   comment_on_failed_test:
@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Install Crystal
-        uses: crystal-lang/install-crystal@e4c9d197a5d1fa8329b55dadf309d06050ef5d07
+        uses: crystal-lang/install-crystal@cdf26dcd488490c9939e9d4d62cab169c9e4f20d
         with:
           crystal: "1.12.1"
-      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
+      - uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b
       - name: Run generator tests
         run: crystal document-generator/scripts/check_docs.cr
       - name: Comment on PR if test failed
