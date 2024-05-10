@@ -1,8 +1,8 @@
 # Number types
 
-Crystal has a variety of different number types for different purposes.
-For example, some types are faster but have a smaller range of possible values than other types.
-Some that have a larger range of possible values but are slower.
+Crystal has a variety of different number types for various purposes.
+For example, some types are faster but have a smaller range of possible values than others.
+Some have a more extensive range of possible values but are slower.
 
 In Crystal, there are both signed and unsigned integer types.
 The signed integer types can be positive or negative.
@@ -22,18 +22,18 @@ These are the [signed integer types][int] in Crystal:
 
 The smaller types use less memory and are faster than the larger types but have a smaller range of possible values.
 
-Where you know that values will be within a certain range, it is best to use the smallest type possible to save memory and improve performance.
+Where you know that values will be within a certain range, using the smallest type possible to save memory and improve performance is best.
 
 The default integer type is `Int32`.
-To declare an integer with a specific type you can use the type name as a suffix, by adding `<number>_i<bit>`.
+To declare an integer with a specific type, you can use the type name as a suffix by adding `<number>_I <bit>`.
 
 ```crystal
 1_i8.class
 # => Int8
 ```
 
-To convert between different integer types you can use the `to_i<bit>` method.
-The `to_i` method converts to the default integer type, which is `Int32`.
+You can use the `to_i<bit>` method to convert between different integer types.
+The `to_i` method converts to the default integer type, `Int32`.
 
 ```crystal
 1_i8.to_i16.class
@@ -49,10 +49,10 @@ These the [unsigned integer][uint] types in Crystal:
 
 `UInt8`, `UInt16`, `UInt32`, `UInt64`, `UInt128`
 
-The only difference to signed integers is that unsigned integers can only be positive.
-To declare an unsigned integer with a specific type you can use the type name as a suffix, by adding `<number>_u<bit>`.
-To convert between different unsigned integer types you can use the `to_u<bit>` method.
-The `to_u` method converts to the default unsigned integer type, which is `UInt32`.
+The only difference between signed and unsigned integers is that unsigned integers can only be positive.
+To declare an unsigned integer with a specific type, you can use the type name as a suffix by adding `<number>_u<bit>`.
+You can use the `to_u<bit>` method to convert between different unsigned integer types.
+The `to_u` method converts to the default unsigned integer type, `UInt32`.
 
 ```crystal
 1_u8.to_u16.class
@@ -72,14 +72,14 @@ There are two different [floating point types][float], one is more precise than 
 
 The default floating point type is `Float64`.
 
-To convert between different floating point types you can use the `to_f<bit>` method.
-The `to_f` method converts to the default floating point type, which is `Float64`.
+You can use the `to_f<bit>` method to convert between different floating point types.
+The `to_f` method converts to the default floating point type, `Float64`.
 
 ## Type after an operation
 
 When you execute an operation between two numbers, the result will be of the type of the number with the highest precision.
-Float is more precise than an integer and an integer is more precise than an unsigned integer.
-Then `Float64` is more precise than Float32 and so on.
+Float is more precise than an integer and an integer is more accurate than an unsigned integer.
+Then `Float64` is more precise than Float32, and so on.
 
 ```crystal
 (1_u8 + 2_u64).class
@@ -101,7 +101,7 @@ For unsigned integers, the first bit is used to store the value.
 So for a signed 32-bit integer is the max value 2^31 - 1.
 For an unsigned 32-bit integer is the max value 2^32 - 1.
 
-If you are interested in learning more about signedness you can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Signedness).
+If you want to learn more about signedness, you can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Signedness).
 ~~~~
 
 [float]: https://crystal-lang.org/api/latest/Float.html
