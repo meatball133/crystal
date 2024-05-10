@@ -28,13 +28,13 @@ Several methods can do more specific case conversions.
 That can be useful when converting a string to a specific format.
 Here is a list of some of the most common methods:
 
-| Method                            | Description                                                                                                        | Example                                              |
+| Method                            | Description                                                                                                        | Example                                              |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lowercase                                                  | `"hEllO" # => "Hello"`                               |
-| [`String#camelcase`][camel-case] | Converts underscore to camelcase                                                                                  | `"eiffel_tower" # => "EiffelTower"`                  |
-| `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lowercased                                                | `"empire_state_building" # => "empireStateBuilding"` |
-| [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
-| [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
+| [`String#capitalize`][capitalize] | Converts the first letter to uppercase and the rest to lowercase                                                   | `"hEllO" # => "Hello"`                               |
+| [`String#camelcase`][camel-case]  | Converts underscore to camelcase                                                                                   | `"eiffel_tower" # => "EiffelTower"`                  |
+| `String#camelcase(lower: true)`   | Same as String#camelcase but leaves the first character lowercased                                                 | `"empire_state_building" # => "empireStateBuilding"` |
+| [`String#underscore`][underscore] | Converts all characters to downcase and places an underscore where between a downcase letter and an upcased letter | `"PartyInTheUSA" # => "party_in_the_usa"`            |
+| [`String#titleize`][titleize]     | Capitalizes the first letter for each word and downcase the rest                                                   | `"the great gatsBY" # => "The Great Gatsby"`         |
 
 ## String#sub & String#gsub
 
