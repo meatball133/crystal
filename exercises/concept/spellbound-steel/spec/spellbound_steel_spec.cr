@@ -38,7 +38,6 @@ describe "SpellboundSteel" do
     end
   end
 
-
   describe "calculate_power_level" do
     it "should return 0 if the deck is empty" do
       deck = [] of String

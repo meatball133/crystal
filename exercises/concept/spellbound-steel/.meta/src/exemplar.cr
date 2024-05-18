@@ -5,7 +5,7 @@ module SpellboundSteel
 
   def self.capitalize_names(characters)
     characters.map do |character|
-      character.capitalize
+      character.split.map(&.capitalize).join
     end
   end
 
@@ -23,7 +23,7 @@ module SpellboundSteel
       25
     when "Lightning Bolt"
       35
-    else 
+    else
       0
     end
   end

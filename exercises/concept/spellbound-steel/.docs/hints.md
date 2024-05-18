@@ -7,7 +7,7 @@
 ## 2. Make all characters capitalized
 
 - There is  a [built-in method][map] to transform all elements in the collection.
-- There is a [built-in method][capitalize] to capitalize all words in a `String`.
+- There is a [built-in method][capitalize] to capitalize a words for `String`.
 
 ## 3. Calculate the power level of all cards
 
