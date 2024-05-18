@@ -5,7 +5,7 @@ module SpellboundSteel
 
   def self.capitalize_names(characters)
     characters.map do |character|
-      character.split.map(&.capitalize).join
+      character.split.map(&.capitalize).join(" ")
     end
   end
 
