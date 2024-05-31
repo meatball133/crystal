@@ -56,20 +56,7 @@ SpellboundSteel.calculate_power_level(cards)
 # => 135
 ```
 
-## 4. Sort the cards by power level
-
-To get the upper hand in the game, you want to sort the cards by power level.
-This is so you can play the cards with the highest power level first.
-
-Implement a method `SpellboundSteel.sort_cards_by_power_level` that takes an `Array` of `String` cards and returns the cards sorted by power level.
-
-```crystal
-cards = ["Warrior", "Mage", "Rogue", "Fireball", "Ice Storm", "Lightning Bolt"]
-SpellboundSteel.sort_cards_by_power_level(cards)
-# => ["Warrior", "Fireball", "Mage", "Ice Storm", "Rogue", "Lightning Bolt"]
-```
-
-## 5. Decode a card
+## 4. Decode a card
 
 In the game, there are what is known as cursed cards.
 These cards is a hidden card that can only be decoded by the player who played it.

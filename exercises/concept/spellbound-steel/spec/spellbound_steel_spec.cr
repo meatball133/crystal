@@ -75,33 +75,6 @@ describe "SpellboundSteel" do
     end
   end
 
-  describe "sort_cards_by_power_level" do
-    it "should return an empty array if the deck is empty" do
-      deck = [] of String
-      SpellboundSteel.sort_cards_by_power_level(deck).should eq([] of String)
-    end
-
-    it "should be able to sort a deck with one card" do
-      deck = ["Warrior"]
-      SpellboundSteel.sort_cards_by_power_level(deck).should eq(["Warrior"])
-    end
-
-    it "should be able to sort a deck with two cards" do
-      deck = ["Warrior", "Mage"]
-      SpellboundSteel.sort_cards_by_power_level(deck).should eq(["Mage", "Warrior"])
-    end
-
-    it "should return the deck sorted by power level" do
-      deck = ["Warrior", "Mage", "Rogue", "Fireball", "Ice Storm", "Lightning Bolt"]
-      SpellboundSteel.sort_cards_by_power_level(deck).should eq(["Lightning Bolt", "Rogue", "Ice Storm", "Mage", "Fireball", "Warrior"])
-    end
-
-    it "should return the deck sorted by power level" do
-      deck = ["Warrior", "Mage", "Rogue", "Fireball", "Ice Storm", "Lightning Bolt", "Warrior", "Mage", "Rogue", "Fireball", "Ice Storm", "Lightning Bolt"]
-      SpellboundSteel.sort_cards_by_power_level(deck).should eq(["Lightning Bolt", "Lightning Bolt", "Rogue", "Rogue", "Ice Storm", "Ice Storm", "Mage", "Mage", "Fireball", "Fireball", "Warrior", "Warrior"])
-    end
-  end
-
   describe "decode_characters" do
     it "should return an empty string if the input is empty" do
       SpellboundSteel.decode_characters("").should eq("")

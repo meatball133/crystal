@@ -14,11 +14,7 @@
 - You can use the [`sum` method] to calculate the total power level of all cards.
 - The `sum` method can also accept a block to transform the elements before summing them.
 
-## 4. Sort the cards by power level
-
-- There is a [built-in method][sort_by] to sort the cards given a block, that can transform the elements the way you want to sort them.
-
-## 5. Decode a card
+## 4. Decode a card
 
 - There is a [built in method][each_with_char] to iterate over the characters of a `String` with an index.
 

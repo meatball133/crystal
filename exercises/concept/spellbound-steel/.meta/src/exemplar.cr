@@ -34,12 +34,6 @@ module SpellboundSteel
     end
   end
 
-  def self.sort_cards_by_power_level(characters)
-    characters.sort_by do |character|
-      power_level(character)
-    end.reverse
-  end
-
   def self.decode_characters(character)
     result = ""
     character.each_char_with_index do |char, index|
