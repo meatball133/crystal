@@ -31,28 +31,12 @@ This means that two symbols with the same name are always the same object.
 :foo.object_id # => 1086748
 ```
 
-## Modifying Symbols
-
-Symbols are immutable, which means that they cannot be modified.
-This means that when you "modify" a symbol, you are actually creating a new symbol.
-There are a few methods that can be used to manipulate symbols, they all return new symbols.
-All methods can be found in the [Symbol API][symbols-api].
-
-```ruby
-:foo.upcase # => :FOO
-
-:foo.object_id # => 1086748
-:foo.upcase.object_id # => 60
-```
-
-The benefit of symbols being immutable is that they are more memory efficient than strings, but also safer to use as identifiers.
-
 ## Conversion
 
-Symbols can be converted to strings and vice versa.
+Symbols can be converted to strings but not vice versa.
+This is because symbols are created at compile time, and strings are created at runtime.
 This can be useful when you want to modify a symbol, or when you want to use a symbol as a string.
 To present a string as a symbol, you can use the `String#to_sym` method, and to do the opposite, you can use the `Symbol#to_s` method.
-Due to symbols having a limited set of methods, it can be useful to convert a symbol to a string to use string methods on it, if a new symbol is needed.
 
 ```ruby
 :foo.to_s # => "foo"
