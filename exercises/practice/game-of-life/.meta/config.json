@@ -1,0 +1,17 @@
+{
+  "authors": ["meatball133"],
+  "files": {
+    "solution": [
+      "src/game_of_life.cr"
+    ],
+    "test": [
+      "spec/game_of_life_spec.cr"
+    ],
+    "example": [
+      ".meta/src/example.cr"
+    ]
+  },
+  "blurb": "Implement Conway's Game of Life.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+}
