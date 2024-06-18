@@ -1,5 +1,5 @@
 module GameOfLife
-  def self.tick(board : Array(Array(Int32))): Array(Array(Int32))
+  def self.tick(board : Array(Array(Int32))) : Array(Array(Int32))
     result = Array(Array(Int32)).new
     board.each_with_index do |row, index_row|
       result << [] of Int32
