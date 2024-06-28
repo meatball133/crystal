@@ -1,1 +1,1 @@
-{% $symbol \ $"array"."Array pointer" %}
+{% $symbol %}

@@ -4,7 +4,7 @@
 Symbols are created through a symbol literal, which is by prefixing a name with a `:` character, e.g. `:foo`.
 They also allow for being written with quotes, e.g. `:"foo"`, which allows, for example, spaces in the name.
 
-```ruby
+```crystal
 :foo # => :foo
 :"foo boo" # => :"foo boo"
 ```
@@ -35,13 +35,10 @@ This means that two symbols with the same name are always the same object.
 
 Symbols can be converted to strings but not vice versa.
 This is because symbols are created at compile time, and strings are created at runtime.
-This can be useful when you want to modify a symbol, or when you want to use a symbol as a string.
-To present a string as a symbol, you can use the `String#to_sym` method, and to do the opposite, you can use the `Symbol#to_s` method.
 
-```ruby
+```crystal
 :foo.to_s # => "foo"
-"foo".to_sym # => :foo
 ```
 
-[symbols]: https://www.rubyguides.com/2018/02/ruby-symbols/
-[symbols-api]: https://rubyapi.org/o/symbol
+[symbols]: https://crystal-lang.org/reference/syntax_and_semantics/literals/symbol.html
+[symbols-api]: https://crystal-lang.org/api/Symbol.html
