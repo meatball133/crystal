@@ -11,16 +11,16 @@ class Markdown
       if line.starts_with?('#')
         parsed_heading = parse_heading(line)
         unless parsed_heading.nil?
-          result += parsed_heading
+          lines[i] = parsed_heading
         end
       elsif line.starts_with?('*')
-        result += parse_list(line, i - 1 == -1 || lines[i - 1], lines[i + 1]?)
+        lines[i] = parse_list(line, i - 1 == -1 || lines[i - 1], lines[i + 1]?)
       else
-        result += "<p>#{parse_line(line)}</p>"
+        lines[i] = "<p>#{parse_line(line)}</p>"
       end
       i += 1
     end
-    result
+    lines.join("\n")
   end
 
   private def parse_list(line : String, previous_line : Bool | String, next_line : Nil | String) : String
