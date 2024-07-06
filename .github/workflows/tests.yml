@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
       - name: Run generator tests
-        run: crystal spec test-generator/spec/*
+        run: crystal spec test-generator
   test-generator-templates:
     name: Check Generator Templates
     runs-on: ubuntu-22.04
