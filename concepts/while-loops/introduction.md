@@ -5,10 +5,10 @@ A loop is a control structure that allows code to be executed repeatedly based o
 ## While Loops
 
 A while loop is a control structure that allows code to be executed repeatedly based on a given condition.
-The code within a while loop will continue to execute while the condition evaluates to truthy.
-While loops are often used when the number of iterations is not known beforehand but can be used in any situation where a loop is needed.
+The code within a while loop will continue executing while the condition evaluates truthy.
+While loops are often used when the number of iterations is unknown beforehand, they can be used in any situation where a loop is needed.
 
-The condition is evaluated before the code within the loop is executed, which means that if the condition is false the code within the loop will never be executed.
+The condition is evaluated before the code within the loop is executed, which means that if the condition is false, the code within the loop will never be executed.
 
 ```crystal
 i = 0
@@ -56,11 +56,11 @@ end
 
 ### Infinite loops
 
-A common error with while loops is getting into an "infinite" loop: a loop that never exits.
-The condition of an infinite loop _never_ evaluates to a falsey value.
+A common error with while loops is entering an "infinite loop," which never exits.
+An infinite loop can be caused by a condition _never_ evaluates to truthy or falsey.
 This is often due to programmer error; for example, forgetting to increment the loop variable.
-But sometimes an infinite loop is the clearest way to implement the logic of the program.
-Or it is truly necessary to loop forever; for example, an HTTP server waits for an incoming connection, handles it, then waits for the next connection.
+But sometimes, an infinite loop is the clearest way to implement the logic of the program.
+Or it is vital to loop forever; for example, an HTTP server waits for an incoming connection, handles it, and then waits for the next connection.
 
 ## Break
 
@@ -85,7 +85,7 @@ end
 ## Next
 
 The `next` keyword can be used to skip to the next iteration of a loop.
-This can be convenient when you want to skip certain iterations of a loop.
+This can be convenient when you want to skip specific iterations of a loop.
 
 ```crystal
 i = 0
@@ -106,10 +106,10 @@ end
 
 The type of the variable can be different under looping.
 In the following example, the type of `a` is `Int32 | String` because it can be `Int32` or `String` under the first part of the loop.
-The variable `a` will only carry the type `Int32 | String` under the first part of the loop, since when the loop starts it holds `Int32` and under the 2nd iteration it holds `String`.
-Exactly what this multiple type system is, will be explained in later concepts.
-But since we are sure that under the 2nd part of the loop it will only hold `String`, the type of `a` is `String` under the 2nd part of the loop.
-It will never hold `Int32` and `String` at the same time in runtime.
+The variable `a` will only carry the type `Int32 | String` in the first part of the loop since when the loop starts, it holds `Int32`, and in the second iteration, it holds a `String`.
+This multiple-type system will be explained in detail later.
+But since we are sure that the second part of the loop will only hold `String`, the type of `a' is `String` under the second part of the loop.
+At runtime, it will never simultaneously hold `Int32` and `String`.
 
 ```crystal
 i = 0
