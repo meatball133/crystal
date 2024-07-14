@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "Temperature" do
-  describe "to_kelvin" do
+  describe "to_kelvin", tags: "task_id=1" do
     it "should convert 0 celsius to 273.15 Kelvin" do
       Temperature.new.to_kelvin(0).should eq 273.15
     end
@@ -20,7 +20,7 @@ describe "Temperature" do
     end
   end
 
-  describe "round" do
+  describe "round", tags: "task_id=2" do
     it "should convert 1.12 celsius to 1.1" do
       Temperature.new.round(1.12).should eq 1.1
     end
@@ -38,7 +38,7 @@ describe "Temperature" do
     end
   end
 
-  describe "to_fahrenheit" do
+  describe "to_fahrenheit", tags: "task_id=3" do
     it "should convert 0 celsius to 32 fahrenheit" do
       Temperature.new.to_fahrenheit(0).should eq 32
     end
@@ -56,7 +56,7 @@ describe "Temperature" do
     end
   end
 
-  describe "number_missing_sensors" do
+  describe "number_missing_sensors", tags: "task_id=4" do
     it "should return 0 if there are no missing sensors" do
       Temperature.new.number_missing_sensors(4).should eq 0
     end
