@@ -14,7 +14,7 @@ jobs:
       - name: Install Crystal
         uses: crystal-lang/install-crystal@cdf26dcd488490c9939e9d4d62cab169c9e4f20d
         with:
-          crystal: "1.12.1"
+          crystal: "1.13.1"
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
       - name: Run generator tests
         run: crystal spec ./document-generator/spec/*
@@ -26,7 +26,7 @@ jobs:
       - name: Install Crystal
         uses: crystal-lang/install-crystal@cdf26dcd488490c9939e9d4d62cab169c9e4f20d
         with:
-          crystal: "1.12.1"
+          crystal: "1.13.1"
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
       - name: Run generator tests
         run: crystal document-generator/scripts/check_docs.cr
