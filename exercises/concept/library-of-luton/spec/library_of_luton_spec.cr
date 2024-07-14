@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "Library" do
-  describe "first_letter" do
+  describe "first_letter", tags: "task_id=1" do
     it "Should return the first letter of a title" do
       Library.first_letter("Mystery of the Crystal Skull").should eq 'M'
     end
@@ -16,7 +16,7 @@ describe "Library" do
     end
   end
 
-  describe "initials" do
+  describe "initials", tags: "task_id=2" do
     it "Should return the initials of a author" do
       Library.initials("William", "Shakespeare").should eq "W.S"
     end
@@ -30,7 +30,7 @@ describe "Library" do
     end
   end
 
-  describe "decrypt_character" do
+  describe "decrypt_character", tags: "task_id=3" do
     it "Should return the decrypted character of 'B' character" do
       Library.decrypt_character('B').should eq 'A'
     end
@@ -56,7 +56,7 @@ describe "Library" do
     end
   end
 
-  describe "decrypt_text" do
+  describe "decrypt_text", tags: "task_id=4" do
     it "Should return the decrypted text of a text" do
       expected = "Hello World!"
       Library.decrypt_text("Ifmmp Xpsme!").should eq expected
