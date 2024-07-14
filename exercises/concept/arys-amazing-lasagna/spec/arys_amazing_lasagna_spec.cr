@@ -2,13 +2,13 @@ require "spec"
 require "../src/*"
 
 describe Lasagna do
-  describe "EXPECTED_MINUTES_IN_OVEN" do
+  describe "EXPECTED_MINUTES_IN_OVEN", tags: "task_id=1" do
     it "should be 40" do
       Lasagna::EXPECTED_MINUTES_IN_OVEN.should eq 40
     end
   end
 
-  describe "remaining_minutes_in_oven" do
+  describe "remaining_minutes_in_oven", tags: "task_id=2" do
     it "Giving 15 should return 25" do
       Lasagna.new.remaining_minutes_in_oven(25).should eq(15)
     end
@@ -20,7 +20,7 @@ describe Lasagna do
     end
   end
 
-  describe "preparation_time_in_minutes" do
+  describe "preparation_time_in_minutes", tags: "task_id=3" do
     it "1 layer should return 2" do
       Lasagna.new.preparation_time_in_minutes(1).should eq(2)
     end
@@ -32,7 +32,7 @@ describe Lasagna do
     end
   end
 
-  describe "total_time_in_minutes" do
+  describe "total_time_in_minutes", tags: "task_id=4" do
     it "1 layer, 30 minutes in oven should return 32" do
       Lasagna.new.total_time_in_minutes(1, 30).should eq(32)
     end
