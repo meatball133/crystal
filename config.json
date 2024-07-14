@@ -1293,6 +1293,14 @@
         "difficulty": 5
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "8671ac4b-a11f-43c8-9a17-508f831401bc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "poker",
         "name": "Poker",
         "uuid": "5eee3bb6-bcb8-4056-a854-805ecc4dd903",
