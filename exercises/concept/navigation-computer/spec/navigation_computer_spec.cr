@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "Navigation" do
-  describe "Constants" do
+  describe "Constants", tags: "task_id=1" do
     it "NEPTUNE_DISTANCE should be 4.4 billion km and be int64" do
       distance = Navigation::NEPTUNE_DISTANCE
       distance.should eq 4_400_000_000
@@ -22,7 +22,7 @@ describe "Navigation" do
     end
   end
 
-  describe "correct_area_analysis" do
+  describe "correct_area_analysis", tags: "task_id=2" do
     it "Giving 9999 should return 9999 as Uint" do
       result = Navigation.new.correct_area_analysis(9_999)
       result.should eq 9_999
@@ -36,7 +36,7 @@ describe "Navigation" do
     end
   end
 
-  describe "calculate_velocity" do
+  describe "calculate_velocity", tags: "task_id=3" do
     it "1000 m and 5 seconds should equal 200 meter per second" do
       calculation = Navigation.new.calculate_velocity(1000, 5)
       calculation.should eq 200
