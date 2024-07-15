@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "FotoFusionist" do
-  describe "binary_to_int" do
+  describe "binary_to_int", tags: "task_id=1" do
     it "should be able to convert 00000001 binary to int" do
       FotoFusionist.binary_to_int("00000001").should eq 1
     end
@@ -16,7 +16,7 @@ describe "FotoFusionist" do
     end
   end
 
-  describe "least_significant_bit" do
+  describe "least_significant_bit", tags: "task_id=2" do
     it "should be able to get the least significant bit of 0b1" do
       FotoFusionist.least_significant_bit(0b1).should eq 1
     end
@@ -30,7 +30,7 @@ describe "FotoFusionist" do
     end
   end
 
-  describe "hex_value" do
+  describe "hex_value", tags: "task_id=3" do
     it "should be able to convert 19 to hex" do
       FotoFusionist.hex_value(19).should eq "13"
     end
@@ -48,7 +48,7 @@ describe "FotoFusionist" do
     end
   end
 
-  describe "hex_value_from_rgb" do
+  describe "hex_value_from_rgb", tags: "task_id=4" do
     it "should be able to convert 0,0,0 to hex" do
       FotoFusionist.hex_value_from_rgb(0, 0, 0).should eq "000000"
     end
