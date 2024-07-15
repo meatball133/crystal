@@ -8,14 +8,14 @@ However, most often you want to iterate over a collection of items, such as an `
 Both the `Array` and `Range` classes in Crystal include the [`Enumerable`][enumerable] module, which provides a number of methods for iterating over the elements.
 Meanwhile, the `String` class has its own set of methods for iterating over the characters.
 
-Crystal also doesnt have any any for statement like other languages.
+Crystal also doesn't have any for statement like other languages.
 Instead it has several methods that can be used to iterate.
 
 ## Iterating
 
 The most common way to iterate over a collection is to use the [`each`][each] method, which yields each element in the collection to a block.
 This can be done easily with a `Range`.
-Say you would want to loop between 1 and 3, you can use the `each` method to iterate over the range.
+Say you want to loop between 1 and 3, you can use the `each` method to iterate over the range.
 
 ```crystal
 (1..3).each do |n|
@@ -28,7 +28,7 @@ end
 # 3
 ```
 
-Even simplier if you just want to iterate n numbers of times you can use the [`times`][times] method, which exists on the `Int` class.
+Even simpler, if you just want to iterate a number of times you can use the [`times`][times] method, which exists on the `Int` class.
 
 ```crystal
 3.times do |n|
@@ -43,7 +43,7 @@ end
 
 ## Iterating over a `String`
 
-A `String` is a sequence of characters, and doesnt belong to the `Enumerable` module, which means it has its own set of methods for iterating over the characters.
+A `String` is a sequence of characters and doesn't belong to the `Enumerable` module, which means it has its own set of methods for iterating over the characters.
 The most common way to iterate over a `String` is to use the [`each_char`][each_char] method, which yields each character in the `String` to a block.
 
 ~~~~exercism/note
@@ -62,7 +62,8 @@ str.each_char { |char| puts char }
 # o
 ```
 
-Another way of iterating over a `String` is to use the [`each_line`][each_line] method, this method is mostly used when reading a file line by line.
+Another way of iterating over a `String` is to use the [`each_line`][each_line] method.
+This method is mostly used when reading a file line by line.
 
 ```crystal
 str = "hello\nworld"

@@ -11,10 +11,6 @@ module SpellboundSteel
     raise "Please implement the SpellboundSteel.calculate_power_level method"
   end
 
-  def self.sort_cards_by_power_level(characters)
-    raise "Please implement the SpellboundSteel.sort_cards_by_power_level method"
-  end
-
   def self.decode_characters(character)
     raise "Please implement the SpellboundSteel.decode_characters method"
   end

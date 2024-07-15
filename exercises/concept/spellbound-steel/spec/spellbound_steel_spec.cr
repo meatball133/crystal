@@ -64,7 +64,7 @@ describe "SpellboundSteel" do
       SpellboundSteel.calculate_power_level(deck).should eq(35)
     end
 
-    it "should return 65 if the deck has a Rogue and Ice Storm " do
+    it "should return 65 if the deck has a Rogue and an Ice Storm " do
       deck = ["Rogue", "Ice Storm"]
       SpellboundSteel.calculate_power_level(deck).should eq(55)
     end
@@ -80,15 +80,15 @@ describe "SpellboundSteel" do
       SpellboundSteel.decode_characters("").should eq("")
     end
 
-    it "should return warrior if the inut is wbalrrrlimoqr" do
+    it "should return warrior if the input is wbalrrrlimoqr" do
       SpellboundSteel.decode_characters("wbalrrrlimoqr").should eq("warrior")
     end
 
-    it "should return mage if the inut is mlabgle" do
+    it "should return mage if the input is mlabgle" do
       SpellboundSteel.decode_characters("mlabgle").should eq("mage")
     end
 
-    it "should return rogue if the inut is rloguqgle" do
+    it "should return rogue if the input is rloggquge" do
       SpellboundSteel.decode_characters("rloggquge").should eq("rogue")
     end
   end
