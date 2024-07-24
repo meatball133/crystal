@@ -36,7 +36,7 @@ There is also a method called [`Char#succ`][succ], which returns the next char i
 
 ## concatenation
 
-Since Chars is only meant to represent a 32-bit Unicode, can't two chars be concatenated.
+Since Chars is only meant to represent a 32-bit Unicode, two chars can't be concatenated.
 Therefore, Chars can only be concatenated with Strings.
 
 ```Crystal
@@ -52,13 +52,13 @@ Therefore, Chars can only be concatenated with Strings.
 Crystal has a few methods for getting information about a Character, such as whether it is a number or a letter or whether it is uppercase or lowercase.
 Here is a list of some of the methods, for a complete list see the [Char API][char-api]:
 
-| Method                           | Description                                          |
+| Method                           | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
-| [`Char#number?`][number]         | Returns `true` if the Char is a number               |
-| [`Char#letter?`][letter]         | Returns `true` if the Char is a letter               |
-| [`Char#lowercase?`][lowercase]   | Returns `true` if the Char is lowercase              |
-| [`Char#uppercase?`][uppercase]   | Returns `true` if the Char is uppercase              |
-| [`Char#ascii?`][ascii]           | Returns `true` if the Char is an ASCII character      |
+| [`Char#number?`][number]         | Returns `true` if the Char is a number               |
+| [`Char#letter?`][letter]         | Returns `true` if the Char is a letter               |
+| [`Char#lowercase?`][lowercase]   | Returns `true` if the Char is lowercase              |
+| [`Char#uppercase?`][uppercase]   | Returns `true` if the Char is uppercase              |
+| [`Char#ascii?`][ascii]           | Returns `true` if the Char is an ASCII character     |
 | [`Char#whitespace?`][whitespace] | Returns `true` if the Char is a whitespace character |
 
 ## Converting
