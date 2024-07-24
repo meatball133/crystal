@@ -13,7 +13,7 @@ There is a high chance that the food is poisoned if it is not what her majesty o
 If the food is not what her majesty ordered, it should be tossed out.
 
 Implement the `check_food?` method, which takes the argument `food` which holds the name of the food as a `String`.
-The method should return the food if it is' Mushroom pasties`; otherwise, it should return `nil`.
+The method should return the food if it is `Mushroom pasties`; otherwise, it should return `nil`.
 
 ```crystal
 CastleDinner.check_food?("Mushroom pasties")
@@ -57,4 +57,3 @@ CastleDinner.replace_drink("Tea")
 ```
 
 [kalmar_union]: https://en.wikipedia.org/wiki/Kalmar_Union
-
