@@ -1,0 +1,24 @@
+{
+  "introduction": {
+    "authors": ["meatball133"],
+    "contributors": []
+  },
+  "approaches": [
+    {
+      "uuid": "9da625b3-e995-413e-8194-48e53aa47b66",
+      "slug": "data-driven",
+      "title": "Data Driven",
+      "blurb": "Using a data driven approach to setup the search areas",
+      "authors": [
+        "meatball133"
+      ]
+    },
+    {
+      "uuid": "a6263128-0713-49d9-9305-d575aadf85e5",
+      "slug": "translate",
+      "title": "Translate",
+      "blurb": "Uses the `tr` method to translate certain parts of a `String`",
+      "authors": ["meatball133"]
+    }
+  ]
+}
