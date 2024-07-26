@@ -277,6 +277,18 @@
           "array-methods"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "weighing-machine",
+        "name": "Weighing Machine",
+        "uuid": "317930f4-4c97-4962-a04e-76e6d60b7fba",
+        "concepts": [
+          "getter-setter"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [

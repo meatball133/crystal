@@ -2,15 +2,16 @@
   "authors": ["meatball133"],
   "files": {
     "solution": [
-      "src/task_handler.cr"
+      "src/weighing_machine.cr"
     ],
     "test": [
-      "spec/task_handler_spec.cr"
+      "spec/weighing_machine_spec.cr"
     ],
     "exemplar": [
       ".meta/src/exemplar.cr"
     ]
   },
-  "blurb": "Learn about Procs & blocks by implementing a simple task handler.",
-  "icon": "coordinate-transformation"
+  "blurb": "Learn about getter and setters by implementing a weighing machine.",
+  "icon": "weighing-machine",
+  "forked_from": ["csharp/weighing-machine"]
 }

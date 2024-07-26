@@ -9,9 +9,9 @@ class WeighingMachine
   end
 
   # DO NOT MODIFY ANYTHING BELOW THIS LINE
-  def weigh(weight : Float64) : String
+  def weigh : String
+    weight = @metric ? @weight : @weight * 2.20462
     weight = weight.round(@precision)
-    weight = weight * 2.20462 unless @metric
-    weight
+    weight.to_s
   end
 end

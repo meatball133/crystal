@@ -2,20 +2,23 @@
 
 ## General
 
-- To access and define instance variables you write `@` followed by the name of the variable.
+- To creat the getter and setter methods you should use the `getter`, `setter` and `property` macros.
 
-## 1. Initialize `TaskHandler`
+## 1. Create an initial state for the weighing machine
 
-- To create a `Proc` use the `-> (args) { block }` syntax.
-- When a `Proc` is defined for an instance variable, it needs to be explicitly typed.
-  This can be done by adding `: Proc(<arg_type>, <return_type>)` after the variable name.
-  Or `-> (arg_1 : <arg_type>) : <return_type> { block }` syntax.
-- The `Proc` should compare if the argument is greater than or equal to 0.
+- To initialize the weighing machine you should use the `initialize` method.
+- The method should take two arguments, `precision` and `metric` which should be a `Int32` and `Bool` respectively.
+  These should be used to set the instance variables `@precision` and `@metric`.
+- The instance variable `@weight` should be set to `0.0`.
 
-## 2. Update the task condition logic
+## 2. Allow the weighing machine to have a precision
 
-- The method should take a block as an argument and assign it to the `@task_condition_logic` instance variable.
+- The `getter` macro allows you to define a method that returns the value of an instance variable.
 
-## 3. Execute the next task
+## 3. Allow the weight to be set on the weighing machine
 
-- To execute a `Proc` you can use the `call` method which accepts the arguments for the proc.
+- The `property` macro allows you to define a method that gets and sets the value of an instance variable.
+
+## 4. Allow the machine to be switch between metric and imperial units
+
+- The `setter` macro allows you to define a method that sets the value of an instance variable.

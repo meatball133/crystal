@@ -1,102 +1,95 @@
-# Modules
+# Getters and setters
 
-[Modules][modules] in Crystal serve 2 purposes:
+Getters and setters are methods that allow you to read and write the value of an object's property. 
+Crystal has macros which makes it easy to define getters and setters for a property.
+Macros are a way to generate code at compile time and will be covered later in the macro concept.
 
-The first purpose is to create a [namespace][namespace] to avoid name collisions.
-But it also forms as a form of grouping code together, this is to make it easier to understand what the code is for.
+In Ruby these methods are defined using the `attr_reader`, `attr_writer` and `attr_accessor` methods and are very similar to Crystals implementation on the surface.
+Crystal has defined these as `getter`, `setter` and `property` macros.
 
-The second purpose is to define [mixins][mixin] to share code to types.
+## Getters
 
-Modules have similarities to classes, but the main difference is that modules cannot be instantiated, and thereby don't have instance variables.
+Getter is a macro that defines a method that returns the value of an instance variable.
+This makes so you no longer have to write `@` in front of the instance variable when you want to access it (in methods, excluding intillize), instead you can call the method that the getter macro has defined.
 
-To declare a module you use the `module` keyword followed by the name of the module.
-
-```crystal
-module Foo
-end
-```
-
-## Namespace
-
-A namespace is a way to group code together, this is to avoid name clashes, but also to make it easier to understand what the code is for.
-When wanting to access for example a constant or a class that has been placed inside a namespace you use the `::` operator.
+The getter macro can accept multiple instance variables by separating them with a comma.
 
 ```crystal
-module Foo
-  class Bar
+# This:
+class Person
+  @nane : String
+  @age : Int32
+
+  def name
+    @name
+  end
+
+  def age
+    @age
   end
 end
 
-Foo::Bar.new
+# Is the same as this:
+class Person
+  @name : String
+  @age : Int32
+
+  getter name, :age
+end
 ```
 
-## Use it as a mixin
+As you can see using getter reduces the amount of code you have to write and makes it easier to read.
+Also a difference between Ruby and Crystal is that Crystal accepts both the variable name and symbol as arguments to the getter macro.
+Symbols will be covered later in the symbols concept.
 
-This can be useful when, for example, wanting multiple classes to have the same "base" functionality or when wanting to share code between classes that are not related.
-Or when wanting to share code between classes that are not related.
+## Setters
 
-There are 2 different ways to use a module as a mixin: the first one is to use the `include` keyword, the second one is to use the `extend` keyword.
+Setters is a macro that defines a method that sets the value of an instance variable.
+This macro isnt that often found and more commonly is the `property` macro used.
+The methods which will be created will look like `name_of_method=`, the `=` is what makes so the property can be set.
 
-Both methods will make constants available to the type that includes or extends the module.
+This method defintion is a bit special since the argument the method recive is after the `=` sign.
+There are several other special methods in Crystal that uses this syntax, like the `+` method for example.
 
-### Include
-
-Include will make all methods in the module available as instance methods on the type that includes the module.
-The `include` keyword should be written at the top of the type, followed by the name of the module.
+As with the getter macro when you want to update the value of an instance variable after defining a setter you can call the method that the setter macro has defined.
 
 ```crystal
-module Foo
-  def foo
-    "foo"
+# This:
+class Person
+  @name : String
+  @age : Int32
+
+  def name=(name : String)
+    @name = name
+  end
+
+  def age=(age : Int32)
+    @age = age
   end
 end
 
-class Bar
-  include Foo
-end
+# Is the same as this:
+class Person
+  @name : String
+  @age : Int32
 
-Bar.new.foo # => "foo"
+  setter name, :age
+end
 ```
 
-### Extend
+## Property
 
-Extend works similarly to include, but instead of making the methods available as instance methods, it makes them available as class methods.
-The `extend` keyword should be written at the top of the type followed by the name of the module.
+Property is a macro that defines both a getter and a setter for an instance variable.
 
 ```crystal
-module Foo
-  def foo
-    "foo"
-  end
-end
+class Person
+  @name : String
+  @age : Int32
 
-class Bar
-  extend Foo
+  property name, :age
 end
-
-Bar.foo # => "foo"
 ```
 
-## Extend self
-
-A quite common pattern in Crystal is to use the [`extend self`][extend self] pattern, in a module.
-This will make all methods in the module available as class methods on the module itself.
-This means you don't have to assign each method to the module itself using the `def self.method_name` syntax.
-
-
-```crystal
-module Foo
-  extend self
-
-  def foo
-    "foo"
-  end
-end
-
-Foo.foo # => "foo"
-```
-
-[mixin]: https://en.wikipedia.org/wiki/Mixin
-[modules]: https://crystal-lang.org/reference/syntax_and_semantics/modules.html
-[extend self]: https://crystal-lang.org/reference/syntax_and_semantics/modules.html#extend-self
-[namespace]: https://en.wikipedia.org/wiki/Namespace
+[getter]: https://crystal-lang.org/api/Object.html#getter%28%2Anames%2C%26block%29-macro
+[setter]: https://crystal-lang.org/api/Object.html#setter%28%2Anames%29-macro
+[property]: https://crystal-lang.org/api/Object.html#property%28%2Anames%2C%26block%29-macro
