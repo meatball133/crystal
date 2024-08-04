@@ -1,102 +1,135 @@
-# Modules
+# Exception
 
-[Modules][modules] in Crystal serve 2 purposes:
+In the ideal world, everything works perfectly.
+But in the real world, things can go wrong and it matters how we handle these situations to ensure that our software is robust and reliable.
+Exceptions is a crucial concept in programming that allows us to handle errors and unexpected situations gracefully.
 
-The first purpose is to create a [namespace][namespace] to avoid name collisions.
-But it also forms as a form of grouping code together, this is to make it easier to understand what the code is for.
+Raising error if not handle halts the program, and throws an error message.
+This is a good practice as it helps in debugging and understanding the problem.
 
-The second purpose is to define [mixins][mixin] to share code to types.
+In most cases you don't want your program to crash when an error occurs, instead you want to handle the error and continue running the program.
 
-Modules have similarities to classes, but the main difference is that modules cannot be instantiated, and thereby don't have instance variables.
+## Raising an exception
 
-To declare a module you use the `module` keyword followed by the name of the module.
+In Crystal, exceptions are raised using the `raise` keyword and can either be given a `String` or an `Exception` object.
+If unhandled, the program will halt and print the error message.
 
 ```crystal
-module Foo
+raise "This is an error"
+```
+
+There are several built-in exceptions in Crystal, like `ArgumentError`, `IndexError`, `KeyError`, `IOError`, `SystemCallError`, `TypeError`, `ZeroDivisionError` and many more, these require you to pass a message to the exception.
+
+```crystal
+raise ArgumentError.new("This is an argument error")
+```
+
+## Handle exceptions
+
+We wouldn't that our program crashes when an exception is raised.
+
+Thereby when we know that a piece of code is risky, we can wrap it in a `begin` block and rescue the exception with a `rescue` block.
+The `begin` block marks the beginning of the code that might raise an exception and the `rescue` block is where the exception is handled.
+
+```crystal
+begin
+  raise "This is an error"
+rescue
+  puts "An error occurred!"
 end
 ```
 
-## Namespace
-
-A namespace is a way to group code together, this is to avoid name clashes, but also to make it easier to understand what the code is for.
-When wanting to access for example a constant or a class that has been placed inside a namespace you use the `::` operator.
+The `rescue` block can also be specified with a variable to get the exception object.
 
 ```crystal
-module Foo
-  class Bar
+begin
+  raise "This is an error"
+rescue ex
+  puts "An error occurred: #{ex.message}"
+end
+```
+
+The `rescue` block can also be specified with a specific exception type to only catch that exception.
+
+```crystal
+begin
+  raise ArgumentError.new("This is an argument error")
+rescue ArgumentError
+  puts "An argument error occurred!"
+end
+
+# or
+
+begin
+  raise ArgumentError.new("This is an argument error")
+rescue ex : ArgumentError
+  puts "An argument error occurred: #{ex.message}"
+end
+```
+
+Multiple `rescue` blocks can be used to handle different types of exceptions.
+In the example below, the first `rescue` block will catch an `ArgumentError` and the second `rescue` block will catch any other exception.
+
+```crystal
+begin
+  raise ArgumentError.new("This is an argument error")
+rescue ArgumentError
+  puts "An argument error occurred!"
+rescue
+  puts "An error occurred!"
+end
+```
+
+The `begin` block can also have a `else` block which is executed if no exception is raised.
+
+```crystal
+begin
+  puts "No error occurred"
+rescue
+  puts "An error occurred!"
+else
+  puts "No error occurred"
+end
+```
+
+Lastly there is an `ensure` block which is always executed, regardless of whether an exception was raised or not.
+
+```crystal
+begin
+  raise "This is an error"
+rescue
+  puts "An error occurred!"
+ensure
+  puts "This is always executed"
+end
+```
+
+## Method convention
+
+If you have checked certain methods have two versions, one which have `!` and other which doesn't.
+This can mean two different things.
+One is that the method mutates the object and the other is that the method can raise an exception.
+
+But there is also another convention around ending a method with `?` which was mentioned in the previous concept.
+Some methods raises an exception by default but also have a version ending with `?` which returns `nil` instead of raising an exception.
+
+This can be ideal in some situiations where you want to handle the exception yourself.
+This can have preformance benefits since it donesnt have to create a stack trace.
+
+## Custom exceptions
+
+You can also create your own exceptions by inheriting from the [`Exception`][exception] class.
+There you can optionally override the `initialize` method to set the message of the exception.
+This can be done by assigning an instance variable named `@message` with the message.
+
+```crystal
+class MyException < Exception
+  def initialize
+    @message = "This is my exception"
   end
 end
 
-Foo::Bar.new
+raise MyException.new
 ```
 
-## Use it as a mixin
-
-This can be useful when, for example, wanting multiple classes to have the same "base" functionality or when wanting to share code between classes that are not related.
-Or when wanting to share code between classes that are not related.
-
-There are 2 different ways to use a module as a mixin: the first one is to use the `include` keyword, the second one is to use the `extend` keyword.
-
-Both methods will make constants available to the type that includes or extends the module.
-
-### Include
-
-Include will make all methods in the module available as instance methods on the type that includes the module.
-The `include` keyword should be written at the top of the type, followed by the name of the module.
-
-```crystal
-module Foo
-  def foo
-    "foo"
-  end
-end
-
-class Bar
-  include Foo
-end
-
-Bar.new.foo # => "foo"
-```
-
-### Extend
-
-Extend works similarly to include, but instead of making the methods available as instance methods, it makes them available as class methods.
-The `extend` keyword should be written at the top of the type followed by the name of the module.
-
-```crystal
-module Foo
-  def foo
-    "foo"
-  end
-end
-
-class Bar
-  extend Foo
-end
-
-Bar.foo # => "foo"
-```
-
-## Extend self
-
-A quite common pattern in Crystal is to use the [`extend self`][extend self] pattern, in a module.
-This will make all methods in the module available as class methods on the module itself.
-This means you don't have to assign each method to the module itself using the `def self.method_name` syntax.
-
-
-```crystal
-module Foo
-  extend self
-
-  def foo
-    "foo"
-  end
-end
-
-Foo.foo # => "foo"
-```
-
-[mixin]: https://en.wikipedia.org/wiki/Mixin
-[modules]: https://crystal-lang.org/reference/syntax_and_semantics/modules.html
-[extend self]: https://crystal-lang.org/reference/syntax_and_semantics/modules.html#extend-self
-[namespace]: https://en.wikipedia.org/wiki/Namespace
+[exception]: https://crystal-lang.org/api/Exception.html

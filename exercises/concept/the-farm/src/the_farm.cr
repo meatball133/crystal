@@ -1,7 +1,15 @@
-package thefarm
+# Implement the InvalidCowsError here
 
-# TODO: define the 'DivideFood' function
+module TheFarm
+  def self.divide_food(food : FodderCalculator, number_of_cows)
+    raise "Please implement the TheFarm.divide_food method"
+  end
 
-# TODO: define the 'ValidateInputAndDivideFood' function
+  def self.validate_input_and_divide_food(food : FodderCalculator, number_of_cows)
+    raise "Please implement the TheFarm.validate_input_and_divide_food method"
+  end
 
-# TODO: define the 'ValidateNumberOfCows' function
+  def self.validate_number_of_cows(number_of_cows)
+    raise "Please implement the TheFarm.validate_number_of_cows method"
+  end
+end

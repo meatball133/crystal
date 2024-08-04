@@ -67,12 +67,42 @@ rescue ex : ArgumentError
 end
 ```
 
-multiple rescue
+Multiple `rescue` blocks can be used to handle different types of exceptions.
+In the example below, the first `rescue` block will catch an `ArgumentError` and the second `rescue` block will catch any other exception.
 
+```crystal
+begin
+  raise ArgumentError.new("This is an argument error")
+rescue ArgumentError
+  puts "An argument error occurred!"
+rescue
+  puts "An error occurred!"
+end
+```
+
+The `begin` block can also have a `else` block which is executed if no exception is raised.
+
+```crystal
+begin
+  puts "No error occurred"
+rescue
+  puts "An error occurred!"
 else
+  puts "No error occurred"
+end
+```
 
+Lastly there is an `ensure` block which is always executed, regardless of whether an exception was raised or not.
+
+```crystal
+begin
+  raise "This is an error"
+rescue
+  puts "An error occurred!"
 ensure
-
+  puts "This is always executed"
+end
+```
 
 ## Method convention
 
@@ -90,11 +120,12 @@ This can have preformance benefits since it donesnt have to create a stack trace
 
 You can also create your own exceptions by inheriting from the [`Exception`][exception] class.
 There you can optionally override the `initialize` method to set the message of the exception.
+This can be done by assigning an instance variable named `@message` with the message.
 
 ```crystal
 class MyException < Exception
   def initialize
-    "This is my exception"
+    @message = "This is my exception"
   end
 end
 
