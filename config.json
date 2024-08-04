@@ -277,6 +277,13 @@
           "array-methods"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "the-farm",
+        "name": "the-farm",
+        "uuid": "600b6035-ca9b-41df-843d-2dcd86cac2d1",
+        "concepts": [],
+        "prerequisites": []
       }
     ],
     "practice": [

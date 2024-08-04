@@ -1,0 +1,15 @@
+{
+  "authors": ["meatball133"],
+  "files": {
+    "solution": [
+      "src/the_farm.cr"
+    ],
+    "test": [
+      "spec/the_farm_spec.cr"
+    ],
+    "exemplar": [
+      ".meta/src/exemplar.cr"
+    ]
+  },
+  "blurb": ""
+}

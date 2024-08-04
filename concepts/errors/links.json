@@ -1,6 +1,10 @@
 [
   {
-    "url": "https://crystal-lang.org/reference/latest/syntax_and_semantics/modules.html",
-    "description": "Crystal docs: modules"
+    "url": "https://crystal-lang.org/reference/syntax_and_semantics/exception_handling.html",
+    "description": "Crystal docs: expection-handeling"
+  },
+  {
+    "url": "https://crystal-lang.org/api/Exception.html",
+    "description": "Crystal API: exception"
   }
 ]
