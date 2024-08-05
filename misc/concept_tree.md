@@ -89,6 +89,23 @@ graph TD
         s(Blocks/proc/)
     end
 
+    subgraph V [Weighing Machine]
+        m(Getters/setters)
+    end
+
+    subgraph W [The Farm]
+        p(raising errors)
+    end
+
+    subgraph X [Speelbound Steel]
+        t(enumeration)
+    end
+
+    subgraph Y [Kitchen Calculator]
+        x(symbols)
+        y(Tuples)
+    end
+
     A --> B
     A --> C
     B --> J
@@ -111,28 +128,21 @@ graph TD
     F --> S
     S --> T
     R --> U
-    U --> t
+    U --> X
+    F --> V
+    Q --> W
+    X --> Y
 
-
-
-    m(Getters/setters)
-    p(raising errors)
-    s(Blocks/proc/)
-    t(enumeration)
     u(more enumeration)
-    x(symbols)
-    y(Tuples)
     z(Hashes)
     aa(Named Tuple)
     ab(Decomposition & multiple assignment)
+    ae(Inheritance)
 
-    Q --> p
-    t --> u
-    u --> y
-    u --> x
-    x --> z
-    y --> z
+    X --> u
+    Y --> z
     z --> aa
     aa --> ab
-    E --> m
+    ae --> W
+    O --> aev
 ```
