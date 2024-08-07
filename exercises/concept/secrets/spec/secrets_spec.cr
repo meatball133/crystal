@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "Secrets" do
-  describe "shift_back" do
+  describe "shift_back", tags: "task_id=1" do
     it "should be able to shift 0 places" do
       Secrets.shift_back(15, 0).should eq 15
     end
@@ -20,7 +20,7 @@ describe "Secrets" do
     end
   end
 
-  describe "apply_mask" do
+  describe "apply_mask", tags: "task_id=2" do
     it "should be able to AND value with mask bits all 1" do
       Secrets.apply_mask(101, 255).should eq 101
     end
@@ -34,7 +34,7 @@ describe "Secrets" do
     end
   end
 
-  describe "set_bits" do
+  describe "set_bits", tags: "task_id=3" do
     it "should be able to OR value with 0s" do
       Secrets.set_bits(107, 0).should eq 107
     end
@@ -48,7 +48,7 @@ describe "Secrets" do
     end
   end
 
-  describe "reverse_xor" do
+  describe "reverse_xor", tags: "task_id=4" do
     it "should be able to reverse with all 1s" do
       Secrets.reverse_xor(106, 255).should eq 106
     end

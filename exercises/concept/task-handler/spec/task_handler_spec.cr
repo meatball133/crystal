@@ -7,7 +7,7 @@ def check_proc(proc, num)
 end
 
 describe TaskHandler do
-  describe "initialize" do
+  describe "initialize", tags: "task_id=1" do
     it "should initialize with a task" do
       handler = TaskHandler.new(["task1", "task2"])
       handler.@tasks.should eq ["task1", "task2"]
@@ -16,7 +16,7 @@ describe TaskHandler do
     end
   end
 
-  describe "update_task_condition_logic" do
+  describe "update_task_condition_logic", tags: "task_id=2" do
     it "should update the task condition logic" do
       handler = TaskHandler.new(["task1", "task2"])
       handler.update_task_condition_logic { |priority| priority > 2 }
@@ -32,7 +32,7 @@ describe TaskHandler do
     end
   end
 
-  describe "execute" do
+  describe "execute", tags: "task_id=3" do
     it "should add a task to the task list" do
       handler = TaskHandler.new(["task1", "task2"])
       handler.execute(1).should eq "Completed task1"

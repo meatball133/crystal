@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe Rules do
-  describe "bonus_points?" do
+  describe "bonus_points?", tags: "task_id=1" do
     it "Character gets bonus points" do
       Rules.new.bonus_points?(true, true).should be_true
     end
@@ -20,7 +20,7 @@ describe Rules do
     end
   end
 
-  describe "score?" do
+  describe "score?", tags: "task_id=2" do
     it "Score when picking up crystal" do
       Rules.new.score?(true, false).should be_true
     end
@@ -34,7 +34,7 @@ describe Rules do
     end
   end
 
-  describe "lose?" do
+  describe "lose?", tags: "task_id=3" do
     it "Lose if touching a bandit without a power-up active" do
       Rules.new.lose?(false, true).should be_true
     end
@@ -52,7 +52,7 @@ describe Rules do
     end
   end
 
-  describe "win?" do
+  describe "win?", tags: "task_id=4" do
     it "Win if all crystals have been picked up" do
       Rules.new.win?(true, false, false).should be_true
     end

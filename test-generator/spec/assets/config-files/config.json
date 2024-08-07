@@ -1,0 +1,58 @@
+{
+  "exercises": {
+    "concept": [
+      {
+        "slug": "arys-amazing-lasagna",
+        "name": "Ary's Amazing Lasagna",
+        "uuid": "e2d8380e-d815-4458-a760-963e150bb439",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "beta"
+      },
+      {
+        "slug": "crystal-hunter",
+        "name": "Crystal Hunter",
+        "uuid": "2e4f0820-655d-461f-a48e-9465eed99c75",
+        "concepts": [
+          "bools"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "beta"
+      }
+    ],
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "4078cf4d-4361-4c55-aa18-63a3fe269be1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "5373e713-f2ab-4b1e-b934-92969174bc48",
+        "practices": [
+          "string-methods"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "2df0796e-951d-4f10-8a2e-5c54f2443f10",
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
+  }
+}

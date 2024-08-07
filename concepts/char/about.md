@@ -1,15 +1,15 @@
 # Char
 
-`Char` is a data type in Crystal that represents a 32-bit [Unicode][unicode] code point.
-Their size makes so they are memory efficient, and also gives it certain properties that Strings don't have.
-They are created using single quotes (`'`) and do only allow for one Unicode code point to be placed inside.
+`Char` is a data type in Crystal representing a 32-bit [Unicode][unicode] code point.
+Their size makes them memory efficient and gives them specific properties that Strings doesn't have.
+They are created using single quotes (`'`) and only allow one Unicode code point to be placed inside.
 
 ```crystal
 'a' # => 'a'
 'a'.class # => Char
 ```
 
-When working with Strings in Crystal is it quite common to work with Chars, since quite a few methods in the String class return Chars or takes Chars as arguments.
+It is quite common to work with Chars when working with Strings in Crystal since quite a few methods in the String class return Chars or take Chars as arguments.
 For example, the [`String#[]`][index] method returns a Char, or the [`String#chars`][chars] method returns a collection of Chars.
 
 ## Incrementing / Decrementing
@@ -24,7 +24,7 @@ Due to char being a 32 Unicode point do they support incrementing and decrementi
 # => 'a'
 ```
 
-There is also a method called [`Char#succ`][succ] which will return the next char in the Unicode table and [`Char#pred`][pred] which will return the previous char in the Unicode table.
+There is also a method called [`Char#succ`][succ], which returns the next char in the Unicode table, and [`Char#pred`][pred], which returns the previous char in the Unicode table.
 
 ```crystal
 'a'.succ
@@ -36,8 +36,8 @@ There is also a method called [`Char#succ`][succ] which will return the next cha
 
 ## concatenation
 
-Since Chars is only meant to represent a 32-bit Unicode, can't 2 chars be concatenation.
-Thereby Chars can only be concatenated with Strings.
+Since Chars is only meant to represent a 32-bit Unicode, two chars can't be concatenated.
+Therefore, Chars can only be concatenated with Strings.
 
 ```Crystal
 'a' + "bc"
@@ -49,8 +49,8 @@ Thereby Chars can only be concatenated with Strings.
 
 ## Properties methods
 
-Crystal has a few methods that can be used to get information about a Char, like if it is a number or a letter, or if it is uppercase or lowercase.
-Here is a list of some of the methods, for a full list see the [Char API][char-api]:
+Crystal has a few methods for getting information about a Character, such as whether it is a number or a letter or whether it is uppercase or lowercase.
+Here is a list of some of the methods, for a complete list see the [Char API][char-api]:
 
 | Method                           | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
@@ -58,14 +58,14 @@ Here is a list of some of the methods, for a full list see the [Char API][char-a
 | [`Char#letter?`][letter]         | Returns `true` if the Char is a letter               |
 | [`Char#lowercase?`][lowercase]   | Returns `true` if the Char is lowercase              |
 | [`Char#uppercase?`][uppercase]   | Returns `true` if the Char is uppercase              |
-| [`Char#ascii?`][ascii]           | Returns `true` if the Char is an ASCII character      |
+| [`Char#ascii?`][ascii]           | Returns `true` if the Char is an ASCII character     |
 | [`Char#whitespace?`][whitespace] | Returns `true` if the Char is a whitespace character |
 
 ## Converting
 
 ### Converting between code points and Chars
 
-Since Chars is a 32-bit Unicode point, so can you convert between Chars and code points (Int).
+Since Chars is a 32-bit Unicode point, can you convert between Chars and code points (Int).
 This can be done using the [`Char#ord`][ord] method which will return the code point of the Char, or the [`Int#chr`][chr] method which will return the Char of the code point.
 
 ```crystal
@@ -78,8 +78,8 @@ This can be done using the [`Char#ord`][ord] method which will return the code p
 
 ### Converting between types
 
-As with other data types so does Chars have a few methods that can be used to convert between types.
-The most common one is the `Char#to_s` method which will convert the Char to a String, but there is also the `Char#to_i` method which will convert the Char to an Int, And the `Char#to_f` method which will convert the Char to a Float.
+As with other data types, chars have a few methods for converting between types.
+The most common one is the `Char#to_s` method, which converts the Char to a String. However, there is also the `Char#to_i` method, which converts the Char to an Int, and the `Char#to_f` method, which converts the Char to a Float.
 
 ```crystal
 'a'.to_s
@@ -94,8 +94,8 @@ The most common one is the `Char#to_s` method which will convert the Char to a S
 
 ## Escaping
 
-As with Strings are certain characters that can't be written directly, and to write them you need to escape them.
-To write an escape sequence you can use the `\` character followed by the character you want to escape.
+As with Strings, there are certain characters that can't be written directly, and to write them, you need to escape them.
+You can use the `\` character to write an escape sequence followed by the character you want to escape.
 
 These are the special characters in Crystal:
 

@@ -1,6 +1,6 @@
 # Blocks & Procs
 
-[Block][block] is a piece of code that can be passed to a method.
+A [block][block] is a piece of code that can be passed to a method.
 This is known as an [anonymous function or lambda][anonymous function] in other programming languages.
 A method can convert a block to a [Proc][proc] which represents a block of code.
 

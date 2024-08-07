@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe SavingsAccount do
-  describe "interest_rate" do
+  describe "interest_rate", tags: "task_id=1" do
     it "Returns minimum interest rate" do
       SavingsAccount.interest_rate(0.0).should eq(0.5)
     end
@@ -52,7 +52,7 @@ describe SavingsAccount do
     end
   end
 
-  describe "interest" do
+  describe "interest", tags: "task_id=2" do
     it "Returns intrest on negative balance" do
       SavingsAccount.interest(-10000.0).should be_close(-321.3, 0.001)
     end
@@ -70,7 +70,7 @@ describe SavingsAccount do
     end
   end
 
-  describe "annual_balance_update" do
+  describe "annual_balance_update", tags: "task_id=3" do
     it "Returns zero for empty start balance" do
       SavingsAccount.annual_balance_update(0.0).should be_close(0.0, 0.001)
     end
@@ -96,7 +96,7 @@ describe SavingsAccount do
     end
   end
 
-  describe "years_before_desired_balance" do
+  describe "years_before_desired_balance", tags: "task_id=4" do
     it "Returns years before desired balance on small start balance" do
       SavingsAccount.years_before_desired_balance(100.0, 125.80).should eq(47)
     end
