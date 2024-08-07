@@ -1,6 +1,6 @@
 # Instructions append
 
-The Crystal track add optional test to test to test possible letters to be any unicode character, not just ASCII alphabetic ones.
-These are not accesaible from the web editor, but is default when exectued locally.
+An optional test has been added that tests for possible letters to be any unicode character, not just ASCII alphabetic ones.
+These are not accessible from the web editor, but are run by default when executed locally.
 
-To disable these tests, when calling the test runner, add the following flag: `--tag "~optional"`
+To disable these tests, when calling the test command (`crystal spec`), add the following flag: `--tag "~optional"`
