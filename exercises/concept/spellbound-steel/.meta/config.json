@@ -12,5 +12,6 @@
       ".meta/src/exemplar.cr"
     ]
   },
-  "blurb": "Learn about Iteration by implementing methods to aid in the game of Spellbound Steel."
+  "blurb": "Learn about Iteration by implementing methods to aid in the game of Spellbound Steel.",
+  "icon": "role-playing-game"
 }
