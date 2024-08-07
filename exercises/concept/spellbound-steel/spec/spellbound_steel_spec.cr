@@ -2,7 +2,7 @@ require "../src/*"
 require "spec"
 
 describe "SpellboundSteel" do
-  describe "find_card?" do
+  describe "find_card?", tags: "task_id=1" do
     it "should return the first warriors index" do
       deck = ["Warrior", "Mage", "Warrior"]
       SpellboundSteel.find_card?(deck, "Warrior").should eq(0)
@@ -24,7 +24,7 @@ describe "SpellboundSteel" do
     end
   end
 
-  describe "capitalize_names" do
+  describe "capitalize_names", tags: "task_id=2" do
     it "should return an empty array if the input is empty" do
       SpellboundSteel.capitalize_names([] of String).should eq([] of String)
     end
@@ -38,7 +38,7 @@ describe "SpellboundSteel" do
     end
   end
 
-  describe "calculate_power_level" do
+  describe "calculate_power_level", tags: "task_id=3" do
     it "should return 0 if the deck is empty" do
       deck = [] of String
       SpellboundSteel.calculate_power_level(deck).should eq(0)
@@ -75,7 +75,7 @@ describe "SpellboundSteel" do
     end
   end
 
-  describe "decode_characters" do
+  describe "decode_characters", tags: "task_id=4" do
     it "should return an empty string if the input is empty" do
       SpellboundSteel.decode_characters("").should eq("")
     end
