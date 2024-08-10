@@ -9,19 +9,19 @@ They also allow for being written with quotes, e.g. `:"foo"`, which allows, for 
 :"foo boo" # => :"foo boo"
 ```
 
-Symbols are used in many places in the language, including as keys in namedtuples, to represent method names and variable names.
+Symbols are used in many places in the language, including as keys in namedtuples and to represent method and variable names.
 
 ## Symbols in Crystal
 
-Symbols in Crystal is quite different from Ruby.
-In Crystal is a symbol a form of constants and is thereby is assigned at compile time.
+Symbols in Crystal are quite different from Ruby.
+In Crystal a symbol is a type of constant and is thereby is assigned at compile time.
 This means that symbols can't be created dynamically, which is possible in Ruby.
 
-Symbols in Crystal is represented as an `Int32` which makes very efficient.
+Symbols in Crystal are represented as `Int32`s which makes them very efficient.
 
 ## Identifier
 
-What makes symbols different from strings is that they are identifiers, and do not represent data or text.
+What makes symbols different from strings is that they are identifiers and do not represent data or text.
 This means that two symbols with the same name are always the same object.
 
 ```ruby
@@ -34,7 +34,7 @@ This means that two symbols with the same name are always the same object.
 ## Conversion
 
 Symbols can be converted to strings but not vice versa.
-This is because symbols are created at compile time, and strings are created at runtime.
+This is because symbols are created at compile time and strings are created at runtime.
 
 ```crystal
 :foo.to_s # => "foo"

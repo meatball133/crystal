@@ -1,0 +1,5 @@
+{
+  "blurb": "Tuples are data structures which store a fixed number of elements. Tuples are indexable and immutable",
+  "authors": ["meatball133"],
+  "contributors": ["ryanplusplus"]
+}

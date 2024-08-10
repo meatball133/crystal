@@ -2,8 +2,8 @@
 
 ## General
 
-- [Tuples][tuple] are data structures which are inmutable, have a fixed size, and can hold any data-type.
-- Symbols may be used to denote finite states, as this exercise uses `:cup`, `:fluid_ounce`, `:teaspoon`, `:tablespoon`, `:milliliter` to denote the units used.
+- [Tuples][tuple] are data structures which are immutable, have a fixed size, and can hold any data-type.
+- Symbols may be used to denote finite states: this exercise uses `:cup`, `:fluid_ounce`, `:teaspoon`, `:tablespoon`, `:milliliter` to denote the units used.
 
 ## 1. Get the numeric component from a volume-pair
 

@@ -1,23 +1,30 @@
 ## Goal
 
-The goal of this exercise is to teach the student about modules in Crystal.
+The goal of this exercise is to teach the student about symbols and tuples in Crystal.
 
 ## Learning objectives
 
-- Know how to create a module
-- How to include a module in a class
+- Know how to create a tuple
+- Know how to get items from tuple
+- Know how to define a symbol
+- Know when you can use symbols
 
 ## Out of scope
 
-- How to use mixins between classes
+- Named tuples
 
 ## Concepts
 
-`Modules`:
+`Tuples`:
 
-- Create a module
-- Include a module in a class
+- Create a Tuple
+- Index tuples
+
+`Symbol`:
+
+- Create symbol
+- Compare symbol
 
 ## Prerequisites
 
-- return
+- Iteration

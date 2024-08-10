@@ -1,2 +1,2 @@
-{% $tuples \ $"tuples"."Tuples definition shorthand" %}
+{% $tuple \ $"tuple"."Tuples definition shorthand" %}
 {% $symbol %}

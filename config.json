@@ -292,11 +292,11 @@
       },
       {
         "slug": "kitchen-calculator",
-        "name": "Kitcen Calculator",
+        "name": "Kitchen Calculator",
         "uuid": "e7250ff1-967d-4b5d-8fa8-a57fdbbe24c5",
         "concepts": [
           "symbol",
-          "tuples"
+          "tuple"
         ],
         "prerequisites": [
           "iteration"
@@ -1593,8 +1593,8 @@
     },
     {
       "uuid": "a36e93cb-5ab0-4693-a6ab-ce698a3550ce",
-      "slug": "tuples",
-      "name": "Tuples"
+      "slug": "tuple",
+      "name": "Tuple"
     },
     {
       "uuid": "268c4865-1a15-4f65-88d9-5a1bb1ba5ac4",

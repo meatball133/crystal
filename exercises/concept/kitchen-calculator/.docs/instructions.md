@@ -1,7 +1,7 @@
 # Instructions
 
 While preparing to bake cookies for your friends, you have found that you have to convert some of the measurements used in the recipe.
-Being only familiar with the metric system, you need to come up with a way to convert common US baking measurements to milliliters (mL) for your own ease.
+Only being familiar with the metric system, you need to come up with a way to convert common US baking measurements to milliliters (mL) for your own ease.
 
 Use this conversion chart for your solution:
 

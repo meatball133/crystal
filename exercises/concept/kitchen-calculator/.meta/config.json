@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": [],
+  "contributors": ["ryanplusplus"],
   "files": {
     "solution": ["src/kitchen_calculator.cr"],
     "test": ["spec/kitchen_calculator_spec.cr"],
