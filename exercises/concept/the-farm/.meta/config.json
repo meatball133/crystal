@@ -11,5 +11,7 @@
       ".meta/src/exemplar.cr"
     ]
   },
-  "blurb": "Learn about error handling in Crystal while feeding cows on the farm."
+  "blurb": "Learn about error handling in Crystal while feeding cows on the farm.",
+  "forked_from": ["go/the-farm"],
+  "icon": "the-farm"
 }
