@@ -16,16 +16,16 @@ If unhandled, the program will halt and print the error message.
 raise "This is an error"
 ```
 
-There are several built-in exceptions in Crystal, like `ArgumentError`, `IndexError`, `KeyError`, `IOError`, `SystemCallError`, `TypeError`, `ZeroDivisionError` and many more, these require you to pass a message to the exception.
+There are several built-in exceptions in Crystal, like `ArgumentError`, `IndexError`, `KeyError`, `IOError`, `SystemCallError`, `TypeError`, `ZeroDivisionError` and many more.
+These require you to pass a message to the exception.
 
 ```crystal
 raise ArgumentError.new("This is an argument error")
 ```
 
-## Handle exceptions
+## [Handling exceptions][[exception-handling]]
 
 We wouldn't want our program to crash when an exception is raised.
-
 Therefore, when we know a piece of code is error prone, we can wrap it in a `begin` block and rescue the exception with a `rescue` block.
 The `begin` block marks the beginning of the code that might raise an exception, and the `rescue` block handles the exception.
 
@@ -104,30 +104,31 @@ end
 
 ## Method convention
 
-If you have checked, specific methods have two versions, one with `!` and the other without.
+Some methods have two versions, one with `!` and the other without.
 This can mean two different things.
 One is that the method mutates the object, and the other is that the method can raise an exception.
 
-But there is also another convention around ending a method with `?` mentioned in the previous concept.
+But there is also another convention around ending a method with `?` mentioned in the boolean concept.
 Some methods raise an exception by default but also have a version ending with `?` which returns `nil` instead of raising an exception.
 
 This is ideal when you want to avoid an error being raised. 
-This can benefit performance since it doesn't have to create a stack trace and, if setup correctly, could make the code safer.
+This can benefit performance since it doesn't have to create a stack trace and, if set up correctly, could make the code safer.
 
 ## Custom exceptions
 
 You can also create your own exceptions by inheriting from the [`Exception`][exception] class.
-There, you can optionally override the `initialize` method to set the exception message.
+In doing so, you can optionally override the `initialize` method to set the exception message.
 This can be done by assigning an instance variable named `@message` with the message.
 
 ```crystal
 class MyException < Exception
  def initialize
- @message = "This is my exception"
+   @message = "This is my exception"
  end
 end
 
 raise MyException.new
 ```
 
+[exception-handling]: https://crystal-lang.org/reference/syntax_and_semantics/exception_handling.html
 [exception]: https://crystal-lang.org/api/Exception.html
