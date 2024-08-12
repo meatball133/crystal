@@ -106,6 +106,18 @@
         "status": "beta"
       },
       {
+        "slug": "weighing-machine",
+        "name": "Weighing Machine",
+        "uuid": "317930f4-4c97-4962-a04e-76e6d60b7fba",
+        "concepts": [
+          "getter-setter"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "high-school-sweetheart",
         "name": "High School Sweetheart",
         "uuid": "375d5c38-3b3b-4f62-8a16-e0e3e381adc9",
@@ -275,18 +287,6 @@
         ],
         "prerequisites": [
           "array-methods"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "weighing-machine",
-        "name": "Weighing Machine",
-        "uuid": "317930f4-4c97-4962-a04e-76e6d60b7fba",
-        "concepts": [
-          "getter-setter"
-        ],
-        "prerequisites": [
-          "strings"
         ],
         "status": "beta"
       }
@@ -1494,6 +1494,11 @@
       "uuid": "7bea8916-b41e-4b28-872d-a7abeca74125",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "b5f40f9a-d3bf-4e82-9918-a04649f08655",
+      "slug": "getter-setter",
+      "name": "Getter and Setter"
     },
     {
       "uuid": "4dd28cdc-f197-490b-bbfb-5cd33bbdb6af",
