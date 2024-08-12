@@ -110,7 +110,7 @@
         "name": "Weighing Machine",
         "uuid": "317930f4-4c97-4962-a04e-76e6d60b7fba",
         "concepts": [
-          "getter-setter"
+          "getters-setters"
         ],
         "prerequisites": [
           "strings"
@@ -1497,8 +1497,8 @@
     },
     {
       "uuid": "b5f40f9a-d3bf-4e82-9918-a04649f08655",
-      "slug": "getter-setter",
-      "name": "Getter and Setter"
+      "slug": "getters-setters",
+      "name": "Getters and Setters"
     },
     {
       "uuid": "4dd28cdc-f197-490b-bbfb-5cd33bbdb6af",
