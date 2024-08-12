@@ -1,0 +1,1 @@
+{% $procs-blocks \ $procs-blocks.Shorthand \ $procs-blocks."Declare procs from methods" %}

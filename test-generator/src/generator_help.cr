@@ -5,10 +5,11 @@ require "./generator_plugins.cr"
 
 class GeneratorHelp
   include GeneratorPlugins
+
   @json : JSON::Any
+  @first = true
 
   def initialize(@exercise : String)
-    @first = true
     @json = get_remote_files()
   end
 
@@ -61,10 +62,10 @@ class GeneratorHelp
     end
   end
 
-  def check_config
-    config_file = File.read("./config.json")
-    JSON.parse(config_file)["exercises"]["practice"].as_a.each do |x|
-      return true if @exercise == x["slug"]
+  def check_config(custom_config : String = "./config.json")
+    config_file = File.read(custom_config)
+    JSON.parse(config_file)["exercises"]["practice"].as_a.each do |config_exercise|
+      return true if @exercise == config_exercise["slug"]
     end
     raise "Couldn't find the exercise in the config.json.\nMake sure you use the same slug name as in the config file."
   end

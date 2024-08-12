@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe TicketSystem do
-  describe "initialize" do
+  describe "initialize", tags: "task_id=1" do
     it "Can create a new TicketSystem" do
       ticket_system = TicketSystem.new(200, "Bellebrook")
       ticket_system.@tickets_available.should eq 200
@@ -16,7 +16,7 @@ describe TicketSystem do
     end
   end
 
-  describe "tickets_available" do
+  describe "tickets_available", tags: "task_id=2" do
     it "Can return the number of tickets available" do
       {% if @top_level.has_constant? "TicketingReservation" %}
         {% if TicketingReservation.has_method? "tickets_available" %}
@@ -44,7 +44,7 @@ describe TicketSystem do
     end
   end
 
-  describe "order_ticket?" do
+  describe "order_ticket?", tags: "task_id=3" do
     it "Can order a ticket" do
       {% if @top_level.has_constant? "TicketingReservation" %}
         {% if TicketingReservation.has_method?("order_ticket?") && TicketingReservation.has_method?("tickets_available") %}
@@ -121,7 +121,7 @@ describe TicketSystem do
     end
   end
 
-  describe "order_message" do
+  describe "order_message", tags: "task_id=4" do
     it "Give message for succesfull purchase" do
       {% if @top_level.has_constant? "TicketingReservation" %}
         {% if TicketingReservation.has_method?("tickets_available") && TicketingReservation.has_method?("order_message") %}

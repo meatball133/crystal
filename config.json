@@ -243,6 +243,14 @@
         "status": "beta"
       },
       {
+        "slug": "the-farm",
+        "name": "the-farm",
+        "uuid": "600b6035-ca9b-41df-843d-2dcd86cac2d1",
+        "concepts": ["errors"],
+        "prerequisites": ["array"],
+        "status": "beta"
+      },
+      {
         "slug": "foto-fusionist",
         "name": "Foto Fusionist",
         "uuid": "e2b0e636-6538-4fe9-8db8-fccedcca26d5",
@@ -279,11 +287,29 @@
         "status": "beta"
       },
       {
-        "slug": "the-farm",
-        "name": "the-farm",
-        "uuid": "600b6035-ca9b-41df-843d-2dcd86cac2d1",
-        "concepts": [],
-        "prerequisites": []
+        "slug": "spellbound-steel",
+        "name": "spellbound-steel",
+        "uuid": "8fed320d-59b8-4683-83fb-a87b6c1a6911",
+        "concepts": [
+          "iteration"
+        ],
+        "prerequisites": [
+          "procs-blocks"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "kitchen-calculator",
+        "name": "Kitchen Calculator",
+        "uuid": "e7250ff1-967d-4b5d-8fa8-a57fdbbe24c5",
+        "concepts": [
+          "symbol",
+          "tuple"
+        ],
+        "prerequisites": [
+          "iteration"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1300,6 +1326,14 @@
         "difficulty": 5
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "8671ac4b-a11f-43c8-9a17-508f831401bc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "poker",
         "name": "Poker",
         "uuid": "5eee3bb6-bcb8-4056-a854-805ecc4dd903",
@@ -1559,6 +1593,26 @@
       "uuid": "22b6c054-9705-46c9-a14e-cf051c1d653a",
       "slug": "procs-blocks",
       "name": "Procs & Blocks"
+    },
+    {
+      "uuid": "0455ecbd-dc84-4799-b49e-bc9bf0a9fc71",
+      "slug": "iteration",
+      "name": "Iteration"
+    },
+    {
+      "uuid": "a36e93cb-5ab0-4693-a6ab-ce698a3550ce",
+      "slug": "tuple",
+      "name": "Tuple"
+    },
+    {
+      "uuid": "268c4865-1a15-4f65-88d9-5a1bb1ba5ac4",
+      "slug": "symbol",
+      "name": "Symbol"
+    },
+    {
+      "uuid": "bacc3d62-e0a8-402d-a14b-967806368150",
+      "slug": "errors",
+      "name": "Errors"
     }
   ],
   "key_features": [

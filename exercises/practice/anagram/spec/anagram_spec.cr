@@ -65,4 +65,12 @@ describe "Anagram" do
   pending "words other than themselves can be anagrams" do
     Anagram.find("LISTEN", ["LISTEN", "Silent"]).should eq(["Silent"] of String)
   end
+
+  pending "handles case of greek letters", tags: "optional" do
+    Anagram.find("ΑΒΓ", ["ΒΓΑ", "ΒΓΔ", "γβα", "αβγ"]).should eq(["ΒΓΑ", "γβα"] of String)
+  end
+
+  pending "different characters may have the same bytes", tags: "optional" do
+    Anagram.find("a⬂", ["€a"]).should eq([] of String)
+  end
 end

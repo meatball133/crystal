@@ -1,6 +1,6 @@
 # Nil
 
-Crystal has a type which is called [`Nil`][nil], it can only have one value: `nil`.
+Crystal has a type called [`Nil`][nil], which can only have one value: `nil`.
 It is used to represent the absence of a value, and is similar to `null` or `None` in other languages.
 
 Nil values can be returned from various methods for example [`String#[]?`][string-index], which returns `nil` if the index is out of bounds.
@@ -10,14 +10,14 @@ Nil values can be returned from various methods for example [`String#[]?`][strin
 ```
 
 Crystal has what is known as **NULL REFERENCE CHECKS**, which means that all types are non-nilable by default.
-This means that you can not assign `nil` to a variable unless you explicitly declare it as a `Nil` type.
+This means you can not assign `nil` to a variable unless you explicitly declare it as a `Nil` type.
 In turn this means that the compiler will automatically check for null references.
 
 ## Falsey value
 
-To be able to handle `nil` values, are there certain approaches that can be taken.
+Certain approaches can be taken to handle `nil` values.
 `nil` is a [falsey][truthy-falsey] value as well are `false`.
-This means that in if statements and other places where a falsey or truthy value is expected it will be treated the same as `false`.
+This means that statements and other places where a falsey or truthy value is expected it will be treated the same as `false`.
 
 ```crystal
 if nil
@@ -53,12 +53,12 @@ end
 ```
 
 This is a bit different when just using the value in an if statement, since in the last examples would both false and nil be treated as false.
-Here only `nil` is treated as falsy, since if it was false it wouldn't have been nil thereby it would have been truthy.
+Here only `nil` is treated as falsey, since if it was false it wouldn't have been nil thereby it would have been truthy.
 
 ## Or operator
 
-The easiest way to deal with `nil` values is by ensuring that the value never becomes `nil` in the first place.
-The or operator ([`||`][or]) is often used when dealing with `Bools` but if understood correctly it can be used to deal with `nil` values as well.
+The easiest way to deal with `nil` values is to ensure that they never become `nil` in the first place.
+The or operator ([`||`][or]) is often used when dealing with `Bools`, but if understood correctly, it can also be used to deal with `nil` values.
 The or operator checks if the first value is truthy, if not the second value is used.
 This can be used to make if the value is `nil` it will be falsey and thereby the second value will be used.
 

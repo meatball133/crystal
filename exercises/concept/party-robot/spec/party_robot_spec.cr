@@ -2,7 +2,7 @@ require "spec"
 require "../src/*"
 
 describe "PartyRobot" do
-  describe "welcome" do
+  describe "welcome", tags: "task_id=1" do
     it "Greet Chihiro with a welcoming message" do
       PartyRobot.welcome("Chihiro").should eq "Welcome to my party, Chihiro!"
     end
@@ -12,7 +12,7 @@ describe "PartyRobot" do
     end
   end
 
-  describe "happy_birthday" do
+  describe "happy_birthday", tags: "task_id=2" do
     it "Wish Chihiro Happy Birthday with name and age" do
       PartyRobot.happy_birthday("Chihiro", 61).should eq "Happy birthday Chihiro! You are now 61 years old!"
     end
@@ -22,7 +22,7 @@ describe "PartyRobot" do
     end
   end
 
-  describe "assign_table" do
+  describe "assign_table", tags: "task_id=3" do
     it "Greet Chihiro and give them directions to their seat" do
       PartyRobot.assign_table("Chihiro", "straight ahead", 22, 9.2394381, "Akachi Chikondi").should eq "Welcome to my party, Chihiro!\nYou have been assigned to table 22. Your table is straight ahead, exactly 9.2 meters from here.\nYou will be sitting next to Ai."
     end

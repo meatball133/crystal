@@ -15,16 +15,16 @@ jobs:
     container:
       image: crystallang/crystal
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Run generator tests
-        run: crystal spec test-generator/spec/*
+        run: crystal spec test-generator
   test-generator-templates:
     name: Check Generator Templates
     runs-on: ubuntu-22.04
     container:
       image: crystallang/crystal
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Check generator templates tests
         run: ./bin/test_specs
   template:
@@ -33,7 +33,7 @@ jobs:
     container:
       image: crystallang/crystal
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Run file formatting
         run: crystal ./bin/check-format.cr
   exercises:
@@ -42,11 +42,11 @@ jobs:
     strategy:
       # Allows running the job multiple times with different configurations
       matrix:
-        crystal: ["1.8", "1.9", "1.10", "1.11", "1.12.1"]
+        crystal: ["1.9", "1.10", "1.11", "1.12", "1.13.1"]
     container:
       image: crystallang/crystal:${{ matrix.crystal }}
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Install jq
         run: apt-get update && apt-get install -y jq
       - name: Run tests
@@ -58,9 +58,9 @@ jobs:
       - name: Install Crystal
         uses: crystal-lang/install-crystal@cdf26dcd488490c9939e9d4d62cab169c9e4f20d
         with:
-          crystal: "1.12.1"
+          crystal: "1.13.1"
       - name: 'Setup jq'
         run: choco install jq
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Run tests
         run: ./bin/test-exercises.ps1
