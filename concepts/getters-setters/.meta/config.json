@@ -1,5 +1,5 @@
 {
   "blurb": "Crystal has macros for defining getters and setters. Which is used to access and modify the instance variables of a class.",
   "authors": ["meatball133"],
-  "contributors": [""]
+  "contributors": []
 }
