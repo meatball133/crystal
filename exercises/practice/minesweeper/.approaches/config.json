@@ -5,7 +5,7 @@
   },
   "approaches": [
     {
-      "uuid": "9da625b3-e995-413e-8194-48e53aa47b66",
+      "uuid": "7d266679-f573-42a5-80fa-66a9d15f2364",
       "slug": "data-driven",
       "title": "Data Driven",
       "blurb": "Using a data driven approach to setup the search areas",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "uuid": "a6263128-0713-49d9-9305-d575aadf85e5",
+      "uuid": "5ac94a13-3e20-4b2c-a7ad-4d1426192e06",
       "slug": "translate",
       "title": "Translate",
       "blurb": "Uses the `tr` method to translate certain parts of a `String`",
