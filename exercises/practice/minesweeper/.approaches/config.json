@@ -18,7 +18,7 @@
       "slug": "translate",
       "title": "Translate",
       "blurb": "Uses the `tr` method to translate certain parts of a `String`",
-      "authors": ["meatball133"]
+      "authors": ["meatball133", "ryanplusplus"]
     }
   ]
 }
