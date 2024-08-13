@@ -2,7 +2,7 @@ class WeighingMachine
   getter precision : Int32
   setter metric : Bool
   property weight : Float64 = 0.0
-  
+
   def initialize(precision : Int32, metric : Bool = true)
     @precision = precision
     @metric = metric
