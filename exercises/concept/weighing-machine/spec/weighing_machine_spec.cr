@@ -30,7 +30,6 @@ describe WeighingMachine do
     end
   end
 
-
   describe "precision" do
     it "should return the precision of the weighing machine" do
       weighing_machine = WeighingMachine.new(3, true)
