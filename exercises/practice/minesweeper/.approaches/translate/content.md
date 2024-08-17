@@ -14,8 +14,8 @@ class Minesweeper
   end
 
   private def annotated_space(x, y)
- ([y - 1, 0].max..[y + 1, @board.size - 1].min).sum do |y|
- ([x - 1, 0].max..[x + 1, @board[0].size - 1].min).count do |x|
+    ([y - 1, 0].max..[y + 1, @board.size - 1].min).sum do |y|
+      ([x - 1, 0].max..[x + 1, @board[0].size - 1].min).count do |x|
         @board[y][x] == '*'
       end
     end.to_s.tr("0", " ")

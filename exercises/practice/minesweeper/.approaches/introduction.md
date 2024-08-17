@@ -22,8 +22,8 @@ class Minesweeper
   end
 
   private def annotated_space(x, y)
- ([y - 1, 0].max..[y + 1, @board.size - 1].min).map do |y|
- ([x - 1, 0].max..[x + 1, @board[0].size - 1].min).count do |x|
+    ([y - 1, 0].max..[y + 1, @board.size - 1].min).map do |y|
+      ([x - 1, 0].max..[x + 1, @board[0].size - 1].min).count do |x|
         @board[y][x] == '*'
       end
     end.sum.to_s.tr("0", " ")
@@ -41,10 +41,10 @@ This solution is concise and flexible. If the rules change, it is as easy as cha
 ```crystal
 class Minesweeper
   OFFSETS = [
- {-1, -1}, {0, -1}, {1, -1},
- {-1,  0},          {1,  0},
- {-1,  1}, {0,  1}, {1,  1},
- ]
+    {-1, -1}, {0, -1}, {1, -1},
+    {-1,  0},          {1,  0},
+    {-1,  1}, {0,  1}, {1,  1},
+  ]
 
   def initialize(@board : Array(String) )
   end
