@@ -1,6 +1,6 @@
 {
   "authors": ["meatball133"],
-  "contributors": "ryanplusplus",
+  "contributors": ["ryanplusplus"],
   "files": {
     "solution": [
       "src/weighing_machine.cr"
