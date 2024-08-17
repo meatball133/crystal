@@ -31,7 +31,7 @@ class Minesweeper
 end
 ```
 
-For more information, see the [translate approach][approach-translate], or if you want to hear Erik Sheirboom's thoughts on this approach, see the [video][video-translate].
+For more information, see the [translate approach][approach-translate], or if you want to hear Erik Schierboom's thoughts on this approach, see the [video][video-translate].
 
 ## Approach: Using a data-driven approach
 
