@@ -41,7 +41,7 @@ describe WeighingMachine do
       weighing_machine.precision.should eq(5)
     end
 
-    it "should not allowed to be modify" do
+    it "should not allow modification" do
       {% if WeighingMachine.has_method? "precision=" %}
         raise "Error: precision should not have a setter"
       {% end %}
@@ -87,7 +87,7 @@ describe WeighingMachine do
       weighing_machine.weigh.should eq("11.023")
     end
 
-    it "should not allowed to be get" do
+    it "should not allow getting" do
       {% if WeighingMachine.has_method? "metric" %}
         raise "Error: metric should not have a getter"
       {% end %}

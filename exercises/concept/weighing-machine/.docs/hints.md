@@ -2,12 +2,12 @@
 
 ## General
 
-- To creat the getter and setter methods you should use the `getter`, `setter` and `property` macros.
+- To create the getter and setter methods you should use the `getter`, `setter` and `property` macros.
 
 ## 1. Create an initial state for the weighing machine
 
 - To initialize the weighing machine you should use the `initialize` method.
-- The method should take two arguments, `precision` and `metric` which should be a `Int32` and `Bool` respectively.
+- The method should take two arguments, `precision` and `metric`, which should be an `Int32` and `Bool`, respectively.
   These should be used to set the instance variables `@precision` and `@metric`.
 - The instance variable `@weight` should be set to `0.0`.
 

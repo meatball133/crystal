@@ -12,7 +12,7 @@ Crystal has defined these as `getter`, `setter` and `property` macros.
 Getter is a macro that defines a method that returns the value of an instance variable.
 This means that you no longer have to write `@` in front of the instance variable when you want to access it (in methods, excluding initialize); instead, you can call the method that the getter macro has defined.
 
-The getter macro can accept multiple instance variables by separating them with a comma.
+The getter macro can accept multiple instance variables by separating them with commas.
 
 ```crystal
 # This:
@@ -44,7 +44,7 @@ Symbols will be covered later in the symbol concept.
 
 ## Setters
 
-Setters is a macro that defines a method that sets the value of an instance variable.
+Setter is a macro that defines a method that sets the value of an instance variable.
 This macro isn't that often found and is commonly the `property` macro used instead.
 The methods that will be created will look like `name_of_method=`; the `=` is what makes it so the property can be set.
 

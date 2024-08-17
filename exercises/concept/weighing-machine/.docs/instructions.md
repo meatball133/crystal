@@ -1,15 +1,15 @@
 # Instructions
 
-In this exercise you'll be modelling a weighing machine.
+In this exercise you'll be modeling a weighing machine.
 
 ## 1. Create an initial state for the weighing machine
 
-The weighing machine when initalized should refer to its factory settings which is different for where the machine is sold.
+When initialized, the weighing machine should refer to its factory settings which is different for where the machine is sold.
 Thereby the machine should be able to be initialized with a precision and if it is metric or imperial.
 
 Implement the `WeighingMachine#initialize` method which takes two arguments, `precision` which is an `Int32` and `metric` which is a `Bool`.
 The `metric` argument when `true` means that the machine should use the metric system, otherwise it should use the imperial system.
-The initizalized set should also set an instance variable, `@weight` to `0.0`.
+The initialize method set should also set the instance variable `@weight` to `0.0`.
 
 ```crystal
 precision = 3
@@ -49,7 +49,8 @@ wm.weigh
 
 ## 4. Allow the machine to be switch between metric and imperial units
 
-Implement the `WeighingMachine#metric=` property to allow the unit to be set, it should accept a boolean value.
+Implement the `WeighingMachine#metric=` property to allow the unit to be set.
+It should accept a boolean value.
 
 ```crystal
 precision = 3
