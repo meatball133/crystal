@@ -52,7 +52,7 @@ NUMBER = 2
 
 ### Types
 
-Crystal is a compiled language, meaing every variable or method argument is assigned a type at compile time.
+Crystal is a compiled language, meaning every variable or method argument is assigned a type at compile time.
 The compiler is capable of inferring the type of a variable or method argument.
 However, in some cases, it is necessary to specify the type.
 The cases that require a type to be set will be explained in later concepts.
