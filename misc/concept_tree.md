@@ -1,7 +1,7 @@
 # Concept Tree
 
 This is a concept tree for the Crystal Syllabus. 
-It is a work in progress, it was last updated on 2024-01-13.
+It is a work in progress, it was last updated on 2024-12-06.
 Each concept with an exercise around it has been implemented, the rest is still to be implemented.
 
 
@@ -16,7 +16,7 @@ graph TD
         b(bools)
     end
 
-    subgraph J [Number Types]
+    subgraph J [Navigation Computer]
         ac(Number Types)
     end
 
@@ -48,7 +48,7 @@ graph TD
         h(conditionals)
     end
 
-    subgraph I [Interest is intresting]
+    subgraph I [Interest is interesting]
         i(return)
         j(while)
     end
