@@ -29,11 +29,11 @@ module React
     @last_callback_value : CellValue
 
     def initialize(input : Cell, &compute : CellValue -> CellValue)
-      initialize(->{ compute.call(input.value) }, input)
+      initialize(-> { compute.call(input.value) }, input)
     end
 
     def initialize(input1 : Cell, input2 : Cell, &compute : (CellValue, CellValue) -> CellValue)
-      initialize(->{ compute.call(input1.value, input2.value) }, input1, input2)
+      initialize(-> { compute.call(input1.value, input2.value) }, input1, input2)
     end
 
     private def initialize(@new_value : -> CellValue, *dependencies : Cell)
