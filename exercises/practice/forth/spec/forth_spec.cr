@@ -26,6 +26,10 @@ describe "Forth" do
     end
   end
 
+  pending "more than two values on the stack" do
+    Forth.evaluate("1 2 3 +").should eq([1, 5] of Int32)
+  end
+
   pending "can subtract two numbers" do
     Forth.evaluate("3 4 -").should eq([-1] of Int32)
   end
@@ -42,6 +46,10 @@ describe "Forth" do
     end
   end
 
+  pending "more than two values on the stack" do
+    Forth.evaluate("1 12 3 -").should eq([1, 9] of Int32)
+  end
+
   pending "can multiply two numbers" do
     Forth.evaluate("2 4 *").should eq([8] of Int32)
   end
@@ -56,6 +64,10 @@ describe "Forth" do
     expect_raises(ArgumentError) do
       Forth.evaluate("1 *")
     end
+  end
+
+  pending "more than two values on the stack" do
+    Forth.evaluate("1 2 3 *").should eq([1, 6] of Int32)
   end
 
   pending "can divide two numbers" do
@@ -84,12 +96,24 @@ describe "Forth" do
     end
   end
 
+  pending "more than two values on the stack" do
+    Forth.evaluate("1 12 3 /").should eq([1, 4] of Int32)
+  end
+
   pending "addition and subtraction" do
     Forth.evaluate("1 2 + 4 -").should eq([-1] of Int32)
   end
 
   pending "multiplication and division" do
     Forth.evaluate("2 4 * 3 /").should eq([2] of Int32)
+  end
+
+  pending "multiplication and addition" do
+    Forth.evaluate("1 3 4 * +").should eq([13] of Int32)
+  end
+
+  pending "addition and multiplication" do
+    Forth.evaluate("1 3 4 + *").should eq([7] of Int32)
   end
 
   pending "copies a value on the stack" do

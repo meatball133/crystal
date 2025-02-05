@@ -22,7 +22,7 @@ module WordSearch
     results
   end
 
-  private def self.each_delta
+  private def self.each_delta(&)
     [-1, 0, 1].each do |dx|
       [-1, 0, 1].each do |dy|
         yield(dx, dy) if dx != 0 || dy != 0
