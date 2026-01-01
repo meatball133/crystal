@@ -57,7 +57,7 @@ module GeneratorPlugins
     if input.as_a.empty?
       "[] of Int32"
     else
-      input.to_s
+      to_s_digged(input)
     end
   end
 
@@ -65,7 +65,7 @@ module GeneratorPlugins
     if input.as_a.empty?
       "[] of Array(Int32)"
     else
-      input.to_s.gsub("[]", "[] of Int32")
+      to_s_digged(input).gsub("[]", "[] of Int32")
     end
   end
 

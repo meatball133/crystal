@@ -92,6 +92,29 @@ class GeneratorHelp
     input.tr("-", "_").camelcase
   end
 
+  def to_s_digged(input : JSON::Any) : String
+    case input
+    when .as_i64?
+      input.as_i64.to_s
+    when .as_f?
+      input.as_f.to_s
+    when .as_bool?
+      input.as_bool.to_s
+    when .as_a?
+      elements = input.as_a.map { |element| to_s_digged(element) }.join(", ")
+      "[#{elements}]"
+    when .as_h?
+      pairs = input.as_h.map do |key, value|
+        "\"#{key}\"=> #{to_s_digged(value)}"
+      end.join(", ")
+      "{#{pairs}}"
+    when .as_s?
+      "\"#{input}\""
+    else
+      "nil"
+    end
+  end
+
   def status
     if @first
       @first = false
