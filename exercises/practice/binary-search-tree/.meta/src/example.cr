@@ -38,7 +38,7 @@ class Node(T)
     end
   end
 
-  def each
+  def each(&)
     TreeIterator.new(self).each do |v|
       yield v
     end
