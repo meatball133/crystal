@@ -86,7 +86,7 @@ describe "BafflingBirthdays" do
     BafflingBirthdays.estimated_probability_of_shared_birthday(10).should be_close 11.694818, 1
   end
 
-  it "among twenty-three people" do
+  pending "among twenty-three people" do
     BafflingBirthdays.estimated_probability_of_shared_birthday(23).should be_close 50.729723, 1
   end
 

@@ -16,7 +16,7 @@ class BafflingBirthdays
   def self.random_birthdates(size : Int) : Array(Time)
     result = [] of Time
     size.times do |_|
-      time = Time.utc(2025, 1, 1).shift days: Random.rand(364)
+      time = Time.utc(2025, 1, 1).shift days: Random.rand(365)
       result << time
     end
 
