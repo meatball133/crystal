@@ -6,7 +6,7 @@ describe "<%-= to_capitalized(@json["exercise"].to_s) %>" do
         describe "<%-= cases["description"].to_s %>" do
             <%- cases["cases"].as_a.each do |cases| %>
                 <%= status()%> "<%-= cases["description"] %>" do
-                    board = <%= to_s_digged(cases["input"]["board"]).gsub(/[,\[]/,"\\0\n") %>
+                    board = <%= to_s_deep(cases["input"]["board"]).gsub(/[,\[]/,"\\0\n") %>
                     <%
                         expected = cases["expected"].to_s
                         if expected.includes? "error"

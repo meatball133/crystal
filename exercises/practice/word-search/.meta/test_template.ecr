@@ -4,8 +4,8 @@ require "../src/*"
 describe <%= to_capitalized(@json["exercise"].to_s) %> do
     <% @json["cases"].as_a.each do |cases| %>
         <%= status()%> "<%-= cases["description"] %>" do
-            grid = <%= to_s_digged(cases["input"]["grid"]).gsub("[", "[\n").gsub("\", \"", "\",\n\"") %>
-            words = <%= to_s_digged(cases["input"]["wordsToSearchFor"]).gsub("[", "[\n").gsub("\", \"", "\",\n\"") %>
+            grid = <%= to_s_deep(cases["input"]["grid"]).gsub("[", "[\n").gsub("\", \"", "\",\n\"") %>
+            words = <%= to_s_deep(cases["input"]["wordsToSearchFor"]).gsub("[", "[\n").gsub("\", \"", "\",\n\"") %>
             expected = {
                 <% cases["expected"].as_h.each do |word, location| -%>
                     <% if location.as_h? -%>

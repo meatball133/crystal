@@ -6,7 +6,7 @@ describe <%= to_capitalized(@json["exercise"].to_s).inspect %> do
         <%= status()%> "<%-= cases["description"] %>" do
             game = <%= to_capitalized(@json["exercise"].to_s) %>.new
             <% if cases["input"]["previousRolls"].as_a.size > 0 -%>
-                <%= to_s_digged(cases["input"]["previousRolls"]) %>.each do |roll|
+                <%= to_s_deep(cases["input"]["previousRolls"]) %>.each do |roll|
                     game.roll(roll)
                 end
             <% end -%>

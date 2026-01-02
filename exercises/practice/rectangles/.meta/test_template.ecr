@@ -5,7 +5,7 @@ describe <%= to_capitalized(@json["exercise"].to_s).inspect %> do
     <% @json["cases"].as_a.each do |cases| %>
         <%= status()%> "<%-= cases["description"] %>" do
             input = <%=
-                to_s_digged(cases["input"]["strings"])
+                to_s_deep(cases["input"]["strings"])
                     .gsub("[", "[\n")
                     .gsub(",", ",\n")
                     .gsub("]", "\n]")
