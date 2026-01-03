@@ -11,7 +11,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, print line numbers flag" do
+  pending "One file, one match, print line numbers flag" do
     expected = "2:Of that Forbidden Tree, whose mortal tast"
     pattern = "Forbidden"
     flags = ["-n"]
@@ -20,7 +20,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, case-insensitive flag" do
+  pending "One file, one match, case-insensitive flag" do
     expected = "Of that Forbidden Tree, whose mortal tast"
     pattern = "FORBIDDEN"
     flags = ["-i"]
@@ -29,7 +29,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, print file names flag" do
+  pending "One file, one match, print file names flag" do
     expected = "paradise-lost.txt"
     pattern = "Forbidden"
     flags = ["-l"]
@@ -38,7 +38,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, match entire lines flag" do
+  pending "One file, one match, match entire lines flag" do
     expected = "With loss of Eden, till one greater Man"
     pattern = "With loss of Eden, till one greater Man"
     flags = ["-x"]
@@ -47,7 +47,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, multiple flags" do
+  pending "One file, one match, multiple flags" do
     expected = "9:Of Atreus, Agamemnon, King of men."
     pattern = "OF ATREUS, Agamemnon, KIng of MEN."
     flags = ["-n", "-i", "-x"]
@@ -56,7 +56,7 @@ describe "Grep" do
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, no flags" do
+  pending "One file, several matches, no flags" do
     expected = "Nor how it may concern my modesty,
 But I beseech your grace that I may know
 The worst that may befall me in this case,"
@@ -67,7 +67,7 @@ The worst that may befall me in this case,"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, print line numbers flag" do
+  pending "One file, several matches, print line numbers flag" do
     expected = "3:Nor how it may concern my modesty,
 5:But I beseech your grace that I may know
 6:The worst that may befall me in this case,"
@@ -78,7 +78,7 @@ The worst that may befall me in this case,"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, match entire lines flag" do
+  pending "One file, several matches, match entire lines flag" do
     expected = ""
     pattern = "may"
     flags = ["-x"]
@@ -87,7 +87,7 @@ The worst that may befall me in this case,"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, case-insensitive flag" do
+  pending "One file, several matches, case-insensitive flag" do
     expected = "Achilles sing, O Goddess! Peleus' son;
 The noble Chief Achilles from the son"
     pattern = "ACHILLES"
@@ -97,7 +97,7 @@ The noble Chief Achilles from the son"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, inverted flag" do
+  pending "One file, several matches, inverted flag" do
     expected = "Brought Death into the World, and all our woe,
 With loss of Eden, till one greater Man
 Restore us, and regain the blissful Seat,
@@ -110,7 +110,7 @@ That Shepherd, who first taught the chosen Seed"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, no matches, various flags" do
+  pending "One file, no matches, various flags" do
     expected = ""
     pattern = "Gandalf"
     flags = ["-n", "-l", "-x", "-i"]
@@ -119,7 +119,7 @@ That Shepherd, who first taught the chosen Seed"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, one match, file flag takes precedence over line flag" do
+  pending "One file, one match, file flag takes precedence over line flag" do
     expected = "iliad.txt"
     pattern = "ten"
     flags = ["-n", "-l"]
@@ -128,7 +128,7 @@ That Shepherd, who first taught the chosen Seed"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "One file, several matches, inverted and match entire lines flags" do
+  pending "One file, several matches, inverted and match entire lines flags" do
     expected = "Achilles sing, O Goddess! Peleus' son;
 His wrath pernicious, who ten thousand woes
 Caused to Achaia's host, sent many a soul
@@ -144,7 +144,7 @@ Of Atreus, Agamemnon, King of men."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, one match, no flags" do
+  pending "Multiple files, one match, no flags" do
     expected = "iliad.txt:Of Atreus, Agamemnon, King of men."
     pattern = "Agamemnon"
     flags = [] of String
@@ -153,7 +153,7 @@ Of Atreus, Agamemnon, King of men."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, no flags" do
+  pending "Multiple files, several matches, no flags" do
     expected = "midsummer-night.txt:Nor how it may concern my modesty,
 midsummer-night.txt:But I beseech your grace that I may know
 midsummer-night.txt:The worst that may befall me in this case,"
@@ -164,7 +164,7 @@ midsummer-night.txt:The worst that may befall me in this case,"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, print line numbers flag" do
+  pending "Multiple files, several matches, print line numbers flag" do
     expected = "midsummer-night.txt:5:But I beseech your grace that I may know
 midsummer-night.txt:6:The worst that may befall me in this case,
 paradise-lost.txt:2:Of that Forbidden Tree, whose mortal tast
@@ -176,7 +176,7 @@ paradise-lost.txt:6:Sing Heav'nly Muse, that on the secret top"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, one match, print file names flag" do
+  pending "Multiple files, one match, print file names flag" do
     expected = "iliad.txt
 paradise-lost.txt"
     pattern = "who"
@@ -186,7 +186,7 @@ paradise-lost.txt"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, case-insensitive flag" do
+  pending "Multiple files, several matches, case-insensitive flag" do
     expected = "iliad.txt:Caused to Achaia's host, sent many a soul
 iliad.txt:Illustrious into Ades premature,
 iliad.txt:And Heroes gave (so stood the will of Jove)
@@ -204,7 +204,7 @@ paradise-lost.txt:Sing Heav'nly Muse, that on the secret top"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, inverted flag" do
+  pending "Multiple files, several matches, inverted flag" do
     expected = "iliad.txt:Achilles sing, O Goddess! Peleus' son;
 iliad.txt:The noble Chief Achilles from the son
 midsummer-night.txt:If I refuse to wed Demetrius."
@@ -215,7 +215,7 @@ midsummer-night.txt:If I refuse to wed Demetrius."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, one match, match entire lines flag" do
+  pending "Multiple files, one match, match entire lines flag" do
     expected = "midsummer-night.txt:But I beseech your grace that I may know"
     pattern = "But I beseech your grace that I may know"
     flags = ["-x"]
@@ -224,7 +224,7 @@ midsummer-night.txt:If I refuse to wed Demetrius."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, one match, multiple flags" do
+  pending "Multiple files, one match, multiple flags" do
     expected = "paradise-lost.txt:4:With loss of Eden, till one greater Man"
     pattern = "WITH LOSS OF EDEN, TILL ONE GREATER MAN"
     flags = ["-n", "-i", "-x"]
@@ -233,7 +233,7 @@ midsummer-night.txt:If I refuse to wed Demetrius."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, no matches, various flags" do
+  pending "Multiple files, no matches, various flags" do
     expected = ""
     pattern = "Frodo"
     flags = ["-n", "-l", "-x", "-i"]
@@ -242,7 +242,7 @@ midsummer-night.txt:If I refuse to wed Demetrius."
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, file flag takes precedence over line number flag" do
+  pending "Multiple files, several matches, file flag takes precedence over line number flag" do
     expected = "iliad.txt
 paradise-lost.txt"
     pattern = "who"
@@ -252,7 +252,7 @@ paradise-lost.txt"
     Grep.search(pattern, flags, files).should eq(expected)
   end
 
-  it "Multiple files, several matches, inverted and match entire lines flags" do
+  pending "Multiple files, several matches, inverted and match entire lines flags" do
     expected = "iliad.txt:Achilles sing, O Goddess! Peleus' son;
 iliad.txt:His wrath pernicious, who ten thousand woes
 iliad.txt:Caused to Achaia's host, sent many a soul
