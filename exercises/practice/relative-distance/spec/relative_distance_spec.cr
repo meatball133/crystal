@@ -8,25 +8,25 @@ describe "RelativeDistance" do
     relative_distance.degree_of_separation?("Vera", "Tomoko").should eq(1)
   end
 
-  it "Sibling relationship" do
+  pending "Sibling relationship" do
     family_tree = {"Dalia" => ["Olga", "Yassin"]}
     relative_distance = RelativeDistance.new(family_tree)
     relative_distance.degree_of_separation?("Olga", "Yassin").should eq(1)
   end
 
-  it "Two degrees of separation, grandchild" do
+  pending "Two degrees of separation, grandchild" do
     family_tree = {"Khadija" => ["Mateo"], "Mateo" => ["Rami"]}
     relative_distance = RelativeDistance.new(family_tree)
     relative_distance.degree_of_separation?("Khadija", "Rami").should eq(2)
   end
 
-  it "Unrelated individuals" do
+  pending "Unrelated individuals" do
     family_tree = {"Priya" => ["Rami"], "Kaito" => ["Elif"]}
     relative_distance = RelativeDistance.new(family_tree)
     relative_distance.degree_of_separation?("Priya", "Kaito").should eq(nil)
   end
 
-  it "Complex graph, cousins" do
+  pending "Complex graph, cousins" do
     family_tree = {
       "Aiko" => ["Bao", "Carlos"], "Bao" => ["Dalia", "Elias"], "Carlos" => ["Fatima", "Gustavo"],
       "Dalia" => ["Hassan", "Isla"], "Elias" => ["Javier"], "Fatima" => ["Khadija", "Liam"], "Gustavo" => ["Mina"],
@@ -45,7 +45,7 @@ describe "RelativeDistance" do
     relative_distance.degree_of_separation?("Dimitri", "Fabio").should eq(9)
   end
 
-  it "Complex graph, no shortcut, far removed nephew" do
+  pending "Complex graph, no shortcut, far removed nephew" do
     family_tree = {
       "Aiko" => ["Bao", "Carlos"], "Bao" => ["Dalia", "Elias"], "Carlos" => ["Fatima", "Gustavo"],
       "Dalia" => ["Hassan", "Isla"], "Elias" => ["Javier"], "Fatima" => ["Khadija", "Liam"], "Gustavo" => ["Mina"],
@@ -64,7 +64,7 @@ describe "RelativeDistance" do
     relative_distance.degree_of_separation?("Lucia", "Jun").should eq(14)
   end
 
-  it "Complex graph, some shortcuts, cross-down and cross-up, cousins several times removed, with unrelated family tree" do
+  pending "Complex graph, some shortcuts, cross-down and cross-up, cousins several times removed, with unrelated family tree" do
     family_tree = {
       "Aiko" => ["Bao", "Carlos"], "Bao" => ["Dalia"], "Carlos" => ["Fatima", "Gustavo"], "Dalia" => ["Hassan", "Isla"],
       "Fatima" => ["Khadija", "Liam"], "Gustavo" => ["Mina"], "Hassan" => ["Noah", "Olga"], "Isla" => ["Pedro"],
